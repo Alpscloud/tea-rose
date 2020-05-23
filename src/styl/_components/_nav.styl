@@ -1,9 +1,30 @@
 .nav
 	&__item
 		display inline-block
-		margin-right 15px
+		margin-right 36px
 		&:last-child
 			margin-right 0
 	&__link
-		display block
+		font 14px $Med
 		color $text-color
+		
+	&-catalog
+		&__col
+			flex 1
+			margin-right 45px
+			
+		&__list
+			display flex
+			justify-content space-between
+			align-items center
+		
+		&__item
+			margin-right 10px
+			&:last-child
+				margin-right 0
+				
+		&__link
+			font-size 14px
+			color $nav-link-color
+			&:hover
+				color $accent-color

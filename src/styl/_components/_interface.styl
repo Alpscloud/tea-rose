@@ -1,0 +1,146 @@
+.socials
+	font-size 0
+	&__item
+		display inline-block
+		margin-right 25px
+		&:last-child
+			margin-right 0
+	&__link
+		display block
+		width 20px
+		height 20px
+		&--ic
+			block()
+		
+		svg
+			svg()
+			fill $socials-ic-color
+			
+		&:hover
+			svg
+				fill $accent-color
+				
+
+.phone-link
+	font 22px $Med
+	color $dark-color
+	line-height 1
+	&:hover
+		color $accent-color
+		
+
+.delivery
+	margin 0 30px
+	&__text
+		position relative
+		padding-left 55px
+		color $dark-color
+		font-size 22px
+		opacity .2
+		&:before
+			pseudo()
+			position absolute
+			left 0
+			vertical-center()
+			background url('../img/icons/svg/delivery-ic.svg') 50% 50% no-repeat / 43px 43px
+			width 43px
+			height 43px
+			
+
+.link
+	display inline-block
+	position relative
+	// overflow hidden
+	// padding-bottom 0.5em
+	&:before
+		pseudo()
+		position absolute
+		left 0
+		bottom -0.5em
+		width 0
+		height 2px
+		background-color $light-accent-color
+		transition width .17s ease-in-out
+		
+		
+	&:hover
+		&:before
+			width 100%
+			
+
+.languages
+	margin-right 25px
+	&__item
+		display inline-block
+		margin-right 26px
+		&:last-child
+			margin-right 0
+			
+	&__link
+		font 14px $Med
+		color $text-color
+		opacity .3
+		line-height 1
+		&:hover
+			opacity 1
+			
+		&.is-active
+			opacity 1
+			&:before
+				width 100%
+				
+
+.icon-link
+	display inline-block
+	width 20px
+	height 20px
+	&__ic
+		block()
+		
+	svg
+		svg()
+		fill $text-color
+		
+
+.tooltip
+	display block
+	position absolute
+	top 100%
+	right 100%
+	z-index 5
+	text-align center
+	color $light-color
+	font 12px $Med
+	background-color $secondary-color
+	border-radius 50px 0 50px 50px
+	line-height 1
+	padding 6px 17px
+	white-space nowrap
+	
+	transition all .17s ease-in-out
+	
+	margin-top 25px
+	opacity 0
+	visibility hidden
+	pointer-events none
+	
+	&:before
+		pseudo()
+		position absolute
+		bottom 100%
+		right 0
+		width 0
+		height 0
+		border-style solid
+		border-width 0 0 8px 8px
+		border-color transparent transparent $secondary-color transparent
+		margin-top -1px
+	&__wrapper
+		position relative
+		display inline-block
+		&:hover
+			.tooltip
+				margin-top 15px
+				opacity 1
+				visibility visible
+		
