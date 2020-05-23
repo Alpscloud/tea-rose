@@ -15,36 +15,35 @@ input[type="search"]::-webkit-search-results-decoration
 
 
 .form
-	max-width 600px
-	margin 40px auto
+	max-width 285px
 	
 .input
 	display block
 	width 100%
-	padding 10px 15px
+	padding 0 0 10px 0
 	text-align left
 	background-color $light-color
-	border 2px solid transparent
+	border-bottom 2px solid $border-color
 	font 1em $Reg
 	color $text-color
 	&:hover,
 	&:focus
 		border-color $accent-color
 	&::-webkit-input-placeholder
-		font 1em $Reg
+		font 16px $Reg
 		color $text-color
 	&::-moz-placeholder
-		font 1em $Reg
+		font 16px $Reg
 		color $text-color
 	&:-moz-placeholder
-		font 1em $Reg
+		font 16px $Reg
 		color $text-color
 	&:-ms-input-placeholder
-		font 1em $Reg
+		font 16px $Reg
 		color $text-color
 		
 	&__wrapper
-		margin-bottom 15px
+		margin-bottom 50px
 		position relative
 		
 	&.is-error

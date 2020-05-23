@@ -48,6 +48,7 @@ $(document).ready(function() {
 	// Sliders
 	var promoSlider = new Swiper('.js-promo-slider', {
 		speed: 600,
+		loop: true,
 		spaceBetween: 0,
 		autoplay: {
 			delay: 5000,

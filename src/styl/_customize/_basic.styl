@@ -93,10 +93,10 @@ img
 .gutters
 	padding $gutters
 .gutter
-	&__top
+	&-top
 		padding-top $gutter-top
-	&__bottom
-		padding-top $gutter-bottom
+	&-bottom
+		padding-bottom $gutter-bottom
 	
 .w3c
 	visibility hidden
@@ -109,8 +109,27 @@ img
 	
 .sect
 	&__title
-		font 2em $Bold
-		margin-bottom 40px
+		font 34px $PBold
+		line-height 1.35
+		color $alternate-text-color
+		margin-bottom 50px
+		
+		&--col
+			.sect__title
+				margin-bottom 30px
+				
+		&--sm
+			font 25px $Med
+			color $alternate-text-color
+			margin-bottom 42.5px
+			span
+				display inline-block
+				position relative
+				
+	&__text
+		font-size 12px
+		color $light-text-color
+		line-height 1.2
 		
 
 

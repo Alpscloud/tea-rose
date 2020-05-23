@@ -22,7 +22,7 @@
 		font-size 14px
 		text-align right
 		width 155px
-		padding 16px 25px 16px 45px
+		padding 18px 25px 18px 45px
 		background-image url('../img/icons/svg/cart-ic.svg') 
 		background-position 17px 50% 
 		background-repeat no-repeat
@@ -35,21 +35,23 @@
 		background url('../img/icons/svg/close-ic.svg') center center no-repeat
 		background-size 20px 20px
 		
-	&__search
-		&::-ms-clear
-			display none 
-			width 0
-			height 0
-		&::-ms-reveal
-			display none 
-			width 0
-			height 0
-		
-		&::-webkit-search-decoration,
-		&::-webkit-search-cancel-button,
-		&::-webkit-search-results-button,
-		&::-webkit-search-results-decoration
-			display none
+	&__arrow
+		display inline-block
+		width 76px
+		height 9.5px
+		will-change transform 
+		backface-visibility hidden
+		&--prev
+			transform scaleX(-1)
+		&--ic
+			block()
+		svg
+			svg()
+			fill $accent-color
+			
+		&:hover
+			svg
+				fill $dark-accent-color
 		
 	&__top
 		display none
