@@ -1,2 +1,55 @@
 .footer
 	background-color $footer-bg
+	
+	
+	&__content
+		padding 45px 0 35px
+		font-size 14px
+		
+		color $footer-text-color
+		a
+			color inherit
+			&:hover
+				color $accent-color
+	
+	&__logo
+		width 25%
+		
+	&__row
+		margin-bottom 35px
+		
+	&__actions
+		width 75%
+		
+	&__col
+		width 25%
+		padding 0 15px
+		
+		&--title
+			font 14px $Med
+			margin-bottom 25px
+			color $text-color
+			
+	&__contacts
+		&--link
+			margin-bottom 25px
+			&:last-child
+				margin-bottom 0
+		
+.copyright
+	padding-top 35px
+	border-top 1px solid #e0e0e0
+	font-size 12px 
+	color $lighter-text-color
+	
+
+.subscribe
+	padding 20px 0
+	
+	&__text
+		max-width 360px
+		font-size 20px
+	
+	&__form
+		.input-round__wrapper
+			margin-right 70px

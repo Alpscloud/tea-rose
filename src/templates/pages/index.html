@@ -4,6 +4,10 @@
 	<!-- CONTENT WRAPPER -->
 	<div class="content__wrapper">
 
+		<!-- Popups -->
+		{% include '../parts/components/popups.html' %}
+		<!-- //Popups -->
+
 		<!-- Header -->
 		{% include '../parts/sections/header.html' %}
 		<!-- //Header -->
@@ -17,17 +21,30 @@
 
 				<div class="container">
 					<div class="promo-slider">
+						<div class="slider__loader"></div>
 						<div class="swiper-container js-promo-slider">
 							<div class="swiper-wrapper">
 								<!-- Slide -->
 								<div class="swiper-slide">
-									<div class="promo__slide">sadsad</div>
+									<div class="promo-slide">
+										<a href="#" class="promo-slide__bg">
+											<img src="img/promo/1.jpg" alt="">
+										</a>
+
+										<a href="#" class="btn btn-light">Открыть</a>
+									</div>
 								</div>
 								<!-- //Slide -->
 
 								<!-- Slide -->
 								<div class="swiper-slide">
-									<div class="promo__slide">sadsad</div>
+									<div class="promo-slide">
+										<a href="#" class="promo-slide__bg">
+											<img src="img/promo/2.jpg" alt="">
+										</a>
+
+										<a href="#" class="btn btn-light">Открыть</a>
+									</div>
 								</div>
 								<!-- //Slide -->
 							</div>
@@ -226,34 +243,35 @@
 				<h2 class="w3c">&nbsp;</h2>
 
 				<div class="container">
+
 					<div class="form-block">
-					<div class="row align-vertical-center align-horisontal-between form-block__row">
-						<div class="form-block__col">
-							<div class="form-block__img">
-								<div class="form-block__img--square color-bg"></div>
-								<img src="img/flower.png" alt="Tea rose">
+						<div class="row align-vertical-center align-horisontal-between form-block__row">
+							<div class="form-block__col">
+								<div class="form-block__img">
+									<div class="form-block__img--square color-bg"></div>
+									<img src="img/flower.png" alt="Tea rose">
+								</div>
 							</div>
-						</div>
 
-						<div class="form-block__col">
-							<div class="form__col--content">
-								<h3 class="form-block__title">Есть повод?</h3>
-								<p class="form-block__notice">Но не знаете что выбрать?</p>
-								<p class="form-block__text">оставьте контакты и наш флорист подберёт самый лучший варинат специально для вас</p>
+							<div class="form-block__col">
+								<div class="form__col--content">
+									<h3 class="form-block__title">Есть повод?</h3>
+									<p class="form-block__notice">Но не знаете что выбрать?</p>
+									<p class="form-block__text">оставьте контакты и наш флорист подберёт самый лучший варинат специально для вас</p>
 
-								<form class="form">
-									<div class="input__wrapper">
-										<input type="text" class="input js-input" name="name" placeholder="Ваше имя *">
-									</div>
-									<div class="input__wrapper">
-										<input type="tel" class="input js-input" name="phone" placeholder="Ваш телефон *">
-									</div>
-									<button class="btn btn-wide" type="submit">Позвоните мне</button>
-								</form>
+									<form class="form">
+										<div class="input__wrapper">
+											<input type="text" class="input js-input" name="name" placeholder="Ваше имя *">
+										</div>
+										<div class="input__wrapper">
+											<input type="tel" class="input js-input" name="phone" placeholder="Ваш телефон *">
+										</div>
+										<button class="btn btn-wide" type="submit">Позвоните мне</button>
+									</form>
+
+								</div>
 
 							</div>
-							
-						</div>
 
 						</div>
 					</div>
@@ -269,11 +287,555 @@
 				<div class="container">
 					<div class="choise-bouquet__block">
 						<h3 class="sect__title--sm text-center"><span>Выберите цветок:</span></h3>
+
+						<div class="choise-bouquet__variants">
+							<div class="row align-horisontal-start">
+								<!-- Item -->
+								<div class="choise-bouquet__variant--wrapper">
+									<label class="choise-bouquet__variant--label">
+
+										<input type="checkbox" name="Название цветка">
+
+										<span class="choise-bouquet__variant">
+											<span class="choise-bouquet__variant--text">Анемона</span>
+											<!-- Decor -->
+											<span class="choise-bouquet__variant--decor">
+												<img src="img/flowers/1.jpg" alt="">
+											</span>
+											<!-- //Decor -->
+										</span>
+										
+										
+									</label>
+								</div>
+								<!-- //Item -->
+
+								<!-- Item -->
+								<div class="choise-bouquet__variant--wrapper">
+									<label class="choise-bouquet__variant--label">
+
+										<input type="checkbox" name="Название цветка">
+
+										<span class="choise-bouquet__variant">
+											<span class="choise-bouquet__variant--text">Сирень</span>
+											<!-- Decor -->
+											<span class="choise-bouquet__variant--decor">
+												<img src="img/flowers/2.jpg" alt="">
+											</span>
+											<!-- //Decor -->
+										</span>
+										
+										
+									</label>
+								</div>
+								<!-- //Item -->
+
+								<!-- Item -->
+								<div class="choise-bouquet__variant--wrapper">
+									<label class="choise-bouquet__variant--label">
+
+										<input type="checkbox" name="Название цветка">
+
+										<span class="choise-bouquet__variant">
+											<span class="choise-bouquet__variant--text">Гвоздика</span>
+											<!-- Decor -->
+											<span class="choise-bouquet__variant--decor">
+												<img src="img/flowers/3.jpg" alt="">
+											</span>
+											<!-- //Decor -->
+										</span>
+										
+										
+									</label>
+								</div>
+								<!-- //Item -->
+
+								<!-- Item -->
+								<div class="choise-bouquet__variant--wrapper">
+									<label class="choise-bouquet__variant--label">
+
+										<input type="checkbox" name="Название цветка">
+
+										<span class="choise-bouquet__variant">
+											<span class="choise-bouquet__variant--text">Гиацинт</span>
+											<!-- Decor -->
+											<span class="choise-bouquet__variant--decor">
+												<img src="img/flowers/1.jpg" alt="">
+											</span>
+											<!-- //Decor -->
+										</span>
+										
+										
+									</label>
+								</div>
+								<!-- //Item -->
+
+								<!-- Item -->
+								<div class="choise-bouquet__variant--wrapper">
+									<label class="choise-bouquet__variant--label">
+
+										<input type="checkbox" name="Название цветка">
+
+										<span class="choise-bouquet__variant">
+											<span class="choise-bouquet__variant--text">Гербера</span>
+											<!-- Decor -->
+											<span class="choise-bouquet__variant--decor">
+												<img src="img/flowers/2.jpg" alt="">
+											</span>
+											<!-- //Decor -->
+										</span>
+										
+										
+									</label>
+								</div>
+								<!-- //Item -->
+
+								<!-- Item -->
+								<div class="choise-bouquet__variant--wrapper">
+									<label class="choise-bouquet__variant--label">
+
+										<input type="checkbox" name="Название цветка">
+
+										<span class="choise-bouquet__variant">
+											<span class="choise-bouquet__variant--text">Гортензия</span>
+											<!-- Decor -->
+											<span class="choise-bouquet__variant--decor">
+												<img src="img/flowers/1.jpg" alt="">
+											</span>
+											<!-- //Decor -->
+										</span>
+										
+										
+									</label>
+								</div>
+								<!-- //Item -->
+
+								<!-- Item -->
+								<div class="choise-bouquet__variant--wrapper">
+									<label class="choise-bouquet__variant--label">
+
+										<input type="checkbox" name="Название цветка">
+
+										<span class="choise-bouquet__variant">
+											<span class="choise-bouquet__variant--text">Дельфиниум</span>
+											<!-- Decor -->
+											<span class="choise-bouquet__variant--decor">
+												<img src="img/flowers/2.jpg" alt="">
+											</span>
+											<!-- //Decor -->
+										</span>
+										
+										
+									</label>
+								</div>
+								<!-- //Item -->
+
+								<!-- Item -->
+								<div class="choise-bouquet__variant--wrapper">
+									<label class="choise-bouquet__variant--label">
+
+										<input type="checkbox" name="Название цветка">
+
+										<span class="choise-bouquet__variant">
+											<span class="choise-bouquet__variant--text">Эустома</span>
+											<!-- Decor -->
+											<span class="choise-bouquet__variant--decor">
+												<img src="img/flowers/3.jpg" alt="">
+											</span>
+											<!-- //Decor -->
+										</span>
+										
+										
+									</label>
+								</div>
+								<!-- //Item -->
+
+								<!-- Item -->
+								<div class="choise-bouquet__variant--wrapper">
+									<label class="choise-bouquet__variant--label">
+
+										<input type="checkbox" name="Название цветка">
+
+										<span class="choise-bouquet__variant">
+											<span class="choise-bouquet__variant--text">Кала</span>
+											<!-- Decor -->
+											<span class="choise-bouquet__variant--decor">
+												<img src="img/flowers/1.jpg" alt="">
+											</span>
+											<!-- //Decor -->
+										</span>
+										
+										
+									</label>
+								</div>
+								<!-- //Item -->
+
+								<!-- Item -->
+								<div class="choise-bouquet__variant--wrapper">
+									<label class="choise-bouquet__variant--label">
+
+										<input type="checkbox" name="Название цветка">
+
+										<span class="choise-bouquet__variant">
+											<span class="choise-bouquet__variant--text">Клематис</span>
+											<!-- Decor -->
+											<span class="choise-bouquet__variant--decor">
+												<img src="img/flowers/2.jpg" alt="">
+											</span>
+											<!-- //Decor -->
+										</span>
+										
+										
+									</label>
+								</div>
+								<!-- //Item -->
+							</div>
+						</div>
+					</div>
+
+					<div class="choise-bouquet__block">
+						<h3 class="sect__title--sm text-center"><span>Выберите цвет букета:</span></h3>
+
+						<div class="choise-bouquet__variants">
+							<div class="row align-horisontal-start">
+								<!-- Item -->
+								<div class="choise-bouquet__variant--wrapper">
+									<label class="choise-bouquet__variant--label">
+
+										<input type="checkbox" name="bouquetColor_white">
+
+										<span class="choise-bouquet__variant">
+											<span class="choise-bouquet__variant--text">Белый</span>
+											<!-- Decor -->
+											<span class="choise-bouquet__variant--decor">
+												<span class="choise-bouquet__variant--decor_color">
+													<span class="choise-bouquet__variant--decor_color-value" style="background-color: white;"></span>
+												</span>
+											</span>
+											<!-- //Decor -->
+										</span>
+										
+										
+									</label>
+								</div>
+								<!-- //Item -->
+
+								<!-- Item -->
+								<div class="choise-bouquet__variant--wrapper">
+									<label class="choise-bouquet__variant--label">
+
+										<input type="checkbox" name="bouquetColor_red">
+
+										<span class="choise-bouquet__variant">
+											<span class="choise-bouquet__variant--text">Красный</span>
+											<!-- Decor -->
+											<span class="choise-bouquet__variant--decor">
+												<span class="choise-bouquet__variant--decor_color">
+													<span class="choise-bouquet__variant--decor_color-value" style="background-color: #ff5c5c;"></span>
+												</span>
+											</span>
+											<!-- //Decor -->
+										</span>
+										
+										
+									</label>
+								</div>
+								<!-- //Item -->
+
+								<!-- Item -->
+								<div class="choise-bouquet__variant--wrapper">
+									<label class="choise-bouquet__variant--label">
+
+										<input type="checkbox" name="bouquetColor_blue">
+
+										<span class="choise-bouquet__variant">
+											<span class="choise-bouquet__variant--text">Синий</span>
+											<!-- Decor -->
+											<span class="choise-bouquet__variant--decor">
+												<span class="choise-bouquet__variant--decor_color">
+													<span class="choise-bouquet__variant--decor_color-value" style="background-color: #546bde;"></span>
+												</span>
+											</span>
+											<!-- //Decor -->
+										</span>
+										
+										
+									</label>
+								</div>
+								<!-- //Item -->
+
+								<!-- Item -->
+								<div class="choise-bouquet__variant--wrapper">
+									<label class="choise-bouquet__variant--label">
+
+										<input type="checkbox" name="bouquetColor_pink">
+
+										<span class="choise-bouquet__variant">
+											<span class="choise-bouquet__variant--text">Розовый</span>
+											<!-- Decor -->
+											<span class="choise-bouquet__variant--decor">
+												<span class="choise-bouquet__variant--decor_color">
+													<span class="choise-bouquet__variant--decor_color-value" style="background-color: #ff8fcc;"></span>
+												</span>
+											</span>
+											<!-- //Decor -->
+										</span>
+										
+										
+									</label>
+								</div>
+								<!-- //Item -->
+
+								<!-- Item -->
+								<div class="choise-bouquet__variant--wrapper">
+									<label class="choise-bouquet__variant--label">
+
+										<input type="checkbox" name="bouquetColor_capucino">
+
+										<span class="choise-bouquet__variant">
+											<span class="choise-bouquet__variant--text">Капучино</span>
+											<!-- Decor -->
+											<span class="choise-bouquet__variant--decor">
+												<span class="choise-bouquet__variant--decor_color">
+													<span class="choise-bouquet__variant--decor_color-value" style="background-color: #e0c6b6;"></span>
+												</span>
+											</span>
+											<!-- //Decor -->
+										</span>
+										
+										
+									</label>
+								</div>
+								<!-- //Item -->
+
+								<!-- Item -->
+								<div class="choise-bouquet__variant--wrapper">
+									<label class="choise-bouquet__variant--label">
+
+										<input type="checkbox" name="bouquetColor_violet">
+
+										<span class="choise-bouquet__variant">
+											<span class="choise-bouquet__variant--text">Фиолетовый</span>
+											<!-- Decor -->
+											<span class="choise-bouquet__variant--decor">
+												<span class="choise-bouquet__variant--decor_color">
+													<span class="choise-bouquet__variant--decor_color-value" style="background-color: #8866de;"></span>
+												</span>
+											</span>
+											<!-- //Decor -->
+										</span>
+										
+										
+									</label>
+								</div>
+								<!-- //Item -->
+
+								<!-- Item -->
+								<div class="choise-bouquet__variant--wrapper">
+									<label class="choise-bouquet__variant--label">
+
+										<input type="checkbox" name="bouquetColor_lilac">
+
+										<span class="choise-bouquet__variant">
+											<span class="choise-bouquet__variant--text">Сиреневый</span>
+											<!-- Decor -->
+											<span class="choise-bouquet__variant--decor">
+												<span class="choise-bouquet__variant--decor_color">
+													<span class="choise-bouquet__variant--decor_color-value" style="background-color: #b96fde;"></span>
+												</span>
+											</span>
+											<!-- //Decor -->
+										</span>
+										
+										
+									</label>
+								</div>
+								<!-- //Item -->
+
+								<!-- Item -->
+								<div class="choise-bouquet__variant--wrapper">
+									<label class="choise-bouquet__variant--label">
+
+										<input type="checkbox" name="bouquetColor_yellow">
+
+										<span class="choise-bouquet__variant">
+											<span class="choise-bouquet__variant--text">Желтый</span>
+											<!-- Decor -->
+											<span class="choise-bouquet__variant--decor">
+												<span class="choise-bouquet__variant--decor_color">
+													<span class="choise-bouquet__variant--decor_color-value" style="background-color: #fff28a;"></span>
+												</span>
+											</span>
+											<!-- //Decor -->
+										</span>
+										
+										
+									</label>
+								</div>
+								<!-- //Item -->
+
+								<!-- Item -->
+								<div class="choise-bouquet__variant--wrapper">
+									<label class="choise-bouquet__variant--label">
+
+										<input type="checkbox" name="bouquetColor_green">
+
+										<span class="choise-bouquet__variant">
+											<span class="choise-bouquet__variant--text">Зеленый</span>
+											<!-- Decor -->
+											<span class="choise-bouquet__variant--decor">
+												<span class="choise-bouquet__variant--decor_color">
+													<span class="choise-bouquet__variant--decor_color-value" style="background-color: #adeb95;"></span>
+												</span>
+											</span>
+											<!-- //Decor -->
+										</span>
+										
+										
+									</label>
+								</div>
+								<!-- //Item -->
+
+								<!-- Item -->
+								<div class="choise-bouquet__variant--wrapper">
+									<label class="choise-bouquet__variant--label">
+
+										<input type="checkbox" name="bouquetColor_orange">
+
+										<span class="choise-bouquet__variant">
+											<span class="choise-bouquet__variant--text">Оранжевый</span>
+											<!-- Decor -->
+											<span class="choise-bouquet__variant--decor">
+												<span class="choise-bouquet__variant--decor_color">
+													<span class="choise-bouquet__variant--decor_color-value" style="background-color:orange;"></span>
+												</span>
+											</span>
+											<!-- //Decor -->
+										</span>
+										
+										
+									</label>
+								</div>
+								<!-- //Item -->
+
+							</div>
+						</div>
 					</div>
 				</div>
 				<!-- //container -->
 			</section>
 			<!-- //Section choice  bouquet-->
+
+			<!-- Section about -->
+			<section class="sect__about gutter-bottom">
+				<h2 class="w3c">&nbsp;</h2>
+
+
+				<div class="about-us">
+					<div class="about-us__content bg bg-with-overlay" style="background-image: url('img/backgrounds/decor-bg.jpg');">
+						<div class="container">
+
+							<div class="about-us__content--block">
+								<div class="about-us__content--block_text">
+									<img src="img/women.png" alt="Tea Rose">
+									<h3 class="sect__title sect__title--accent">О магазинах «Чайная Роза»</h3>
+									<p>Хакерские методы взлома. Самый опасный и незаметный способ украсть вашу страницу или личную информацию. Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Lorem ipsum dolor sit amet.</p>
+								</div>
+
+								<div class="about-us__content--block_img">
+									<img src="img/women.png" alt="Tea Rose">
+								</div>
+							</div>
+
+						</div>
+						<!-- //container -->
+					</div>
+
+					<div class="about-us__btn container text-left">
+						<a href="page-about.html" class="btn">Читать полностью</a>
+					</div>
+
+
+				</div>
+				
+			</section>
+			<!-- //Section about -->
+
+			<!-- Section blog -->
+			<section class="sect__blog">
+				<h2 class="w3c">&nbsp;</h2>
+
+				<div class="container">
+					<div class="blog">
+						<div class="row align-vertical-center blog__row">
+							<div class="blog__articles--col">
+								<div class="row align-horisontal-start">
+									<!-- Article card -->
+									<article class="article-card">
+										<div class="product-card">
+											<a href="page-article.html" class="product-card__thumbnail">
+												<span>Открыть</span>
+												<img src="img/product-thumb.jpg" alt="Product thumnail">
+											</a>
+											<div class="product-card__information">
+												<p class="date">10.09.2019</p>
+												<h3 class="product-card__title">
+													<a href="page-article.html">Название статьи</a>
+												</h3>
+											</div>
+										</div>
+									</article>
+									<!-- //Article card -->
+
+									<!-- Article card -->
+									<article class="article-card">
+										<div class="product-card">
+											<a href="page-article.html" class="product-card__thumbnail">
+												<span>Открыть</span>
+												<img src="img/product-thumb.jpg" alt="Product thumnail">
+											</a>
+											<div class="product-card__information">
+												<p class="date">10.09.2019</p>
+												<h3 class="product-card__title">
+													<a href="page-article.html">Название<br>статьи</a>
+												</h3>
+											</div>
+										</div>
+									</article>
+									<!-- //Article card -->
+
+									<!-- Article card -->
+									<article class="article-card">
+										<div class="product-card">
+											<a href="page-article.html" class="product-card__thumbnail">
+												<span>Открыть</span>
+												<img src="img/product-thumb.jpg" alt="Product thumnail">
+											</a>
+											<div class="product-card__information">
+												<p class="date">10.09.2019</p>
+												<h3 class="product-card__title">
+													<a href="page-article.html">Название статьи</a>
+												</h3>
+											</div>
+										</div>
+									</article>
+									<!-- //Article card -->
+								</div>
+							</div>
+
+							<div class="blog-title__content--col">
+								<div class="blog-title__content">
+									<img src="img/decor/blog-title-decor.svg" class="decor-img" alt="Tea rose">
+									<h3 class="sect__title">Блог<br>Чайной<br>Розы</h3>
+									<a href="page-catalog.html" class="permalink">Открыть статьи</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //container -->
+			</section>
+			<!-- //Section blog -->
 		</main>
 		<!-- //Main -->
 

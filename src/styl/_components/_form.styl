@@ -48,7 +48,34 @@ input[type="search"]::-webkit-search-results-decoration
 		
 	&.is-error
 		border-color red
-	
+		
+	&-round
+		padding 22px
+		display block
+		width 100%
+		border-radius 50px
+		font 16px $Reg
+		color $text-color
+		background-color $light-color
+		text-align center
+		box-shadow $round-input-shadow
+		&:focus,
+		&:hover
+			box-shadow none
+		&::-webkit-input-placeholder
+			font 16px $Reg
+			color $text-color
+		&::-moz-placeholder
+			font 16px $Reg
+			color $text-color
+		&:-moz-placeholder
+			font 16px $Reg
+			color $text-color
+		&:-ms-input-placeholder
+			font 16px $Reg
+			color $text-color
+		&__wrapper
+			max-width 250px
 
 
 .checkbox,
@@ -56,17 +83,18 @@ input[type="search"]::-webkit-search-results-decoration
 	position relative
 	display inline-block
 	margin-left 0
-	padding-left 25px
-	font 1em $Reg
+	padding-left 40px
+	font 14px $Med
 	line-height 1
-	color $text-color
+	color rgba($dark-color, .3)
+	
 	&:before,
 	&:after
 		pseudo()
 		transition all .25s ease-in-out
 		position absolute
 		left 0
-		vertical-center()
+		top 3px
 			
 	&__label
 		cursor pointer
@@ -80,23 +108,21 @@ input[type="search"]::-webkit-search-results-decoration
 		width 18px
 		height 18px
 		border 1px solid $accent-color
-		background-color transparent
+		background-color $light-color
+		box-shadow $round-input-shadow
 	&:after
 		width 12px
 		height 12px
-		background url('../img/icons/svg/checkbox-ic.svg') 50% 50% no-repeat
-		background-size 12px 12px
+		border-radius 4px
+		background-color $accent-color
 		position absolute
 		left 3px
-		top 8px
+		top 6px
 		opacity 0
 	&__label
 		input
 			&:checked 
 				+ span
-					&:before
-						border-color $dark-color
-						background-color $dark-color
 					&:after
 						opacity 1
 			

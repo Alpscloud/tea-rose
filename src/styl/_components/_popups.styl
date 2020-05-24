@@ -28,16 +28,54 @@
 			height 100%
 	&__body
 		width 100%
-		max-width 400px
+		max-width 470px
 		background-color $popup-body-bg
-		padding 20px
+		padding 50px 80px 30px 80px
 		display inline-block
 		vertical-align middle
 		position relative
 		white-space normal
+		border-radius 30px
+		
+	&__title
+		color $alternate-text-color
+		font 23px $PBold
+		
+		
+		
+	&__text
+		color rgba($dark-color, .3)
+		font 14px $Med
+		margin-top 30px
+		
+	&__form
+		margin-top 30px
+		.input__wrapper
+			margin-bottom 20px
+			
+		.checkbox__label
+			margin-top 30px
+			
+	&__btns
+		margin-top 30px
+	
+	&__tabs
+		&--controls
+			margin-top 30px
+			display flex
+			align-items center
+			justify-content space-between
+			.btn__tab
+				width 48%
 		
 	.btn__close
 		position absolute
-		top 10px
-		right 10px
+		top 30px
+		right 30px
+		
+.forgot-pw-link
+	color rgba($dark-color, .3)
+	font 14px $Med
+	&:hover
+		color $accent-color
 

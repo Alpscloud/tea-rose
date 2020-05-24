@@ -9,7 +9,9 @@
 	transition all .17s ease-in-out
 	backface-visibility hidden
 	border-radius 50px
-	
+	box-shadow 0px 14px 25px -11px rgba(224,83,83,0.45)
+	&:hover
+		box-shadow none
 	&-wide
 		width 100%
 		padding-left 15px
@@ -28,12 +30,21 @@
 		background-repeat no-repeat
 		background-size 20px 18px
 		
+	&-light
+		background-color $light-color
+		color $accent-color
+
+		
 	&__close
 		display inline-block
-		width 20px
-		height 20px
-		background url('../img/icons/svg/close-ic.svg') center center no-repeat
-		background-size 20px 20px
+		width 16px
+		height 16px
+		svg
+			svg()
+			fill #090909
+		&:hover
+			svg
+				fill $accent-color
 		
 	&__arrow
 		display inline-block
@@ -52,6 +63,18 @@
 		&:hover
 			svg
 				fill $dark-accent-color
+				
+	&__tab
+		background-color $light-color
+		border-radius 50px
+		padding 10px 15px
+		text-align center
+		font 14px $Med
+		color $text-color
+		&.is-active,
+		&:hover
+			background-color $alternate-color
+			color $light-color
 		
 	&__top
 		display none

@@ -10,6 +10,8 @@
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 	<meta name="author" content="Serhii 'winde' Kuptsov">
+
+	<meta http-equiv="Cache-Control" content="no-cache">
 	
 	<!-- Favicons -->
 	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
@@ -39,6 +41,187 @@
 	
 	<!-- CONTENT WRAPPER -->
 	<div class="content__wrapper">
+
+		<!-- Popups -->
+		<!-- Popup login-->
+<div class="popup js-popup js-popup-login-form" >
+	<div class="popup__overflow">
+		<div class="popup__body text-center">
+			<!-- Close btn -->
+			<button class="btn__close js-close-popup-btn" type="button">
+				<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
+					<path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717
+					L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859
+					c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287
+					l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285
+					L284.286,256.002z"/>
+				</svg>
+			</button>
+			<!-- //Close btn -->
+
+			<!-- Popup content-->
+			<div class="popup__content">
+				<h3 class="popup__title">Личный кабинет</h3>
+
+				<div class="popup__tabs--controls">
+					<button class="btn__tab js-tab-btn is-active" type="button">Авторизация</button>
+					<button class="btn__tab js-tab-btn" type="button">Регистрация</button>
+				</div>
+
+				<div class="popup__tabs--forms">
+					<!-- Login form -->
+					<div class="popup__tab--form js-tab-content">
+						<form class="popup__form text-left">
+							<div class="input__wrapper">
+								<input type="email" class="input-round js-input" name="email" placeholder="e-mail *">
+							</div>
+							<div class="input__wrapper">
+								<input type="password" class="input-round js-input" name="password" placeholder="Пароль *">
+							</div>
+							<div class="input__wrapper">
+								<button class="btn btn-wide" type="button">Войти</button>
+							</div>
+						</form>
+
+						<a href="#" class="forgot-pw-link">Забыли пароль?</a>
+					</div>
+					<!-- //Login form -->
+
+					<!-- Registration form -->
+					<div class="popup__tab--form js-tab-content">
+						<form class="popup__form text-left">
+							<div class="input__wrapper">
+								<input type="text" class="input-round js-input" name="name" placeholder="Ваше имя *">
+							</div>
+							<div class="input__wrapper">
+								<input type="tel" class="input-round js-input" name="phone" placeholder="Ваш телефон *">
+							</div>
+							<div class="input__wrapper">
+								<input type="email" class="input-round js-input" name="email" placeholder="e-mail *">
+							</div>
+							<div class="input__wrapper">
+								<input type="password" class="input-round js-input" name="password" placeholder="Пароль *">
+							</div>
+							<div class="input__wrapper">
+								<button class="btn btn-wide" type="button">Рагистрация</button>
+							</div>
+
+							<label class="checkbox__label">
+								<input name="privacyPolicy" type="checkbox" checked>
+								<span class="checkbox text-left">Даю разрешение на<br>обработку личных данных</span>
+							</label>
+						</form>
+					</div>
+					<!-- //Registration form -->
+				</div>
+				
+			</div>
+			<!-- //Popup content-->
+		</div>
+	</div>
+</div>
+<!-- //Popup login-->
+
+<!-- Popup quick order-->
+<div class="popup js-popup js-popup-form">
+	<div class="popup__overflow">
+		<div class="popup__body text-center">
+			<!-- Close btn -->
+			<button class="btn__close js-close-popup-btn" type="button">
+				<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
+					<path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717
+					L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859
+					c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287
+					l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285
+					L284.286,256.002z"/>
+				</svg>
+			</button>
+			<!-- //Close btn -->
+
+			<!-- Popup content-->
+			<div class="popup__content">
+				<h3 class="popup__title">Быстрый заказ</h3>
+				<p class="popup__text">Заполните всего два поля,<br>а все остальное мы сделаем за вас :)</p>
+				<form class="popup__form text-left">
+					<div class="input__wrapper">
+						<input type="text" class="input-round js-input" name="name" placeholder="Ваше имя *">
+					</div>
+					<div class="input__wrapper">
+						<input type="tel" class="input-round js-input" name="phone" placeholder="Ваш телефон *">
+					</div>
+					<div class="input__wrapper">
+						<button class="btn btn-wide" type="button">Отправить</button>
+					</div>
+
+					<label class="checkbox__label">
+						<input name="privacyPolicy" type="checkbox" checked>
+						<span class="checkbox text-left">Даю разрешение на<br>обработку личных данных</span>
+					</label>
+				</form>
+			</div>
+			<!-- //Popup content-->
+		</div>
+	</div>
+</div>
+<!-- //Popup quick order-->
+
+<!-- Popup thanks-->
+<div class="popup js-popup js-popup-thanks">
+	<div class="popup__overflow">
+		<div class="popup__body text-center">
+			<!-- Close btn -->
+			<button class="btn__close js-close-popup-btn" type="button">
+				<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
+					<path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717
+					L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859
+					c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287
+					l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285
+					L284.286,256.002z"/>
+				</svg>
+			</button>
+			<!-- //Close btn -->
+
+			<!-- Popup content-->
+			<div class="popup__content">
+				<h3 class="popup__title">Спасибо за подписку</h3>
+				<p class="popup__text">Теперь мы с вами ещё ближе :)</p>
+			</div>
+			<!-- //Popup content-->
+		</div>
+	</div>
+</div>
+<!-- //Popup thanks-->
+
+<!-- Popup add to cart-->
+<div class="popup js-popup js-popup-added-to-cart">
+	<div class="popup__overflow">
+		<div class="popup__body text-center">
+			<!-- Close btn -->
+			<button class="btn__close js-close-popup-btn" type="button">
+				<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
+					<path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717
+					L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859
+					c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287
+					l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285
+					L284.286,256.002z"/>
+				</svg>
+			</button>
+			<!-- //Close btn -->
+
+			<!-- Popup content-->
+			<div class="popup__content">
+				<h3 class="popup__title">Товар добавлен в корзину</h3>
+
+				<div class="row popup__btns">
+					<div class="btn__wrapper"><a href="page-cart.html" class="btn btn-sm">Перейти в корзину</a></div>
+					<div class="btn__wrapper"><a href="#" class="btn btn-sm btn-light js-close-popup-btn">Вернуться на сайт</a></div>
+				</div>
+			</div>
+			<!-- //Popup content-->
+		</div>
+	</div>
+</div>
+<!-- //Popup add to cart-->		<!-- //Popups -->
 
 		<!-- Header -->
 		<header class="header">
@@ -121,7 +304,7 @@
 							<!--// Wishlist -->
 
 							<!-- Cabinet -->
-							<a href="page-wishlist.html" class="icon-link tooltip__wrapper">
+							<a href="page-wishlist.html" class="icon-link tooltip__wrapper js-login-btn">
 								<i class="icon-link__ic">
 
 									<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 19.68 19.149" enable-background="new 0 0 19.68 19.149" xml:space="preserve">
@@ -183,91 +366,90 @@
 						<!-- Socials -->
 						<ul class="socials">
 							<li class="socials__item">
-								<a href="#" class="socials__link" target="_blank">
-									<i class="socials__link--ic">
+	<a href="#" class="socials__link" target="_blank">
+		<i class="socials__link--ic">
 
-										<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 19.23 16.2" enable-background="new 0 0 19.23 16.2" xml:space="preserve">
-											<path  d="M17.995,0.063L0.408,6.917c-0.57,0.222-0.535,1.039,0.051,1.213l4.469,1.32l1.668,5.292
-											c0.174,0.553,0.875,0.72,1.28,0.306l2.311-2.359l4.534,3.328c0.555,0.407,1.345,0.105,1.486-0.569L19.21,1.091
-											C19.357,0.388,18.665-0.198,17.995,0.063z M15.791,3.249l-8.169,7.224c-0.081,0.072-0.133,0.172-0.145,0.28l-0.315,2.796
-											c-0.01,0.091-0.138,0.103-0.165,0.016l-1.294-4.17C5.643,9.204,5.72,8.997,5.89,8.892l9.647-5.983
-											C15.759,2.771,15.986,3.076,15.791,3.249z"/>
-										</svg>
+			<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 19.23 16.2" enable-background="new 0 0 19.23 16.2" xml:space="preserve">
+				<path  d="M17.995,0.063L0.408,6.917c-0.57,0.222-0.535,1.039,0.051,1.213l4.469,1.32l1.668,5.292
+				c0.174,0.553,0.875,0.72,1.28,0.306l2.311-2.359l4.534,3.328c0.555,0.407,1.345,0.105,1.486-0.569L19.21,1.091
+				C19.357,0.388,18.665-0.198,17.995,0.063z M15.791,3.249l-8.169,7.224c-0.081,0.072-0.133,0.172-0.145,0.28l-0.315,2.796
+				c-0.01,0.091-0.138,0.103-0.165,0.016l-1.294-4.17C5.643,9.204,5.72,8.997,5.89,8.892l9.647-5.983
+				C15.759,2.771,15.986,3.076,15.791,3.249z"/>
+			</svg>
 
-									</i>
-								</a>
-							</li>
-							<li class="socials__item">
-								<a href="#" class="socials__link" target="_blank">
-									<i class="socials__link--ic">
+		</i>
+	</a>
+</li>
+<li class="socials__item">
+	<a href="#" class="socials__link" target="_blank">
+		<i class="socials__link--ic">
 
-										<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20.35 21.034" enable-background="new 0 0 20.35 21.034" xml:space="preserve">
-											<g>
-												<g>
-													<path  d="M19.895,5.057l-0.006-0.024c-0.491-1.985-2.704-4.114-4.737-4.557L15.129,0.47
-													c-3.288-0.627-6.621-0.627-9.908,0L5.197,0.475C3.166,0.918,0.952,3.048,0.461,5.033L0.455,5.057
-													c-0.607,2.772-0.607,5.583,0,8.354l0.005,0.024c0.471,1.9,2.519,3.932,4.476,4.491v2.215c0,0.802,0.977,1.196,1.533,0.617
-													l2.245-2.333c0.487,0.027,0.974,0.042,1.461,0.042c1.655,0,3.311-0.156,4.954-0.47l0.023-0.005
-													c2.033-0.443,4.246-2.573,4.737-4.557l0.006-0.024C20.502,10.639,20.502,7.829,19.895,5.057z M18.119,13.009
-													c-0.328,1.295-2.008,2.905-3.344,3.202c-1.748,0.332-3.51,0.474-5.27,0.426c-0.035-0.001-0.069,0.013-0.093,0.038
-													c-0.25,0.256-1.639,1.682-1.639,1.682L6.03,20.146c-0.127,0.133-0.351,0.042-0.351-0.141v-3.67c0-0.061-0.043-0.112-0.103-0.124
-													l-0.001,0c-1.335-0.297-3.015-1.907-3.344-3.202c-0.546-2.505-0.546-5.045,0-7.55c0.328-1.295,2.008-2.905,3.344-3.202
-													c3.053-0.581,6.148-0.581,9.201,0c1.336,0.297,3.016,1.907,3.344,3.202C18.665,7.964,18.665,10.504,18.119,13.009z"/>
-													<path  d="M13.08,14.703c-0.205-0.062-0.401-0.104-0.583-0.18c-1.883-0.781-3.615-1.789-4.988-3.333
-													c-0.78-0.878-1.391-1.87-1.908-2.92C5.357,7.773,5.15,7.256,4.94,6.742C4.748,6.273,5.031,5.789,5.328,5.436
-													c0.279-0.331,0.638-0.585,1.027-0.772C6.659,4.519,6.959,4.603,7.18,4.86C7.66,5.417,8.1,6.001,8.457,6.646
-													c0.219,0.397,0.159,0.882-0.238,1.152C8.122,7.863,8.034,7.94,7.944,8.015C7.865,8.079,7.791,8.145,7.737,8.233
-													c-0.099,0.161-0.104,0.351-0.04,0.526c0.49,1.347,1.316,2.394,2.671,2.958c0.217,0.09,0.435,0.195,0.685,0.166
-													c0.418-0.049,0.554-0.508,0.847-0.748c0.287-0.234,0.653-0.237,0.962-0.042c0.309,0.195,0.608,0.405,0.906,0.617
-													c0.292,0.208,0.583,0.412,0.852,0.649c0.259,0.228,0.348,0.527,0.202,0.837c-0.267,0.567-0.656,1.039-1.216,1.34
-													C13.447,14.621,13.258,14.648,13.08,14.703C12.874,14.641,13.258,14.648,13.08,14.703z"/>
-													<path  d="M10.18,4.016c2.462,0.069,4.485,1.703,4.918,4.138c0.074,0.415,0.1,0.839,0.133,1.26
-													c0.014,0.177-0.086,0.345-0.278,0.348c-0.197,0.002-0.286-0.163-0.299-0.34c-0.025-0.35-0.043-0.702-0.091-1.05
-													c-0.255-1.834-1.718-3.352-3.544-3.678c-0.275-0.049-0.556-0.062-0.834-0.091C10.01,4.585,9.78,4.574,9.741,4.355
-													c-0.033-0.183,0.122-0.329,0.297-0.339C10.085,4.014,10.132,4.016,10.18,4.016C12.643,4.085,10.132,4.016,10.18,4.016z"/>
-													<path d="M13.922,8.867c-0.004,0.031-0.006,0.103-0.024,0.171c-0.065,0.247-0.44,0.278-0.526,0.029
-													c-0.026-0.074-0.029-0.158-0.03-0.238c-0.001-0.522-0.114-1.043-0.377-1.496c-0.27-0.466-0.683-0.858-1.168-1.096
-													c-0.293-0.143-0.61-0.233-0.931-0.286c-0.14-0.023-0.282-0.037-0.423-0.057c-0.171-0.024-0.262-0.133-0.254-0.301
-													c0.008-0.158,0.123-0.271,0.295-0.262c0.565,0.032,1.111,0.154,1.613,0.42c1.022,0.541,1.605,1.395,1.776,2.535
-													c0.008,0.052,0.02,0.103,0.024,0.155C13.906,8.57,13.913,8.699,13.922,8.867C13.918,8.898,13.913,8.699,13.922,8.867z"/>
-													<path  d="M12.391,8.808c-0.206,0.004-0.316-0.11-0.338-0.299c-0.015-0.132-0.026-0.265-0.058-0.393
-													c-0.062-0.252-0.196-0.486-0.408-0.641c-0.1-0.073-0.214-0.126-0.333-0.161c-0.151-0.044-0.308-0.032-0.459-0.069
-													c-0.164-0.04-0.254-0.173-0.229-0.326c0.023-0.14,0.159-0.249,0.312-0.238c0.955,0.069,1.637,0.562,1.734,1.686
-													c0.007,0.079,0.015,0.163-0.003,0.239C12.581,8.736,12.485,8.802,12.391,8.808C12.185,8.812,12.485,8.802,12.391,8.808z"/>
-												</g>
-											</g>
-										</svg>
+			<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20.35 21.034" enable-background="new 0 0 20.35 21.034" xml:space="preserve">
+				<g>
+					<g>
+						<path  d="M19.895,5.057l-0.006-0.024c-0.491-1.985-2.704-4.114-4.737-4.557L15.129,0.47
+						c-3.288-0.627-6.621-0.627-9.908,0L5.197,0.475C3.166,0.918,0.952,3.048,0.461,5.033L0.455,5.057
+						c-0.607,2.772-0.607,5.583,0,8.354l0.005,0.024c0.471,1.9,2.519,3.932,4.476,4.491v2.215c0,0.802,0.977,1.196,1.533,0.617
+						l2.245-2.333c0.487,0.027,0.974,0.042,1.461,0.042c1.655,0,3.311-0.156,4.954-0.47l0.023-0.005
+						c2.033-0.443,4.246-2.573,4.737-4.557l0.006-0.024C20.502,10.639,20.502,7.829,19.895,5.057z M18.119,13.009
+						c-0.328,1.295-2.008,2.905-3.344,3.202c-1.748,0.332-3.51,0.474-5.27,0.426c-0.035-0.001-0.069,0.013-0.093,0.038
+						c-0.25,0.256-1.639,1.682-1.639,1.682L6.03,20.146c-0.127,0.133-0.351,0.042-0.351-0.141v-3.67c0-0.061-0.043-0.112-0.103-0.124
+						l-0.001,0c-1.335-0.297-3.015-1.907-3.344-3.202c-0.546-2.505-0.546-5.045,0-7.55c0.328-1.295,2.008-2.905,3.344-3.202
+						c3.053-0.581,6.148-0.581,9.201,0c1.336,0.297,3.016,1.907,3.344,3.202C18.665,7.964,18.665,10.504,18.119,13.009z"/>
+						<path  d="M13.08,14.703c-0.205-0.062-0.401-0.104-0.583-0.18c-1.883-0.781-3.615-1.789-4.988-3.333
+						c-0.78-0.878-1.391-1.87-1.908-2.92C5.357,7.773,5.15,7.256,4.94,6.742C4.748,6.273,5.031,5.789,5.328,5.436
+						c0.279-0.331,0.638-0.585,1.027-0.772C6.659,4.519,6.959,4.603,7.18,4.86C7.66,5.417,8.1,6.001,8.457,6.646
+						c0.219,0.397,0.159,0.882-0.238,1.152C8.122,7.863,8.034,7.94,7.944,8.015C7.865,8.079,7.791,8.145,7.737,8.233
+						c-0.099,0.161-0.104,0.351-0.04,0.526c0.49,1.347,1.316,2.394,2.671,2.958c0.217,0.09,0.435,0.195,0.685,0.166
+						c0.418-0.049,0.554-0.508,0.847-0.748c0.287-0.234,0.653-0.237,0.962-0.042c0.309,0.195,0.608,0.405,0.906,0.617
+						c0.292,0.208,0.583,0.412,0.852,0.649c0.259,0.228,0.348,0.527,0.202,0.837c-0.267,0.567-0.656,1.039-1.216,1.34
+						C13.447,14.621,13.258,14.648,13.08,14.703C12.874,14.641,13.258,14.648,13.08,14.703z"/>
+						<path  d="M10.18,4.016c2.462,0.069,4.485,1.703,4.918,4.138c0.074,0.415,0.1,0.839,0.133,1.26
+						c0.014,0.177-0.086,0.345-0.278,0.348c-0.197,0.002-0.286-0.163-0.299-0.34c-0.025-0.35-0.043-0.702-0.091-1.05
+						c-0.255-1.834-1.718-3.352-3.544-3.678c-0.275-0.049-0.556-0.062-0.834-0.091C10.01,4.585,9.78,4.574,9.741,4.355
+						c-0.033-0.183,0.122-0.329,0.297-0.339C10.085,4.014,10.132,4.016,10.18,4.016C12.643,4.085,10.132,4.016,10.18,4.016z"/>
+						<path d="M13.922,8.867c-0.004,0.031-0.006,0.103-0.024,0.171c-0.065,0.247-0.44,0.278-0.526,0.029
+						c-0.026-0.074-0.029-0.158-0.03-0.238c-0.001-0.522-0.114-1.043-0.377-1.496c-0.27-0.466-0.683-0.858-1.168-1.096
+						c-0.293-0.143-0.61-0.233-0.931-0.286c-0.14-0.023-0.282-0.037-0.423-0.057c-0.171-0.024-0.262-0.133-0.254-0.301
+						c0.008-0.158,0.123-0.271,0.295-0.262c0.565,0.032,1.111,0.154,1.613,0.42c1.022,0.541,1.605,1.395,1.776,2.535
+						c0.008,0.052,0.02,0.103,0.024,0.155C13.906,8.57,13.913,8.699,13.922,8.867C13.918,8.898,13.913,8.699,13.922,8.867z"/>
+						<path  d="M12.391,8.808c-0.206,0.004-0.316-0.11-0.338-0.299c-0.015-0.132-0.026-0.265-0.058-0.393
+						c-0.062-0.252-0.196-0.486-0.408-0.641c-0.1-0.073-0.214-0.126-0.333-0.161c-0.151-0.044-0.308-0.032-0.459-0.069
+						c-0.164-0.04-0.254-0.173-0.229-0.326c0.023-0.14,0.159-0.249,0.312-0.238c0.955,0.069,1.637,0.562,1.734,1.686
+						c0.007,0.079,0.015,0.163-0.003,0.239C12.581,8.736,12.485,8.802,12.391,8.808C12.185,8.812,12.485,8.802,12.391,8.808z"/>
+					</g>
+				</g>
+			</svg>
 
-									</i>
-								</a>
-							</li>
-							<li class="socials__item">
-								<a href="#" class="socials__link" target="_blank">
-									<i class="socials__link--ic">
+		</i>
+	</a>
+</li>
+<li class="socials__item">
+	<a href="#" class="socials__link" target="_blank">
+		<i class="socials__link--ic">
 
-										<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20.167 20.324" enable-background="new 0 0 20.167 20.324" xml:space="preserve">
-											<g>
-												<g>
-													<path d="M10.266,0c-5.467,0-9.9,4.432-9.9,9.9
-													c0,1.87,0.519,3.62,1.42,5.112L0,20.324l5.481-1.755c1.418,0.784,3.049,1.231,4.785,1.231c5.468,0,9.9-4.433,9.9-9.9
-													C20.167,4.432,15.734,0,10.266,0z M10.266,18.142c-1.674,0-3.233-0.502-4.534-1.363l-3.167,1.014l1.029-3.06
-													C2.608,13.374,2.025,11.704,2.025,9.9c0-4.545,3.697-8.242,8.241-8.242c4.545,0,8.242,3.697,8.242,8.242
-													C18.508,14.445,14.811,18.142,10.266,18.142z M14.908,12.15c-0.248-0.136-1.467-0.794-1.696-0.887
-													c-0.229-0.093-0.395-0.141-0.574,0.106c-0.178,0.246-0.684,0.797-0.837,0.96c-0.154,0.163-0.302,0.178-0.55,0.042
-													c-0.248-0.135-1.052-0.433-1.985-1.33c-0.726-0.698-1.202-1.544-1.34-1.803c-0.138-0.259-0.001-0.39,0.13-0.511
-													C8.174,8.618,8.32,8.441,8.452,8.298C8.584,8.156,8.63,8.052,8.721,7.887s0.054-0.315-0.005-0.443
-													C8.657,7.315,8.199,6.052,8.007,5.538C7.815,5.025,7.602,5.101,7.454,5.095C7.307,5.09,7.139,5.062,6.971,5.056
-													C6.802,5.05,6.526,5.103,6.285,5.347C6.044,5.591,5.368,6.178,5.322,7.422C5.275,8.665,6.135,9.9,6.255,10.073
-													c0.12,0.174,1.643,2.869,4.174,3.977c2.531,1.108,2.545,0.77,3.009,0.745c0.465-0.025,1.518-0.556,1.751-1.138
-													c0.233-0.582,0.251-1.088,0.192-1.196C15.322,12.355,15.156,12.285,14.908,12.15z"/>
-												</g>
-											</g>
-										</svg>
+			<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20.167 20.324" enable-background="new 0 0 20.167 20.324" xml:space="preserve">
+				<g>
+					<g>
+						<path d="M10.266,0c-5.467,0-9.9,4.432-9.9,9.9
+						c0,1.87,0.519,3.62,1.42,5.112L0,20.324l5.481-1.755c1.418,0.784,3.049,1.231,4.785,1.231c5.468,0,9.9-4.433,9.9-9.9
+						C20.167,4.432,15.734,0,10.266,0z M10.266,18.142c-1.674,0-3.233-0.502-4.534-1.363l-3.167,1.014l1.029-3.06
+						C2.608,13.374,2.025,11.704,2.025,9.9c0-4.545,3.697-8.242,8.241-8.242c4.545,0,8.242,3.697,8.242,8.242
+						C18.508,14.445,14.811,18.142,10.266,18.142z M14.908,12.15c-0.248-0.136-1.467-0.794-1.696-0.887
+						c-0.229-0.093-0.395-0.141-0.574,0.106c-0.178,0.246-0.684,0.797-0.837,0.96c-0.154,0.163-0.302,0.178-0.55,0.042
+						c-0.248-0.135-1.052-0.433-1.985-1.33c-0.726-0.698-1.202-1.544-1.34-1.803c-0.138-0.259-0.001-0.39,0.13-0.511
+						C8.174,8.618,8.32,8.441,8.452,8.298C8.584,8.156,8.63,8.052,8.721,7.887s0.054-0.315-0.005-0.443
+						C8.657,7.315,8.199,6.052,8.007,5.538C7.815,5.025,7.602,5.101,7.454,5.095C7.307,5.09,7.139,5.062,6.971,5.056
+						C6.802,5.05,6.526,5.103,6.285,5.347C6.044,5.591,5.368,6.178,5.322,7.422C5.275,8.665,6.135,9.9,6.255,10.073
+						c0.12,0.174,1.643,2.869,4.174,3.977c2.531,1.108,2.545,0.77,3.009,0.745c0.465-0.025,1.518-0.556,1.751-1.138
+						c0.233-0.582,0.251-1.088,0.192-1.196C15.322,12.355,15.156,12.285,14.908,12.15z"/>
+					</g>
+				</g>
+			</svg>
 
-									</i>
-								</a>
-							</li>
-						</ul>
+		</i>
+	</a>
+</li>						</ul>
 						<!-- //Socials -->
 
 						<a href="tel:+38044 543 12 34" class="phone-link">044 543 12 34</a>
@@ -292,17 +474,30 @@
 
 				<div class="container">
 					<div class="promo-slider">
+						<div class="slider__loader"></div>
 						<div class="swiper-container js-promo-slider">
 							<div class="swiper-wrapper">
 								<!-- Slide -->
 								<div class="swiper-slide">
-									<div class="promo__slide">sadsad</div>
+									<div class="promo-slide">
+										<a href="#" class="promo-slide__bg">
+											<img src="img/promo/1.jpg" alt="">
+										</a>
+
+										<a href="#" class="btn btn-light">Открыть</a>
+									</div>
 								</div>
 								<!-- //Slide -->
 
 								<!-- Slide -->
 								<div class="swiper-slide">
-									<div class="promo__slide">sadsad</div>
+									<div class="promo-slide">
+										<a href="#" class="promo-slide__bg">
+											<img src="img/promo/2.jpg" alt="">
+										</a>
+
+										<a href="#" class="btn btn-light">Открыть</a>
+									</div>
 								</div>
 								<!-- //Slide -->
 							</div>
@@ -395,7 +590,7 @@
 
 			<div class="product-card__tools">
 				<!-- Wishlist btn -->
-				<a href="#" class="link-wishlist">
+				<a href="#" class="link-wishlist tooltip__wrapper">
 					<i class="link-wishlist__ic">
 						<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20.651px" height="18.534px" viewBox="0 0 20.651 18.534" enable-background="new 0 0 20.651 18.534" xml:space="preserve">
 							<g>
@@ -423,10 +618,14 @@
 							</g>
 						</svg>
 					</i>
+
+					<!-- Tooltip -->
+					<span class="tooltip tooltip-top">В избранное</span>
+					<!-- //Tooltip -->
 				</a>
 				<!-- //Wishlist btn -->
 
-				<a href="#" class="btn btn-with-ic">В корзину</a>
+				<a href="#" class="btn btn-with-ic js-add-to-cart-btn">В корзину</a>
 			</div>
 		</div>
 	</div>
@@ -447,7 +646,7 @@
 
 			<div class="product-card__tools">
 				<!-- Wishlist btn -->
-				<a href="#" class="link-wishlist">
+				<a href="#" class="link-wishlist tooltip__wrapper">
 					<i class="link-wishlist__ic">
 						<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20.651px" height="18.534px" viewBox="0 0 20.651 18.534" enable-background="new 0 0 20.651 18.534" xml:space="preserve">
 							<g>
@@ -475,10 +674,14 @@
 							</g>
 						</svg>
 					</i>
+
+					<!-- Tooltip -->
+					<span class="tooltip tooltip-top">В избранное</span>
+					<!-- //Tooltip -->
 				</a>
 				<!-- //Wishlist btn -->
 
-				<a href="#" class="btn btn-with-ic">В корзину</a>
+				<a href="#" class="btn btn-with-ic js-add-to-cart-btn">В корзину</a>
 			</div>
 		</div>
 	</div>
@@ -499,7 +702,7 @@
 
 			<div class="product-card__tools">
 				<!-- Wishlist btn -->
-				<a href="#" class="link-wishlist">
+				<a href="#" class="link-wishlist tooltip__wrapper">
 					<i class="link-wishlist__ic">
 						<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20.651px" height="18.534px" viewBox="0 0 20.651 18.534" enable-background="new 0 0 20.651 18.534" xml:space="preserve">
 							<g>
@@ -527,10 +730,14 @@
 							</g>
 						</svg>
 					</i>
+
+					<!-- Tooltip -->
+					<span class="tooltip tooltip-top">В избранное</span>
+					<!-- //Tooltip -->
 				</a>
 				<!-- //Wishlist btn -->
 
-				<a href="#" class="btn btn-with-ic">В корзину</a>
+				<a href="#" class="btn btn-with-ic js-add-to-cart-btn">В корзину</a>
 			</div>
 		</div>
 	</div>
@@ -572,7 +779,7 @@
 
 			<div class="product-card__tools">
 				<!-- Wishlist btn -->
-				<a href="#" class="link-wishlist">
+				<a href="#" class="link-wishlist tooltip__wrapper">
 					<i class="link-wishlist__ic">
 						<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20.651px" height="18.534px" viewBox="0 0 20.651 18.534" enable-background="new 0 0 20.651 18.534" xml:space="preserve">
 							<g>
@@ -600,10 +807,14 @@
 							</g>
 						</svg>
 					</i>
+
+					<!-- Tooltip -->
+					<span class="tooltip tooltip-top">В избранное</span>
+					<!-- //Tooltip -->
 				</a>
 				<!-- //Wishlist btn -->
 
-				<a href="#" class="btn btn-with-ic">В корзину</a>
+				<a href="#" class="btn btn-with-ic js-add-to-cart-btn">В корзину</a>
 			</div>
 		</div>
 	</div>
@@ -624,7 +835,7 @@
 
 			<div class="product-card__tools">
 				<!-- Wishlist btn -->
-				<a href="#" class="link-wishlist">
+				<a href="#" class="link-wishlist tooltip__wrapper">
 					<i class="link-wishlist__ic">
 						<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20.651px" height="18.534px" viewBox="0 0 20.651 18.534" enable-background="new 0 0 20.651 18.534" xml:space="preserve">
 							<g>
@@ -652,10 +863,14 @@
 							</g>
 						</svg>
 					</i>
+
+					<!-- Tooltip -->
+					<span class="tooltip tooltip-top">В избранное</span>
+					<!-- //Tooltip -->
 				</a>
 				<!-- //Wishlist btn -->
 
-				<a href="#" class="btn btn-with-ic">В корзину</a>
+				<a href="#" class="btn btn-with-ic js-add-to-cart-btn">В корзину</a>
 			</div>
 		</div>
 	</div>
@@ -676,7 +891,7 @@
 
 			<div class="product-card__tools">
 				<!-- Wishlist btn -->
-				<a href="#" class="link-wishlist">
+				<a href="#" class="link-wishlist tooltip__wrapper">
 					<i class="link-wishlist__ic">
 						<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20.651px" height="18.534px" viewBox="0 0 20.651 18.534" enable-background="new 0 0 20.651 18.534" xml:space="preserve">
 							<g>
@@ -704,10 +919,14 @@
 							</g>
 						</svg>
 					</i>
+
+					<!-- Tooltip -->
+					<span class="tooltip tooltip-top">В избранное</span>
+					<!-- //Tooltip -->
 				</a>
 				<!-- //Wishlist btn -->
 
-				<a href="#" class="btn btn-with-ic">В корзину</a>
+				<a href="#" class="btn btn-with-ic js-add-to-cart-btn">В корзину</a>
 			</div>
 		</div>
 	</div>
@@ -809,34 +1028,35 @@
 				<h2 class="w3c">&nbsp;</h2>
 
 				<div class="container">
+
 					<div class="form-block">
-					<div class="row align-vertical-center align-horisontal-between form-block__row">
-						<div class="form-block__col">
-							<div class="form-block__img">
-								<div class="form-block__img--square color-bg"></div>
-								<img src="img/flower.png" alt="Tea rose">
+						<div class="row align-vertical-center align-horisontal-between form-block__row">
+							<div class="form-block__col">
+								<div class="form-block__img">
+									<div class="form-block__img--square color-bg"></div>
+									<img src="img/flower.png" alt="Tea rose">
+								</div>
 							</div>
-						</div>
 
-						<div class="form-block__col">
-							<div class="form__col--content">
-								<h3 class="form-block__title">Есть повод?</h3>
-								<p class="form-block__notice">Но не знаете что выбрать?</p>
-								<p class="form-block__text">оставьте контакты и наш флорист подберёт самый лучший варинат специально для вас</p>
+							<div class="form-block__col">
+								<div class="form__col--content">
+									<h3 class="form-block__title">Есть повод?</h3>
+									<p class="form-block__notice">Но не знаете что выбрать?</p>
+									<p class="form-block__text">оставьте контакты и наш флорист подберёт самый лучший варинат специально для вас</p>
 
-								<form class="form">
-									<div class="input__wrapper">
-										<input type="text" class="input js-input" name="name" placeholder="Ваше имя *">
-									</div>
-									<div class="input__wrapper">
-										<input type="tel" class="input js-input" name="phone" placeholder="Ваш телефон *">
-									</div>
-									<button class="btn btn-wide" type="submit">Позвоните мне</button>
-								</form>
+									<form class="form">
+										<div class="input__wrapper">
+											<input type="text" class="input js-input" name="name" placeholder="Ваше имя *">
+										</div>
+										<div class="input__wrapper">
+											<input type="tel" class="input js-input" name="phone" placeholder="Ваш телефон *">
+										</div>
+										<button class="btn btn-wide" type="submit">Позвоните мне</button>
+									</form>
+
+								</div>
 
 							</div>
-							
-						</div>
 
 						</div>
 					</div>
@@ -852,16 +1072,741 @@
 				<div class="container">
 					<div class="choise-bouquet__block">
 						<h3 class="sect__title--sm text-center"><span>Выберите цветок:</span></h3>
+
+						<div class="choise-bouquet__variants">
+							<div class="row align-horisontal-start">
+								<!-- Item -->
+								<div class="choise-bouquet__variant--wrapper">
+									<label class="choise-bouquet__variant--label">
+
+										<input type="checkbox" name="Название цветка">
+
+										<span class="choise-bouquet__variant">
+											<span class="choise-bouquet__variant--text">Анемона</span>
+											<!-- Decor -->
+											<span class="choise-bouquet__variant--decor">
+												<img src="img/flowers/1.jpg" alt="">
+											</span>
+											<!-- //Decor -->
+										</span>
+										
+										
+									</label>
+								</div>
+								<!-- //Item -->
+
+								<!-- Item -->
+								<div class="choise-bouquet__variant--wrapper">
+									<label class="choise-bouquet__variant--label">
+
+										<input type="checkbox" name="Название цветка">
+
+										<span class="choise-bouquet__variant">
+											<span class="choise-bouquet__variant--text">Сирень</span>
+											<!-- Decor -->
+											<span class="choise-bouquet__variant--decor">
+												<img src="img/flowers/2.jpg" alt="">
+											</span>
+											<!-- //Decor -->
+										</span>
+										
+										
+									</label>
+								</div>
+								<!-- //Item -->
+
+								<!-- Item -->
+								<div class="choise-bouquet__variant--wrapper">
+									<label class="choise-bouquet__variant--label">
+
+										<input type="checkbox" name="Название цветка">
+
+										<span class="choise-bouquet__variant">
+											<span class="choise-bouquet__variant--text">Гвоздика</span>
+											<!-- Decor -->
+											<span class="choise-bouquet__variant--decor">
+												<img src="img/flowers/3.jpg" alt="">
+											</span>
+											<!-- //Decor -->
+										</span>
+										
+										
+									</label>
+								</div>
+								<!-- //Item -->
+
+								<!-- Item -->
+								<div class="choise-bouquet__variant--wrapper">
+									<label class="choise-bouquet__variant--label">
+
+										<input type="checkbox" name="Название цветка">
+
+										<span class="choise-bouquet__variant">
+											<span class="choise-bouquet__variant--text">Гиацинт</span>
+											<!-- Decor -->
+											<span class="choise-bouquet__variant--decor">
+												<img src="img/flowers/1.jpg" alt="">
+											</span>
+											<!-- //Decor -->
+										</span>
+										
+										
+									</label>
+								</div>
+								<!-- //Item -->
+
+								<!-- Item -->
+								<div class="choise-bouquet__variant--wrapper">
+									<label class="choise-bouquet__variant--label">
+
+										<input type="checkbox" name="Название цветка">
+
+										<span class="choise-bouquet__variant">
+											<span class="choise-bouquet__variant--text">Гербера</span>
+											<!-- Decor -->
+											<span class="choise-bouquet__variant--decor">
+												<img src="img/flowers/2.jpg" alt="">
+											</span>
+											<!-- //Decor -->
+										</span>
+										
+										
+									</label>
+								</div>
+								<!-- //Item -->
+
+								<!-- Item -->
+								<div class="choise-bouquet__variant--wrapper">
+									<label class="choise-bouquet__variant--label">
+
+										<input type="checkbox" name="Название цветка">
+
+										<span class="choise-bouquet__variant">
+											<span class="choise-bouquet__variant--text">Гортензия</span>
+											<!-- Decor -->
+											<span class="choise-bouquet__variant--decor">
+												<img src="img/flowers/1.jpg" alt="">
+											</span>
+											<!-- //Decor -->
+										</span>
+										
+										
+									</label>
+								</div>
+								<!-- //Item -->
+
+								<!-- Item -->
+								<div class="choise-bouquet__variant--wrapper">
+									<label class="choise-bouquet__variant--label">
+
+										<input type="checkbox" name="Название цветка">
+
+										<span class="choise-bouquet__variant">
+											<span class="choise-bouquet__variant--text">Дельфиниум</span>
+											<!-- Decor -->
+											<span class="choise-bouquet__variant--decor">
+												<img src="img/flowers/2.jpg" alt="">
+											</span>
+											<!-- //Decor -->
+										</span>
+										
+										
+									</label>
+								</div>
+								<!-- //Item -->
+
+								<!-- Item -->
+								<div class="choise-bouquet__variant--wrapper">
+									<label class="choise-bouquet__variant--label">
+
+										<input type="checkbox" name="Название цветка">
+
+										<span class="choise-bouquet__variant">
+											<span class="choise-bouquet__variant--text">Эустома</span>
+											<!-- Decor -->
+											<span class="choise-bouquet__variant--decor">
+												<img src="img/flowers/3.jpg" alt="">
+											</span>
+											<!-- //Decor -->
+										</span>
+										
+										
+									</label>
+								</div>
+								<!-- //Item -->
+
+								<!-- Item -->
+								<div class="choise-bouquet__variant--wrapper">
+									<label class="choise-bouquet__variant--label">
+
+										<input type="checkbox" name="Название цветка">
+
+										<span class="choise-bouquet__variant">
+											<span class="choise-bouquet__variant--text">Кала</span>
+											<!-- Decor -->
+											<span class="choise-bouquet__variant--decor">
+												<img src="img/flowers/1.jpg" alt="">
+											</span>
+											<!-- //Decor -->
+										</span>
+										
+										
+									</label>
+								</div>
+								<!-- //Item -->
+
+								<!-- Item -->
+								<div class="choise-bouquet__variant--wrapper">
+									<label class="choise-bouquet__variant--label">
+
+										<input type="checkbox" name="Название цветка">
+
+										<span class="choise-bouquet__variant">
+											<span class="choise-bouquet__variant--text">Клематис</span>
+											<!-- Decor -->
+											<span class="choise-bouquet__variant--decor">
+												<img src="img/flowers/2.jpg" alt="">
+											</span>
+											<!-- //Decor -->
+										</span>
+										
+										
+									</label>
+								</div>
+								<!-- //Item -->
+							</div>
+						</div>
+					</div>
+
+					<div class="choise-bouquet__block">
+						<h3 class="sect__title--sm text-center"><span>Выберите цвет букета:</span></h3>
+
+						<div class="choise-bouquet__variants">
+							<div class="row align-horisontal-start">
+								<!-- Item -->
+								<div class="choise-bouquet__variant--wrapper">
+									<label class="choise-bouquet__variant--label">
+
+										<input type="checkbox" name="bouquetColor_white">
+
+										<span class="choise-bouquet__variant">
+											<span class="choise-bouquet__variant--text">Белый</span>
+											<!-- Decor -->
+											<span class="choise-bouquet__variant--decor">
+												<span class="choise-bouquet__variant--decor_color">
+													<span class="choise-bouquet__variant--decor_color-value" style="background-color: white;"></span>
+												</span>
+											</span>
+											<!-- //Decor -->
+										</span>
+										
+										
+									</label>
+								</div>
+								<!-- //Item -->
+
+								<!-- Item -->
+								<div class="choise-bouquet__variant--wrapper">
+									<label class="choise-bouquet__variant--label">
+
+										<input type="checkbox" name="bouquetColor_red">
+
+										<span class="choise-bouquet__variant">
+											<span class="choise-bouquet__variant--text">Красный</span>
+											<!-- Decor -->
+											<span class="choise-bouquet__variant--decor">
+												<span class="choise-bouquet__variant--decor_color">
+													<span class="choise-bouquet__variant--decor_color-value" style="background-color: #ff5c5c;"></span>
+												</span>
+											</span>
+											<!-- //Decor -->
+										</span>
+										
+										
+									</label>
+								</div>
+								<!-- //Item -->
+
+								<!-- Item -->
+								<div class="choise-bouquet__variant--wrapper">
+									<label class="choise-bouquet__variant--label">
+
+										<input type="checkbox" name="bouquetColor_blue">
+
+										<span class="choise-bouquet__variant">
+											<span class="choise-bouquet__variant--text">Синий</span>
+											<!-- Decor -->
+											<span class="choise-bouquet__variant--decor">
+												<span class="choise-bouquet__variant--decor_color">
+													<span class="choise-bouquet__variant--decor_color-value" style="background-color: #546bde;"></span>
+												</span>
+											</span>
+											<!-- //Decor -->
+										</span>
+										
+										
+									</label>
+								</div>
+								<!-- //Item -->
+
+								<!-- Item -->
+								<div class="choise-bouquet__variant--wrapper">
+									<label class="choise-bouquet__variant--label">
+
+										<input type="checkbox" name="bouquetColor_pink">
+
+										<span class="choise-bouquet__variant">
+											<span class="choise-bouquet__variant--text">Розовый</span>
+											<!-- Decor -->
+											<span class="choise-bouquet__variant--decor">
+												<span class="choise-bouquet__variant--decor_color">
+													<span class="choise-bouquet__variant--decor_color-value" style="background-color: #ff8fcc;"></span>
+												</span>
+											</span>
+											<!-- //Decor -->
+										</span>
+										
+										
+									</label>
+								</div>
+								<!-- //Item -->
+
+								<!-- Item -->
+								<div class="choise-bouquet__variant--wrapper">
+									<label class="choise-bouquet__variant--label">
+
+										<input type="checkbox" name="bouquetColor_capucino">
+
+										<span class="choise-bouquet__variant">
+											<span class="choise-bouquet__variant--text">Капучино</span>
+											<!-- Decor -->
+											<span class="choise-bouquet__variant--decor">
+												<span class="choise-bouquet__variant--decor_color">
+													<span class="choise-bouquet__variant--decor_color-value" style="background-color: #e0c6b6;"></span>
+												</span>
+											</span>
+											<!-- //Decor -->
+										</span>
+										
+										
+									</label>
+								</div>
+								<!-- //Item -->
+
+								<!-- Item -->
+								<div class="choise-bouquet__variant--wrapper">
+									<label class="choise-bouquet__variant--label">
+
+										<input type="checkbox" name="bouquetColor_violet">
+
+										<span class="choise-bouquet__variant">
+											<span class="choise-bouquet__variant--text">Фиолетовый</span>
+											<!-- Decor -->
+											<span class="choise-bouquet__variant--decor">
+												<span class="choise-bouquet__variant--decor_color">
+													<span class="choise-bouquet__variant--decor_color-value" style="background-color: #8866de;"></span>
+												</span>
+											</span>
+											<!-- //Decor -->
+										</span>
+										
+										
+									</label>
+								</div>
+								<!-- //Item -->
+
+								<!-- Item -->
+								<div class="choise-bouquet__variant--wrapper">
+									<label class="choise-bouquet__variant--label">
+
+										<input type="checkbox" name="bouquetColor_lilac">
+
+										<span class="choise-bouquet__variant">
+											<span class="choise-bouquet__variant--text">Сиреневый</span>
+											<!-- Decor -->
+											<span class="choise-bouquet__variant--decor">
+												<span class="choise-bouquet__variant--decor_color">
+													<span class="choise-bouquet__variant--decor_color-value" style="background-color: #b96fde;"></span>
+												</span>
+											</span>
+											<!-- //Decor -->
+										</span>
+										
+										
+									</label>
+								</div>
+								<!-- //Item -->
+
+								<!-- Item -->
+								<div class="choise-bouquet__variant--wrapper">
+									<label class="choise-bouquet__variant--label">
+
+										<input type="checkbox" name="bouquetColor_yellow">
+
+										<span class="choise-bouquet__variant">
+											<span class="choise-bouquet__variant--text">Желтый</span>
+											<!-- Decor -->
+											<span class="choise-bouquet__variant--decor">
+												<span class="choise-bouquet__variant--decor_color">
+													<span class="choise-bouquet__variant--decor_color-value" style="background-color: #fff28a;"></span>
+												</span>
+											</span>
+											<!-- //Decor -->
+										</span>
+										
+										
+									</label>
+								</div>
+								<!-- //Item -->
+
+								<!-- Item -->
+								<div class="choise-bouquet__variant--wrapper">
+									<label class="choise-bouquet__variant--label">
+
+										<input type="checkbox" name="bouquetColor_green">
+
+										<span class="choise-bouquet__variant">
+											<span class="choise-bouquet__variant--text">Зеленый</span>
+											<!-- Decor -->
+											<span class="choise-bouquet__variant--decor">
+												<span class="choise-bouquet__variant--decor_color">
+													<span class="choise-bouquet__variant--decor_color-value" style="background-color: #adeb95;"></span>
+												</span>
+											</span>
+											<!-- //Decor -->
+										</span>
+										
+										
+									</label>
+								</div>
+								<!-- //Item -->
+
+								<!-- Item -->
+								<div class="choise-bouquet__variant--wrapper">
+									<label class="choise-bouquet__variant--label">
+
+										<input type="checkbox" name="bouquetColor_orange">
+
+										<span class="choise-bouquet__variant">
+											<span class="choise-bouquet__variant--text">Оранжевый</span>
+											<!-- Decor -->
+											<span class="choise-bouquet__variant--decor">
+												<span class="choise-bouquet__variant--decor_color">
+													<span class="choise-bouquet__variant--decor_color-value" style="background-color:orange;"></span>
+												</span>
+											</span>
+											<!-- //Decor -->
+										</span>
+										
+										
+									</label>
+								</div>
+								<!-- //Item -->
+
+							</div>
+						</div>
 					</div>
 				</div>
 				<!-- //container -->
 			</section>
 			<!-- //Section choice  bouquet-->
+
+			<!-- Section about -->
+			<section class="sect__about gutter-bottom">
+				<h2 class="w3c">&nbsp;</h2>
+
+
+				<div class="about-us">
+					<div class="about-us__content bg bg-with-overlay" style="background-image: url('img/backgrounds/decor-bg.jpg');">
+						<div class="container">
+
+							<div class="about-us__content--block">
+								<div class="about-us__content--block_text">
+									<img src="img/women.png" alt="Tea Rose">
+									<h3 class="sect__title sect__title--accent">О магазинах «Чайная Роза»</h3>
+									<p>Хакерские методы взлома. Самый опасный и незаметный способ украсть вашу страницу или личную информацию. Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Lorem ipsum dolor sit amet.</p>
+								</div>
+
+								<div class="about-us__content--block_img">
+									<img src="img/women.png" alt="Tea Rose">
+								</div>
+							</div>
+
+						</div>
+						<!-- //container -->
+					</div>
+
+					<div class="about-us__btn container text-left">
+						<a href="page-about.html" class="btn">Читать полностью</a>
+					</div>
+
+
+				</div>
+				
+			</section>
+			<!-- //Section about -->
+
+			<!-- Section blog -->
+			<section class="sect__blog">
+				<h2 class="w3c">&nbsp;</h2>
+
+				<div class="container">
+					<div class="blog">
+						<div class="row align-vertical-center blog__row">
+							<div class="blog__articles--col">
+								<div class="row align-horisontal-start">
+									<!-- Article card -->
+									<article class="article-card">
+										<div class="product-card">
+											<a href="page-article.html" class="product-card__thumbnail">
+												<span>Открыть</span>
+												<img src="img/product-thumb.jpg" alt="Product thumnail">
+											</a>
+											<div class="product-card__information">
+												<p class="date">10.09.2019</p>
+												<h3 class="product-card__title">
+													<a href="page-article.html">Название статьи</a>
+												</h3>
+											</div>
+										</div>
+									</article>
+									<!-- //Article card -->
+
+									<!-- Article card -->
+									<article class="article-card">
+										<div class="product-card">
+											<a href="page-article.html" class="product-card__thumbnail">
+												<span>Открыть</span>
+												<img src="img/product-thumb.jpg" alt="Product thumnail">
+											</a>
+											<div class="product-card__information">
+												<p class="date">10.09.2019</p>
+												<h3 class="product-card__title">
+													<a href="page-article.html">Название<br>статьи</a>
+												</h3>
+											</div>
+										</div>
+									</article>
+									<!-- //Article card -->
+
+									<!-- Article card -->
+									<article class="article-card">
+										<div class="product-card">
+											<a href="page-article.html" class="product-card__thumbnail">
+												<span>Открыть</span>
+												<img src="img/product-thumb.jpg" alt="Product thumnail">
+											</a>
+											<div class="product-card__information">
+												<p class="date">10.09.2019</p>
+												<h3 class="product-card__title">
+													<a href="page-article.html">Название статьи</a>
+												</h3>
+											</div>
+										</div>
+									</article>
+									<!-- //Article card -->
+								</div>
+							</div>
+
+							<div class="blog-title__content--col">
+								<div class="blog-title__content">
+									<img src="img/decor/blog-title-decor.svg" class="decor-img" alt="Tea rose">
+									<h3 class="sect__title">Блог<br>Чайной<br>Розы</h3>
+									<a href="page-catalog.html" class="permalink">Открыть статьи</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- //container -->
+			</section>
+			<!-- //Section blog -->
 		</main>
 		<!-- //Main -->
 
 		<!-- Footer -->
-		<footer class="footer"></footer>
+		<footer class="footer">
+	<div class="subscribe accent-bg">
+		<div class="container">
+			<div class="row align-vertical-center align-horisontal-between subscribe__row">
+				<p class="subscribe__text">Подпишитесь на рассылку,<br>что бы быть в курсе всех новостей</p>
+
+				<form  class="subscribe__form">
+					<div class="row align-vertical-center align-horisontal-start">
+						<div class="input-round__wrapper">
+							<input type="email" class="input-round" name="email" placeholder="e-mail">
+						</div>
+						<button class="btn" type="submit">Подписаться</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- //container -->
+	</div>
+
+	<div class="footer__content">
+		<div class="container">
+			<div class="row footer__row">
+
+				<div class="footer__logo">
+
+					<!-- Logo -->
+					<a href="index.html" class="logo">
+						<img src="img/logo-dark.svg" alt="Tea Rose">
+					</a>
+					<!-- //Logo -->
+
+				</div>
+
+				<div class="footer__actions">
+					<div class="row footer__actions--row row-gutters">
+						<div class="footer__col">
+							<h2 class="footer__col--title">Разделы сайта</h2>
+
+							<nav class="footer__nav">
+								<ul>
+									<li><a href="page-about.html">О нас</a></li>
+									<li><a href="page-blog.html">Блог</a></li>
+									<li><a href="page-contacts.html">Контакты</a></li>
+									<li><a href="page-technical.html">Доставка</a></li>
+									<li><a href="page-technical.html">Возврат</a></li>
+									<li><a href="page-technical.html">Оплата</a></li>
+									<li><a href="page-technical.html">Конфидициальность</a></li>
+								</ul>
+							</nav>
+						</div>
+						<!-- //col -->
+
+						<div class="footer__col">
+							<h2 class="footer__col--title">Приезжайте к нам</h2>
+
+							<div class="footer__contacts">
+								<p class="footer__contacts--link block-with-ic block-with-ic__address">Киев,<br>Бульвар Леси<br>Украинки 10</p>
+								<p class="footer__contacts--link block-with-ic block-with-ic__address">Киев,<br>Бульвар Леси<br>Украинки 10</p>
+							</div>
+						</div>
+						<!-- //col -->
+
+						<div class="footer__col">
+							<h2 class="footer__col--title">Свяжитесь</h2>
+
+							<div class="footer__contacts">
+								<p class="footer__contacts--link block-with-ic block-with-ic__phone"><a href="tel:+380449829898">+38 044 982 98 98</a></p>
+								<p class="footer__contacts--link block-with-ic block-with-ic__phone"><a href="tel:+380997232332">+38 099 723 23 32</a></p>
+								<p class="footer__contacts--link block-with-ic block-with-ic__email"><a href="mailto:admin@tea-rose.com.ua<">admin@tea-rose.ua</a></p>
+							</div>
+						</div>
+						<!-- //col -->
+
+						<div class="footer__col">
+							<h2 class="footer__col--title">Мы в соц. сетях</h2>
+
+							<ul class="socials socials-accent">
+								<li class="socials__item">
+	<a href="#" class="socials__link" target="_blank">
+		<i class="socials__link--ic">
+
+			<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 19.23 16.2" enable-background="new 0 0 19.23 16.2" xml:space="preserve">
+				<path  d="M17.995,0.063L0.408,6.917c-0.57,0.222-0.535,1.039,0.051,1.213l4.469,1.32l1.668,5.292
+				c0.174,0.553,0.875,0.72,1.28,0.306l2.311-2.359l4.534,3.328c0.555,0.407,1.345,0.105,1.486-0.569L19.21,1.091
+				C19.357,0.388,18.665-0.198,17.995,0.063z M15.791,3.249l-8.169,7.224c-0.081,0.072-0.133,0.172-0.145,0.28l-0.315,2.796
+				c-0.01,0.091-0.138,0.103-0.165,0.016l-1.294-4.17C5.643,9.204,5.72,8.997,5.89,8.892l9.647-5.983
+				C15.759,2.771,15.986,3.076,15.791,3.249z"/>
+			</svg>
+
+		</i>
+	</a>
+</li>
+<li class="socials__item">
+	<a href="#" class="socials__link" target="_blank">
+		<i class="socials__link--ic">
+
+			<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20.35 21.034" enable-background="new 0 0 20.35 21.034" xml:space="preserve">
+				<g>
+					<g>
+						<path  d="M19.895,5.057l-0.006-0.024c-0.491-1.985-2.704-4.114-4.737-4.557L15.129,0.47
+						c-3.288-0.627-6.621-0.627-9.908,0L5.197,0.475C3.166,0.918,0.952,3.048,0.461,5.033L0.455,5.057
+						c-0.607,2.772-0.607,5.583,0,8.354l0.005,0.024c0.471,1.9,2.519,3.932,4.476,4.491v2.215c0,0.802,0.977,1.196,1.533,0.617
+						l2.245-2.333c0.487,0.027,0.974,0.042,1.461,0.042c1.655,0,3.311-0.156,4.954-0.47l0.023-0.005
+						c2.033-0.443,4.246-2.573,4.737-4.557l0.006-0.024C20.502,10.639,20.502,7.829,19.895,5.057z M18.119,13.009
+						c-0.328,1.295-2.008,2.905-3.344,3.202c-1.748,0.332-3.51,0.474-5.27,0.426c-0.035-0.001-0.069,0.013-0.093,0.038
+						c-0.25,0.256-1.639,1.682-1.639,1.682L6.03,20.146c-0.127,0.133-0.351,0.042-0.351-0.141v-3.67c0-0.061-0.043-0.112-0.103-0.124
+						l-0.001,0c-1.335-0.297-3.015-1.907-3.344-3.202c-0.546-2.505-0.546-5.045,0-7.55c0.328-1.295,2.008-2.905,3.344-3.202
+						c3.053-0.581,6.148-0.581,9.201,0c1.336,0.297,3.016,1.907,3.344,3.202C18.665,7.964,18.665,10.504,18.119,13.009z"/>
+						<path  d="M13.08,14.703c-0.205-0.062-0.401-0.104-0.583-0.18c-1.883-0.781-3.615-1.789-4.988-3.333
+						c-0.78-0.878-1.391-1.87-1.908-2.92C5.357,7.773,5.15,7.256,4.94,6.742C4.748,6.273,5.031,5.789,5.328,5.436
+						c0.279-0.331,0.638-0.585,1.027-0.772C6.659,4.519,6.959,4.603,7.18,4.86C7.66,5.417,8.1,6.001,8.457,6.646
+						c0.219,0.397,0.159,0.882-0.238,1.152C8.122,7.863,8.034,7.94,7.944,8.015C7.865,8.079,7.791,8.145,7.737,8.233
+						c-0.099,0.161-0.104,0.351-0.04,0.526c0.49,1.347,1.316,2.394,2.671,2.958c0.217,0.09,0.435,0.195,0.685,0.166
+						c0.418-0.049,0.554-0.508,0.847-0.748c0.287-0.234,0.653-0.237,0.962-0.042c0.309,0.195,0.608,0.405,0.906,0.617
+						c0.292,0.208,0.583,0.412,0.852,0.649c0.259,0.228,0.348,0.527,0.202,0.837c-0.267,0.567-0.656,1.039-1.216,1.34
+						C13.447,14.621,13.258,14.648,13.08,14.703C12.874,14.641,13.258,14.648,13.08,14.703z"/>
+						<path  d="M10.18,4.016c2.462,0.069,4.485,1.703,4.918,4.138c0.074,0.415,0.1,0.839,0.133,1.26
+						c0.014,0.177-0.086,0.345-0.278,0.348c-0.197,0.002-0.286-0.163-0.299-0.34c-0.025-0.35-0.043-0.702-0.091-1.05
+						c-0.255-1.834-1.718-3.352-3.544-3.678c-0.275-0.049-0.556-0.062-0.834-0.091C10.01,4.585,9.78,4.574,9.741,4.355
+						c-0.033-0.183,0.122-0.329,0.297-0.339C10.085,4.014,10.132,4.016,10.18,4.016C12.643,4.085,10.132,4.016,10.18,4.016z"/>
+						<path d="M13.922,8.867c-0.004,0.031-0.006,0.103-0.024,0.171c-0.065,0.247-0.44,0.278-0.526,0.029
+						c-0.026-0.074-0.029-0.158-0.03-0.238c-0.001-0.522-0.114-1.043-0.377-1.496c-0.27-0.466-0.683-0.858-1.168-1.096
+						c-0.293-0.143-0.61-0.233-0.931-0.286c-0.14-0.023-0.282-0.037-0.423-0.057c-0.171-0.024-0.262-0.133-0.254-0.301
+						c0.008-0.158,0.123-0.271,0.295-0.262c0.565,0.032,1.111,0.154,1.613,0.42c1.022,0.541,1.605,1.395,1.776,2.535
+						c0.008,0.052,0.02,0.103,0.024,0.155C13.906,8.57,13.913,8.699,13.922,8.867C13.918,8.898,13.913,8.699,13.922,8.867z"/>
+						<path  d="M12.391,8.808c-0.206,0.004-0.316-0.11-0.338-0.299c-0.015-0.132-0.026-0.265-0.058-0.393
+						c-0.062-0.252-0.196-0.486-0.408-0.641c-0.1-0.073-0.214-0.126-0.333-0.161c-0.151-0.044-0.308-0.032-0.459-0.069
+						c-0.164-0.04-0.254-0.173-0.229-0.326c0.023-0.14,0.159-0.249,0.312-0.238c0.955,0.069,1.637,0.562,1.734,1.686
+						c0.007,0.079,0.015,0.163-0.003,0.239C12.581,8.736,12.485,8.802,12.391,8.808C12.185,8.812,12.485,8.802,12.391,8.808z"/>
+					</g>
+				</g>
+			</svg>
+
+		</i>
+	</a>
+</li>
+<li class="socials__item">
+	<a href="#" class="socials__link" target="_blank">
+		<i class="socials__link--ic">
+
+			<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20.167 20.324" enable-background="new 0 0 20.167 20.324" xml:space="preserve">
+				<g>
+					<g>
+						<path d="M10.266,0c-5.467,0-9.9,4.432-9.9,9.9
+						c0,1.87,0.519,3.62,1.42,5.112L0,20.324l5.481-1.755c1.418,0.784,3.049,1.231,4.785,1.231c5.468,0,9.9-4.433,9.9-9.9
+						C20.167,4.432,15.734,0,10.266,0z M10.266,18.142c-1.674,0-3.233-0.502-4.534-1.363l-3.167,1.014l1.029-3.06
+						C2.608,13.374,2.025,11.704,2.025,9.9c0-4.545,3.697-8.242,8.241-8.242c4.545,0,8.242,3.697,8.242,8.242
+						C18.508,14.445,14.811,18.142,10.266,18.142z M14.908,12.15c-0.248-0.136-1.467-0.794-1.696-0.887
+						c-0.229-0.093-0.395-0.141-0.574,0.106c-0.178,0.246-0.684,0.797-0.837,0.96c-0.154,0.163-0.302,0.178-0.55,0.042
+						c-0.248-0.135-1.052-0.433-1.985-1.33c-0.726-0.698-1.202-1.544-1.34-1.803c-0.138-0.259-0.001-0.39,0.13-0.511
+						C8.174,8.618,8.32,8.441,8.452,8.298C8.584,8.156,8.63,8.052,8.721,7.887s0.054-0.315-0.005-0.443
+						C8.657,7.315,8.199,6.052,8.007,5.538C7.815,5.025,7.602,5.101,7.454,5.095C7.307,5.09,7.139,5.062,6.971,5.056
+						C6.802,5.05,6.526,5.103,6.285,5.347C6.044,5.591,5.368,6.178,5.322,7.422C5.275,8.665,6.135,9.9,6.255,10.073
+						c0.12,0.174,1.643,2.869,4.174,3.977c2.531,1.108,2.545,0.77,3.009,0.745c0.465-0.025,1.518-0.556,1.751-1.138
+						c0.233-0.582,0.251-1.088,0.192-1.196C15.322,12.355,15.156,12.285,14.908,12.15z"/>
+					</g>
+				</g>
+			</svg>
+
+		</i>
+	</a>
+</li>							</ul>
+						</div>
+						<!-- //col -->
+
+					</div>
+				</div>
+			</div>
+
+			<div class="copyright">
+				<div class="row align-vertical-center align-horisontal-between">
+					<p class="copyright__text">&copy; 2020 Все права защищены</p>
+
+					<a href="#" class="developed" target="_blank" title="Grytsay">
+						<img src="img/grytsay.svg" alt="Grytsay">
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- //container -->
+	</div>
+</footer>
 		<!-- //Footer -->
 
 	</div>
