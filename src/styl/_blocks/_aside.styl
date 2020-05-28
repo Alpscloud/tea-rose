@@ -1,0 +1,60 @@
+.aside
+	width 100%
+	max-width 270px
+	
+	&-form
+		&__reset
+			padding-right 20px
+			.btn__reset
+				width 100%
+				
+				
+		&__filters
+			box-shadow $round-input-shadow
+			padding 30px 20px
+			margin-bottom 30px
+			margin-top 50px
+			
+			&--block
+				padding-top 30px
+				&_wrapper
+					border-bottom 1px solid #e0e0e0
+					padding-bottom 20px
+					margin-bottom 20px
+					&:last-child
+						border-bottom none
+						padding-bottom 0
+						margin-bottom 0
+						
+				&_btn
+					display block
+					text-align left
+					width 100%
+					padding-right 25px
+					line-height 1
+					font 14px $Med
+					position relative
+					
+					&:after
+						pseudo()
+						position absolute
+						right 0
+						top 7px
+						width 12px
+						height 5px
+						will-change transform
+						transition transform .17s ease-in-out
+						background url('../img/icons/svg/arrow-sm.svg') 50% 50% no-repeat / 12px 5px
+						
+					&:hover
+						color $accent-color
+					&.is-active
+						&:after
+							transform rotate(-180deg)
+							
+				.checkbox__label,
+				.radio__label
+					margin-bottom 20px
+					width 100%
+					&:last-child
+						margin-bottom 0

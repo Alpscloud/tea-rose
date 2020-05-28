@@ -83,7 +83,7 @@
 							</div>
 						</form>
 
-						<a href="#" class="forgot-pw-link">Забыли пароль?</a>
+						<a href="#" class="forgot-pw-link js-open-restore-pw-form-btn">Забыли пароль?</a>
 					</div>
 					<!-- //Login form -->
 
@@ -121,6 +121,41 @@
 	</div>
 </div>
 <!-- //Popup login-->
+
+<!-- Popup restore pw-->
+<div class="popup js-popup js-popup-restore-pw-form">
+	<div class="popup__overflow">
+		<div class="popup__body text-center">
+			<!-- Close btn -->
+			<button class="btn__close js-close-popup-btn" type="button">
+				<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
+					<path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717
+					L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859
+					c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287
+					l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285
+					L284.286,256.002z"/>
+				</svg>
+			</button>
+			<!-- //Close btn -->
+
+			<!-- Popup content-->
+			<div class="popup__content">
+				<h3 class="popup__title">Восстановление пароля</h3>
+				<p class="popup__text">Мы вышлем Вам пароль на Ваш e-mail,<br>указанный при регистрации</p>
+				<form class="popup__form text-left">
+					<div class="input__wrapper">
+						<input type="email" class="input-round js-input" name="email" placeholder="e-mail *">
+					</div>
+					<div class="input__wrapper">
+						<button class="btn btn-wide" type="button">Отправить</button>
+					</div>
+				</form>
+			</div>
+			<!-- //Popup content-->
+		</div>
+	</div>
+</div>
+<!-- //Popup restore pw-->
 
 <!-- Popup quick order-->
 <div class="popup js-popup js-popup-form">
@@ -213,8 +248,8 @@
 				<h3 class="popup__title">Товар добавлен в корзину</h3>
 
 				<div class="row popup__btns">
-					<div class="btn__wrapper"><a href="page-cart.html" class="btn btn-sm">Перейти в корзину</a></div>
-					<div class="btn__wrapper"><a href="#" class="btn btn-sm btn-light js-close-popup-btn">Вернуться на сайт</a></div>
+					<a href="page-cart.html" class="btn btn-wide">Перейти в корзину</a>
+					<a href="#" class="btn btn-wide btn-light js-close-popup-btn">Вернуться на сайт</a>
 				</div>
 			</div>
 			<!-- //Popup content-->
@@ -222,6 +257,42 @@
 	</div>
 </div>
 <!-- //Popup add to cart-->		<!-- //Popups -->
+
+		<!-- Choise results -->
+		<div class="choise-results__wrapper js-choise-results">
+	<div class="choise-results__content">
+		<div class="container">
+			<div class="row align-vertical-center align-horisontal-between">
+				<p class="choise-results__text">По вашему фильтру найдено позиций:</p>
+
+				<span class="choise-results__value">144</span>
+
+				<div class="choise-results__tools">
+					<div class="row align-vertical-center align-horisontal-end">
+						<a href="page-catalog.html" class="choise-results__link">
+							<span>Показать товары</span>
+
+							<i class="round-ic">
+								
+							</i>
+						</a>
+
+						<button class="btn__clear round-ic js-choise-results-clear-btn" type="button">
+							<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
+								<path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717
+								L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859
+								c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287
+								l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285
+								L284.286,256.002z"/>
+							</svg>
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+		<!-- //Choise results -->
 
 		<!-- Header -->
 		<header class="header">
@@ -351,11 +422,151 @@
 					<!-- NAV -->
 					<nav class="nav-catalog">
 	<ul class="nav-catalog__list">
-		<li class="nav-catalog__item"><a href="#" class="nav-catalog__link">Цветы</a></li>
-		<li class="nav-catalog__item"><a href="#" class="nav-catalog__link">Декор и подарки</a></li>
-		<li class="nav-catalog__item"><a href="#" class="nav-catalog__link">Всё для свадьбы</a></li>
-		<li class="nav-catalog__item"><a href="#" class="nav-catalog__link">Новости и акции</a></li>
-		<li class="nav-catalog__item"><a href="#" class="nav-catalog__link">Букет недели</a></li>
+		<li class="nav-catalog__item has-sublist">
+			<a href="page-catalog.html" class="nav-catalog__link">Цветы</a>
+
+			<button class="btn__toggle-subnav" type="button"></button>
+
+			<!-- Sublist -->
+			<div class="nav-catalog__sublist--wrapper">
+				<div class="nav-catalog__sublist--content">
+					<div class="container">
+						<h2 class="nav-catalog__sublist--title">Цветы</h2>
+						<ul>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- Sublist -->
+		</li>
+		<li class="nav-catalog__item has-sublist">
+			<a href="page-catalog.html" class="nav-catalog__link">Декор и подарки</a>
+
+			<button class="btn__toggle-subnav" type="button"></button>
+
+			<!-- Sublist -->
+			<div class="nav-catalog__sublist--wrapper">
+				<div class="nav-catalog__sublist--content">
+					<div class="container">
+						<h2 class="nav-catalog__sublist--title">Декор и подарки</h2>
+						<ul>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными.</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- Sublist -->
+
+
+		</li>
+		<li class="nav-catalog__item has-sublist">
+			<a href="page-catalog.html" class="nav-catalog__link">Всё для свадьбы</a>
+
+			<button class="btn__toggle-subnav" type="button"></button>
+
+			<!-- Sublist -->
+			<div class="nav-catalog__sublist--wrapper">
+				<div class="nav-catalog__sublist--content">
+					<div class="container">
+						<h2 class="nav-catalog__sublist--title">Всё для свадьбы</h2>
+						<ul>
+							<li><a href="page-catalog.html">Далеко-далеко за.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за Далеко-далеко.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за.Далеко-далеко.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за.</a></li>
+							<li><a href="page-catalog.html">Далек.</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- Sublist -->
+
+
+		</li>
+		<li class="nav-catalog__item has-sublist">
+			<a href="page-catalog.html" class="nav-catalog__link">Новости и акции</a>
+
+			<button class="btn__toggle-subnav" type="button"></button>
+
+			<!-- Sublist -->
+			<div class="nav-catalog__sublist--wrapper">
+				<div class="nav-catalog__sublist--content">
+					<div class="container">
+						<h2 class="nav-catalog__sublist--title">Новости и акции</h2>
+						<ul>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными горами.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными горами.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными горами.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными горами.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными горами.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными горами.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными горами.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными горами.</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- Sublist -->
+
+			
+		</li>
+		<li class="nav-catalog__item has-sublist">
+			<a href="page-catalog.html" class="nav-catalog__link">Букет недели</a>
+
+			<button class="btn__toggle-subnav" type="button"></button>
+
+			<!-- Sublist -->
+			<div class="nav-catalog__sublist--wrapper">
+				<div class="nav-catalog__sublist--content">
+					<div class="container">
+						<h2 class="nav-catalog__sublist--title">Букет недели</h2>
+						<ul>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- Sublist -->
+
+			
+		</li>
 	</ul>
 </nav>
 					<!-- //NAV -->

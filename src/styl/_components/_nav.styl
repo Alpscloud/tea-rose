@@ -23,11 +23,83 @@
 			&:last-child
 				margin-right 0
 				
+			&.has-sublist
+				> .nav-catalog__link
+					padding-right 20px
+					&:after
+						pseudo()
+						width 12px
+						height 5px
+						background url('../img/icons/svg/arrow-sm.svg') 50% 50% no-repeat / 12px 5px
+						position absolute
+						right 0
+						top 50%
+						transform translateY(-50%)
+						will-change transform
+						transition transform .17s ease-in-out
+						
+				&:hover
+					> .nav-catalog__link
+						color $accent-color
+						&:after
+							transform translateY(-50%) rotate(-180deg)
+							
+					.nav-catalog__sublist--wrapper
+						margin-top 0
+						opacity 1
+						visibility visible
+						pointer-events auto
+									
 		&__link
 			font-size 14px
 			color $nav-link-color
+			display inline-block
+			position relative
 			&:hover
 				color $accent-color
+				
+		&__sublist
+			&--wrapper
+				position absolute
+				z-index 10
+				top 100%
+				left 0
+				width 100%
+				background-color $light-color
+				padding-top 25px
+				margin-top 15px
+				transition all .17s ease-in-out
+				opacity 0
+				visibility hidden
+				pointer-events none
+				
+			&--content
+				background-color $dark-accent-color
+				padding 55px 0
+				max-height 85vh
+				overflow-y auto
+				color $light-color
+				
+				a
+					color inherit
+					font 14px $SemiBold
+					&:hover
+						color $light-accent-color
+				
+				ul
+					column-count 4
+					column-gap 30px
+					
+					li
+						display block
+						margin-bottom 20px
+			&--title
+				font 34px $PBold
+				margin-bottom 35px
+				
+			
+				
+
 				
 
 .footer__nav

@@ -45,6 +45,13 @@
 		&:hover
 			svg
 				fill $accent-color
+				
+	&__toggle-subnav
+		display none
+		width 12px
+		height 5px
+		background url('../img/icons/svg/arrow-sm.svg') 50% 50% no-repeat / 12px 5px
+	
 		
 	&__arrow
 		display inline-block
@@ -135,4 +142,28 @@
 					opacity 0	
 				&:nth-child(3)
 					transform translateY(-8px) rotate(-45deg)
+					
+	&__reset
+		display inline-block
+		position relative
+		padding-right 30px
+		font 12px $Med
+		line-height 1
+		text-align left
+		&--ic
+			display block
+			width 12px
+			height 12px
+			position absolute
+			vertical-center()
+			right 0
+		
+		svg
+			svg()
+			fill $accent-color
+			
+		&:hover
+			color $accent-color
+			svg
+				fill $accent-color
 		

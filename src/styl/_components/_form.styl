@@ -87,11 +87,12 @@ input[type="search"]::-webkit-search-results-decoration
 	font 14px $Med
 	line-height 1
 	color rgba($dark-color, .3)
+	transition color .17s ease-in-out
 	
 	&:before,
 	&:after
 		pseudo()
-		transition all .25s ease-in-out
+		transition all .17s ease-in-out
 		position absolute
 		left 0
 		top 3px
@@ -101,56 +102,44 @@ input[type="search"]::-webkit-search-results-decoration
 		display inline-block
 		input
 			display none
-
-.checkbox
+			
 	&:before
-		border-radius 4px
-		width 18px
-		height 18px
-		border 1px solid $accent-color
+		border-radius 50%
+		width 16px
+		height 16px
 		background-color $light-color
 		box-shadow $round-input-shadow
 	&:after
-		width 12px
-		height 12px
-		border-radius 4px
-		background-color $accent-color
-		position absolute
-		left 3px
-		top 6px
-		opacity 0
-	&__label
-		input
-			&:checked 
-				+ span
-					&:after
-						opacity 1
-			
-.radio
-	&:before
-	&:after
+		width 9px
+		height 9px
 		border-radius 50%
-	&:before
-		width 18px
-		height 18px
-		border 1px solid $accent-color
-		background-color $transparent
-	&:after
-		width 12px
-		height 12px
-		background-color $light-color
-		left 3px
-		top 8px
-		opacity 0
-		
+		background-color #ccc
+		position absolute
+		left 3.5px
+		top 6.5px
+	
 	&__label
 		input
 			&:checked 
 				+ span
-					&:before
-						border-color $dark-color
-						background-color $dark-color
 					&:after
-						opacity 1
+						background-color $accent-color
+
+		
+
+.checkbox-filter,
+.radio-filter
+	padding-left 25px
+	font 12px $Reg
+	color $dark-color
+
+	&:hover
+		color $accent-color
+	&:before
+		vertical-center()
+	&:after
+		left 3.5px
+		vertical-center()
+			
 
 		

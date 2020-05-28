@@ -1,3 +1,4 @@
+// socials
 .socials
 	font-size 0
 	&__item
@@ -43,7 +44,7 @@
 						fill $dark-accent-color
 				
 				
-
+// Links
 .phone-link
 	font 22px $Med
 	color $dark-color
@@ -51,25 +52,6 @@
 	&:hover
 		color $accent-color
 		
-
-.delivery
-	margin 0 30px
-	&__text
-		position relative
-		padding-left 55px
-		color $dark-color
-		font-size 22px
-		opacity .2
-		&:before
-			pseudo()
-			position absolute
-			left 0
-			vertical-center()
-			background url('../img/icons/svg/delivery-ic.svg') 50% 50% no-repeat / 43px 43px
-			width 43px
-			height 43px
-			
-
 .link
 	display inline-block
 	position relative
@@ -88,7 +70,49 @@
 		&:before
 			width 100%
 			
+.link-wishlist
+	position relative
+	display inline-block
+	width 50px
+	height 50px
+	border-radius 50%
+	background-color $dark-accent-color
+	box-shadow 0px 3px 3px -1px rgba($dark-color,0.16)
+	&:hover
+		box-shadow none
+	&__ic
+		block()
+		width 20px
+		height 20px
+		position absolute
+		position-center()
+		
+	svg
+		svg()
+		fill $light-color
+		
+// Delivery
+.delivery
+	margin 0 30px
+	&__text
+		position relative
+		padding-left 55px
+		color $dark-color
+		font-size 22px
+		opacity .2
+		&:before
+			pseudo()
+			position absolute
+			left 0
+			vertical-center()
+			background url('../img/icons/svg/delivery-ic.svg') 50% 50% no-repeat / 43px 43px
+			width 43px
+			height 43px
+			
 
+
+			
+// Languages
 .languages
 	margin-right 25px
 	&__item
@@ -111,18 +135,8 @@
 				width 100%
 				
 
-.icon-link
-	display inline-block
-	width 20px
-	height 20px
-	&__ic
-		block()
-		
-	svg
-		svg()
-		fill $text-color
-		
-
+	
+// Tooltip
 .tooltip
 	display block
 	position absolute
@@ -186,28 +200,9 @@
 			left 0
 				
 
-.link-wishlist
-	position relative
-	display inline-block
-	width 50px
-	height 50px
-	border-radius 50%
-	background-color $dark-accent-color
-	box-shadow 0px 3px 3px -1px rgba($dark-color,0.16)
-	&:hover
-		box-shadow none
-	&__ic
-		block()
-		width 20px
-		height 20px
-		position absolute
-		position-center()
-		
-	svg
-		svg()
-		fill $light-color
-		
 
+		
+// Decors
 .decor-img
 	display block
 	width auto
@@ -236,7 +231,18 @@
 		fullSize()
 		background-color rgba(#333633, .86)
 		
-
+// Icons
+.icon-link
+	display inline-block
+	width 20px
+	height 20px
+	&__ic
+		block()
+		
+	svg
+		svg()
+		fill $text-color
+		
 .block-with-ic
 	display inline-block
 	position relative
@@ -265,4 +271,97 @@
 	&__email
 		&:before
 			background-image url('../img/icons/svg/mail.svg')
+			
+
+.round-ic
+	display inline-block
+	border-radius 50%
+	background-color $light-color
+	box-shadow $round-input-shadow
+	width 50px
+	height 50px
+	position relative
+	transition all .17s ease-in-out
+	&:hover
+		background-color $light-accent-color
+		box-shadow none
+	
+	svg
+		display block
+		width 14px
+		height 14px
+		fill #696969
+		position absolute
+		position-center()
+		transition fill .17s ease-in-out
+		
+// Price range
+.price-range
+	height 2px
+	background-color #bebebe
+	border none
+	box-shadow none
+	
+	.noUi
+		&-target
+			height 2px
+			background-color #bebebe
+			border none
+			box-shadow none
+			
+		&-connect
+			background-color $accent-color
+
+		&-handle
+			width 16px
+			height 16px
+			border-radius 50%
+			background-color $light-color
+			border none
+			box-shadow $round-input-shadow
+			top -7.5px
+			right -10px
+			outline none
+			&:before
+				display none
+			&:after
+				pseudo()
+				position absolute
+				position-center()
+				width 9px
+				height 9px
+				border-radius 50%
+				background-color $accent-color
+	&__inputs
+		margin-bottom 30px
+		.row
+			flex-wrap nowrap
+		&--divider
+			flex 1
+			display block
+			margin 0 10px 14.5px 10px
+			height 2px
+			background-color $accent-color
+			
+	&__input
+		display block
+		width 100%
+		border-radius 50px
+		background-color $light-color
+		box-shadow $round-input-shadow
+		text-align center
+		padding 8px
+		font 12px $Reg
+		color $text-color
+		&:hover,
+		&:focus
+			box-shadow none
+		&--block
+			width 85px
+			flex none
+			text-align center
+		&--label
+			font 12px $Reg
+			
+			margin-bottom 8px
 		
