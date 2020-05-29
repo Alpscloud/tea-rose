@@ -1,0 +1,25 @@
+.product
+	&__quantity
+		display flex
+		align-items center
+		justify-content center
+		width 190px
+		&--input
+			flex-col-center()
+			border-radius 50%
+			text-align center
+			width 50px
+			height 50px	
+			border 1px solid $lines-color
+			font 14px $Med
+			color $text-color
+			margin 0 15px
+			&::-webkit-outer-spin-button
+			&::-webkit-inner-spin-button 
+				appearance none
+				-webkit-appearance none
+				margin 0
+			&:hover,
+			&:focus
+				border-color $accent-color
+		

@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Tea Rose</title>
+
+	<!-- Meta tags -->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="Serhii 'winde' Kuptsov">
+
+	<meta http-equiv="Cache-Control" content="no-cache">
+	
+	<!-- Favicons -->
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="img/favicon/site.webmanifest">
+	<link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#efc9c9">
+	<!-- //Favicons -->
+	<meta name="msapplication-TileColor" content="#efc9c9">
+	<meta name="theme-color" content="#efc9c9">
+	<meta name="msapplication-navbutton-color" content="#efc9c9">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#efc9c9">
+
+	<!-- All libs styles -->
+	<link rel="stylesheet" href="css/libs.min.css">
+	<!-- Main file with styles -->
+	<link rel="stylesheet" href="css/main.min.css">
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	
+	<!-- CONTENT WRAPPER -->
+	<div class="content__wrapper">
+
+		<!-- Popups -->
+		<!-- Popup login-->
+<div class="popup js-popup js-popup-login-form" >
+	<div class="popup__overflow">
+		<div class="popup__body text-center">
+			<!-- Close btn -->
+			<button class="btn__close js-close-popup-btn" type="button">
+				<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
+					<path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717
+					L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859
+					c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287
+					l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285
+					L284.286,256.002z"/>
+				</svg>
+			</button>
+			<!-- //Close btn -->
+
+			<!-- Popup content-->
+			<div class="popup__content">
+				<h3 class="popup__title">Личный кабинет</h3>
+
+				<div class="popup__tabs--controls">
+					<button class="btn__tab js-tab-btn is-active" type="button">Авторизация</button>
+					<button class="btn__tab js-tab-btn" type="button">Регистрация</button>
+				</div>
+
+				<div class="popup__tabs--forms">
+					<!-- Login form -->
+					<div class="popup__tab--form js-tab-content">
+						<form class="popup__form text-left">
+							<div class="input__wrapper">
+								<input type="email" class="input-round js-input is-error" name="email" placeholder="e-mail *">
+							</div>
+							<div class="input__wrapper">
+								<input type="password" class="input-round js-input" name="password" placeholder="Пароль *">
+							</div>
+							<div class="input__wrapper">
+								<button class="btn btn-wide" type="button">Войти</button>
+							</div>
+						</form>
+
+						<a href="#" class="forgot-pw-link js-open-restore-pw-form-btn">Забыли пароль?</a>
+					</div>
+					<!-- //Login form -->
+
+					<!-- Registration form -->
+					<div class="popup__tab--form js-tab-content">
+						<form class="popup__form text-left">
+							<div class="input__wrapper">
+								<input type="text" class="input-round js-input is-error" name="name" placeholder="Ваше имя *">
+							</div>
+							<div class="input__wrapper">
+								<input type="tel" class="input-round js-input" name="phone" placeholder="Ваш телефон *">
+							</div>
+							<div class="input__wrapper">
+								<input type="email" class="input-round js-input" name="email" placeholder="e-mail *">
+							</div>
+							<div class="input__wrapper">
+								<input type="password" class="input-round js-input" name="password" placeholder="Пароль *">
+							</div>
+							<div class="input__wrapper">
+								<button class="btn btn-wide" type="button">Рагистрация</button>
+							</div>
+
+							<label class="checkbox__label">
+								<input name="privacyPolicy" type="checkbox" checked>
+								<span class="checkbox text-left">Даю разрешение на<br>обработку личных данных</span>
+							</label>
+						</form>
+					</div>
+					<!-- //Registration form -->
+				</div>
+				
+			</div>
+			<!-- //Popup content-->
+		</div>
+	</div>
+</div>
+<!-- //Popup login-->
+
+<!-- Popup restore pw-->
+<div class="popup js-popup js-popup-restore-pw-form">
+	<div class="popup__overflow">
+		<div class="popup__body text-center">
+			<!-- Close btn -->
+			<button class="btn__close js-close-popup-btn" type="button">
+				<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
+					<path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717
+					L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859
+					c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287
+					l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285
+					L284.286,256.002z"/>
+				</svg>
+			</button>
+			<!-- //Close btn -->
+
+			<!-- Popup content-->
+			<div class="popup__content">
+				<h3 class="popup__title">Восстановление пароля</h3>
+				<p class="popup__text">Мы вышлем Вам пароль на Ваш e-mail,<br>указанный при регистрации</p>
+				<form class="popup__form text-left">
+					<div class="input__wrapper">
+						<input type="email" class="input-round js-input is-error" name="email" placeholder="e-mail *">
+					</div>
+					<div class="input__wrapper">
+						<button class="btn btn-wide" type="button">Отправить</button>
+					</div>
+				</form>
+			</div>
+			<!-- //Popup content-->
+		</div>
+	</div>
+</div>
+<!-- //Popup restore pw-->
+
+<!-- Popup quick order-->
+<div class="popup js-popup js-popup-form">
+	<div class="popup__overflow">
+		<div class="popup__body text-center">
+			<!-- Close btn -->
+			<button class="btn__close js-close-popup-btn" type="button">
+				<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
+					<path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717
+					L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859
+					c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287
+					l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285
+					L284.286,256.002z"/>
+				</svg>
+			</button>
+			<!-- //Close btn -->
+
+			<!-- Popup content-->
+			<div class="popup__content">
+				<h3 class="popup__title">Быстрый заказ</h3>
+				<p class="popup__text">Заполните всего два поля,<br>а все остальное мы сделаем за вас :)</p>
+				<form class="popup__form text-left">
+					<div class="input__wrapper">
+						<input type="text" class="input-round js-input is-error" name="name" placeholder="Ваше имя *">
+					</div>
+					<div class="input__wrapper">
+						<input type="tel" class="input-round js-input" name="phone" placeholder="Ваш телефон *">
+					</div>
+					<div class="input__wrapper">
+						<button class="btn btn-wide" type="button">Отправить</button>
+					</div>
+
+					<label class="checkbox__label">
+						<input name="privacyPolicy" type="checkbox" checked>
+						<span class="checkbox text-left">Даю разрешение на<br>обработку личных данных</span>
+					</label>
+				</form>
+			</div>
+			<!-- //Popup content-->
+		</div>
+	</div>
+</div>
+<!-- //Popup quick order-->
+
+<!-- Popup thanks-->
+<div class="popup js-popup js-popup-thanks">
+	<div class="popup__overflow">
+		<div class="popup__body text-center">
+			<!-- Close btn -->
+			<button class="btn__close js-close-popup-btn" type="button">
+				<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
+					<path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717
+					L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859
+					c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287
+					l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285
+					L284.286,256.002z"/>
+				</svg>
+			</button>
+			<!-- //Close btn -->
+
+			<!-- Popup content-->
+			<div class="popup__content">
+				<h3 class="popup__title">Спасибо за подписку</h3>
+				<p class="popup__text">Теперь мы с вами ещё ближе :)</p>
+			</div>
+			<!-- //Popup content-->
+		</div>
+	</div>
+</div>
+<!-- //Popup thanks-->
+
+<!-- Popup add to cart-->
+<div class="popup js-popup js-popup-added-to-cart">
+	<div class="popup__overflow">
+		<div class="popup__body text-center">
+			<!-- Close btn -->
+			<button class="btn__close js-close-popup-btn" type="button">
+				<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
+					<path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717
+					L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859
+					c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287
+					l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285
+					L284.286,256.002z"/>
+				</svg>
+			</button>
+			<!-- //Close btn -->
+
+			<!-- Popup content-->
+			<div class="popup__content">
+				<h3 class="popup__title">Товар добавлен в корзину</h3>
+
+				<div class="row popup__btns">
+					<a href="page-cart.html" class="btn btn-wide">Перейти в корзину</a>
+					<a href="#" class="btn btn-wide btn-light js-close-popup-btn">Вернуться на сайт</a>
+				</div>
+			</div>
+			<!-- //Popup content-->
+		</div>
+	</div>
+</div>
+<!-- //Popup add to cart-->
+		<!-- //Popups -->
+
+		<!-- Header -->
+		<header class="header">
+	<div class="header-top">
+		<div class="container">
+			<div class="row align-horisontal-between align-vertical-center header-top__row">
+
+				<div class="logo__col">
+					<div class="row align-vertical-center align-horisontal-start">
+						<!-- Logo -->
+						<a href="index.html" class="logo">
+							<img src="img/logo.svg" alt="Tea Rose">
+						</a>
+						<!-- //Logo -->
+
+						<!-- NAV -->
+						<nav class="nav">
+	<ul class="nav__list">
+		<li class="nav__item"><a href="page-about.html" class="nav__link link">О нас</a></li>
+		<li class="nav__item"><a href="page-blog.html" class="nav__link link">Блог</a></li>
+		<li class="nav__item"><a href="page-contacts.html" class="nav__link link">Контакты</a></li>
+	</ul>
+</nav>
+						<!-- //NAV -->
+					</div>
+					<!-- //row -->
+				</div>
+
+
+				<div class="delivery">
+					<p class="delivery__text">Доставка 24/7</p>
+				</div>
+
+
+				<div class="header__tools">
+					<div class="row align-vertical-center align-horisontal-end">
+
+						<ul class="languages">
+							<li class="languages__item"><a href="#" class="languages__link link">en</a></li>
+							<li class="languages__item"><a href="#" class="languages__link link">укр</a></li>
+							<li class="languages__item"><a href="#" class="languages__link link is-active">ру</a></li>
+						</ul>
+
+						<div class="header__icons-links">
+							<!-- Wishlist -->
+							<a href="page-wishlist.html" class="icon-link tooltip__wrapper">
+								<i class="icon-link__ic">
+									<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20.651 18.534" enable-background="new 0 0 20.651 18.534" xml:space="preserve">
+										<g>
+											<g>
+												<g>
+													<path d="M10.326,5.913c-0.276,0-0.5-0.224-0.5-0.5C9.826,2.979,7.847,1,5.413,1S1,2.979,1,5.413c0,0.276-0.224,0.5-0.5,0.5
+													S0,5.689,0,5.413C0,2.429,2.429,0,5.413,0s5.413,2.429,5.413,5.413C10.826,5.689,10.603,5.913,10.326,5.913z"/>
+												</g>
+												<g>
+													<path d="M20.151,5.913c-0.276,0-0.5-0.224-0.5-0.5C19.651,2.979,17.672,1,15.239,1c-2.434,0-4.413,1.979-4.413,4.413
+													c0,0.276-0.224,0.5-0.5,0.5s-0.5-0.224-0.5-0.5C9.826,2.429,12.255,0,15.239,0s5.412,2.429,5.412,5.413
+													C20.651,5.689,20.428,5.913,20.151,5.913z"/>
+												</g>
+												<g>
+													<path d="M10.326,18.534C9.108,18.534,0,11.182,0,5.413c0-0.276,0.224-0.5,0.5-0.5S1,5.137,1,5.413
+													c0,5.034,8.401,11.888,9.375,12.125c0.875-0.237,9.276-7.093,9.276-12.125c0-0.276,0.224-0.5,0.5-0.5s0.5,0.224,0.5,0.5
+													C20.651,11.182,11.544,18.534,10.326,18.534z"/>
+												</g>
+											</g>
+											<g>
+												<path d="M17.678,5.762c-0.276,0-0.5-0.224-0.5-0.5c0-1.069-0.869-1.938-1.938-1.938c-0.407,0-0.796,0.124-1.124,0.358
+												c-0.223,0.159-0.537,0.111-0.697-0.115c-0.161-0.225-0.109-0.537,0.115-0.697c0.499-0.357,1.089-0.546,1.706-0.546
+												c1.62,0,2.938,1.318,2.938,2.938C18.178,5.538,17.954,5.762,17.678,5.762z"/>
+											</g>
+										</g>
+									</svg>
+
+								</i>
+
+								<!-- Tooltip -->
+								<span class="tooltip">Избранное</span>
+								<!-- //Tooltip -->
+							</a>
+							<!--// Wishlist -->
+
+							<!-- Cabinet -->
+							<a href="page-wishlist.html" class="icon-link tooltip__wrapper js-login-btn">
+								<i class="icon-link__ic">
+
+									<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 19.68 19.149" enable-background="new 0 0 19.68 19.149" xml:space="preserve">
+										<g>
+											<path d="M19.227,7.949l-8.16-7.496c-0.658-0.604-1.796-0.604-2.454,0L0.452,7.949c-0.538,0.494-0.482,0.917-0.401,1.126
+											c0.082,0.208,0.327,0.559,1.058,0.559h0.427v7.809c0,0.941,0.766,1.707,1.707,1.707h13.195c0.94,0,1.706-0.766,1.706-1.707V9.634
+											h0.428c0.73,0,0.976-0.35,1.057-0.559S19.765,8.443,19.227,7.949z M17.144,8.634v8.809c0,0.39-0.316,0.707-0.706,0.707H3.243
+											c-0.39,0-0.707-0.317-0.707-0.707V8.634H1.185L9.29,1.19c0.287-0.264,0.813-0.264,1.101,0l8.104,7.444H17.144z"/>
+											<path d="M9.84,8.409C9.361,7.742,8.583,7.303,7.7,7.303c-1.455,0-2.639,1.184-2.639,2.639c0,2.533,3.969,5.997,4.779,5.997
+											s4.779-3.463,4.779-5.997c0-1.455-1.184-2.639-2.639-2.639C11.097,7.303,10.32,7.742,9.84,8.409z M11.98,8.303
+											c0.904,0,1.639,0.735,1.639,1.639c0,1.827-2.978,4.5-3.779,4.958c-0.801-0.458-3.779-3.131-3.779-4.958
+											c0-0.904,0.735-1.639,1.639-1.639c0.904,0,1.64,0.735,1.64,1.639c0,0.276,0.224,0.5,0.5,0.5s0.5-0.224,0.5-0.5
+											C10.34,9.038,11.075,8.303,11.98,8.303z"/>
+										</g>
+									</svg>
+
+
+								</i>
+
+								<!-- Tooltip -->
+								<span class="tooltip">Личный кабинет</span>
+								<!-- //Tooltip -->
+							</a>
+							<!--// Cabinet -->
+						</div>
+
+						<a href="page-cart.html" class="btn btn-cart btn-with-ic">0 грн</a>
+					</div>
+				</div>
+
+
+
+			</div>
+			<!-- //row -->
+		</div>
+		<!-- //container -->
+	</div>
+
+	<div class="header-bottom">
+		<div class="container">
+			<div class="row align-vertical-center-align-horisontal-between header-bottom__row">
+
+				<div class="nav-catalog__col">
+					<!-- NAV -->
+					<nav class="nav-catalog">
+	<ul class="nav-catalog__list">
+		<li class="nav-catalog__item has-sublist">
+			<a href="page-catalog.html" class="nav-catalog__link">Цветы</a>
+
+			<button class="btn__toggle-subnav" type="button"></button>
+
+			<!-- Sublist -->
+			<div class="nav-catalog__sublist--wrapper">
+				<div class="nav-catalog__sublist--content">
+					<div class="container">
+						<h2 class="nav-catalog__sublist--title">Цветы</h2>
+						<ul>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- Sublist -->
+		</li>
+		<li class="nav-catalog__item has-sublist">
+			<a href="page-catalog.html" class="nav-catalog__link">Декор и подарки</a>
+
+			<button class="btn__toggle-subnav" type="button"></button>
+
+			<!-- Sublist -->
+			<div class="nav-catalog__sublist--wrapper">
+				<div class="nav-catalog__sublist--content">
+					<div class="container">
+						<h2 class="nav-catalog__sublist--title">Декор и подарки</h2>
+						<ul>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными.</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- Sublist -->
+
+
+		</li>
+		<li class="nav-catalog__item has-sublist">
+			<a href="page-catalog.html" class="nav-catalog__link">Всё для свадьбы</a>
+
+			<button class="btn__toggle-subnav" type="button"></button>
+
+			<!-- Sublist -->
+			<div class="nav-catalog__sublist--wrapper">
+				<div class="nav-catalog__sublist--content">
+					<div class="container">
+						<h2 class="nav-catalog__sublist--title">Всё для свадьбы</h2>
+						<ul>
+							<li><a href="page-catalog.html">Далеко-далеко за.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за Далеко-далеко.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за.Далеко-далеко.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за.</a></li>
+							<li><a href="page-catalog.html">Далек.</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- Sublist -->
+
+
+		</li>
+		<li class="nav-catalog__item has-sublist">
+			<a href="page-catalog.html" class="nav-catalog__link">Новости и акции</a>
+
+			<button class="btn__toggle-subnav" type="button"></button>
+
+			<!-- Sublist -->
+			<div class="nav-catalog__sublist--wrapper">
+				<div class="nav-catalog__sublist--content">
+					<div class="container">
+						<h2 class="nav-catalog__sublist--title">Новости и акции</h2>
+						<ul>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными горами.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными горами.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными горами.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными горами.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными горами.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными горами.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными горами.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными горами.</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- Sublist -->
+
+			
+		</li>
+		<li class="nav-catalog__item has-sublist">
+			<a href="page-catalog.html" class="nav-catalog__link">Букет недели</a>
+
+			<button class="btn__toggle-subnav" type="button"></button>
+
+			<!-- Sublist -->
+			<div class="nav-catalog__sublist--wrapper">
+				<div class="nav-catalog__sublist--content">
+					<div class="container">
+						<h2 class="nav-catalog__sublist--title">Букет недели</h2>
+						<ul>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- Sublist -->
+
+			
+		</li>
+	</ul>
+</nav>
+					<!-- //NAV -->
+				</div>
+
+				<div class="header__contacts">
+					<div class="row align-vertical-center align-horisontal-end header__contacts__row">
+						<!-- Socials -->
+						<ul class="socials">
+							<li class="socials__item">
+	<a href="#" class="socials__link" target="_blank">
+		<i class="socials__link--ic">
+
+			<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 19.23 16.2" enable-background="new 0 0 19.23 16.2" xml:space="preserve">
+				<path  d="M17.995,0.063L0.408,6.917c-0.57,0.222-0.535,1.039,0.051,1.213l4.469,1.32l1.668,5.292
+				c0.174,0.553,0.875,0.72,1.28,0.306l2.311-2.359l4.534,3.328c0.555,0.407,1.345,0.105,1.486-0.569L19.21,1.091
+				C19.357,0.388,18.665-0.198,17.995,0.063z M15.791,3.249l-8.169,7.224c-0.081,0.072-0.133,0.172-0.145,0.28l-0.315,2.796
+				c-0.01,0.091-0.138,0.103-0.165,0.016l-1.294-4.17C5.643,9.204,5.72,8.997,5.89,8.892l9.647-5.983
+				C15.759,2.771,15.986,3.076,15.791,3.249z"/>
+			</svg>
+
+		</i>
+	</a>
+</li>
+<li class="socials__item">
+	<a href="#" class="socials__link" target="_blank">
+		<i class="socials__link--ic">
+
+			<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20.35 21.034" enable-background="new 0 0 20.35 21.034" xml:space="preserve">
+				<g>
+					<g>
+						<path  d="M19.895,5.057l-0.006-0.024c-0.491-1.985-2.704-4.114-4.737-4.557L15.129,0.47
+						c-3.288-0.627-6.621-0.627-9.908,0L5.197,0.475C3.166,0.918,0.952,3.048,0.461,5.033L0.455,5.057
+						c-0.607,2.772-0.607,5.583,0,8.354l0.005,0.024c0.471,1.9,2.519,3.932,4.476,4.491v2.215c0,0.802,0.977,1.196,1.533,0.617
+						l2.245-2.333c0.487,0.027,0.974,0.042,1.461,0.042c1.655,0,3.311-0.156,4.954-0.47l0.023-0.005
+						c2.033-0.443,4.246-2.573,4.737-4.557l0.006-0.024C20.502,10.639,20.502,7.829,19.895,5.057z M18.119,13.009
+						c-0.328,1.295-2.008,2.905-3.344,3.202c-1.748,0.332-3.51,0.474-5.27,0.426c-0.035-0.001-0.069,0.013-0.093,0.038
+						c-0.25,0.256-1.639,1.682-1.639,1.682L6.03,20.146c-0.127,0.133-0.351,0.042-0.351-0.141v-3.67c0-0.061-0.043-0.112-0.103-0.124
+						l-0.001,0c-1.335-0.297-3.015-1.907-3.344-3.202c-0.546-2.505-0.546-5.045,0-7.55c0.328-1.295,2.008-2.905,3.344-3.202
+						c3.053-0.581,6.148-0.581,9.201,0c1.336,0.297,3.016,1.907,3.344,3.202C18.665,7.964,18.665,10.504,18.119,13.009z"/>
+						<path  d="M13.08,14.703c-0.205-0.062-0.401-0.104-0.583-0.18c-1.883-0.781-3.615-1.789-4.988-3.333
+						c-0.78-0.878-1.391-1.87-1.908-2.92C5.357,7.773,5.15,7.256,4.94,6.742C4.748,6.273,5.031,5.789,5.328,5.436
+						c0.279-0.331,0.638-0.585,1.027-0.772C6.659,4.519,6.959,4.603,7.18,4.86C7.66,5.417,8.1,6.001,8.457,6.646
+						c0.219,0.397,0.159,0.882-0.238,1.152C8.122,7.863,8.034,7.94,7.944,8.015C7.865,8.079,7.791,8.145,7.737,8.233
+						c-0.099,0.161-0.104,0.351-0.04,0.526c0.49,1.347,1.316,2.394,2.671,2.958c0.217,0.09,0.435,0.195,0.685,0.166
+						c0.418-0.049,0.554-0.508,0.847-0.748c0.287-0.234,0.653-0.237,0.962-0.042c0.309,0.195,0.608,0.405,0.906,0.617
+						c0.292,0.208,0.583,0.412,0.852,0.649c0.259,0.228,0.348,0.527,0.202,0.837c-0.267,0.567-0.656,1.039-1.216,1.34
+						C13.447,14.621,13.258,14.648,13.08,14.703C12.874,14.641,13.258,14.648,13.08,14.703z"/>
+						<path  d="M10.18,4.016c2.462,0.069,4.485,1.703,4.918,4.138c0.074,0.415,0.1,0.839,0.133,1.26
+						c0.014,0.177-0.086,0.345-0.278,0.348c-0.197,0.002-0.286-0.163-0.299-0.34c-0.025-0.35-0.043-0.702-0.091-1.05
+						c-0.255-1.834-1.718-3.352-3.544-3.678c-0.275-0.049-0.556-0.062-0.834-0.091C10.01,4.585,9.78,4.574,9.741,4.355
+						c-0.033-0.183,0.122-0.329,0.297-0.339C10.085,4.014,10.132,4.016,10.18,4.016C12.643,4.085,10.132,4.016,10.18,4.016z"/>
+						<path d="M13.922,8.867c-0.004,0.031-0.006,0.103-0.024,0.171c-0.065,0.247-0.44,0.278-0.526,0.029
+						c-0.026-0.074-0.029-0.158-0.03-0.238c-0.001-0.522-0.114-1.043-0.377-1.496c-0.27-0.466-0.683-0.858-1.168-1.096
+						c-0.293-0.143-0.61-0.233-0.931-0.286c-0.14-0.023-0.282-0.037-0.423-0.057c-0.171-0.024-0.262-0.133-0.254-0.301
+						c0.008-0.158,0.123-0.271,0.295-0.262c0.565,0.032,1.111,0.154,1.613,0.42c1.022,0.541,1.605,1.395,1.776,2.535
+						c0.008,0.052,0.02,0.103,0.024,0.155C13.906,8.57,13.913,8.699,13.922,8.867C13.918,8.898,13.913,8.699,13.922,8.867z"/>
+						<path  d="M12.391,8.808c-0.206,0.004-0.316-0.11-0.338-0.299c-0.015-0.132-0.026-0.265-0.058-0.393
+						c-0.062-0.252-0.196-0.486-0.408-0.641c-0.1-0.073-0.214-0.126-0.333-0.161c-0.151-0.044-0.308-0.032-0.459-0.069
+						c-0.164-0.04-0.254-0.173-0.229-0.326c0.023-0.14,0.159-0.249,0.312-0.238c0.955,0.069,1.637,0.562,1.734,1.686
+						c0.007,0.079,0.015,0.163-0.003,0.239C12.581,8.736,12.485,8.802,12.391,8.808C12.185,8.812,12.485,8.802,12.391,8.808z"/>
+					</g>
+				</g>
+			</svg>
+
+		</i>
+	</a>
+</li>
+<li class="socials__item">
+	<a href="#" class="socials__link" target="_blank">
+		<i class="socials__link--ic">
+
+			<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20.167 20.324" enable-background="new 0 0 20.167 20.324" xml:space="preserve">
+				<g>
+					<g>
+						<path d="M10.266,0c-5.467,0-9.9,4.432-9.9,9.9
+						c0,1.87,0.519,3.62,1.42,5.112L0,20.324l5.481-1.755c1.418,0.784,3.049,1.231,4.785,1.231c5.468,0,9.9-4.433,9.9-9.9
+						C20.167,4.432,15.734,0,10.266,0z M10.266,18.142c-1.674,0-3.233-0.502-4.534-1.363l-3.167,1.014l1.029-3.06
+						C2.608,13.374,2.025,11.704,2.025,9.9c0-4.545,3.697-8.242,8.241-8.242c4.545,0,8.242,3.697,8.242,8.242
+						C18.508,14.445,14.811,18.142,10.266,18.142z M14.908,12.15c-0.248-0.136-1.467-0.794-1.696-0.887
+						c-0.229-0.093-0.395-0.141-0.574,0.106c-0.178,0.246-0.684,0.797-0.837,0.96c-0.154,0.163-0.302,0.178-0.55,0.042
+						c-0.248-0.135-1.052-0.433-1.985-1.33c-0.726-0.698-1.202-1.544-1.34-1.803c-0.138-0.259-0.001-0.39,0.13-0.511
+						C8.174,8.618,8.32,8.441,8.452,8.298C8.584,8.156,8.63,8.052,8.721,7.887s0.054-0.315-0.005-0.443
+						C8.657,7.315,8.199,6.052,8.007,5.538C7.815,5.025,7.602,5.101,7.454,5.095C7.307,5.09,7.139,5.062,6.971,5.056
+						C6.802,5.05,6.526,5.103,6.285,5.347C6.044,5.591,5.368,6.178,5.322,7.422C5.275,8.665,6.135,9.9,6.255,10.073
+						c0.12,0.174,1.643,2.869,4.174,3.977c2.531,1.108,2.545,0.77,3.009,0.745c0.465-0.025,1.518-0.556,1.751-1.138
+						c0.233-0.582,0.251-1.088,0.192-1.196C15.322,12.355,15.156,12.285,14.908,12.15z"/>
+					</g>
+				</g>
+			</svg>
+
+		</i>
+	</a>
+</li>						</ul>
+						<!-- //Socials -->
+
+						<a href="tel:+38044 543 12 34" class="phone-link">044 543 12 34</a>
+					</div>
+					<!-- //row -->
+				</div>
+			</div>
+			<!-- //row -->
+		</div>
+		<!-- //container -->
+	</div>
+
+</header>
+
+		<!-- //Header -->
+
+		<!-- Main -->
+		<main class="main main-page">
+			
+			<section class="sect__cart gutter-bottom">
+				<h2 class="w3c">&nbsp;</h2>
+
+				<div class="container">
+					<!-- Breadcrumbs -->
+					<div class="breadcrumbs">
+						<ul class="breadcrumbs__list">
+							<li class="breadcrumbs__item"><a href="index.html" class="breadcrumbs__link">Главная</a></li>
+							<li class="breadcrumbs__item"><span class="breadcrumbs__link is-active">Корзина</span></li>
+						</ul>
+					</div>
+					<!-- //Breadcrumbs -->
+
+					<div class="cart">
+						
+						
+						<!-- Progress -->
+						<div class="cart-progress">
+
+							<div class="cart-progress__step is-current ">
+								<div class="cart-progress__step--information">
+									<span class="cart-progress__step--information_ic">
+										<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 46.161 48.031" enable-background="new 0 0 46.161 48.031" xml:space="preserve">
+											<g>
+												<path d="M35.246,12.776h-4.298v-0.024c0-1.279-1.04-2.319-2.318-2.319h-1.588c-0.229-1.015-1.137-1.774-2.219-1.774
+												s-1.99,0.76-2.219,1.774h-1.587c-1.279,0-2.319,1.04-2.319,2.319v0.045c-0.035-0.008-0.069-0.021-0.106-0.021h-4.19
+												c-0.827,0-1.5,0.673-1.5,1.5v23.717c0,0.827,0.673,1.5,1.5,1.5h20.845c0.827,0,1.5-0.673,1.5-1.5V14.276
+												C36.746,13.449,36.073,12.776,35.246,12.776z M19.698,12.752c0-0.727,0.592-1.319,1.319-1.319h2.531v-0.5
+												c0-0.703,0.571-1.274,1.274-1.274s1.274,0.572,1.274,1.274v0.5h2.532c0.727,0,1.318,0.592,1.318,1.319v0.922
+												c0,0.727-0.592,1.319-1.318,1.319h-7.612c-0.728,0-1.319-0.592-1.319-1.319V12.752z M35.746,37.993c0,0.275-0.225,0.5-0.5,0.5
+												H14.401c-0.275,0-0.5-0.225-0.5-0.5V14.276c0-0.276,0.225-0.5,0.5-0.5h4.19c0.041,0,0.077-0.014,0.114-0.023
+												c0.043,1.242,1.059,2.24,2.311,2.24h7.612c1.243,0,2.253-0.986,2.308-2.217h4.308c0.275,0,0.5,0.224,0.5,0.5V37.993z"/>
+												<path d="M19.889,27.593h-1.298c-0.276,0-0.5,0.224-0.5,0.5s0.224,0.5,0.5,0.5h1.298c0.276,0,0.5-0.224,0.5-0.5
+												S20.166,27.593,19.889,27.593z"/>
+												<path d="M31.054,27.593h-9.092c-0.276,0-0.5,0.224-0.5,0.5s0.224,0.5,0.5,0.5h9.092c0.276,0,0.5-0.224,0.5-0.5
+												S31.331,27.593,31.054,27.593z"/>
+												<path d="M19.889,23.576h-1.298c-0.276,0-0.5,0.224-0.5,0.5s0.224,0.5,0.5,0.5h1.298c0.276,0,0.5-0.224,0.5-0.5
+												S20.166,23.576,19.889,23.576z"/>
+												<path d="M31.054,23.576h-9.092c-0.276,0-0.5,0.224-0.5,0.5s0.224,0.5,0.5,0.5h9.092c0.276,0,0.5-0.224,0.5-0.5
+												S31.331,23.576,31.054,23.576z"/>
+												<path d="M19.889,19.56h-1.298c-0.276,0-0.5,0.224-0.5,0.5s0.224,0.5,0.5,0.5h1.298c0.276,0,0.5-0.224,0.5-0.5
+												S20.166,19.56,19.889,19.56z"/>
+												<path d="M31.054,19.56h-9.092c-0.276,0-0.5,0.224-0.5,0.5s0.224,0.5,0.5,0.5h9.092c0.276,0,0.5-0.224,0.5-0.5
+												S31.331,19.56,31.054,19.56z"/>
+												<path d="M28.554,31.679l-4.21,2.896l-2.037-1.937c-0.198-0.189-0.515-0.183-0.707,0.018c-0.19,0.2-0.183,0.517,0.018,0.707
+												l2.331,2.217c0.024,0.023,0.053,0.034,0.08,0.051c0.02,0.013,0.037,0.027,0.058,0.037c0.066,0.03,0.136,0.05,0.207,0.05
+												c0.088,0,0.172-0.032,0.25-0.077c0.011-0.006,0.023-0.003,0.034-0.01l4.544-3.126c0.228-0.156,0.285-0.468,0.129-0.695
+												C29.093,31.579,28.781,31.523,28.554,31.679z"/>
+												<path d="M22.298,14.21h5.05c0.276,0,0.5-0.224,0.5-0.5s-0.224-0.5-0.5-0.5h-5.05c-0.276,0-0.5,0.224-0.5,0.5
+												S22.022,14.21,22.298,14.21z"/>
+												<path d="M32.501,44.137c-1.073,0-1.947,0.874-1.947,1.947s0.874,1.947,1.947,1.947s1.947-0.874,1.947-1.947
+												S33.575,44.137,32.501,44.137z M32.501,47.031c-0.522,0-0.947-0.425-0.947-0.947s0.425-0.947,0.947-0.947s0.947,0.425,0.947,0.947
+												S33.024,47.031,32.501,47.031z"/>
+												<path d="M15.367,5.729c1.579,0,2.864-1.285,2.864-2.864S16.946,0,15.367,0s-2.863,1.285-2.863,2.864S13.788,5.729,15.367,5.729z
+												M15.367,1c1.028,0,1.864,0.836,1.864,1.864s-0.836,1.864-1.864,1.864c-1.027,0-1.863-0.836-1.863-1.864S14.339,1,15.367,1z"/>
+												<path d="M8.744,15.386l-2.126-1.163c-0.086-0.047-0.233-0.195-0.281-0.281l-1.162-2.125c-0.266-0.486-0.952-0.485-1.217,0
+												L2.796,13.94c-0.048,0.087-0.196,0.235-0.282,0.283l-2.126,1.163C0.145,15.519,0,15.746,0,15.994c0,0.248,0.145,0.475,0.388,0.608
+												l2.125,1.161c0.087,0.048,0.235,0.196,0.282,0.282l1.163,2.126c0.133,0.243,0.36,0.388,0.608,0.388
+												c0.248,0,0.475-0.145,0.608-0.388l1.163-2.125c0.048-0.087,0.195-0.235,0.282-0.283l2.124-1.162
+												c0.243-0.133,0.389-0.36,0.389-0.608C9.131,15.746,8.986,15.518,8.744,15.386z M6.138,16.887c-0.254,0.139-0.539,0.424-0.679,0.679
+												L4.566,19.2l-0.894-1.635c-0.139-0.253-0.424-0.538-0.678-0.678L1.36,15.994L2.994,15.1c0.253-0.138,0.538-0.423,0.678-0.679
+												l0.894-1.633l0.894,1.635c0.14,0.254,0.425,0.54,0.678,0.677l1.634,0.894L6.138,16.887z"/>
+												<path d="M45.82,33.108l-1.338-0.731c-0.029-0.018-0.09-0.078-0.107-0.106l-0.733-1.341c-0.231-0.426-0.857-0.427-1.091-0.001
+												l-0.731,1.339c-0.019,0.029-0.08,0.091-0.106,0.107l-1.341,0.733c-0.214,0.116-0.342,0.32-0.341,0.546
+												c0,0.225,0.127,0.429,0.34,0.545l1.341,0.732c0.029,0.019,0.09,0.079,0.105,0.105l0.732,1.338c0.116,0.216,0.32,0.344,0.546,0.344
+												c0.227,0,0.431-0.128,0.546-0.341l0.732-1.34c0.018-0.029,0.077-0.089,0.105-0.105l1.338-0.732c0.216-0.116,0.344-0.32,0.344-0.546
+												C46.161,33.428,46.033,33.224,45.82,33.108z M44,34.056c-0.191,0.104-0.398,0.311-0.502,0.501l-0.401,0.734l-0.403-0.736
+												c-0.106-0.191-0.312-0.396-0.5-0.499l-0.735-0.402l0.737-0.402c0.188-0.104,0.394-0.31,0.499-0.5l0.401-0.735l0.402,0.734
+												c0.103,0.189,0.308,0.395,0.501,0.502l0.734,0.401L44,34.056z"/>
+											</g>
+										</svg>
+									</span>
+									<p>Товары</p>
+								</div>
+							</div>
+
+							<div class="cart-progress__step">
+								<div class="cart-progress__step--information">
+									<span class="cart-progress__step--information_ic">
+
+										<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 40.223 42.986" enable-background="new 0 0 40.223 42.986" xml:space="preserve">
+											<g>
+												<path  d="M1.947,28.543C0.874,28.543,0,29.417,0,30.491s0.874,1.947,1.947,1.947s1.947-0.874,1.947-1.947
+												S3.021,28.543,1.947,28.543z M1.947,31.438C1.425,31.438,1,31.013,1,30.491s0.425-0.947,0.947-0.947s0.947,0.425,0.947,0.947
+												S2.47,31.438,1.947,31.438z"/>
+												<path  d="M25.885,5.728c1.579,0,2.864-1.285,2.864-2.864C28.75,1.285,27.464,0,25.885,0s-2.864,1.285-2.864,2.864
+												C23.021,4.443,24.306,5.728,25.885,5.728z M25.885,1c1.028,0,1.864,0.836,1.864,1.864s-0.836,1.864-1.864,1.864
+												s-1.864-0.836-1.864-1.864S24.857,1,25.885,1z"/>
+												<path  d="M39.835,8.686L37.71,7.523c-0.087-0.047-0.234-0.195-0.282-0.281l-1.162-2.127
+												c-0.268-0.484-0.949-0.486-1.217,0.001l-1.162,2.125c-0.048,0.087-0.195,0.235-0.282,0.283l-2.124,1.162
+												c-0.243,0.133-0.389,0.36-0.389,0.609c0,0.248,0.146,0.476,0.388,0.608l2.126,1.163c0.086,0.047,0.233,0.195,0.281,0.281
+												l1.162,2.126c0.133,0.243,0.36,0.388,0.608,0.388s0.476-0.145,0.608-0.389l1.162-2.124c0.048-0.087,0.195-0.235,0.282-0.283
+												l2.124-1.162c0.243-0.133,0.389-0.36,0.389-0.608C40.223,9.045,40.078,8.818,39.835,8.686z M37.231,10.187
+												c-0.254,0.138-0.539,0.423-0.68,0.679L35.658,12.5l-0.894-1.635c-0.141-0.254-0.426-0.54-0.679-0.677l-1.634-0.894L34.085,8.4
+												c0.254-0.139,0.539-0.424,0.679-0.679l0.894-1.634l0.894,1.636c0.14,0.253,0.425,0.538,0.679,0.677l1.634,0.894L37.231,10.187z"/>
+												<path  d="M10.143,39.375l-1.34-0.733c-0.028-0.018-0.087-0.076-0.104-0.104l-0.733-1.34
+												c-0.234-0.429-0.86-0.427-1.092-0.001l-0.733,1.34c-0.018,0.029-0.077,0.089-0.104,0.105l-1.341,0.733
+												c-0.214,0.116-0.341,0.32-0.341,0.546c0,0.225,0.127,0.429,0.341,0.545l1.337,0.731c0.03,0.018,0.091,0.078,0.107,0.106
+												l0.734,1.343c0.117,0.212,0.321,0.34,0.545,0.34c0.224,0,0.428-0.128,0.546-0.341l0.732-1.341c0.018-0.029,0.078-0.089,0.104-0.105
+												l1.34-0.732c0.214-0.116,0.342-0.32,0.342-0.546C10.484,39.694,10.356,39.49,10.143,39.375z M8.321,40.323
+												c-0.191,0.105-0.396,0.312-0.5,0.5l-0.402,0.735l-0.401-0.734c-0.103-0.189-0.308-0.395-0.502-0.502L5.781,39.92l0.734-0.402
+												c0.191-0.104,0.398-0.311,0.502-0.501l0.402-0.735l0.402,0.734c0.105,0.192,0.312,0.398,0.502,0.502l0.734,0.401L8.321,40.323z"/>
+												<path  d="M36.366,21.062l-1.938-0.755l-1.119-2.704c-0.462-1.118-1.771-1.993-2.98-1.993h-3.076v-1.633v-0.642
+												c0-1.28-1.041-2.322-2.321-2.322H9.851c-1.28,0-2.322,1.042-2.322,2.322v16.78c0,1.28,1.042,2.322,2.322,2.322h1.156
+												c0.247,1.775,1.758,3.15,3.599,3.15s3.353-1.376,3.6-3.15h10.701c0.247,1.775,1.758,3.15,3.6,3.15c1.843,0,3.356-1.378,3.6-3.155
+												c1.258-0.026,2.275-1.053,2.275-2.317v-6.105C38.382,22.798,37.497,21.502,36.366,21.062z M30.329,16.611
+												c0.807,0,1.748,0.629,2.057,1.375l0.919,2.219h-6.052v-3.594H30.329z M9.851,12.014h15.08c0.729,0,1.321,0.593,1.321,1.322v0.642
+												v2.633v10.196c0,0.276,0.224,0.5,0.5,0.5s0.5-0.224,0.5-0.5v-5.602h6.726l2.024,0.789c0.748,0.292,1.38,1.215,1.38,2.018v0.322
+												h-1.725c-0.276,0-0.5,0.224-0.5,0.5s0.224,0.5,0.5,0.5h1.725v3.77h-2.605c-0.625-0.502-1.408-0.815-2.27-0.815
+												s-1.645,0.313-2.27,0.815H16.877c-0.625-0.502-1.408-0.815-2.27-0.815c-0.87,0-1.659,0.319-2.287,0.828
+												c-0.023-0.003-0.043-0.013-0.067-0.013H8.529v-3.77h1.725c0.276,0,0.5-0.224,0.5-0.5s-0.224-0.5-0.5-0.5H8.529V13.336
+												C8.529,12.607,9.122,12.014,9.851,12.014z M28.907,31.438H18.207c-0.067-0.483-0.226-0.932-0.463-1.335H29.37
+												C29.133,30.506,28.974,30.955,28.907,31.438z M8.529,30.116v-0.014h2.942c-0.237,0.403-0.396,0.853-0.463,1.335H9.851
+												C9.122,31.438,8.529,30.845,8.529,30.116z M14.607,34.588c-1.461,0-2.649-1.188-2.649-2.65c0-1.461,1.188-2.65,2.649-2.65
+												c1.462,0,2.65,1.189,2.65,2.65C17.257,33.4,16.069,34.588,14.607,34.588z M32.507,34.588c-1.462,0-2.65-1.188-2.65-2.65
+												c0-1.461,1.188-2.65,2.65-2.65s2.65,1.189,2.65,2.65C35.158,33.4,33.969,34.588,32.507,34.588z M36.106,31.429
+												c-0.068-0.479-0.226-0.925-0.462-1.326h1.738v0.014C37.382,30.829,36.813,31.403,36.106,31.429z"/>
+												<path  d="M11.921,15.464h10.703c0.276,0,0.5-0.224,0.5-0.5s-0.224-0.5-0.5-0.5H11.921c-0.276,0-0.5,0.224-0.5,0.5
+												S11.645,15.464,11.921,15.464z"/>
+												<path  d="M19.141,18.935c-0.763,0-1.436,0.369-1.869,0.93c-0.433-0.562-1.106-0.93-1.868-0.93
+												c-1.307,0-2.369,1.063-2.369,2.369c0,2.24,3.52,5.302,4.237,5.302c0.719,0,4.238-3.062,4.238-5.302
+												C21.51,19.998,20.448,18.935,19.141,18.935z M17.272,25.562c-0.734-0.442-3.237-2.7-3.237-4.258c0-0.755,0.614-1.369,1.369-1.369
+												s1.368,0.614,1.368,1.369c0,0.276,0.224,0.5,0.5,0.5s0.5-0.224,0.5-0.5c0-0.755,0.614-1.369,1.369-1.369s1.369,0.614,1.369,1.369
+												C20.51,22.863,18.006,25.121,17.272,25.562z"/>
+											</g>
+										</svg>
+
+									</span>
+									<p>Доставка</p>
+								</div>
+							</div>
+
+							<div class="cart-progress__step">
+								<div class="cart-progress__step--information">
+									<span class="cart-progress__step--information_ic">
+
+										<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 49.702 48.53" enable-background="new 0 0 49.702 48.53" xml:space="preserve">
+											<g>
+												<path  d="M47.755,8.486c-1.073,0-1.947,0.874-1.947,1.947s0.874,1.947,1.947,1.947s1.947-0.874,1.947-1.947
+												S48.828,8.486,47.755,8.486z M47.755,11.38c-0.522,0-0.947-0.425-0.947-0.947s0.425-0.947,0.947-0.947s0.947,0.425,0.947,0.947
+												S48.277,11.38,47.755,11.38z"/>
+												<path  d="M2.864,30.628C1.285,30.628,0,31.913,0,33.492c0,1.58,1.285,2.864,2.864,2.864
+												c1.58,0,2.864-1.285,2.864-2.864C5.728,31.913,4.443,30.628,2.864,30.628z M2.864,35.356C1.836,35.356,1,34.52,1,33.492
+												s0.836-1.864,1.864-1.864s1.864,0.836,1.864,1.864S3.892,35.356,2.864,35.356z"/>
+												<path  d="M22.234,43.356l-2.125-1.161c-0.087-0.048-0.234-0.196-0.282-0.283l-1.162-2.124
+												c-0.265-0.486-0.952-0.484-1.217-0.001l-1.163,2.126c-0.047,0.086-0.194,0.233-0.281,0.281l-2.127,1.162
+												c-0.242,0.134-0.387,0.361-0.387,0.608s0.145,0.475,0.388,0.608l2.125,1.162c0.087,0.048,0.234,0.195,0.282,0.282l1.162,2.124
+												c0.133,0.243,0.36,0.389,0.609,0.389c0.248,0,0.476-0.146,0.608-0.388l1.162-2.125c0.048-0.087,0.195-0.235,0.281-0.282
+												l2.126-1.162c0.243-0.133,0.388-0.36,0.388-0.608S22.478,43.489,22.234,43.356z M19.627,44.859
+												c-0.253,0.14-0.538,0.425-0.677,0.678l-0.894,1.634l-0.893-1.633c-0.139-0.254-0.424-0.54-0.679-0.68l-1.634-0.894l1.635-0.894
+												c0.254-0.14,0.54-0.426,0.678-0.679l0.894-1.634l0.894,1.634c0.139,0.253,0.424,0.538,0.678,0.679l1.635,0.894L19.627,44.859z"/>
+												<path  d="M30.585,3.59l1.34,0.733C31.954,4.34,32.014,4.4,32.03,4.427l0.733,1.341
+												c0.116,0.214,0.32,0.341,0.545,0.341c0.226,0,0.43-0.127,0.546-0.341l0.731-1.337c0.018-0.03,0.078-0.091,0.106-0.107l1.343-0.734
+												c0.213-0.117,0.34-0.321,0.34-0.545c0-0.225-0.127-0.429-0.341-0.546l-1.341-0.732c-0.029-0.018-0.089-0.078-0.105-0.104
+												l-0.732-1.34c-0.232-0.428-0.86-0.428-1.092-0.001l-0.733,1.34c-0.018,0.029-0.076,0.087-0.104,0.104l-1.34,0.733
+												c-0.214,0.117-0.342,0.321-0.342,0.546C30.244,3.27,30.372,3.474,30.585,3.59z M32.405,2.643c0.192-0.105,0.399-0.312,0.502-0.502
+												l0.402-0.734l0.402,0.736c0.105,0.191,0.312,0.396,0.5,0.5l0.735,0.402l-0.734,0.401c-0.189,0.103-0.395,0.308-0.502,0.502
+												L33.31,4.682l-0.402-0.734c-0.104-0.191-0.311-0.398-0.501-0.502l-0.735-0.402L32.405,2.643z"/>
+												<path  d="M41.208,12.568H13.355c-0.827,0-1.5,0.673-1.5,1.5v18.424c0,0.827,0.673,1.5,1.5,1.5h27.853
+												c0.827,0,1.5-0.673,1.5-1.5V14.068C42.708,13.241,42.035,12.568,41.208,12.568z M12.855,19.244
+												c3.021-0.243,5.433-2.655,5.676-5.676h17.447c0.244,3.038,2.685,5.46,5.73,5.679v8.067c-3.045,0.218-5.485,2.64-5.73,5.679H18.531
+												c-0.243-3.021-2.655-5.433-5.676-5.676V19.244z M41.708,14.068v4.156c-2.489-0.216-4.463-2.174-4.704-4.656h4.204
+												C41.483,13.568,41.708,13.792,41.708,14.068z M13.355,13.568h4.151c-0.24,2.464-2.187,4.411-4.651,4.651v-4.151
+												C12.855,13.792,13.08,13.568,13.355,13.568z M12.855,32.492v-4.151c2.464,0.24,4.411,2.187,4.651,4.651h-4.151
+												C13.08,32.992,12.855,32.768,12.855,32.492z M41.208,32.992h-4.204c0.241-2.482,2.215-4.44,4.704-4.656v4.156
+												C41.708,32.768,41.483,32.992,41.208,32.992z"/>
+												<path  d="M17.81,23.78h4.057c0.053,0.841,0.24,1.636,0.534,2.359h-2.58c-0.276,0-0.5,0.224-0.5,0.5
+												s0.224,0.5,0.5,0.5h3.018c0.021,0,0.038-0.009,0.059-0.012c0.99,1.626,2.584,2.688,4.385,2.688c1.81,0,3.412-1.074,4.401-2.715
+												c0.059,0.025,0.125,0.039,0.193,0.039h2.866c0.276,0,0.5-0.224,0.5-0.5s-0.224-0.5-0.5-0.5h-2.58
+												c0.294-0.723,0.481-1.518,0.534-2.359h4.057c0.276,0,0.5-0.224,0.5-0.5s-0.224-0.5-0.5-0.5h-4.057
+												c-0.053-0.841-0.24-1.636-0.534-2.359h2.58c0.276,0,0.5-0.224,0.5-0.5s-0.224-0.5-0.5-0.5h-2.866c-0.068,0-0.134,0.014-0.193,0.039
+												c-0.988-1.641-2.591-2.715-4.401-2.715c-1.801,0-3.395,1.062-4.385,2.688c-0.02-0.002-0.038-0.012-0.059-0.012h-3.018
+												c-0.276,0-0.5,0.224-0.5,0.5s0.224,0.5,0.5,0.5h2.58c-0.294,0.723-0.481,1.518-0.534,2.359H17.81c-0.276,0-0.5,0.224-0.5,0.5
+												S17.533,23.78,17.81,23.78z M27.282,17.746c2.445,0,4.436,2.483,4.436,5.535s-1.99,5.535-4.436,5.535
+												c-2.446,0-4.437-2.483-4.437-5.535S24.836,17.746,27.282,17.746z"/>
+												<path  d="M25.347,26.399c0.155,0,0.31-0.073,0.407-0.21l1.029-1.443c0.161,0.036,0.328,0.057,0.5,0.057
+												c0.172,0,0.338-0.022,0.499-0.057l1.029,1.443c0.098,0.137,0.252,0.21,0.407,0.21c0.101,0,0.202-0.03,0.29-0.093
+												c0.225-0.161,0.277-0.473,0.117-0.697l-0.927-1.3c0.547-0.425,0.906-1.082,0.906-1.827c0-1.28-1.041-2.321-2.32-2.321
+												c-1.28,0-2.321,1.042-2.321,2.321c0,0.745,0.359,1.401,0.906,1.826l-0.927,1.3c-0.16,0.225-0.107,0.537,0.117,0.697
+												C25.145,26.369,25.246,26.399,25.347,26.399z M27.282,21.161c0.728,0,1.32,0.593,1.32,1.321s-0.593,1.321-1.32,1.321
+												c-0.729,0-1.321-0.593-1.321-1.321S26.554,21.161,27.282,21.161z"/>
+												<path  d="M15.392,30.748h-1.351c-0.276,0-0.5,0.224-0.5,0.5s0.224,0.5,0.5,0.5h1.351c0.276,0,0.5-0.224,0.5-0.5
+												S15.668,30.748,15.392,30.748z"/>
+												<path  d="M40.468,30.748h-1.351c-0.276,0-0.5,0.224-0.5,0.5s0.224,0.5,0.5,0.5h1.351c0.276,0,0.5-0.224,0.5-0.5
+												S40.744,30.748,40.468,30.748z"/>
+												<path  d="M39.172,15.812h1.351c0.276,0,0.5-0.224,0.5-0.5s-0.224-0.5-0.5-0.5h-1.351c-0.276,0-0.5,0.224-0.5,0.5
+												S38.896,15.812,39.172,15.812z"/>
+												<path  d="M14.096,15.812h1.351c0.276,0,0.5-0.224,0.5-0.5s-0.224-0.5-0.5-0.5h-1.351c-0.276,0-0.5,0.224-0.5,0.5
+												S13.819,15.812,14.096,15.812z"/>
+											</g>
+										</svg>
+
+									</span>
+									<p>Оплата</p>
+								</div>
+							</div>
+
+							<div class="cart-progress__step"></div>
+						</div>
+						<!-- //Progress -->
+
+						<!-- Cart orders -->
+						<div class="cart-orders ">
+							<!-- Header -->
+							<div class="cart-orders__header color-bg cart-gutter-left">
+								<div class="row align-horisontal-start row-gutters">
+
+									<div class="cart-row__col">
+										<p>Товары:</p>
+									</div>
+									<!-- //col -->
+
+									<div class="cart-row__col">
+										<div class="row align-horisontal-betwee align-vertical-center row-gutters">
+											<div class="cart-row__col--subcol">
+												<p>Количество:</p>
+											</div>
+											<div class="cart-row__col--subcol">
+												<p>Цена:</p>
+											</div>
+										</div>
+									</div>
+									<!-- //col -->
+
+								</div>
+							</div>
+							<!-- //Header -->
+
+							<!-- Products -->
+							<div class="cart-orders__products ">
+								<!-- Order product -->
+								<div class="cart-orders__product cart-gutter-left">
+									<div class="row align-horisontal-start align-vertical-center row-gutters">
+
+										<div class="cart-row__col">
+											<div class="cart-orders__product--information">
+												<a href="page-product.html" class="cart-orders__product--information_thumbnail card__thumbnail">
+													<img src="img/product-thumb.jpg" alt="">
+												</a>
+												<p class="articul">Арт. 2345</p>
+											</div>
+										</div>
+										<!-- //col -->
+
+										<div class="cart-row__col">
+											<div class="row align-horisontal-betwee align-vertical-center row-gutters">
+												<div class="cart-row__col--subcol">
+													<div class="product__quantity">
+	<button type="button" class="btn__quantity minus js-quantity-btn" data-action="minus">-</button>
+	<input type="number" class="product__quantity--input js-quantity-input"  min="1" placeholder="0" name="quantity" value="1">
+	<button type="button" class="btn__quantity plus js-quantity-btn" data-action="plus">+</button>
+</div>
+												</div>
+												<div class="cart-row__col--subcol">
+													<p class="cart-orders__product--price">1420 грн</p>
+												</div>
+											</div>
+											
+										</div>
+										<!-- //col -->
+										
+										<!-- Delete product -->
+<button class="btn__delete round-ic" type="button">
+	<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10.159 10.159" enable-background="new 0 0 10.159 10.159" xml:space="preserve">
+		<path  d="M6.14,5.08L9.939,1.28c0.293-0.293,0.293-0.768,0-1.061s-0.768-0.293-1.061,0L5.08,4.019L1.28,0.22
+		c-0.293-0.293-0.768-0.293-1.061,0s-0.293,0.768,0,1.061L4.019,5.08L0.22,8.879c-0.293,0.293-0.293,0.768,0,1.061
+		c0.146,0.146,0.338,0.22,0.53,0.22s0.384-0.073,0.53-0.22L5.08,6.14l3.799,3.799c0.146,0.146,0.338,0.22,0.53,0.22
+		s0.384-0.073,0.53-0.22c0.293-0.293,0.293-0.768,0-1.061L6.14,5.08z"/>
+	</svg>
+</button>
+<!-- //Delete product -->
+									</div>
+								</div>
+								<!-- //Order product -->
+
+								<!-- Order product -->
+								<div class="cart-orders__product cart-gutter-left">
+									<div class="row align-horisontal-start align-vertical-center row-gutters">
+
+										<div class="cart-row__col">
+											<div class="cart-orders__product--information">
+												<a href="page-product.html" class="cart-orders__product--information_thumbnail card__thumbnail">
+													<img src="img/product-thumb.jpg" alt="">
+												</a>
+												<p class="articul">Арт. 2345</p>
+											</div>
+										</div>
+										<!-- //col -->
+
+										<div class="cart-row__col">
+											<div class="row align-horisontal-betwee align-vertical-center row-gutters">
+												<div class="cart-row__col--subcol">
+													<div class="product__quantity">
+	<button type="button" class="btn__quantity minus js-quantity-btn" data-action="minus">-</button>
+	<input type="number" class="product__quantity--input js-quantity-input"  min="1" placeholder="0" name="quantity" value="1">
+	<button type="button" class="btn__quantity plus js-quantity-btn" data-action="plus">+</button>
+</div>
+												</div>
+												<div class="cart-row__col--subcol">
+													<p class="cart-orders__product--price">98 412 грн</p>
+												</div>
+											</div>
+											
+										</div>
+										<!-- //col -->
+										
+										<!-- Delete product -->
+<button class="btn__delete round-ic" type="button">
+	<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10.159 10.159" enable-background="new 0 0 10.159 10.159" xml:space="preserve">
+		<path  d="M6.14,5.08L9.939,1.28c0.293-0.293,0.293-0.768,0-1.061s-0.768-0.293-1.061,0L5.08,4.019L1.28,0.22
+		c-0.293-0.293-0.768-0.293-1.061,0s-0.293,0.768,0,1.061L4.019,5.08L0.22,8.879c-0.293,0.293-0.293,0.768,0,1.061
+		c0.146,0.146,0.338,0.22,0.53,0.22s0.384-0.073,0.53-0.22L5.08,6.14l3.799,3.799c0.146,0.146,0.338,0.22,0.53,0.22
+		s0.384-0.073,0.53-0.22c0.293-0.293,0.293-0.768,0-1.061L6.14,5.08z"/>
+	</svg>
+</button>
+<!-- //Delete product -->
+									</div>
+								</div>
+								<!-- //Order product -->
+							</div>
+							<!-- //Products -->
+
+							<!-- Promo code -->
+							<div class="cart-promocode cart-gutter-left">
+								<div class="row align-horisontal-start align-vertical-center row-gutters">
+									<div class="cart-row__col">
+										<p class="cart-row__col--label">У вас есть скидочная карта?</p>
+									</div>
+									<!-- //col -->
+
+									<div class="cart-row__col">
+										<form>
+											<div class="row align-horisontal-betwee align-vertical-center row-gutters">
+												<div class="cart-row__col--subcol">
+													<input type="text" placeholder="Код скидки" name="promoCode" class="input-round input-border">
+												</div>
+
+												<div class="cart-row__col--subcol text-right">
+													<button class="btn btn-dark btn-wide" type="button">Применить</button>
+												</div>
+
+											</div>
+										</form>
+									</div>
+									<!-- //col -->
+
+								</div>
+							</div>
+							<!-- //Promo code -->
+
+							<!-- Cart footer -->
+							<div class="cart-footer cart-gutter-left">
+								<div class="row align-horisontal-start align-vertical-center row-gutters">
+									<div class="cart-row__col">
+										<div class="row align-vertical-center align-horisontal-between total-price__row">
+											<p class="cart-row__col--label">Итоговая сумма:</p>
+											<p class="total-price">98 123 грн</p>
+										</div>
+									</div>
+									<!-- //col -->
+
+									<div class="cart-row__col">
+										<div class="row align-horisontal-betwee align-vertical-center row-gutters">
+											<div class="cart-row__col--subcol">
+												<a href="#" class="btn btn-transparent js-open-popup-form-btn btn-wide">Купить в один клик</a>
+											</div>
+
+											<div class="cart-row__col--subcol text-right">
+												<a href="#" class="btn btn-wide">Далее</a>
+											</div>
+
+										</div>
+									</div>
+									
+									<!-- //col -->
+								</div>
+							</div>
+							<!-- //Cart footer -->
+						</div>
+						<!-- //Cart orders -->
+
+
+					</div>
+				</div>
+				<!-- //container -->
+			</section>
+
+		</main>
+		<!-- //Main -->
+
+		<!-- Footer -->
+		<footer class="footer">
+	<div class="subscribe accent-bg">
+		<div class="container">
+			<div class="row align-vertical-center align-horisontal-between subscribe__row">
+				<p class="subscribe__text">Подпишитесь на рассылку,<br>что бы быть в курсе всех новостей</p>
+
+				<form  class="subscribe__form">
+					<div class="row align-vertical-center align-horisontal-start">
+						<div class="input-round__wrapper">
+							<input type="email" class="input-round" name="email" placeholder="e-mail">
+						</div>
+						<button class="btn" type="submit">Подписаться</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- //container -->
+	</div>
+
+	<div class="footer__content">
+		<div class="container">
+			<div class="row footer__row">
+
+				<div class="footer__logo">
+
+					<!-- Logo -->
+					<a href="index.html" class="logo">
+						<img src="img/logo-dark.svg" alt="Tea Rose">
+					</a>
+					<!-- //Logo -->
+
+				</div>
+
+				<div class="footer__actions">
+					<div class="row footer__actions--row row-gutters">
+						<div class="footer__col">
+							<h2 class="footer__col--title">Разделы сайта</h2>
+
+							<nav class="footer__nav">
+								<ul>
+									<li><a href="page-about.html">О нас</a></li>
+									<li><a href="page-blog.html">Блог</a></li>
+									<li><a href="page-contacts.html">Контакты</a></li>
+									<li><a href="page-technical.html">Доставка</a></li>
+									<li><a href="page-technical.html">Возврат</a></li>
+									<li><a href="page-technical.html">Оплата</a></li>
+									<li><a href="page-technical.html">Конфидициальность</a></li>
+								</ul>
+							</nav>
+						</div>
+						<!-- //col -->
+
+						<div class="footer__col">
+							<h2 class="footer__col--title">Приезжайте к нам</h2>
+
+							<div class="footer__contacts">
+								<p class="footer__contacts--link block-with-ic block-with-ic__address">Киев,<br>Бульвар Леси<br>Украинки 10</p>
+								<p class="footer__contacts--link block-with-ic block-with-ic__address">Киев,<br>Бульвар Леси<br>Украинки 10</p>
+							</div>
+						</div>
+						<!-- //col -->
+
+						<div class="footer__col">
+							<h2 class="footer__col--title">Свяжитесь</h2>
+
+							<div class="footer__contacts">
+								<p class="footer__contacts--link block-with-ic block-with-ic__phone"><a href="tel:+380449829898">+38 044 982 98 98</a></p>
+								<p class="footer__contacts--link block-with-ic block-with-ic__phone"><a href="tel:+380997232332">+38 099 723 23 32</a></p>
+								<p class="footer__contacts--link block-with-ic block-with-ic__email"><a href="mailto:admin@tea-rose.com.ua<">admin@tea-rose.ua</a></p>
+							</div>
+						</div>
+						<!-- //col -->
+
+						<div class="footer__col">
+							<h2 class="footer__col--title">Мы в соц. сетях</h2>
+
+							<ul class="socials socials-accent">
+								<li class="socials__item">
+	<a href="#" class="socials__link" target="_blank">
+		<i class="socials__link--ic">
+
+			<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 19.23 16.2" enable-background="new 0 0 19.23 16.2" xml:space="preserve">
+				<path  d="M17.995,0.063L0.408,6.917c-0.57,0.222-0.535,1.039,0.051,1.213l4.469,1.32l1.668,5.292
+				c0.174,0.553,0.875,0.72,1.28,0.306l2.311-2.359l4.534,3.328c0.555,0.407,1.345,0.105,1.486-0.569L19.21,1.091
+				C19.357,0.388,18.665-0.198,17.995,0.063z M15.791,3.249l-8.169,7.224c-0.081,0.072-0.133,0.172-0.145,0.28l-0.315,2.796
+				c-0.01,0.091-0.138,0.103-0.165,0.016l-1.294-4.17C5.643,9.204,5.72,8.997,5.89,8.892l9.647-5.983
+				C15.759,2.771,15.986,3.076,15.791,3.249z"/>
+			</svg>
+
+		</i>
+	</a>
+</li>
+<li class="socials__item">
+	<a href="#" class="socials__link" target="_blank">
+		<i class="socials__link--ic">
+
+			<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20.35 21.034" enable-background="new 0 0 20.35 21.034" xml:space="preserve">
+				<g>
+					<g>
+						<path  d="M19.895,5.057l-0.006-0.024c-0.491-1.985-2.704-4.114-4.737-4.557L15.129,0.47
+						c-3.288-0.627-6.621-0.627-9.908,0L5.197,0.475C3.166,0.918,0.952,3.048,0.461,5.033L0.455,5.057
+						c-0.607,2.772-0.607,5.583,0,8.354l0.005,0.024c0.471,1.9,2.519,3.932,4.476,4.491v2.215c0,0.802,0.977,1.196,1.533,0.617
+						l2.245-2.333c0.487,0.027,0.974,0.042,1.461,0.042c1.655,0,3.311-0.156,4.954-0.47l0.023-0.005
+						c2.033-0.443,4.246-2.573,4.737-4.557l0.006-0.024C20.502,10.639,20.502,7.829,19.895,5.057z M18.119,13.009
+						c-0.328,1.295-2.008,2.905-3.344,3.202c-1.748,0.332-3.51,0.474-5.27,0.426c-0.035-0.001-0.069,0.013-0.093,0.038
+						c-0.25,0.256-1.639,1.682-1.639,1.682L6.03,20.146c-0.127,0.133-0.351,0.042-0.351-0.141v-3.67c0-0.061-0.043-0.112-0.103-0.124
+						l-0.001,0c-1.335-0.297-3.015-1.907-3.344-3.202c-0.546-2.505-0.546-5.045,0-7.55c0.328-1.295,2.008-2.905,3.344-3.202
+						c3.053-0.581,6.148-0.581,9.201,0c1.336,0.297,3.016,1.907,3.344,3.202C18.665,7.964,18.665,10.504,18.119,13.009z"/>
+						<path  d="M13.08,14.703c-0.205-0.062-0.401-0.104-0.583-0.18c-1.883-0.781-3.615-1.789-4.988-3.333
+						c-0.78-0.878-1.391-1.87-1.908-2.92C5.357,7.773,5.15,7.256,4.94,6.742C4.748,6.273,5.031,5.789,5.328,5.436
+						c0.279-0.331,0.638-0.585,1.027-0.772C6.659,4.519,6.959,4.603,7.18,4.86C7.66,5.417,8.1,6.001,8.457,6.646
+						c0.219,0.397,0.159,0.882-0.238,1.152C8.122,7.863,8.034,7.94,7.944,8.015C7.865,8.079,7.791,8.145,7.737,8.233
+						c-0.099,0.161-0.104,0.351-0.04,0.526c0.49,1.347,1.316,2.394,2.671,2.958c0.217,0.09,0.435,0.195,0.685,0.166
+						c0.418-0.049,0.554-0.508,0.847-0.748c0.287-0.234,0.653-0.237,0.962-0.042c0.309,0.195,0.608,0.405,0.906,0.617
+						c0.292,0.208,0.583,0.412,0.852,0.649c0.259,0.228,0.348,0.527,0.202,0.837c-0.267,0.567-0.656,1.039-1.216,1.34
+						C13.447,14.621,13.258,14.648,13.08,14.703C12.874,14.641,13.258,14.648,13.08,14.703z"/>
+						<path  d="M10.18,4.016c2.462,0.069,4.485,1.703,4.918,4.138c0.074,0.415,0.1,0.839,0.133,1.26
+						c0.014,0.177-0.086,0.345-0.278,0.348c-0.197,0.002-0.286-0.163-0.299-0.34c-0.025-0.35-0.043-0.702-0.091-1.05
+						c-0.255-1.834-1.718-3.352-3.544-3.678c-0.275-0.049-0.556-0.062-0.834-0.091C10.01,4.585,9.78,4.574,9.741,4.355
+						c-0.033-0.183,0.122-0.329,0.297-0.339C10.085,4.014,10.132,4.016,10.18,4.016C12.643,4.085,10.132,4.016,10.18,4.016z"/>
+						<path d="M13.922,8.867c-0.004,0.031-0.006,0.103-0.024,0.171c-0.065,0.247-0.44,0.278-0.526,0.029
+						c-0.026-0.074-0.029-0.158-0.03-0.238c-0.001-0.522-0.114-1.043-0.377-1.496c-0.27-0.466-0.683-0.858-1.168-1.096
+						c-0.293-0.143-0.61-0.233-0.931-0.286c-0.14-0.023-0.282-0.037-0.423-0.057c-0.171-0.024-0.262-0.133-0.254-0.301
+						c0.008-0.158,0.123-0.271,0.295-0.262c0.565,0.032,1.111,0.154,1.613,0.42c1.022,0.541,1.605,1.395,1.776,2.535
+						c0.008,0.052,0.02,0.103,0.024,0.155C13.906,8.57,13.913,8.699,13.922,8.867C13.918,8.898,13.913,8.699,13.922,8.867z"/>
+						<path  d="M12.391,8.808c-0.206,0.004-0.316-0.11-0.338-0.299c-0.015-0.132-0.026-0.265-0.058-0.393
+						c-0.062-0.252-0.196-0.486-0.408-0.641c-0.1-0.073-0.214-0.126-0.333-0.161c-0.151-0.044-0.308-0.032-0.459-0.069
+						c-0.164-0.04-0.254-0.173-0.229-0.326c0.023-0.14,0.159-0.249,0.312-0.238c0.955,0.069,1.637,0.562,1.734,1.686
+						c0.007,0.079,0.015,0.163-0.003,0.239C12.581,8.736,12.485,8.802,12.391,8.808C12.185,8.812,12.485,8.802,12.391,8.808z"/>
+					</g>
+				</g>
+			</svg>
+
+		</i>
+	</a>
+</li>
+<li class="socials__item">
+	<a href="#" class="socials__link" target="_blank">
+		<i class="socials__link--ic">
+
+			<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20.167 20.324" enable-background="new 0 0 20.167 20.324" xml:space="preserve">
+				<g>
+					<g>
+						<path d="M10.266,0c-5.467,0-9.9,4.432-9.9,9.9
+						c0,1.87,0.519,3.62,1.42,5.112L0,20.324l5.481-1.755c1.418,0.784,3.049,1.231,4.785,1.231c5.468,0,9.9-4.433,9.9-9.9
+						C20.167,4.432,15.734,0,10.266,0z M10.266,18.142c-1.674,0-3.233-0.502-4.534-1.363l-3.167,1.014l1.029-3.06
+						C2.608,13.374,2.025,11.704,2.025,9.9c0-4.545,3.697-8.242,8.241-8.242c4.545,0,8.242,3.697,8.242,8.242
+						C18.508,14.445,14.811,18.142,10.266,18.142z M14.908,12.15c-0.248-0.136-1.467-0.794-1.696-0.887
+						c-0.229-0.093-0.395-0.141-0.574,0.106c-0.178,0.246-0.684,0.797-0.837,0.96c-0.154,0.163-0.302,0.178-0.55,0.042
+						c-0.248-0.135-1.052-0.433-1.985-1.33c-0.726-0.698-1.202-1.544-1.34-1.803c-0.138-0.259-0.001-0.39,0.13-0.511
+						C8.174,8.618,8.32,8.441,8.452,8.298C8.584,8.156,8.63,8.052,8.721,7.887s0.054-0.315-0.005-0.443
+						C8.657,7.315,8.199,6.052,8.007,5.538C7.815,5.025,7.602,5.101,7.454,5.095C7.307,5.09,7.139,5.062,6.971,5.056
+						C6.802,5.05,6.526,5.103,6.285,5.347C6.044,5.591,5.368,6.178,5.322,7.422C5.275,8.665,6.135,9.9,6.255,10.073
+						c0.12,0.174,1.643,2.869,4.174,3.977c2.531,1.108,2.545,0.77,3.009,0.745c0.465-0.025,1.518-0.556,1.751-1.138
+						c0.233-0.582,0.251-1.088,0.192-1.196C15.322,12.355,15.156,12.285,14.908,12.15z"/>
+					</g>
+				</g>
+			</svg>
+
+		</i>
+	</a>
+</li>							</ul>
+						</div>
+						<!-- //col -->
+
+					</div>
+				</div>
+			</div>
+
+			<div class="copyright">
+				<div class="row align-vertical-center align-horisontal-between">
+					<p class="copyright__text">&copy; 2020 Все права защищены</p>
+
+					<a href="#" class="developed" target="_blank" title="Grytsay">
+						<img src="img/grytsay.svg" alt="Grytsay">
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- //container -->
+	</div>
+</footer>
+
+		<!-- //Footer -->
+
+	</div>
+	<!-- //CONTENT WRAPPER -->
+
+	<!-- jQuery IF NEEDED-->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<!-- Google map -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBR5vIGzW3iFwxgUDP3TEFZR66J5LzJdhY"></script>
+<!-- All libs scripts -->
+	<script src="js/libs.min.js"></script>
+<!-- Main file with scripts -->
+<script src="js/common.min.js"></script>
+
+</body>
+
+</html>

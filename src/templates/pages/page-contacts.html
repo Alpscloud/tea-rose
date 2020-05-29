@@ -1,0 +1,130 @@
+{% include '../parts/head.html' %}
+<body>
+	
+	<!-- CONTENT WRAPPER -->
+	<div class="content__wrapper">
+
+		<!-- Popups -->
+		{% include '../parts/components/popups.html' %}
+		<!-- //Popups -->
+
+		<!-- Header -->
+		{% include '../parts/sections/header.html' %}
+		<!-- //Header -->
+
+		<!-- Main -->
+		<main class="main main-page">
+			
+			<section class="sect__contacts">
+				<h2 class="w3c">&nbsp;</h2>
+
+				<div class="row">
+
+					<!-- Contacts -->
+					<div class="contacts">
+						<div class="contacts__col">
+							<!-- Breadcrumbs -->
+							<div class="breadcrumbs">
+								<ul class="breadcrumbs__list">
+									<li class="breadcrumbs__item"><a href="index.html" class="breadcrumbs__link">Главная</a></li>
+									<li class="breadcrumbs__item"><span class="breadcrumbs__link is-active">Контакты</span></li>
+								</ul>
+							</div>
+							<!-- //Breadcrumbs -->
+
+							<div class="contacts__content">
+
+								<div class="sect__title--col sect__title--col-with-circle">
+									<span class="drop drop-double"></span>
+									<img src="img/decor/blog-title-decor.svg" class="decor-img" alt="Tea rose">
+									<h3 class="sect__title">Приезжайте<br>к нам</h3>
+								</div>
+
+								<div class="contacts__content--block">
+									<h4 class="contacts__content--title">Куда приехать?</h4>
+
+									<div class="row align-horisontal-start contacts__items--row row-gutters">
+
+										<div class="contacts__item--col">
+											<div class="contacts__item">
+												<i class="contacts__item--ic" style="background-image: url('img/icons/svg/contacts/location.svg');"></i>
+												<p>Киев, Бульвар Леси<br>Украинки 10</p>
+											</div>
+										</div>
+
+										<div class="contacts__item--col">
+											<div class="contacts__item">
+												<i class="contacts__item--ic" style="background-image: url('img/icons/svg/contacts/location.svg');"></i>
+												<p>Киев, Бульвар Леси<br>Украинки 10</p>
+											</div>
+										</div>
+									</div>
+								</div>
+
+								<div class="contacts__content--block">
+									<h4 class="contacts__content--title">Куда позвонить?</h4>
+
+									<div class="row align-horisontal-start contacts__items--row row-gutters">
+
+										<div class="contacts__item--col">
+											<a href="tel:+380449829898" class="contacts__item">
+												<i class="contacts__item--ic" style="background-image: url('img/icons/svg/contacts/phone.svg');"></i>
+												<span>+38 044 982 98 98</span>
+											</a>
+										</div>
+
+										<div class="contacts__item--col">
+
+											<a href="tel:+380997232332" class="contacts__item">
+												<i class="contacts__item--ic" style="background-image: url('img/icons/svg/contacts/phone.svg');"></i>
+												<span>+38 099 723 23 32</span>
+											</a>
+										</div>
+									</div>
+								</div>
+
+								<div class="contacts__content--block">
+									<h4 class="contacts__content--title">Куда написать?</h4>
+
+									<div class="row align-horisontal-start contacts__items--row row-gutters">
+										<div class="contacts__item--col">
+											<a href="mailto:mail@gmail.com" class="contacts__item">
+												<i class="contacts__item--ic" style="background-image: url('img/icons/svg/contacts/mail.svg');"></i>
+												<span>mail@gmail.com</span>
+											</a>
+										</div>
+									</div>
+
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- //Contacts -->
+
+					<!-- Map -->
+					<div class="map__wrapper">
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2541.2840445289035!2d30.525930715943595!3d50.43580969630049!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cf0168581581%3A0x290eca7340db7dc6!2z0LHRg9C7LiDQm9C10YHQuCDQo9C60YDQsNC40L3QutC4LCAxMCwg0JrQuNC10LIsIDAyMDAw!5e0!3m2!1sru!2sua!4v1590747357379!5m2!1sru!2sua"style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+					</div>
+					<!-- //Map -->
+
+
+				</div>
+
+				
+			</section>
+			
+		</main>
+		<!-- //Main -->
+
+		<!-- Footer -->
+		{% include '../parts/sections/footer.html' %}
+		<!-- //Footer -->
+
+	</div>
+	<!-- //CONTENT WRAPPER -->
+
+	{% include '../parts/scripts.html' %}
+
+</body>
+
+</html>

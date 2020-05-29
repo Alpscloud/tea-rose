@@ -28,7 +28,7 @@ input[type="search"]::-webkit-search-results-decoration
 	color $text-color
 	&:hover,
 	&:focus
-		border-color $accent-color
+		border-color $light-accent-color
 	&::-webkit-input-placeholder
 		font 16px $Reg
 		color $text-color
@@ -47,10 +47,10 @@ input[type="search"]::-webkit-search-results-decoration
 		position relative
 		
 	&.is-error
-		border-color red
+		border-color $accent-color
 		
 	&-round
-		padding 22px
+		padding 20px
 		display block
 		width 100%
 		border-radius 50px
@@ -59,6 +59,7 @@ input[type="search"]::-webkit-search-results-decoration
 		background-color $light-color
 		text-align center
 		box-shadow $round-input-shadow
+		border 1px solid transparent
 		&:focus,
 		&:hover
 			box-shadow none
@@ -76,18 +77,44 @@ input[type="search"]::-webkit-search-results-decoration
 			color $text-color
 		&__wrapper
 			max-width 250px
-
+			
+		&.is-error
+			border-color $accent-color
+			
+	&-border
+		box-shadow none
+		border 1px solid $lines-color
+		padding-left 10px
+		padding-right 10px
+		width 100%
+		&:hover,
+		&:focus
+			border-color $accent-color
+		
+		&.is-error
+			border-color $light-accent-color
+			
+	&__label
+		span
+			display inline-block
+			font-family $Med
+			margin-bottom 15px
+			
 
 .checkbox,
 .radio
 	position relative
 	display inline-block
 	margin-left 0
-	padding-left 40px
+	padding-left 25px
 	font 14px $Med
 	line-height 1
 	color rgba($dark-color, .3)
 	transition color .17s ease-in-out
+	
+	&-default
+		font 16px $Reg
+		color $text-color
 	
 	&:before,
 	&:after
@@ -140,6 +167,30 @@ input[type="search"]::-webkit-search-results-decoration
 	&:after
 		left 3.5px
 		vertical-center()
+		
+
+.textarea
+	border 1px solid transparent
+	background-color $light-color
+	box-shadow $round-input-shadow
+	padding 15px 25px
+	font 16px $Reg
+	min-height 75px
+	&::-webkit-input-placeholder
+		font 1em $Reg
+		color rgba($dark-color, .4)
+	&::-moz-placeholder
+		font 1em $Reg
+		color rgba($dark-color, .4)
+	&:-moz-placeholder
+		font 1em $Reg
+		color rgba($dark-color, .4)
+	&:-ms-input-placeholder
+		font 1em $Reg
+		color rgba($dark-color, .4)
+	&:hover,
+	&:focus
+		box-shadow none
 			
 
 		

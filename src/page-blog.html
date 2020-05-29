@@ -1,0 +1,1151 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<title>Tea Rose</title>
+
+	<!-- Meta tags -->
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="Serhii 'winde' Kuptsov">
+
+	<meta http-equiv="Cache-Control" content="no-cache">
+	
+	<!-- Favicons -->
+	<link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+	<link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+	<link rel="manifest" href="img/favicon/site.webmanifest">
+	<link rel="mask-icon" href="img/favicon/safari-pinned-tab.svg" color="#efc9c9">
+	<!-- //Favicons -->
+	<meta name="msapplication-TileColor" content="#efc9c9">
+	<meta name="theme-color" content="#efc9c9">
+	<meta name="msapplication-navbutton-color" content="#efc9c9">
+	<meta name="apple-mobile-web-app-status-bar-style" content="#efc9c9">
+
+	<!-- All libs styles -->
+	<link rel="stylesheet" href="css/libs.min.css">
+	<!-- Main file with styles -->
+	<link rel="stylesheet" href="css/main.min.css">
+
+	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+	  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+	
+	<!-- CONTENT WRAPPER -->
+	<div class="content__wrapper">
+
+		<!-- Popups -->
+		<!-- Popup login-->
+<div class="popup js-popup js-popup-login-form" >
+	<div class="popup__overflow">
+		<div class="popup__body text-center">
+			<!-- Close btn -->
+			<button class="btn__close js-close-popup-btn" type="button">
+				<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
+					<path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717
+					L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859
+					c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287
+					l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285
+					L284.286,256.002z"/>
+				</svg>
+			</button>
+			<!-- //Close btn -->
+
+			<!-- Popup content-->
+			<div class="popup__content">
+				<h3 class="popup__title">Личный кабинет</h3>
+
+				<div class="popup__tabs--controls">
+					<button class="btn__tab js-tab-btn is-active" type="button">Авторизация</button>
+					<button class="btn__tab js-tab-btn" type="button">Регистрация</button>
+				</div>
+
+				<div class="popup__tabs--forms">
+					<!-- Login form -->
+					<div class="popup__tab--form js-tab-content">
+						<form class="popup__form text-left">
+							<div class="input__wrapper">
+								<input type="email" class="input-round js-input is-error" name="email" placeholder="e-mail *">
+							</div>
+							<div class="input__wrapper">
+								<input type="password" class="input-round js-input" name="password" placeholder="Пароль *">
+							</div>
+							<div class="input__wrapper">
+								<button class="btn btn-wide" type="button">Войти</button>
+							</div>
+						</form>
+
+						<a href="#" class="forgot-pw-link js-open-restore-pw-form-btn">Забыли пароль?</a>
+					</div>
+					<!-- //Login form -->
+
+					<!-- Registration form -->
+					<div class="popup__tab--form js-tab-content">
+						<form class="popup__form text-left">
+							<div class="input__wrapper">
+								<input type="text" class="input-round js-input is-error" name="name" placeholder="Ваше имя *">
+							</div>
+							<div class="input__wrapper">
+								<input type="tel" class="input-round js-input" name="phone" placeholder="Ваш телефон *">
+							</div>
+							<div class="input__wrapper">
+								<input type="email" class="input-round js-input" name="email" placeholder="e-mail *">
+							</div>
+							<div class="input__wrapper">
+								<input type="password" class="input-round js-input" name="password" placeholder="Пароль *">
+							</div>
+							<div class="input__wrapper">
+								<button class="btn btn-wide" type="button">Рагистрация</button>
+							</div>
+
+							<label class="checkbox__label">
+								<input name="privacyPolicy" type="checkbox" checked>
+								<span class="checkbox text-left">Даю разрешение на<br>обработку личных данных</span>
+							</label>
+						</form>
+					</div>
+					<!-- //Registration form -->
+				</div>
+				
+			</div>
+			<!-- //Popup content-->
+		</div>
+	</div>
+</div>
+<!-- //Popup login-->
+
+<!-- Popup restore pw-->
+<div class="popup js-popup js-popup-restore-pw-form">
+	<div class="popup__overflow">
+		<div class="popup__body text-center">
+			<!-- Close btn -->
+			<button class="btn__close js-close-popup-btn" type="button">
+				<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
+					<path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717
+					L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859
+					c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287
+					l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285
+					L284.286,256.002z"/>
+				</svg>
+			</button>
+			<!-- //Close btn -->
+
+			<!-- Popup content-->
+			<div class="popup__content">
+				<h3 class="popup__title">Восстановление пароля</h3>
+				<p class="popup__text">Мы вышлем Вам пароль на Ваш e-mail,<br>указанный при регистрации</p>
+				<form class="popup__form text-left">
+					<div class="input__wrapper">
+						<input type="email" class="input-round js-input is-error" name="email" placeholder="e-mail *">
+					</div>
+					<div class="input__wrapper">
+						<button class="btn btn-wide" type="button">Отправить</button>
+					</div>
+				</form>
+			</div>
+			<!-- //Popup content-->
+		</div>
+	</div>
+</div>
+<!-- //Popup restore pw-->
+
+<!-- Popup quick order-->
+<div class="popup js-popup js-popup-form">
+	<div class="popup__overflow">
+		<div class="popup__body text-center">
+			<!-- Close btn -->
+			<button class="btn__close js-close-popup-btn" type="button">
+				<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
+					<path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717
+					L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859
+					c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287
+					l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285
+					L284.286,256.002z"/>
+				</svg>
+			</button>
+			<!-- //Close btn -->
+
+			<!-- Popup content-->
+			<div class="popup__content">
+				<h3 class="popup__title">Быстрый заказ</h3>
+				<p class="popup__text">Заполните всего два поля,<br>а все остальное мы сделаем за вас :)</p>
+				<form class="popup__form text-left">
+					<div class="input__wrapper">
+						<input type="text" class="input-round js-input is-error" name="name" placeholder="Ваше имя *">
+					</div>
+					<div class="input__wrapper">
+						<input type="tel" class="input-round js-input" name="phone" placeholder="Ваш телефон *">
+					</div>
+					<div class="input__wrapper">
+						<button class="btn btn-wide" type="button">Отправить</button>
+					</div>
+
+					<label class="checkbox__label">
+						<input name="privacyPolicy" type="checkbox" checked>
+						<span class="checkbox text-left">Даю разрешение на<br>обработку личных данных</span>
+					</label>
+				</form>
+			</div>
+			<!-- //Popup content-->
+		</div>
+	</div>
+</div>
+<!-- //Popup quick order-->
+
+<!-- Popup thanks-->
+<div class="popup js-popup js-popup-thanks">
+	<div class="popup__overflow">
+		<div class="popup__body text-center">
+			<!-- Close btn -->
+			<button class="btn__close js-close-popup-btn" type="button">
+				<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
+					<path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717
+					L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859
+					c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287
+					l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285
+					L284.286,256.002z"/>
+				</svg>
+			</button>
+			<!-- //Close btn -->
+
+			<!-- Popup content-->
+			<div class="popup__content">
+				<h3 class="popup__title">Спасибо за подписку</h3>
+				<p class="popup__text">Теперь мы с вами ещё ближе :)</p>
+			</div>
+			<!-- //Popup content-->
+		</div>
+	</div>
+</div>
+<!-- //Popup thanks-->
+
+<!-- Popup add to cart-->
+<div class="popup js-popup js-popup-added-to-cart">
+	<div class="popup__overflow">
+		<div class="popup__body text-center">
+			<!-- Close btn -->
+			<button class="btn__close js-close-popup-btn" type="button">
+				<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
+					<path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717
+					L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859
+					c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287
+					l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285
+					L284.286,256.002z"/>
+				</svg>
+			</button>
+			<!-- //Close btn -->
+
+			<!-- Popup content-->
+			<div class="popup__content">
+				<h3 class="popup__title">Товар добавлен в корзину</h3>
+
+				<div class="row popup__btns">
+					<a href="page-cart.html" class="btn btn-wide">Перейти в корзину</a>
+					<a href="#" class="btn btn-wide btn-light js-close-popup-btn">Вернуться на сайт</a>
+				</div>
+			</div>
+			<!-- //Popup content-->
+		</div>
+	</div>
+</div>
+<!-- //Popup add to cart-->
+		<!-- //Popups -->
+
+		<!-- Header -->
+		<header class="header">
+	<div class="header-top">
+		<div class="container">
+			<div class="row align-horisontal-between align-vertical-center header-top__row">
+
+				<div class="logo__col">
+					<div class="row align-vertical-center align-horisontal-start">
+						<!-- Logo -->
+						<a href="index.html" class="logo">
+							<img src="img/logo.svg" alt="Tea Rose">
+						</a>
+						<!-- //Logo -->
+
+						<!-- NAV -->
+						<nav class="nav">
+	<ul class="nav__list">
+		<li class="nav__item"><a href="page-about.html" class="nav__link link">О нас</a></li>
+		<li class="nav__item"><a href="page-blog.html" class="nav__link link">Блог</a></li>
+		<li class="nav__item"><a href="page-contacts.html" class="nav__link link">Контакты</a></li>
+	</ul>
+</nav>
+						<!-- //NAV -->
+					</div>
+					<!-- //row -->
+				</div>
+
+
+				<div class="delivery">
+					<p class="delivery__text">Доставка 24/7</p>
+				</div>
+
+
+				<div class="header__tools">
+					<div class="row align-vertical-center align-horisontal-end">
+
+						<ul class="languages">
+							<li class="languages__item"><a href="#" class="languages__link link">en</a></li>
+							<li class="languages__item"><a href="#" class="languages__link link">укр</a></li>
+							<li class="languages__item"><a href="#" class="languages__link link is-active">ру</a></li>
+						</ul>
+
+						<div class="header__icons-links">
+							<!-- Wishlist -->
+							<a href="page-wishlist.html" class="icon-link tooltip__wrapper">
+								<i class="icon-link__ic">
+									<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20.651 18.534" enable-background="new 0 0 20.651 18.534" xml:space="preserve">
+										<g>
+											<g>
+												<g>
+													<path d="M10.326,5.913c-0.276,0-0.5-0.224-0.5-0.5C9.826,2.979,7.847,1,5.413,1S1,2.979,1,5.413c0,0.276-0.224,0.5-0.5,0.5
+													S0,5.689,0,5.413C0,2.429,2.429,0,5.413,0s5.413,2.429,5.413,5.413C10.826,5.689,10.603,5.913,10.326,5.913z"/>
+												</g>
+												<g>
+													<path d="M20.151,5.913c-0.276,0-0.5-0.224-0.5-0.5C19.651,2.979,17.672,1,15.239,1c-2.434,0-4.413,1.979-4.413,4.413
+													c0,0.276-0.224,0.5-0.5,0.5s-0.5-0.224-0.5-0.5C9.826,2.429,12.255,0,15.239,0s5.412,2.429,5.412,5.413
+													C20.651,5.689,20.428,5.913,20.151,5.913z"/>
+												</g>
+												<g>
+													<path d="M10.326,18.534C9.108,18.534,0,11.182,0,5.413c0-0.276,0.224-0.5,0.5-0.5S1,5.137,1,5.413
+													c0,5.034,8.401,11.888,9.375,12.125c0.875-0.237,9.276-7.093,9.276-12.125c0-0.276,0.224-0.5,0.5-0.5s0.5,0.224,0.5,0.5
+													C20.651,11.182,11.544,18.534,10.326,18.534z"/>
+												</g>
+											</g>
+											<g>
+												<path d="M17.678,5.762c-0.276,0-0.5-0.224-0.5-0.5c0-1.069-0.869-1.938-1.938-1.938c-0.407,0-0.796,0.124-1.124,0.358
+												c-0.223,0.159-0.537,0.111-0.697-0.115c-0.161-0.225-0.109-0.537,0.115-0.697c0.499-0.357,1.089-0.546,1.706-0.546
+												c1.62,0,2.938,1.318,2.938,2.938C18.178,5.538,17.954,5.762,17.678,5.762z"/>
+											</g>
+										</g>
+									</svg>
+
+								</i>
+
+								<!-- Tooltip -->
+								<span class="tooltip">Избранное</span>
+								<!-- //Tooltip -->
+							</a>
+							<!--// Wishlist -->
+
+							<!-- Cabinet -->
+							<a href="page-wishlist.html" class="icon-link tooltip__wrapper js-login-btn">
+								<i class="icon-link__ic">
+
+									<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 19.68 19.149" enable-background="new 0 0 19.68 19.149" xml:space="preserve">
+										<g>
+											<path d="M19.227,7.949l-8.16-7.496c-0.658-0.604-1.796-0.604-2.454,0L0.452,7.949c-0.538,0.494-0.482,0.917-0.401,1.126
+											c0.082,0.208,0.327,0.559,1.058,0.559h0.427v7.809c0,0.941,0.766,1.707,1.707,1.707h13.195c0.94,0,1.706-0.766,1.706-1.707V9.634
+											h0.428c0.73,0,0.976-0.35,1.057-0.559S19.765,8.443,19.227,7.949z M17.144,8.634v8.809c0,0.39-0.316,0.707-0.706,0.707H3.243
+											c-0.39,0-0.707-0.317-0.707-0.707V8.634H1.185L9.29,1.19c0.287-0.264,0.813-0.264,1.101,0l8.104,7.444H17.144z"/>
+											<path d="M9.84,8.409C9.361,7.742,8.583,7.303,7.7,7.303c-1.455,0-2.639,1.184-2.639,2.639c0,2.533,3.969,5.997,4.779,5.997
+											s4.779-3.463,4.779-5.997c0-1.455-1.184-2.639-2.639-2.639C11.097,7.303,10.32,7.742,9.84,8.409z M11.98,8.303
+											c0.904,0,1.639,0.735,1.639,1.639c0,1.827-2.978,4.5-3.779,4.958c-0.801-0.458-3.779-3.131-3.779-4.958
+											c0-0.904,0.735-1.639,1.639-1.639c0.904,0,1.64,0.735,1.64,1.639c0,0.276,0.224,0.5,0.5,0.5s0.5-0.224,0.5-0.5
+											C10.34,9.038,11.075,8.303,11.98,8.303z"/>
+										</g>
+									</svg>
+
+
+								</i>
+
+								<!-- Tooltip -->
+								<span class="tooltip">Личный кабинет</span>
+								<!-- //Tooltip -->
+							</a>
+							<!--// Cabinet -->
+						</div>
+
+						<a href="page-cart.html" class="btn btn-cart btn-with-ic">0 грн</a>
+					</div>
+				</div>
+
+
+
+			</div>
+			<!-- //row -->
+		</div>
+		<!-- //container -->
+	</div>
+
+	<div class="header-bottom">
+		<div class="container">
+			<div class="row align-vertical-center-align-horisontal-between header-bottom__row">
+
+				<div class="nav-catalog__col">
+					<!-- NAV -->
+					<nav class="nav-catalog">
+	<ul class="nav-catalog__list">
+		<li class="nav-catalog__item has-sublist">
+			<a href="page-catalog.html" class="nav-catalog__link">Цветы</a>
+
+			<button class="btn__toggle-subnav" type="button"></button>
+
+			<!-- Sublist -->
+			<div class="nav-catalog__sublist--wrapper">
+				<div class="nav-catalog__sublist--content">
+					<div class="container">
+						<h2 class="nav-catalog__sublist--title">Цветы</h2>
+						<ul>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- Sublist -->
+		</li>
+		<li class="nav-catalog__item has-sublist">
+			<a href="page-catalog.html" class="nav-catalog__link">Декор и подарки</a>
+
+			<button class="btn__toggle-subnav" type="button"></button>
+
+			<!-- Sublist -->
+			<div class="nav-catalog__sublist--wrapper">
+				<div class="nav-catalog__sublist--content">
+					<div class="container">
+						<h2 class="nav-catalog__sublist--title">Декор и подарки</h2>
+						<ul>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными.</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- Sublist -->
+
+
+		</li>
+		<li class="nav-catalog__item has-sublist">
+			<a href="page-catalog.html" class="nav-catalog__link">Всё для свадьбы</a>
+
+			<button class="btn__toggle-subnav" type="button"></button>
+
+			<!-- Sublist -->
+			<div class="nav-catalog__sublist--wrapper">
+				<div class="nav-catalog__sublist--content">
+					<div class="container">
+						<h2 class="nav-catalog__sublist--title">Всё для свадьбы</h2>
+						<ul>
+							<li><a href="page-catalog.html">Далеко-далеко за.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за Далеко-далеко.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за.Далеко-далеко.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за.</a></li>
+							<li><a href="page-catalog.html">Далек.</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- Sublist -->
+
+
+		</li>
+		<li class="nav-catalog__item has-sublist">
+			<a href="page-catalog.html" class="nav-catalog__link">Новости и акции</a>
+
+			<button class="btn__toggle-subnav" type="button"></button>
+
+			<!-- Sublist -->
+			<div class="nav-catalog__sublist--wrapper">
+				<div class="nav-catalog__sublist--content">
+					<div class="container">
+						<h2 class="nav-catalog__sublist--title">Новости и акции</h2>
+						<ul>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными горами.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными горами.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными горами.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными горами.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными горами.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными горами.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными горами.</a></li>
+							<li><a href="page-catalog.html">Далеко-далеко за словесными горами.</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- Sublist -->
+
+			
+		</li>
+		<li class="nav-catalog__item has-sublist">
+			<a href="page-catalog.html" class="nav-catalog__link">Букет недели</a>
+
+			<button class="btn__toggle-subnav" type="button"></button>
+
+			<!-- Sublist -->
+			<div class="nav-catalog__sublist--wrapper">
+				<div class="nav-catalog__sublist--content">
+					<div class="container">
+						<h2 class="nav-catalog__sublist--title">Букет недели</h2>
+						<ul>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+							<li><a href="page-catalog.html">Название цветов</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!-- Sublist -->
+
+			
+		</li>
+	</ul>
+</nav>
+					<!-- //NAV -->
+				</div>
+
+				<div class="header__contacts">
+					<div class="row align-vertical-center align-horisontal-end header__contacts__row">
+						<!-- Socials -->
+						<ul class="socials">
+							<li class="socials__item">
+	<a href="#" class="socials__link" target="_blank">
+		<i class="socials__link--ic">
+
+			<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 19.23 16.2" enable-background="new 0 0 19.23 16.2" xml:space="preserve">
+				<path  d="M17.995,0.063L0.408,6.917c-0.57,0.222-0.535,1.039,0.051,1.213l4.469,1.32l1.668,5.292
+				c0.174,0.553,0.875,0.72,1.28,0.306l2.311-2.359l4.534,3.328c0.555,0.407,1.345,0.105,1.486-0.569L19.21,1.091
+				C19.357,0.388,18.665-0.198,17.995,0.063z M15.791,3.249l-8.169,7.224c-0.081,0.072-0.133,0.172-0.145,0.28l-0.315,2.796
+				c-0.01,0.091-0.138,0.103-0.165,0.016l-1.294-4.17C5.643,9.204,5.72,8.997,5.89,8.892l9.647-5.983
+				C15.759,2.771,15.986,3.076,15.791,3.249z"/>
+			</svg>
+
+		</i>
+	</a>
+</li>
+<li class="socials__item">
+	<a href="#" class="socials__link" target="_blank">
+		<i class="socials__link--ic">
+
+			<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20.35 21.034" enable-background="new 0 0 20.35 21.034" xml:space="preserve">
+				<g>
+					<g>
+						<path  d="M19.895,5.057l-0.006-0.024c-0.491-1.985-2.704-4.114-4.737-4.557L15.129,0.47
+						c-3.288-0.627-6.621-0.627-9.908,0L5.197,0.475C3.166,0.918,0.952,3.048,0.461,5.033L0.455,5.057
+						c-0.607,2.772-0.607,5.583,0,8.354l0.005,0.024c0.471,1.9,2.519,3.932,4.476,4.491v2.215c0,0.802,0.977,1.196,1.533,0.617
+						l2.245-2.333c0.487,0.027,0.974,0.042,1.461,0.042c1.655,0,3.311-0.156,4.954-0.47l0.023-0.005
+						c2.033-0.443,4.246-2.573,4.737-4.557l0.006-0.024C20.502,10.639,20.502,7.829,19.895,5.057z M18.119,13.009
+						c-0.328,1.295-2.008,2.905-3.344,3.202c-1.748,0.332-3.51,0.474-5.27,0.426c-0.035-0.001-0.069,0.013-0.093,0.038
+						c-0.25,0.256-1.639,1.682-1.639,1.682L6.03,20.146c-0.127,0.133-0.351,0.042-0.351-0.141v-3.67c0-0.061-0.043-0.112-0.103-0.124
+						l-0.001,0c-1.335-0.297-3.015-1.907-3.344-3.202c-0.546-2.505-0.546-5.045,0-7.55c0.328-1.295,2.008-2.905,3.344-3.202
+						c3.053-0.581,6.148-0.581,9.201,0c1.336,0.297,3.016,1.907,3.344,3.202C18.665,7.964,18.665,10.504,18.119,13.009z"/>
+						<path  d="M13.08,14.703c-0.205-0.062-0.401-0.104-0.583-0.18c-1.883-0.781-3.615-1.789-4.988-3.333
+						c-0.78-0.878-1.391-1.87-1.908-2.92C5.357,7.773,5.15,7.256,4.94,6.742C4.748,6.273,5.031,5.789,5.328,5.436
+						c0.279-0.331,0.638-0.585,1.027-0.772C6.659,4.519,6.959,4.603,7.18,4.86C7.66,5.417,8.1,6.001,8.457,6.646
+						c0.219,0.397,0.159,0.882-0.238,1.152C8.122,7.863,8.034,7.94,7.944,8.015C7.865,8.079,7.791,8.145,7.737,8.233
+						c-0.099,0.161-0.104,0.351-0.04,0.526c0.49,1.347,1.316,2.394,2.671,2.958c0.217,0.09,0.435,0.195,0.685,0.166
+						c0.418-0.049,0.554-0.508,0.847-0.748c0.287-0.234,0.653-0.237,0.962-0.042c0.309,0.195,0.608,0.405,0.906,0.617
+						c0.292,0.208,0.583,0.412,0.852,0.649c0.259,0.228,0.348,0.527,0.202,0.837c-0.267,0.567-0.656,1.039-1.216,1.34
+						C13.447,14.621,13.258,14.648,13.08,14.703C12.874,14.641,13.258,14.648,13.08,14.703z"/>
+						<path  d="M10.18,4.016c2.462,0.069,4.485,1.703,4.918,4.138c0.074,0.415,0.1,0.839,0.133,1.26
+						c0.014,0.177-0.086,0.345-0.278,0.348c-0.197,0.002-0.286-0.163-0.299-0.34c-0.025-0.35-0.043-0.702-0.091-1.05
+						c-0.255-1.834-1.718-3.352-3.544-3.678c-0.275-0.049-0.556-0.062-0.834-0.091C10.01,4.585,9.78,4.574,9.741,4.355
+						c-0.033-0.183,0.122-0.329,0.297-0.339C10.085,4.014,10.132,4.016,10.18,4.016C12.643,4.085,10.132,4.016,10.18,4.016z"/>
+						<path d="M13.922,8.867c-0.004,0.031-0.006,0.103-0.024,0.171c-0.065,0.247-0.44,0.278-0.526,0.029
+						c-0.026-0.074-0.029-0.158-0.03-0.238c-0.001-0.522-0.114-1.043-0.377-1.496c-0.27-0.466-0.683-0.858-1.168-1.096
+						c-0.293-0.143-0.61-0.233-0.931-0.286c-0.14-0.023-0.282-0.037-0.423-0.057c-0.171-0.024-0.262-0.133-0.254-0.301
+						c0.008-0.158,0.123-0.271,0.295-0.262c0.565,0.032,1.111,0.154,1.613,0.42c1.022,0.541,1.605,1.395,1.776,2.535
+						c0.008,0.052,0.02,0.103,0.024,0.155C13.906,8.57,13.913,8.699,13.922,8.867C13.918,8.898,13.913,8.699,13.922,8.867z"/>
+						<path  d="M12.391,8.808c-0.206,0.004-0.316-0.11-0.338-0.299c-0.015-0.132-0.026-0.265-0.058-0.393
+						c-0.062-0.252-0.196-0.486-0.408-0.641c-0.1-0.073-0.214-0.126-0.333-0.161c-0.151-0.044-0.308-0.032-0.459-0.069
+						c-0.164-0.04-0.254-0.173-0.229-0.326c0.023-0.14,0.159-0.249,0.312-0.238c0.955,0.069,1.637,0.562,1.734,1.686
+						c0.007,0.079,0.015,0.163-0.003,0.239C12.581,8.736,12.485,8.802,12.391,8.808C12.185,8.812,12.485,8.802,12.391,8.808z"/>
+					</g>
+				</g>
+			</svg>
+
+		</i>
+	</a>
+</li>
+<li class="socials__item">
+	<a href="#" class="socials__link" target="_blank">
+		<i class="socials__link--ic">
+
+			<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20.167 20.324" enable-background="new 0 0 20.167 20.324" xml:space="preserve">
+				<g>
+					<g>
+						<path d="M10.266,0c-5.467,0-9.9,4.432-9.9,9.9
+						c0,1.87,0.519,3.62,1.42,5.112L0,20.324l5.481-1.755c1.418,0.784,3.049,1.231,4.785,1.231c5.468,0,9.9-4.433,9.9-9.9
+						C20.167,4.432,15.734,0,10.266,0z M10.266,18.142c-1.674,0-3.233-0.502-4.534-1.363l-3.167,1.014l1.029-3.06
+						C2.608,13.374,2.025,11.704,2.025,9.9c0-4.545,3.697-8.242,8.241-8.242c4.545,0,8.242,3.697,8.242,8.242
+						C18.508,14.445,14.811,18.142,10.266,18.142z M14.908,12.15c-0.248-0.136-1.467-0.794-1.696-0.887
+						c-0.229-0.093-0.395-0.141-0.574,0.106c-0.178,0.246-0.684,0.797-0.837,0.96c-0.154,0.163-0.302,0.178-0.55,0.042
+						c-0.248-0.135-1.052-0.433-1.985-1.33c-0.726-0.698-1.202-1.544-1.34-1.803c-0.138-0.259-0.001-0.39,0.13-0.511
+						C8.174,8.618,8.32,8.441,8.452,8.298C8.584,8.156,8.63,8.052,8.721,7.887s0.054-0.315-0.005-0.443
+						C8.657,7.315,8.199,6.052,8.007,5.538C7.815,5.025,7.602,5.101,7.454,5.095C7.307,5.09,7.139,5.062,6.971,5.056
+						C6.802,5.05,6.526,5.103,6.285,5.347C6.044,5.591,5.368,6.178,5.322,7.422C5.275,8.665,6.135,9.9,6.255,10.073
+						c0.12,0.174,1.643,2.869,4.174,3.977c2.531,1.108,2.545,0.77,3.009,0.745c0.465-0.025,1.518-0.556,1.751-1.138
+						c0.233-0.582,0.251-1.088,0.192-1.196C15.322,12.355,15.156,12.285,14.908,12.15z"/>
+					</g>
+				</g>
+			</svg>
+
+		</i>
+	</a>
+</li>						</ul>
+						<!-- //Socials -->
+
+						<a href="tel:+38044 543 12 34" class="phone-link">044 543 12 34</a>
+					</div>
+					<!-- //row -->
+				</div>
+			</div>
+			<!-- //row -->
+		</div>
+		<!-- //container -->
+	</div>
+
+</header>
+
+		<!-- //Header -->
+
+		<!-- Main -->
+		<main class="main main-page">
+			
+			<section class="sect__blog gutter-bottom">
+				<h2 class="w3c">&nbsp;</h2>
+
+				<div class="container">
+					<!-- Breadcrumbs -->
+					<div class="breadcrumbs">
+						<ul class="breadcrumbs__list">
+							<li class="breadcrumbs__item"><a href="index.html" class="breadcrumbs__link">Главная</a></li>
+							<li class="breadcrumbs__item"><span class="breadcrumbs__link is-active">Блог</span></li>
+						</ul>
+					</div>
+					<!-- //Breadcrumbs -->
+
+					<div class="blog">
+
+						<div class="blog__categories">
+
+							<!-- Category -->
+							<div class="blog__category">
+
+								<h2 class="blog__category--title">Май 2020</h2>
+
+								<div class="blog__articles--col">
+									<div class="row align-horisontal-start">
+										<!-- Article card -->
+<article class="article-card">
+	<div class="card">
+		<a href="page-article.html" class="card__thumbnail">
+			<span>Открыть</span>
+			<img src="img/product-thumb.jpg" alt="Product thumnail">
+		</a>
+		<div class="card__information">
+			<p class="date">10.09.2019</p>
+			<h3 class="card__title">
+				<a href="page-article.html">Название статьи</a>
+			</h3>
+		</div>
+	</div>
+</article>
+<!-- //Article card -->
+										<!-- Article card -->
+<article class="article-card">
+	<div class="card">
+		<a href="page-article.html" class="card__thumbnail">
+			<span>Открыть</span>
+			<img src="img/product-thumb.jpg" alt="Product thumnail">
+		</a>
+		<div class="card__information">
+			<p class="date">10.09.2019</p>
+			<h3 class="card__title">
+				<a href="page-article.html">Название статьи</a>
+			</h3>
+		</div>
+	</div>
+</article>
+<!-- //Article card -->
+										<!-- Article card -->
+<article class="article-card">
+	<div class="card">
+		<a href="page-article.html" class="card__thumbnail">
+			<span>Открыть</span>
+			<img src="img/product-thumb.jpg" alt="Product thumnail">
+		</a>
+		<div class="card__information">
+			<p class="date">10.09.2019</p>
+			<h3 class="card__title">
+				<a href="page-article.html">Название статьи</a>
+			</h3>
+		</div>
+	</div>
+</article>
+<!-- //Article card -->
+									</div>
+								</div>
+							</div>
+							<!-- //Category -->
+
+							<!-- Category -->
+							<div class="blog__category">
+
+								<h2 class="blog__category--title">Декабрь 2019</h2>
+
+								<div class="blog__articles--col">
+									<div class="row align-horisontal-start">
+										<!-- Article card -->
+<article class="article-card">
+	<div class="card">
+		<a href="page-article.html" class="card__thumbnail">
+			<span>Открыть</span>
+			<img src="img/product-thumb.jpg" alt="Product thumnail">
+		</a>
+		<div class="card__information">
+			<p class="date">10.09.2019</p>
+			<h3 class="card__title">
+				<a href="page-article.html">Название статьи</a>
+			</h3>
+		</div>
+	</div>
+</article>
+<!-- //Article card -->
+										<!-- Article card -->
+<article class="article-card">
+	<div class="card">
+		<a href="page-article.html" class="card__thumbnail">
+			<span>Открыть</span>
+			<img src="img/product-thumb.jpg" alt="Product thumnail">
+		</a>
+		<div class="card__information">
+			<p class="date">10.09.2019</p>
+			<h3 class="card__title">
+				<a href="page-article.html">Название статьи</a>
+			</h3>
+		</div>
+	</div>
+</article>
+<!-- //Article card -->
+										<!-- Article card -->
+<article class="article-card">
+	<div class="card">
+		<a href="page-article.html" class="card__thumbnail">
+			<span>Открыть</span>
+			<img src="img/product-thumb.jpg" alt="Product thumnail">
+		</a>
+		<div class="card__information">
+			<p class="date">10.09.2019</p>
+			<h3 class="card__title">
+				<a href="page-article.html">Название статьи</a>
+			</h3>
+		</div>
+	</div>
+</article>
+<!-- //Article card -->
+										<!-- Article card -->
+<article class="article-card">
+	<div class="card">
+		<a href="page-article.html" class="card__thumbnail">
+			<span>Открыть</span>
+			<img src="img/product-thumb.jpg" alt="Product thumnail">
+		</a>
+		<div class="card__information">
+			<p class="date">10.09.2019</p>
+			<h3 class="card__title">
+				<a href="page-article.html">Название статьи</a>
+			</h3>
+		</div>
+	</div>
+</article>
+<!-- //Article card -->
+										<!-- Article card -->
+<article class="article-card">
+	<div class="card">
+		<a href="page-article.html" class="card__thumbnail">
+			<span>Открыть</span>
+			<img src="img/product-thumb.jpg" alt="Product thumnail">
+		</a>
+		<div class="card__information">
+			<p class="date">10.09.2019</p>
+			<h3 class="card__title">
+				<a href="page-article.html">Название статьи</a>
+			</h3>
+		</div>
+	</div>
+</article>
+<!-- //Article card -->
+									</div>
+								</div>
+							</div>
+							<!-- //Category -->
+
+							<!-- Category -->
+							<div class="blog__category">
+
+								<h2 class="blog__category--title">Сентябрь 2019</h2>
+
+								<div class="blog__articles--col">
+									<div class="row align-horisontal-start">
+										<!-- Article card -->
+<article class="article-card">
+	<div class="card">
+		<a href="page-article.html" class="card__thumbnail">
+			<span>Открыть</span>
+			<img src="img/product-thumb.jpg" alt="Product thumnail">
+		</a>
+		<div class="card__information">
+			<p class="date">10.09.2019</p>
+			<h3 class="card__title">
+				<a href="page-article.html">Название статьи</a>
+			</h3>
+		</div>
+	</div>
+</article>
+<!-- //Article card -->
+										<!-- Article card -->
+<article class="article-card">
+	<div class="card">
+		<a href="page-article.html" class="card__thumbnail">
+			<span>Открыть</span>
+			<img src="img/product-thumb.jpg" alt="Product thumnail">
+		</a>
+		<div class="card__information">
+			<p class="date">10.09.2019</p>
+			<h3 class="card__title">
+				<a href="page-article.html">Название статьи</a>
+			</h3>
+		</div>
+	</div>
+</article>
+<!-- //Article card -->
+										<!-- Article card -->
+<article class="article-card">
+	<div class="card">
+		<a href="page-article.html" class="card__thumbnail">
+			<span>Открыть</span>
+			<img src="img/product-thumb.jpg" alt="Product thumnail">
+		</a>
+		<div class="card__information">
+			<p class="date">10.09.2019</p>
+			<h3 class="card__title">
+				<a href="page-article.html">Название статьи</a>
+			</h3>
+		</div>
+	</div>
+</article>
+<!-- //Article card -->
+										<!-- Article card -->
+<article class="article-card">
+	<div class="card">
+		<a href="page-article.html" class="card__thumbnail">
+			<span>Открыть</span>
+			<img src="img/product-thumb.jpg" alt="Product thumnail">
+		</a>
+		<div class="card__information">
+			<p class="date">10.09.2019</p>
+			<h3 class="card__title">
+				<a href="page-article.html">Название статьи</a>
+			</h3>
+		</div>
+	</div>
+</article>
+<!-- //Article card -->
+									</div>
+								</div>
+							</div>
+							<!-- //Category -->
+
+						</div>
+
+						<!-- Pagination -->
+<div class="pagination">
+	<ul class="pagination__list">
+		<!-- Prev page link -->
+		<!-- <li class="pagination__item">
+			<a href="#" class="pagination__link pagination__link--arrow pagination__link--arrow_prev">
+				<i class="pagination__link--ic">
+					<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 5.997 12.034" enable-background="new 0 0 5.997 12.034" xml:space="preserve">
+						<path  d="M5.981,6.158C5.99,6.111,5.997,6.065,5.997,6.017c0-0.048-0.007-0.094-0.016-0.141
+						C5.972,5.829,5.961,5.785,5.943,5.74C5.924,5.693,5.898,5.652,5.87,5.609C5.853,5.583,5.846,5.554,5.826,5.53L1.32,0.263
+						C1.052-0.052,0.578-0.089,0.263,0.18C-0.052,0.449-0.089,0.923,0.18,1.238l4.089,4.779L0.18,10.796
+						c-0.27,0.315-0.232,0.789,0.083,1.058c0.141,0.121,0.314,0.18,0.487,0.18c0.212,0,0.422-0.089,0.57-0.263l4.506-5.267
+						C5.846,6.48,5.853,6.451,5.87,6.425c0.028-0.043,0.054-0.084,0.073-0.131C5.961,6.249,5.972,6.205,5.981,6.158z"/>
+					</svg>
+				</i>
+			</a>
+		</li> -->
+		<!-- //Prev page link -->
+
+		<li class="pagination__item"><a href="#" class="pagination__link is-active">1</a></li>
+		<li class="pagination__item"><a href="#" class="pagination__link">2</a></li>
+		<li class="pagination__item"><a href="#" class="pagination__link">3</a></li>
+
+		<li class="pagination__item"><span class="pagination__link pagination__link--divider">...</span></li>
+
+		<li class="pagination__item"><a href="#" class="pagination__link">5</a></li>
+
+		<!-- Next page link -->
+		<li class="pagination__item">
+			<a href="#" class="pagination__link pagination__link--arrow pagination__link--arrow_next">
+				<i class="pagination__link--ic">
+					<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 5.997 12.034" enable-background="new 0 0 5.997 12.034" xml:space="preserve">
+						<path  d="M5.981,6.158C5.99,6.111,5.997,6.065,5.997,6.017c0-0.048-0.007-0.094-0.016-0.141
+						C5.972,5.829,5.961,5.785,5.943,5.74C5.924,5.693,5.898,5.652,5.87,5.609C5.853,5.583,5.846,5.554,5.826,5.53L1.32,0.263
+						C1.052-0.052,0.578-0.089,0.263,0.18C-0.052,0.449-0.089,0.923,0.18,1.238l4.089,4.779L0.18,10.796
+						c-0.27,0.315-0.232,0.789,0.083,1.058c0.141,0.121,0.314,0.18,0.487,0.18c0.212,0,0.422-0.089,0.57-0.263l4.506-5.267
+						C5.846,6.48,5.853,6.451,5.87,6.425c0.028-0.043,0.054-0.084,0.073-0.131C5.961,6.249,5.972,6.205,5.981,6.158z"/>
+					</svg>
+				</i>
+			</a>
+		</li>
+		<!-- //Next page link -->
+
+	</ul>
+</div>
+<!-- //Pagination -->
+
+					</div>
+				</div>
+				<!-- //container -->
+			</section>
+			
+		</main>
+		<!-- //Main -->
+
+		<!-- Footer -->
+		<footer class="footer">
+	<div class="subscribe accent-bg">
+		<div class="container">
+			<div class="row align-vertical-center align-horisontal-between subscribe__row">
+				<p class="subscribe__text">Подпишитесь на рассылку,<br>что бы быть в курсе всех новостей</p>
+
+				<form  class="subscribe__form">
+					<div class="row align-vertical-center align-horisontal-start">
+						<div class="input-round__wrapper">
+							<input type="email" class="input-round" name="email" placeholder="e-mail">
+						</div>
+						<button class="btn" type="submit">Подписаться</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		<!-- //container -->
+	</div>
+
+	<div class="footer__content">
+		<div class="container">
+			<div class="row footer__row">
+
+				<div class="footer__logo">
+
+					<!-- Logo -->
+					<a href="index.html" class="logo">
+						<img src="img/logo-dark.svg" alt="Tea Rose">
+					</a>
+					<!-- //Logo -->
+
+				</div>
+
+				<div class="footer__actions">
+					<div class="row footer__actions--row row-gutters">
+						<div class="footer__col">
+							<h2 class="footer__col--title">Разделы сайта</h2>
+
+							<nav class="footer__nav">
+								<ul>
+									<li><a href="page-about.html">О нас</a></li>
+									<li><a href="page-blog.html">Блог</a></li>
+									<li><a href="page-contacts.html">Контакты</a></li>
+									<li><a href="page-technical.html">Доставка</a></li>
+									<li><a href="page-technical.html">Возврат</a></li>
+									<li><a href="page-technical.html">Оплата</a></li>
+									<li><a href="page-technical.html">Конфидициальность</a></li>
+								</ul>
+							</nav>
+						</div>
+						<!-- //col -->
+
+						<div class="footer__col">
+							<h2 class="footer__col--title">Приезжайте к нам</h2>
+
+							<div class="footer__contacts">
+								<p class="footer__contacts--link block-with-ic block-with-ic__address">Киев,<br>Бульвар Леси<br>Украинки 10</p>
+								<p class="footer__contacts--link block-with-ic block-with-ic__address">Киев,<br>Бульвар Леси<br>Украинки 10</p>
+							</div>
+						</div>
+						<!-- //col -->
+
+						<div class="footer__col">
+							<h2 class="footer__col--title">Свяжитесь</h2>
+
+							<div class="footer__contacts">
+								<p class="footer__contacts--link block-with-ic block-with-ic__phone"><a href="tel:+380449829898">+38 044 982 98 98</a></p>
+								<p class="footer__contacts--link block-with-ic block-with-ic__phone"><a href="tel:+380997232332">+38 099 723 23 32</a></p>
+								<p class="footer__contacts--link block-with-ic block-with-ic__email"><a href="mailto:admin@tea-rose.com.ua<">admin@tea-rose.ua</a></p>
+							</div>
+						</div>
+						<!-- //col -->
+
+						<div class="footer__col">
+							<h2 class="footer__col--title">Мы в соц. сетях</h2>
+
+							<ul class="socials socials-accent">
+								<li class="socials__item">
+	<a href="#" class="socials__link" target="_blank">
+		<i class="socials__link--ic">
+
+			<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 19.23 16.2" enable-background="new 0 0 19.23 16.2" xml:space="preserve">
+				<path  d="M17.995,0.063L0.408,6.917c-0.57,0.222-0.535,1.039,0.051,1.213l4.469,1.32l1.668,5.292
+				c0.174,0.553,0.875,0.72,1.28,0.306l2.311-2.359l4.534,3.328c0.555,0.407,1.345,0.105,1.486-0.569L19.21,1.091
+				C19.357,0.388,18.665-0.198,17.995,0.063z M15.791,3.249l-8.169,7.224c-0.081,0.072-0.133,0.172-0.145,0.28l-0.315,2.796
+				c-0.01,0.091-0.138,0.103-0.165,0.016l-1.294-4.17C5.643,9.204,5.72,8.997,5.89,8.892l9.647-5.983
+				C15.759,2.771,15.986,3.076,15.791,3.249z"/>
+			</svg>
+
+		</i>
+	</a>
+</li>
+<li class="socials__item">
+	<a href="#" class="socials__link" target="_blank">
+		<i class="socials__link--ic">
+
+			<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20.35 21.034" enable-background="new 0 0 20.35 21.034" xml:space="preserve">
+				<g>
+					<g>
+						<path  d="M19.895,5.057l-0.006-0.024c-0.491-1.985-2.704-4.114-4.737-4.557L15.129,0.47
+						c-3.288-0.627-6.621-0.627-9.908,0L5.197,0.475C3.166,0.918,0.952,3.048,0.461,5.033L0.455,5.057
+						c-0.607,2.772-0.607,5.583,0,8.354l0.005,0.024c0.471,1.9,2.519,3.932,4.476,4.491v2.215c0,0.802,0.977,1.196,1.533,0.617
+						l2.245-2.333c0.487,0.027,0.974,0.042,1.461,0.042c1.655,0,3.311-0.156,4.954-0.47l0.023-0.005
+						c2.033-0.443,4.246-2.573,4.737-4.557l0.006-0.024C20.502,10.639,20.502,7.829,19.895,5.057z M18.119,13.009
+						c-0.328,1.295-2.008,2.905-3.344,3.202c-1.748,0.332-3.51,0.474-5.27,0.426c-0.035-0.001-0.069,0.013-0.093,0.038
+						c-0.25,0.256-1.639,1.682-1.639,1.682L6.03,20.146c-0.127,0.133-0.351,0.042-0.351-0.141v-3.67c0-0.061-0.043-0.112-0.103-0.124
+						l-0.001,0c-1.335-0.297-3.015-1.907-3.344-3.202c-0.546-2.505-0.546-5.045,0-7.55c0.328-1.295,2.008-2.905,3.344-3.202
+						c3.053-0.581,6.148-0.581,9.201,0c1.336,0.297,3.016,1.907,3.344,3.202C18.665,7.964,18.665,10.504,18.119,13.009z"/>
+						<path  d="M13.08,14.703c-0.205-0.062-0.401-0.104-0.583-0.18c-1.883-0.781-3.615-1.789-4.988-3.333
+						c-0.78-0.878-1.391-1.87-1.908-2.92C5.357,7.773,5.15,7.256,4.94,6.742C4.748,6.273,5.031,5.789,5.328,5.436
+						c0.279-0.331,0.638-0.585,1.027-0.772C6.659,4.519,6.959,4.603,7.18,4.86C7.66,5.417,8.1,6.001,8.457,6.646
+						c0.219,0.397,0.159,0.882-0.238,1.152C8.122,7.863,8.034,7.94,7.944,8.015C7.865,8.079,7.791,8.145,7.737,8.233
+						c-0.099,0.161-0.104,0.351-0.04,0.526c0.49,1.347,1.316,2.394,2.671,2.958c0.217,0.09,0.435,0.195,0.685,0.166
+						c0.418-0.049,0.554-0.508,0.847-0.748c0.287-0.234,0.653-0.237,0.962-0.042c0.309,0.195,0.608,0.405,0.906,0.617
+						c0.292,0.208,0.583,0.412,0.852,0.649c0.259,0.228,0.348,0.527,0.202,0.837c-0.267,0.567-0.656,1.039-1.216,1.34
+						C13.447,14.621,13.258,14.648,13.08,14.703C12.874,14.641,13.258,14.648,13.08,14.703z"/>
+						<path  d="M10.18,4.016c2.462,0.069,4.485,1.703,4.918,4.138c0.074,0.415,0.1,0.839,0.133,1.26
+						c0.014,0.177-0.086,0.345-0.278,0.348c-0.197,0.002-0.286-0.163-0.299-0.34c-0.025-0.35-0.043-0.702-0.091-1.05
+						c-0.255-1.834-1.718-3.352-3.544-3.678c-0.275-0.049-0.556-0.062-0.834-0.091C10.01,4.585,9.78,4.574,9.741,4.355
+						c-0.033-0.183,0.122-0.329,0.297-0.339C10.085,4.014,10.132,4.016,10.18,4.016C12.643,4.085,10.132,4.016,10.18,4.016z"/>
+						<path d="M13.922,8.867c-0.004,0.031-0.006,0.103-0.024,0.171c-0.065,0.247-0.44,0.278-0.526,0.029
+						c-0.026-0.074-0.029-0.158-0.03-0.238c-0.001-0.522-0.114-1.043-0.377-1.496c-0.27-0.466-0.683-0.858-1.168-1.096
+						c-0.293-0.143-0.61-0.233-0.931-0.286c-0.14-0.023-0.282-0.037-0.423-0.057c-0.171-0.024-0.262-0.133-0.254-0.301
+						c0.008-0.158,0.123-0.271,0.295-0.262c0.565,0.032,1.111,0.154,1.613,0.42c1.022,0.541,1.605,1.395,1.776,2.535
+						c0.008,0.052,0.02,0.103,0.024,0.155C13.906,8.57,13.913,8.699,13.922,8.867C13.918,8.898,13.913,8.699,13.922,8.867z"/>
+						<path  d="M12.391,8.808c-0.206,0.004-0.316-0.11-0.338-0.299c-0.015-0.132-0.026-0.265-0.058-0.393
+						c-0.062-0.252-0.196-0.486-0.408-0.641c-0.1-0.073-0.214-0.126-0.333-0.161c-0.151-0.044-0.308-0.032-0.459-0.069
+						c-0.164-0.04-0.254-0.173-0.229-0.326c0.023-0.14,0.159-0.249,0.312-0.238c0.955,0.069,1.637,0.562,1.734,1.686
+						c0.007,0.079,0.015,0.163-0.003,0.239C12.581,8.736,12.485,8.802,12.391,8.808C12.185,8.812,12.485,8.802,12.391,8.808z"/>
+					</g>
+				</g>
+			</svg>
+
+		</i>
+	</a>
+</li>
+<li class="socials__item">
+	<a href="#" class="socials__link" target="_blank">
+		<i class="socials__link--ic">
+
+			<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20.167 20.324" enable-background="new 0 0 20.167 20.324" xml:space="preserve">
+				<g>
+					<g>
+						<path d="M10.266,0c-5.467,0-9.9,4.432-9.9,9.9
+						c0,1.87,0.519,3.62,1.42,5.112L0,20.324l5.481-1.755c1.418,0.784,3.049,1.231,4.785,1.231c5.468,0,9.9-4.433,9.9-9.9
+						C20.167,4.432,15.734,0,10.266,0z M10.266,18.142c-1.674,0-3.233-0.502-4.534-1.363l-3.167,1.014l1.029-3.06
+						C2.608,13.374,2.025,11.704,2.025,9.9c0-4.545,3.697-8.242,8.241-8.242c4.545,0,8.242,3.697,8.242,8.242
+						C18.508,14.445,14.811,18.142,10.266,18.142z M14.908,12.15c-0.248-0.136-1.467-0.794-1.696-0.887
+						c-0.229-0.093-0.395-0.141-0.574,0.106c-0.178,0.246-0.684,0.797-0.837,0.96c-0.154,0.163-0.302,0.178-0.55,0.042
+						c-0.248-0.135-1.052-0.433-1.985-1.33c-0.726-0.698-1.202-1.544-1.34-1.803c-0.138-0.259-0.001-0.39,0.13-0.511
+						C8.174,8.618,8.32,8.441,8.452,8.298C8.584,8.156,8.63,8.052,8.721,7.887s0.054-0.315-0.005-0.443
+						C8.657,7.315,8.199,6.052,8.007,5.538C7.815,5.025,7.602,5.101,7.454,5.095C7.307,5.09,7.139,5.062,6.971,5.056
+						C6.802,5.05,6.526,5.103,6.285,5.347C6.044,5.591,5.368,6.178,5.322,7.422C5.275,8.665,6.135,9.9,6.255,10.073
+						c0.12,0.174,1.643,2.869,4.174,3.977c2.531,1.108,2.545,0.77,3.009,0.745c0.465-0.025,1.518-0.556,1.751-1.138
+						c0.233-0.582,0.251-1.088,0.192-1.196C15.322,12.355,15.156,12.285,14.908,12.15z"/>
+					</g>
+				</g>
+			</svg>
+
+		</i>
+	</a>
+</li>							</ul>
+						</div>
+						<!-- //col -->
+
+					</div>
+				</div>
+			</div>
+
+			<div class="copyright">
+				<div class="row align-vertical-center align-horisontal-between">
+					<p class="copyright__text">&copy; 2020 Все права защищены</p>
+
+					<a href="#" class="developed" target="_blank" title="Grytsay">
+						<img src="img/grytsay.svg" alt="Grytsay">
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- //container -->
+	</div>
+</footer>
+
+		<!-- //Footer -->
+
+	</div>
+	<!-- //CONTENT WRAPPER -->
+
+	<!-- jQuery IF NEEDED-->
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<!-- Google map -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBR5vIGzW3iFwxgUDP3TEFZR66J5LzJdhY"></script>
+<!-- All libs scripts -->
+	<script src="js/libs.min.js"></script>
+<!-- Main file with scripts -->
+<script src="js/common.min.js"></script>
+
+</body>
+
+</html>

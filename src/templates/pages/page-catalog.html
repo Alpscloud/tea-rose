@@ -34,14 +34,36 @@
 							
 							<!-- Products -->
 							<div class="catalog__products">
-								<div class="row catalog__products--row align-horisontal-start">
-									{% include '../parts/components/product-card.html' %}
-									{% include '../parts/components/product-card.html' %}
-									{% include '../parts/components/product-card.html' %}
-									{% include '../parts/components/product-card.html' %}
-									{% include '../parts/components/product-card.html' %}
-									{% include '../parts/components/product-card.html' %}
+
+								<div class="catalog__products--header">
+									<div class="row align-vertical-center align-horisontal-between">
+										<h1 class="page-title">Букеты:</h1>
+										
+										<!-- Sorting -->
+										<div class="sorting">
+											<span class="sorting__label">Сортировать по:</span>
+											<div class="sorting__params">
+												<a href="#" class="link sorting__link is-active">Популярности</a>
+												<a href="#" class="link sorting__link">Цене</a>
+												<a href="#" class="link sorting__link">Новизне</a>
+											</div>
+										</div>
+										<!-- //Sorting -->
+									</div>
 								</div>
+								<!-- //header -->
+
+
+								<div class="row catalog__products--row align-horisontal-start">
+									{% include '../parts/components/card.html' %}
+									{% include '../parts/components/card.html' %}
+									{% include '../parts/components/card.html' %}
+									{% include '../parts/components/card.html' %}
+									{% include '../parts/components/card.html' %}
+									{% include '../parts/components/card.html' %}
+								</div>
+
+								{% include '../parts/components/pagination.html' %}
 							</div>
 							<!-- //Products -->
 						</div>

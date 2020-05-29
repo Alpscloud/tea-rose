@@ -74,7 +74,7 @@
 					<div class="popup__tab--form js-tab-content">
 						<form class="popup__form text-left">
 							<div class="input__wrapper">
-								<input type="email" class="input-round js-input" name="email" placeholder="e-mail *">
+								<input type="email" class="input-round js-input is-error" name="email" placeholder="e-mail *">
 							</div>
 							<div class="input__wrapper">
 								<input type="password" class="input-round js-input" name="password" placeholder="Пароль *">
@@ -92,7 +92,7 @@
 					<div class="popup__tab--form js-tab-content">
 						<form class="popup__form text-left">
 							<div class="input__wrapper">
-								<input type="text" class="input-round js-input" name="name" placeholder="Ваше имя *">
+								<input type="text" class="input-round js-input is-error" name="name" placeholder="Ваше имя *">
 							</div>
 							<div class="input__wrapper">
 								<input type="tel" class="input-round js-input" name="phone" placeholder="Ваш телефон *">
@@ -145,7 +145,7 @@
 				<p class="popup__text">Мы вышлем Вам пароль на Ваш e-mail,<br>указанный при регистрации</p>
 				<form class="popup__form text-left">
 					<div class="input__wrapper">
-						<input type="email" class="input-round js-input" name="email" placeholder="e-mail *">
+						<input type="email" class="input-round js-input is-error" name="email" placeholder="e-mail *">
 					</div>
 					<div class="input__wrapper">
 						<button class="btn btn-wide" type="button">Отправить</button>
@@ -180,7 +180,7 @@
 				<p class="popup__text">Заполните всего два поля,<br>а все остальное мы сделаем за вас :)</p>
 				<form class="popup__form text-left">
 					<div class="input__wrapper">
-						<input type="text" class="input-round js-input" name="name" placeholder="Ваше имя *">
+						<input type="text" class="input-round js-input is-error" name="name" placeholder="Ваше имя *">
 					</div>
 					<div class="input__wrapper">
 						<input type="tel" class="input-round js-input" name="phone" placeholder="Ваш телефон *">
@@ -853,22 +853,42 @@
 							
 							<!-- Products -->
 							<div class="catalog__products">
+
+								<div class="catalog__products--header">
+									<div class="row align-vertical-center align-horisontal-between">
+										<h1 class="page-title">Букеты:</h1>
+										
+										<!-- Sorting -->
+										<div class="sorting">
+											<span class="sorting__label">Сортировать по:</span>
+											<div class="sorting__params">
+												<a href="#" class="link sorting__link is-active">Популярности</a>
+												<a href="#" class="link sorting__link">Цене</a>
+												<a href="#" class="link sorting__link">Новизне</a>
+											</div>
+										</div>
+										<!-- //Sorting -->
+									</div>
+								</div>
+								<!-- //header -->
+
+
 								<div class="row catalog__products--row align-horisontal-start">
 									<!-- Product card -->
-<div class="product-card__wrapper">
-	<div class="product-card">
-		<a href="page-product.html" class="product-card__thumbnail">
+<article class="card__wrapper">
+	<div class="card">
+		<a href="page-product.html" class="card__thumbnail">
 			<span>Открыть</span>
 			<img src="img/product-thumb.jpg" alt="Product thumnail">
 		</a>
-		<div class="product-card__information">
+		<div class="card__information">
 			<div class="row align-vertical-end align-horisontal-between price__row">
-				<p class="product-card__price price">1 450 Грн</p>
+				<p class="card__price price">1 450 Грн</p>
 
 				<p class="articul">арт: 34475</p>
 			</div>
 
-			<div class="product-card__tools">
+			<div class="card__tools">
 				<!-- Wishlist btn -->
 				<a href="#" class="link-wishlist tooltip__wrapper">
 					<i class="link-wishlist__ic">
@@ -909,23 +929,23 @@
 			</div>
 		</div>
 	</div>
-</div>
+</article>
 <!-- // product card -->
 									<!-- Product card -->
-<div class="product-card__wrapper">
-	<div class="product-card">
-		<a href="page-product.html" class="product-card__thumbnail">
+<article class="card__wrapper">
+	<div class="card">
+		<a href="page-product.html" class="card__thumbnail">
 			<span>Открыть</span>
 			<img src="img/product-thumb.jpg" alt="Product thumnail">
 		</a>
-		<div class="product-card__information">
+		<div class="card__information">
 			<div class="row align-vertical-end align-horisontal-between price__row">
-				<p class="product-card__price price">1 450 Грн</p>
+				<p class="card__price price">1 450 Грн</p>
 
 				<p class="articul">арт: 34475</p>
 			</div>
 
-			<div class="product-card__tools">
+			<div class="card__tools">
 				<!-- Wishlist btn -->
 				<a href="#" class="link-wishlist tooltip__wrapper">
 					<i class="link-wishlist__ic">
@@ -966,23 +986,23 @@
 			</div>
 		</div>
 	</div>
-</div>
+</article>
 <!-- // product card -->
 									<!-- Product card -->
-<div class="product-card__wrapper">
-	<div class="product-card">
-		<a href="page-product.html" class="product-card__thumbnail">
+<article class="card__wrapper">
+	<div class="card">
+		<a href="page-product.html" class="card__thumbnail">
 			<span>Открыть</span>
 			<img src="img/product-thumb.jpg" alt="Product thumnail">
 		</a>
-		<div class="product-card__information">
+		<div class="card__information">
 			<div class="row align-vertical-end align-horisontal-between price__row">
-				<p class="product-card__price price">1 450 Грн</p>
+				<p class="card__price price">1 450 Грн</p>
 
 				<p class="articul">арт: 34475</p>
 			</div>
 
-			<div class="product-card__tools">
+			<div class="card__tools">
 				<!-- Wishlist btn -->
 				<a href="#" class="link-wishlist tooltip__wrapper">
 					<i class="link-wishlist__ic">
@@ -1023,23 +1043,23 @@
 			</div>
 		</div>
 	</div>
-</div>
+</article>
 <!-- // product card -->
 									<!-- Product card -->
-<div class="product-card__wrapper">
-	<div class="product-card">
-		<a href="page-product.html" class="product-card__thumbnail">
+<article class="card__wrapper">
+	<div class="card">
+		<a href="page-product.html" class="card__thumbnail">
 			<span>Открыть</span>
 			<img src="img/product-thumb.jpg" alt="Product thumnail">
 		</a>
-		<div class="product-card__information">
+		<div class="card__information">
 			<div class="row align-vertical-end align-horisontal-between price__row">
-				<p class="product-card__price price">1 450 Грн</p>
+				<p class="card__price price">1 450 Грн</p>
 
 				<p class="articul">арт: 34475</p>
 			</div>
 
-			<div class="product-card__tools">
+			<div class="card__tools">
 				<!-- Wishlist btn -->
 				<a href="#" class="link-wishlist tooltip__wrapper">
 					<i class="link-wishlist__ic">
@@ -1080,23 +1100,23 @@
 			</div>
 		</div>
 	</div>
-</div>
+</article>
 <!-- // product card -->
 									<!-- Product card -->
-<div class="product-card__wrapper">
-	<div class="product-card">
-		<a href="page-product.html" class="product-card__thumbnail">
+<article class="card__wrapper">
+	<div class="card">
+		<a href="page-product.html" class="card__thumbnail">
 			<span>Открыть</span>
 			<img src="img/product-thumb.jpg" alt="Product thumnail">
 		</a>
-		<div class="product-card__information">
+		<div class="card__information">
 			<div class="row align-vertical-end align-horisontal-between price__row">
-				<p class="product-card__price price">1 450 Грн</p>
+				<p class="card__price price">1 450 Грн</p>
 
 				<p class="articul">арт: 34475</p>
 			</div>
 
-			<div class="product-card__tools">
+			<div class="card__tools">
 				<!-- Wishlist btn -->
 				<a href="#" class="link-wishlist tooltip__wrapper">
 					<i class="link-wishlist__ic">
@@ -1137,23 +1157,23 @@
 			</div>
 		</div>
 	</div>
-</div>
+</article>
 <!-- // product card -->
 									<!-- Product card -->
-<div class="product-card__wrapper">
-	<div class="product-card">
-		<a href="page-product.html" class="product-card__thumbnail">
+<article class="card__wrapper">
+	<div class="card">
+		<a href="page-product.html" class="card__thumbnail">
 			<span>Открыть</span>
 			<img src="img/product-thumb.jpg" alt="Product thumnail">
 		</a>
-		<div class="product-card__information">
+		<div class="card__information">
 			<div class="row align-vertical-end align-horisontal-between price__row">
-				<p class="product-card__price price">1 450 Грн</p>
+				<p class="card__price price">1 450 Грн</p>
 
 				<p class="articul">арт: 34475</p>
 			</div>
 
-			<div class="product-card__tools">
+			<div class="card__tools">
 				<!-- Wishlist btn -->
 				<a href="#" class="link-wishlist tooltip__wrapper">
 					<i class="link-wishlist__ic">
@@ -1194,9 +1214,56 @@
 			</div>
 		</div>
 	</div>
-</div>
+</article>
 <!-- // product card -->
 								</div>
+
+								<!-- Pagination -->
+<div class="pagination">
+	<ul class="pagination__list">
+		<!-- Prev page link -->
+		<!-- <li class="pagination__item">
+			<a href="#" class="pagination__link pagination__link--arrow pagination__link--arrow_prev">
+				<i class="pagination__link--ic">
+					<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 5.997 12.034" enable-background="new 0 0 5.997 12.034" xml:space="preserve">
+						<path  d="M5.981,6.158C5.99,6.111,5.997,6.065,5.997,6.017c0-0.048-0.007-0.094-0.016-0.141
+						C5.972,5.829,5.961,5.785,5.943,5.74C5.924,5.693,5.898,5.652,5.87,5.609C5.853,5.583,5.846,5.554,5.826,5.53L1.32,0.263
+						C1.052-0.052,0.578-0.089,0.263,0.18C-0.052,0.449-0.089,0.923,0.18,1.238l4.089,4.779L0.18,10.796
+						c-0.27,0.315-0.232,0.789,0.083,1.058c0.141,0.121,0.314,0.18,0.487,0.18c0.212,0,0.422-0.089,0.57-0.263l4.506-5.267
+						C5.846,6.48,5.853,6.451,5.87,6.425c0.028-0.043,0.054-0.084,0.073-0.131C5.961,6.249,5.972,6.205,5.981,6.158z"/>
+					</svg>
+				</i>
+			</a>
+		</li> -->
+		<!-- //Prev page link -->
+
+		<li class="pagination__item"><a href="#" class="pagination__link is-active">1</a></li>
+		<li class="pagination__item"><a href="#" class="pagination__link">2</a></li>
+		<li class="pagination__item"><a href="#" class="pagination__link">3</a></li>
+
+		<li class="pagination__item"><span class="pagination__link pagination__link--divider">...</span></li>
+
+		<li class="pagination__item"><a href="#" class="pagination__link">5</a></li>
+
+		<!-- Next page link -->
+		<li class="pagination__item">
+			<a href="#" class="pagination__link pagination__link--arrow pagination__link--arrow_next">
+				<i class="pagination__link--ic">
+					<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 5.997 12.034" enable-background="new 0 0 5.997 12.034" xml:space="preserve">
+						<path  d="M5.981,6.158C5.99,6.111,5.997,6.065,5.997,6.017c0-0.048-0.007-0.094-0.016-0.141
+						C5.972,5.829,5.961,5.785,5.943,5.74C5.924,5.693,5.898,5.652,5.87,5.609C5.853,5.583,5.846,5.554,5.826,5.53L1.32,0.263
+						C1.052-0.052,0.578-0.089,0.263,0.18C-0.052,0.449-0.089,0.923,0.18,1.238l4.089,4.779L0.18,10.796
+						c-0.27,0.315-0.232,0.789,0.083,1.058c0.141,0.121,0.314,0.18,0.487,0.18c0.212,0,0.422-0.089,0.57-0.263l4.506-5.267
+						C5.846,6.48,5.853,6.451,5.87,6.425c0.028-0.043,0.054-0.084,0.073-0.131C5.961,6.249,5.972,6.205,5.981,6.158z"/>
+					</svg>
+				</i>
+			</a>
+		</li>
+		<!-- //Next page link -->
+
+	</ul>
+</div>
+<!-- //Pagination -->
 							</div>
 							<!-- //Products -->
 						</div>
@@ -1400,7 +1467,7 @@
 	<!-- jQuery IF NEEDED-->
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <!-- Google map -->
-<!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBR5vIGzW3iFwxgUDP3TEFZR66J5LzJdhY"></script> -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBR5vIGzW3iFwxgUDP3TEFZR66J5LzJdhY"></script>
 <!-- All libs scripts -->
 	<script src="js/libs.min.js"></script>
 <!-- Main file with scripts -->

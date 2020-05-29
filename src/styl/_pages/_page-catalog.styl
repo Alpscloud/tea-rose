@@ -3,5 +3,38 @@
 		flex 1
 		padding-left 20px
 		
-		.product-card
+		.card
 			margin-bottom 60px
+			
+		&--header
+			margin-bottom 50px
+			
+
+.sorting
+	display flex
+	align-items center
+	justify-content flex-end
+	
+	&__label
+		display inline-block
+		font 14px $Med
+		margin-right 25px
+		
+	&__params
+		display flex
+		align-items center
+		justify-content flex-end
+		
+	&__link
+		color #b8b8b8
+		display inline-block
+		margin-right 25px
+		&:last-child
+			margin-right 0
+		&:hover
+			color $nav-link-color
+		
+		&.is-active
+			color $nav-link-color
+			&:before
+				width 100%

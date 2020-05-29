@@ -1,0 +1,49 @@
+.pagination
+	margin-top 60px
+	&__list
+		text-align center
+		display flex
+		justify-content center
+		align-items center
+		
+	&__item
+		display inline-block
+		margin-right 15px
+		&:last-child
+			margin-right 0
+			
+	&__link
+		flex-col-center()
+		border-radius 50%
+		background-color $accent-color
+		box-shadow 0px 3px 3px -1px rgba($dark-color,0.16)
+		color $light-color
+		width 40px
+		height 40px
+		position relative
+		
+		&--divider
+			background-color transparent
+			color $text-color
+			box-shadow none
+			
+		&--ic
+			display block
+			width 6px
+			height 12px
+			
+			svg
+				svg()
+				fill $light-color
+			
+			
+		&--arrow
+			&_prev
+				transform scaleX(-1)
+				
+a.pagination__link
+	&.is-active,
+	&:hover
+
+		background-color $dark-accent-color
+		box-shadow none

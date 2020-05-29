@@ -1,0 +1,248 @@
+.cart
+	&-progress
+		margin 0 auto 55px auto
+		max-width 860px
+		display flex
+		justify-content flex-start
+		align-items flex-start
+		&__step
+			display flex
+			justify-content flex-end
+			flex 1 0 auto
+			position relative
+			&:before,
+			&:after
+				pseudo()
+				position absolute
+				top 42px
+				left 0
+				height 1px
+				width 100%
+			&:after
+				z-index 1
+				background-color $cart-progress-color
+				width 0
+				
+			&:before
+				background-color #e8e8e8
+				
+			&.is-current
+				&:after
+					width 50%
+				svg
+					fill $text-color
+					
+			&.is-active
+				&:after
+					width 100%
+					
+				.cart-progress__step--information_ic
+					border-color $cart-progress-color
+				
+				svg
+					fill $text-color
+					
+				
+			&--information
+				width 85px
+				font 14px $Med
+				text-align center
+				position relative
+				z-index 2
+				&_ic
+					flex-col-center()
+					border-radius 50%
+					width 85px
+					height 85px
+					background-color $light-color
+					box-shadow $round-input-shadow
+					margin 0 auto 20px auto
+					border 1px solid #e8e8e8
+					svg
+						width 48px
+						height 48px
+						fill #ccc
+						
+			
+
+	&-orders
+		&__header
+			padding 15px 0
+			font 14px $Med
+				
+		&__product
+			padding 20px 0
+			border-bottom 1px solid $lines-color
+			position relative
+			
+			.btn__delete
+				position absolute
+				right 0
+				vertical-center()
+				z-index 1
+			
+			&--information
+				display flex
+				align-items center
+				justify-content flex-start
+				
+				&_thumbnail
+					flex none
+					margin-right 35px
+					width 150px
+					height 150px
+					padding-top 0
+					margin-bottom 0
+					
+				.articul
+					font-size 14px
+					color $text-color
+					
+			&--price
+				font 22px $Med
+				
+	&-row__col
+		padding 0 15px
+		width 50%
+		&:first-child
+			padding-right 90px
+		&--subcol
+			width 50%
+			padding 0 15px
+			
+		&--label
+			font 22px $Med
+			
+	&-promocode
+		padding-top 55px
+		
+	&-footer
+		padding-top 55px
+		margin-top 55px
+
+		border-top 1px solid $lines-color
+	
+	&-gutter-left
+		padding-left 30px
+		
+	&-delivery
+		&__variants
+			margin-top 55px
+			min-height 600px
+			&--row
+				margin-left -22.5px
+				margin-right -22.5px
+				
+			.cart-row__col
+				padding-left 22.5px
+				padding-right 22.5px
+		
+	&-block
+		background-color #f7f7f7
+		&__header
+			padding 40px
+		&__body
+			padding 40px
+			padding-top 0
+			display none
+			
+		.input__wrapper
+			margin-bottom 20px
+			&:last-child
+				margin-bottom 0
+			
+	&-radio
+		display block
+		position relative
+		padding-left 75px
+		font 22px $Med
+		color $text-color
+		cursor pointer
+		transition color .17s ease-in-out
+		&:hover
+			color $accent-color
+			&:before
+				border-color $lines-color
+		&:before,
+		&:after
+			pseudo()
+			position absolute
+			border-radius 50%
+			transition all .17s ease-in-out
+		&:before
+			border 1px solid transparent
+			width 40px
+			height 40px
+			left 0
+			vertical-center()
+			
+		&:after
+			width 25px
+			height 25px
+			background-color transparent
+			border 8px solid #f0f0f0
+			left 7.5px
+			
+			vertical-center()
+		&__label
+			input
+				display none
+				&:checked
+					+ span
+							&:after
+								background-color $accent-color
+								
+	&-inputs
+		&__label
+			font-family $Med
+			margin-bottom 25px
+			
+	&-delivery
+		&__inputs
+			&--row
+				margin-bottom 15px
+				.input__wrapper
+					margin 0
+					width 50%
+					padding 0 15px 15px 20px
+			
+.delivery-price
+	color $accent-color
+	font 22px $Med
+	display inline-block
+	margin-left 20px
+	
+.pickup
+	margin 0 auto
+	max-width 260px
+	&__addresses
+		display flex
+		flex-direction column
+		align-items flex-start
+		margin-bottom 35px
+		
+		.radio__label,
+		.checkbox__label
+			margin-bottom 25px
+			font 16px $Reg
+			color $text-color
+			&:last-child
+				margin-bottom 0
+			
+.total-price
+	font 35px $PBold
+	color $alternate-text-color
+	margin-left 15px		
+	
+.receiver-notice
+	opacity .2
+	
+.postcard
+	margin-bottom 15px
+	&__text
+		display none
+	.input__wrapper
+		margin-bottom 0
+		
+	.checkbox__label
+		margin-bottom 15px

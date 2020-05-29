@@ -1,0 +1,69 @@
+.contacts
+	width 50%
+	display flex
+	justify-content flex-end
+	padding-bottom 100px
+	
+	
+	&__col
+		width 100%
+		max-width 585px
+		padding-right 12%
+		
+	&__content
+		
+		.sect__title--col
+			padding-right 0
+			margin-bottom 50px
+		
+			.drop
+				left 100px
+				top 15px
+				
+		&--block
+			margin-bottom 50px
+			&:last-child
+				margin-bottom 0
+				
+		&--title
+			font 20px $PBold
+			color $alternate-text-color
+			margin-bottom 30px
+				
+	&__item
+		position relative
+		padding-left 60px
+		color #6b6b6b
+		font-size 14px
+		transition color .17s ease-in-out
+		&--col
+			width 50%
+			padding-left 15px
+			padding-right 15px
+		
+		&:hover
+			color $accent-color
+		&--ic
+			display block
+			position absolute
+			left 0
+			vertical-center()
+			width 40px
+			height 40px
+			border-radius 50%
+			background-color $accent-color
+			background-position 50% 50%
+			background-repeat no-repeat
+			background-size 21px 21px
+			box-shadow 0px 3px 3px -1px rgba($dark-color,0.16)
+	
+.map__wrapper
+	width 50%
+	position relative
+	overflow hidden
+	background-color $light-accent-color
+	
+	iframe
+		display block
+		width 100%
+		height 100%

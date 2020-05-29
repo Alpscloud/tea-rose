@@ -132,6 +132,7 @@ $(document).ready(function() {
 			target = $(event.target);
 		
 		if(target.attr('data-action') === 'plus') {
+            if(input.val() >= 999) {return};
 			value++;
 			
 			input.val(value);
@@ -146,6 +147,8 @@ $(document).ready(function() {
 		}
 
 	});
+
+
 
 	var nonLinearSlider = document.getElementById('price');
 
@@ -190,6 +193,23 @@ $(document).ready(function() {
 		
 	}
 
+
+	// Cart
+	$('.cart-radio__input').each(function(e) {
+		var self = $(this);
+
+		self.on('change', function() {
+			if(self.prop('checked')) {
+				$('.cart-block__body').stop().slideUp(150);
+				self.parents('.cart-block').find('.cart-block__body').stop().slideDown(150);
+			}
+		});
+	});
+
+	$('.js-postcard-check').on('change', function() {
+		$('.js-postcard-text').stop().slideToggle(150);
+	});
+
 	// Sliders
 	var promoSlider = new Swiper('.js-promo-slider', {
 		speed: 600,
@@ -213,6 +233,14 @@ $(document).ready(function() {
 			}
 		},
 	});
+
+	// ========= Ajax form ===========
+	$('.js-input').on('focus',function() {
+		if($(this).hasClass('is-error')) {
+			$(this).removeClass('is-error');
+		}
+	});
+
 
 
 	$('input[type=tel]').mask('+38 (999) 999-99-99');
