@@ -34,6 +34,14 @@
 		background-color $light-color
 		color $accent-color
 		
+		&-with-shadow
+			background-color $light-color
+			color $text-color
+			box-shadow $round-input-shadow
+			font-family $Reg
+			&:hover
+				box-shadow none
+		
 	&-dark
 		color $text-color
 		box-shadow none
@@ -52,6 +60,13 @@
 		&:hover
 			background-color $accent-color
 			color $light-color
+			
+			
+	&-equal
+		width 100%
+		max-width 230px
+		padding-left 15px
+		padding-right 15px
 
 		
 	&__close

@@ -86,13 +86,7 @@
 				align-items center
 				justify-content flex-start
 				
-				&_thumbnail
-					flex none
-					margin-right 35px
-					width 150px
-					height 150px
-					padding-top 0
-					margin-bottom 0
+		
 					
 				.articul
 					font-size 14px
@@ -140,10 +134,9 @@
 	&-block
 		background-color #f7f7f7
 		&__header
-			padding 40px
+			padding 50px 40px
 		&__body
-			padding 40px
-			padding-top 0
+			padding 0 40px 50px 40px
 			display none
 			
 		.input__wrapper
@@ -189,9 +182,11 @@
 				display none
 				&:checked
 					+ span
+							&:before
+								border-color $lines-color
 							&:after
 								background-color $accent-color
-								
+									
 	&-inputs
 		&__label
 			font-family $Med
@@ -205,6 +200,93 @@
 					margin 0
 					width 50%
 					padding 0 15px 15px 20px
+					
+	&-checkout
+		&__row
+			margin-left -22.5px
+			margin-right -22.5px
+				
+			.cart-row__col
+				padding-left 22.5px
+				padding-right 22.5px
+				
+				&--label
+					margin-bottom 55px
+					
+		&__payment
+			.cart-block
+				margin-bottom 20px
+				&:last-child
+					margin-bottom 0
+				
+			&--methods
+				display flex
+				flex-direction column
+				align-items flex-start
+				.btn
+					margin-bottom 20px
+					
+					&:last-child
+						margin-bottom 0
+						
+		&__information
+			
+			&--row
+				margin-left -10px
+				margin-right -10px
+			&--col
+				width 25%
+				padding 0 10px
+				
+		&__orders
+			font-size 14px
+			&--product
+				margin-bottom 20px
+				&:last-child
+					margin-bottom 0
+					
+		&__footer
+			.total-price
+				margin-left 0
+			.cart-checkout__information
+				&--row
+					margin-bottom 90px
+					&:last-child
+						margin-bottom 0
+				&--col
+					width 50%
+					
+		&__customer
+			margin-top 35px
+			&--title
+				margin-bottom 30px
+				
+			ul
+				li
+					display flex
+					justify-content space-between
+					color #949494
+					margin-bottom 15px
+					margin-left -10px
+					margin-right -10px
+					&:last-child
+						margin-bottom 0
+					
+					b
+						color $text-color
+						
+					
+					b,
+					span
+						display inline-block
+						padding-left 10px
+						padding-right 10px
+						width 50%
+
+					
+.shop-address
+	&__wrapper
+		padding-left 75px
 			
 .delivery-price
 	color $accent-color
@@ -246,3 +328,8 @@
 		
 	.checkbox__label
 		margin-bottom 15px
+		
+.gutter-and-border
+	padding-bottom 20px
+	margin-bottom 20px
+	border-bottom 1px solid $lines-color

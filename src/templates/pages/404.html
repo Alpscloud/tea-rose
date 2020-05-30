@@ -1,0 +1,59 @@
+{% include '../parts/head.html' %}
+<body>
+	
+	<!-- CONTENT WRAPPER -->
+	<div class="content__wrapper">
+
+		<!-- Popups -->
+		{% include '../parts/components/popups.html' %}
+		<!-- //Popups -->
+
+		<!-- Header -->
+		{% include '../parts/sections/header.html' %}
+		<!-- //Header -->
+
+		<!-- Main -->
+		<main class="main main-page">
+			
+			<section class="sect__technical bg-with-overlay bg" style="background-image: url('img/backgrounds/decor-bg.jpg');">
+				<h2 class="w3c">&nbsp;</h2>
+
+				<div class="container">
+					
+					<div class="block-404">
+						<div class="row align-vertical-start">
+							<div class="block-404__title text-right">
+								<h2 class="technical__title">404</h2>
+								<img src="img/decor/gold-leafs.svg" alt="Tea Rose">
+							</div>
+
+							<div class="technical__text--col">
+								<div class="technical__text">
+									<p>Видимо что то пошло не так :(</p>
+									<p>Намите на кнопку ниже,<br>что бы вернуться на главную страницу сайта</p>
+								</div>
+
+								<a href="index.html" class="btn btn-wide">На главную</a>
+							</div>
+						</div>
+					</div>
+
+				</div>
+				<!-- //container -->
+			</section>
+
+		</main>
+		<!-- //Main -->
+
+		<!-- Footer -->
+		{% include '../parts/sections/footer.html' %}
+		<!-- //Footer -->
+
+	</div>
+	<!-- //CONTENT WRAPPER -->
+
+	{% include '../parts/scripts.html' %}
+
+</body>
+
+</html>

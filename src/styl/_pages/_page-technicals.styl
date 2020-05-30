@@ -1,0 +1,178 @@
+.sect__technical
+	padding 150px 0
+	min-height 620px
+	display flex
+	align-items center
+	
+	.container
+		width 100%
+	
+.block-404
+	max-width 640px
+	margin 0 auto
+	
+	.row
+		margin-left -32.5px
+		margin-right -32.5px
+	&__title
+		width 50%
+		padding 0 32.5px
+		img
+			transform rotate(60deg)
+		.technical__title
+			font-size 180px
+			
+	.technical__text
+		margin-bottom 65px
+			
+	
+.technical
+	&__title
+		color $accent-color
+		font 63px $PBold
+		margin-bottom 45px
+		line-height 1
+		
+	&__text
+		font 1em $Med
+		color $light-color
+		p
+			margin-bottom 25px
+			&:last-child
+				margin-bottom 0
+				
+		&--col
+			width 50%
+			padding 0 32.5px
+			
+.thanks
+	max-width 310px
+	margin 0 auto
+	position relative
+	text-align center
+	
+	.btn
+		margin-top 125px
+	
+	img
+		position absolute
+		transform rotate(-45deg)
+		top -100px
+		right -100px
+		
+
+.content
+	font-size 14px
+	
+	p
+		margin-bottom 30px
+		&:last-child
+			margin-bottom 0
+			
+	h2,h3,h4,h5,h6
+		font-family $PBold
+		color $alternate-text-color
+		margin-top 60px
+		&:first-child
+			margin-top 0
+			
+		&:last-child
+			margin-bottom 0
+			
+	b, strong
+		font-family $Bold
+		
+	a
+		color $accent-color
+		&:hover
+			text-decoration underline
+		
+	img
+		display block
+		margin 40px 0 50px
+		
+	h6
+		font-size 16px
+		margin-bottom 20px
+		
+	h5
+		font-size 18px
+		margin-bottom 25px
+		
+	h4
+		font-size 20px
+		margin-bottom 30px
+		
+	h3
+		font-size 22px
+		margin-bottom 35px
+		
+	h2
+		font-size 24px
+		margin-bottom 35px
+		
+	ul, ol
+		margin-bottom 30px
+		&:last-child
+			margin-bottom 0
+		li
+			display block
+			position relative
+			margin-bottom 15px
+			&:last-child
+				margin-bottom 0
+				
+	ul
+		li
+			&:before
+				pseudo()
+				width 5px
+				height 5px
+				border-radius 50%
+				vertical-align middle
+				margin-right 5px
+				background-color $accent-color
+				
+	ol
+		counter-reset list
+		li
+			&:before
+				counter-increment list
+				content counter(list) '. '
+				font-family $Med
+				color $accent-color
+				margin-right 5px
+		
+
+
+
+
+
+
+
+
+
+
+
+	&__img
+		width 320px
+		margin-top 85px
+		img
+			display block
+			
+	&__col
+		padding-left 90px
+		max-width 530px
+		
+		.sect__title--col
+			padding-right 0
+			width 100%
+			max-width 375px
+			margin-bottom 40px
+			&:before
+				top auto
+				bottom 0
+			
+			.drop
+				left 175px
+				top -30px
