@@ -304,7 +304,8 @@
 
 						<div class="header__icons-links">
 							<!-- Wishlist -->
-							<a href="page-wishlist.html" class="icon-link tooltip__wrapper">
+							<!-- Remove is-empty class -->
+							<a href="page-wishlist.html" class="icon-link tooltip__wrapper ">
 								<i class="icon-link__ic">
 									<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20.651 18.534" enable-background="new 0 0 20.651 18.534" xml:space="preserve">
 										<g>
@@ -333,6 +334,8 @@
 									</svg>
 
 								</i>
+
+								<span class="icon-link__counter">99</span>
 
 								<!-- Tooltip -->
 								<span class="tooltip">Избранное</span>
@@ -367,8 +370,16 @@
 							</a>
 							<!--// Cabinet -->
 						</div>
+						
+						<div class="header__cart text-right">
+							<a href="page-cart.html" class="btn btn-cart btn-with-ic is-empty tooltip__wrapper">
+								<span class="btn-cart__count">5415 грн</span>
 
-						<a href="page-cart.html" class="btn btn-cart btn-with-ic">0 грн</a>
+								<!-- Tooltip -->
+								<span class="tooltip">Перейти в корзину</span>
+								<!-- //Tooltip -->
+							</a>
+						</div>
 					</div>
 				</div>
 
@@ -543,7 +554,7 @@
 						<!-- Socials -->
 						<ul class="socials">
 							<li class="socials__item">
-	<a href="#" class="socials__link" target="_blank" rel="nofollow">
+	<a href="#" class="socials__link" target="_blank" rel="nofollow" title="Telegram">
 		<i class="socials__link--ic">
 
 			<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 19.23 16.2" enable-background="new 0 0 19.23 16.2" xml:space="preserve">
@@ -558,7 +569,7 @@
 	</a>
 </li>
 <li class="socials__item">
-	<a href="#" class="socials__link" target="_blank" rel="nofollow">
+	<a href="#" class="socials__link" target="_blank" rel="nofollow" title="Viber">
 		<i class="socials__link--ic">
 
 			<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20.35 21.034" enable-background="new 0 0 20.35 21.034" xml:space="preserve">
@@ -602,7 +613,7 @@
 	</a>
 </li>
 <li class="socials__item">
-	<a href="#" class="socials__link" target="_blank" rel="nofollow">
+	<a href="#" class="socials__link" target="_blank" rel="nofollow" title="WhatsApp">
 		<i class="socials__link--ic">
 
 			<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20.167 20.324" enable-background="new 0 0 20.167 20.324" xml:space="preserve">
@@ -883,7 +894,7 @@
 										<div class="cart-row__col">
 											<div class="cart-orders__product--information">
 												<a href="page-product.html" class="card__thumbnail card__thumbnail--md">
-													<img src="img/product-thumb.jpg" alt="">
+													<img src="img/product-thumb.jpg" alt="Название продукта">
 												</a>
 												<p class="articul">Арт. 2345</p>
 											</div>
@@ -894,9 +905,25 @@
 											<div class="row align-horisontal-betwee align-vertical-center row-gutters">
 												<div class="cart-row__col--subcol">
 													<div class="product__quantity">
-	<button type="button" class="btn__quantity minus js-quantity-btn" data-action="minus">-</button>
+	<button type="button" class="btn__quantity minus js-quantity-btn" data-action="minus">
+		<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 11.502 1.5" enable-background="new 0 0 11.502 1.5" xml:space="preserve">
+			<g>
+				<path d="M10.752,1.5H0.75C0.336,1.5,0,1.165,0,0.75C0,0.336,0.336,0,0.75,0h10.002c0.414,0,0.75,0.336,0.75,0.75
+				C11.502,1.165,11.166,1.5,10.752,1.5z"/>
+			</g>
+		</svg>
+
+	</button>
+
 	<input type="number" class="product__quantity--input js-quantity-input"  min="1" placeholder="0" name="quantity" value="1">
-	<button type="button" class="btn__quantity plus js-quantity-btn" data-action="plus">+</button>
+
+	<button type="button" class="btn__quantity plus js-quantity-btn" data-action="plus">
+		<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 11.502 11.502" enable-background="new 0 0 11.502 11.502" xml:space="preserve">
+			<path  d="M10.752,5.001H6.501V0.75C6.501,0.336,6.165,0,5.751,0s-0.75,0.336-0.75,0.75v4.251H0.75
+			C0.336,5.001,0,5.337,0,5.751C0,6.166,0.336,6.5,0.75,6.5h4.251v4.252c0,0.414,0.336,0.75,0.75,0.75s0.75-0.336,0.75-0.75V6.5h4.251
+			c0.414,0,0.75-0.335,0.75-0.75C11.502,5.337,11.166,5.001,10.752,5.001z"/>
+		</svg>
+	</button>
 </div>
 												</div>
 												<div class="cart-row__col--subcol">
@@ -909,11 +936,11 @@
 										
 										<!-- Delete product -->
 <button class="btn__delete round-ic" type="button">
-	<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10.159 10.159" enable-background="new 0 0 10.159 10.159" xml:space="preserve">
-		<path  d="M6.14,5.08L9.939,1.28c0.293-0.293,0.293-0.768,0-1.061s-0.768-0.293-1.061,0L5.08,4.019L1.28,0.22
-		c-0.293-0.293-0.768-0.293-1.061,0s-0.293,0.768,0,1.061L4.019,5.08L0.22,8.879c-0.293,0.293-0.293,0.768,0,1.061
-		c0.146,0.146,0.338,0.22,0.53,0.22s0.384-0.073,0.53-0.22L5.08,6.14l3.799,3.799c0.146,0.146,0.338,0.22,0.53,0.22
-		s0.384-0.073,0.53-0.22c0.293-0.293,0.293-0.768,0-1.061L6.14,5.08z"/>
+	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 8.572 8.573" enable-background="new 0 0 8.572 8.573" xml:space="preserve">
+		<path d="M5.347,4.286L8.353,1.28c0.293-0.293,0.293-0.768,0-1.061s-0.768-0.293-1.061,0L4.286,3.226L1.28,0.22
+		c-0.293-0.293-0.768-0.293-1.061,0s-0.293,0.768,0,1.061l3.006,3.006L0.22,7.292c-0.293,0.293-0.293,0.768,0,1.061
+		c0.146,0.146,0.338,0.22,0.53,0.22S1.134,8.5,1.28,8.353l3.006-3.006l3.006,3.006c0.146,0.146,0.338,0.22,0.53,0.22
+		s0.384-0.073,0.53-0.22c0.293-0.293,0.293-0.768,0-1.061L5.347,4.286z"/>
 	</svg>
 </button>
 <!-- //Delete product -->
@@ -928,7 +955,7 @@
 										<div class="cart-row__col">
 											<div class="cart-orders__product--information">
 												<a href="page-product.html" class="card__thumbnail card__thumbnail--md">
-													<img src="img/product-thumb.jpg" alt="">
+													<img src="img/product-thumb.jpg" alt="Название продукта">
 												</a>
 												<p class="articul">Арт. 2345</p>
 											</div>
@@ -939,9 +966,25 @@
 											<div class="row align-horisontal-betwee align-vertical-center row-gutters">
 												<div class="cart-row__col--subcol">
 													<div class="product__quantity">
-	<button type="button" class="btn__quantity minus js-quantity-btn" data-action="minus">-</button>
+	<button type="button" class="btn__quantity minus js-quantity-btn" data-action="minus">
+		<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 11.502 1.5" enable-background="new 0 0 11.502 1.5" xml:space="preserve">
+			<g>
+				<path d="M10.752,1.5H0.75C0.336,1.5,0,1.165,0,0.75C0,0.336,0.336,0,0.75,0h10.002c0.414,0,0.75,0.336,0.75,0.75
+				C11.502,1.165,11.166,1.5,10.752,1.5z"/>
+			</g>
+		</svg>
+
+	</button>
+
 	<input type="number" class="product__quantity--input js-quantity-input"  min="1" placeholder="0" name="quantity" value="1">
-	<button type="button" class="btn__quantity plus js-quantity-btn" data-action="plus">+</button>
+
+	<button type="button" class="btn__quantity plus js-quantity-btn" data-action="plus">
+		<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 11.502 11.502" enable-background="new 0 0 11.502 11.502" xml:space="preserve">
+			<path  d="M10.752,5.001H6.501V0.75C6.501,0.336,6.165,0,5.751,0s-0.75,0.336-0.75,0.75v4.251H0.75
+			C0.336,5.001,0,5.337,0,5.751C0,6.166,0.336,6.5,0.75,6.5h4.251v4.252c0,0.414,0.336,0.75,0.75,0.75s0.75-0.336,0.75-0.75V6.5h4.251
+			c0.414,0,0.75-0.335,0.75-0.75C11.502,5.337,11.166,5.001,10.752,5.001z"/>
+		</svg>
+	</button>
 </div>
 												</div>
 												<div class="cart-row__col--subcol">
@@ -954,11 +997,11 @@
 										
 										<!-- Delete product -->
 <button class="btn__delete round-ic" type="button">
-	<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 10.159 10.159" enable-background="new 0 0 10.159 10.159" xml:space="preserve">
-		<path  d="M6.14,5.08L9.939,1.28c0.293-0.293,0.293-0.768,0-1.061s-0.768-0.293-1.061,0L5.08,4.019L1.28,0.22
-		c-0.293-0.293-0.768-0.293-1.061,0s-0.293,0.768,0,1.061L4.019,5.08L0.22,8.879c-0.293,0.293-0.293,0.768,0,1.061
-		c0.146,0.146,0.338,0.22,0.53,0.22s0.384-0.073,0.53-0.22L5.08,6.14l3.799,3.799c0.146,0.146,0.338,0.22,0.53,0.22
-		s0.384-0.073,0.53-0.22c0.293-0.293,0.293-0.768,0-1.061L6.14,5.08z"/>
+	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 8.572 8.573" enable-background="new 0 0 8.572 8.573" xml:space="preserve">
+		<path d="M5.347,4.286L8.353,1.28c0.293-0.293,0.293-0.768,0-1.061s-0.768-0.293-1.061,0L4.286,3.226L1.28,0.22
+		c-0.293-0.293-0.768-0.293-1.061,0s-0.293,0.768,0,1.061l3.006,3.006L0.22,7.292c-0.293,0.293-0.293,0.768,0,1.061
+		c0.146,0.146,0.338,0.22,0.53,0.22S1.134,8.5,1.28,8.353l3.006-3.006l3.006,3.006c0.146,0.146,0.338,0.22,0.53,0.22
+		s0.384-0.073,0.53-0.22c0.293-0.293,0.293-0.768,0-1.061L5.347,4.286z"/>
 	</svg>
 </button>
 <!-- //Delete product -->
@@ -1083,18 +1126,18 @@
 									<li><a href="page-technical.html">Доставка</a></li>
 									<li><a href="page-technical.html">Возврат</a></li>
 									<li><a href="page-technical.html">Оплата</a></li>
-									<li><a href="page-technical.html">Конфидициальность</a></li>
+									<li><a href="page-technical.html">Конфиденциальность</a></li>
 								</ul>
 							</nav>
 						</div>
 						<!-- //col -->
 
 						<div class="footer__col">
-							<h2 class="footer__col--title">Приезжайте к нам</h2>
+							<h2 class="footer__col--title">Приезжайте в Киеве</h2>
 
 							<div class="footer__contacts">
-								<p class="footer__contacts--link block-with-ic block-with-ic__address">Киев,<br>Бульвар Леси<br>Украинки 10</p>
-								<p class="footer__contacts--link block-with-ic block-with-ic__address">Киев,<br>Бульвар Леси<br>Украинки 10</p>
+								<p class="footer__contacts--link block-with-ic block-with-ic__address">Бульвар Леси<br>Украинки 10</p>
+								<p class="footer__contacts--link block-with-ic block-with-ic__address">Бульвар Леси<br>Украинки 15</p>
 							</div>
 						</div>
 						<!-- //col -->
@@ -1115,7 +1158,7 @@
 
 							<ul class="socials socials-accent">
 								<li class="socials__item">
-	<a href="#" class="socials__link" target="_blank" rel="nofollow">
+	<a href="#" class="socials__link" target="_blank" rel="nofollow" title="Telegram">
 		<i class="socials__link--ic">
 
 			<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 19.23 16.2" enable-background="new 0 0 19.23 16.2" xml:space="preserve">
@@ -1130,7 +1173,7 @@
 	</a>
 </li>
 <li class="socials__item">
-	<a href="#" class="socials__link" target="_blank" rel="nofollow">
+	<a href="#" class="socials__link" target="_blank" rel="nofollow" title="Viber">
 		<i class="socials__link--ic">
 
 			<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20.35 21.034" enable-background="new 0 0 20.35 21.034" xml:space="preserve">
@@ -1174,7 +1217,7 @@
 	</a>
 </li>
 <li class="socials__item">
-	<a href="#" class="socials__link" target="_blank" rel="nofollow">
+	<a href="#" class="socials__link" target="_blank" rel="nofollow" title="WhatsApp">
 		<i class="socials__link--ic">
 
 			<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20.167 20.324" enable-background="new 0 0 20.167 20.324" xml:space="preserve">
@@ -1199,6 +1242,13 @@
 		</i>
 	</a>
 </li>							</ul>
+
+							<div class="developed">
+								<p class="developed__text">Powered by:</p>
+								<a href="#" class="developed__link" target="_blank" title="Grytsay" rel="nofollow">
+									<img src="img/grytsay.svg" alt="Grytsay">
+								</a>
+							</div>
 						</div>
 						<!-- //col -->
 
@@ -1206,14 +1256,8 @@
 				</div>
 			</div>
 
-			<div class="copyright">
-				<div class="row align-vertical-center align-horisontal-between">
-					<p class="copyright__text">&copy; 2020 Все права защищены</p>
-
-					<a href="#" class="developed" target="_blank" title="Grytsay">
-						<img src="img/grytsay.svg" alt="Grytsay">
-					</a>
-				</div>
+			<div class="copyright text-center">
+				<p class="copyright__text">&copy; 2020 Все права защищены</p>
 			</div>
 		</div>
 		<!-- //container -->

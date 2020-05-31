@@ -91,6 +91,17 @@
 		svg()
 		fill $light-color
 		
+	&__lg
+		width 60px
+		height 60px
+		
+		.link-wishlist__ic
+			width 27px
+			height 27px
+			
+	&.is-active
+		background-color $wishlist-active-color
+		
 // Delivery
 .delivery
 	margin 0 30px
@@ -212,36 +223,43 @@
 .permalink
 	font 16px $Med
 	color $text-accent-color
+	line-height 1
 	&:hover
 		color $accent-color
 		
 
-.decor-bg
-	position absolute
-	top 65px
-	left 0
-	width 100%
-	height 1030px
-	overflow hidden
-	z-index -1
-	will-change transform
-	&:before
-		pseudo()
-		position absolute
-		fullSize()
-		background-color rgba(#333633, .86)
 		
 // Icons
 .icon-link
 	display inline-block
 	width 20px
 	height 20px
+	position relative
+	&__counter
+		width 16px
+		height 16px
+		border-radius 50%
+		background-color $wishlist-active-color
+		color $light-color
+		flex-col-center()
+		font 9px $Med
+		position absolute
+		bottom 100%
+		left 100%
+	
+	&.is-empty
+		.icon-link__counter
+			display none
 	&__ic
 		block()
 		
 	svg
 		svg()
 		fill $text-color
+		
+	&:hover
+		svg
+			fill $dark-accent-color
 		
 .block-with-ic
 	display inline-block
@@ -366,6 +384,8 @@
 			margin-bottom 8px
 			
 // Decor drops
+
+	
 .drop
 	display inline-block
 	position absolute
@@ -386,4 +406,29 @@
 		width 42.084px
 		height 55.383px
 		background-image url('../img/decor/drops/triple-drops.svg')
-		
+
+
+.sect__title--col
+	.drop
+		&-double
+			left 100px
+			top 15px
+		&-triple
+			left 175px
+			top -30px
+			
+// Decor figure
+.decor-figure
+	background-color #f7f5f5
+	position absolute
+	z-index -1
+	pointer-events none
+	
+.product-page
+	.decor-figure
+		left 0
+		top 1200px
+		height 900px
+		width 50%
+			
+

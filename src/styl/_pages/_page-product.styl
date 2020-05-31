@@ -1,4 +1,8 @@
 .product
+	&-page
+		position relative
+		
+		
 	&__quantity
 		display flex
 		align-items center
@@ -22,4 +26,153 @@
 			&:hover,
 			&:focus
 				border-color $accent-color
+				
+		&--lg
+			width 100%
+			justify-content space-between
+			.product__quantity--input
+				border-color transparent
+				background-color #f0f0f0
+				width 60px
+				height 60px
+				font-size 16px
+				&:hover,
+				&:focus
+					border-color $accent-color
+			
+			.btn__quantity
+				width 60px
+				height 60px
+				background-color $light-color
+				border 1px solid #dbdbdb
+				box-shadow none
+				color $text-color
+				svg
+					fill $text-color
+					width 23px
+					height 23px
+				&:hover
+					border-color $accent-color
+				
+	&__img
+		width 50%
+		img
+			display block
+			width 100%
+			
+	&__information
+		width 50%
+		padding-left 65px
 		
+		.articul
+			margin-bottom 55px
+			
+	&__description
+		margin-bottom 70px
+		.permalink
+			font-size 14px
+		&--title
+			font 20px $PBold
+			line-height 1
+			color $alternate-text-color
+			margin-bottom 25px
+		&--text
+			font-size 14px
+			margin-bottom 15px
+			color $product-text-color
+			line-height 1.2
+			span
+				display none
+				&.is-toggled
+					display inline
+					
+	&__tools
+		&--wrapper
+			position relative
+			width 270px
+			&:before
+				pseudo()
+				width 100px
+				height 174px
+				position absolute
+				transform rotate(-50deg)
+				top -70px
+				right -60px
+				pointer-events none
+				z-index -1
+				background url('../img/decor/gold-flower.svg') 50% 50% no-repeat / contain
+				
+		.card__tools
+			margin 40px 0
+	
+	&__price
+		margin-bottom 50px
+		&--label
+			display block
+			font-size 20px
+			margin-bottom 20px
+			line-height 1
+		.price
+			font-size 34px
+			line-height 1
+			
+	&__visual
+		margin-top 165px
+		
+		&--col
+			width 50%
+			font-size 14px
+			line-height 1.2
+			color $product-text-color
+			h2,h3,h4,h5,h6
+				font-family $PBold
+				color $alternate-text-color
+				font-size 34px
+				line-height 1
+				margin-bottom 30px
+			&:first-child
+				padding-right 14%
+			img 
+				display block
+				width 100%
+				margin-bottom 70px
+				&:last-child
+					margin-bottom 0
+					
+
+.sect__product-video
+	position relative
+	min-height 720px
+	display flex
+	align-items center
+	
+	.sect__title--col
+		padding-right 0
+		width 250px
+	
+
+	
+.product__video
+	height 720px
+	background-color $accent-color
+	width 64%
+	max-width 1200px
+	position absolute
+	left 0
+	margin-right 105px
+	vertical-center()
+	
+		
+	&--wrapper
+		width 250px
+		
+	iframe
+		display block
+		width 100%
+		height 100%
+		
+
+.viewed-products
+	.card__wrapper
+		width 25%
+

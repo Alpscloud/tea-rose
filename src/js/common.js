@@ -210,6 +210,13 @@ $(document).ready(function() {
 		$('.js-postcard-text').stop().slideToggle(150);
 	});
 
+	// Product
+	$('.js-toggle-text-block-btn').on('click', function(e) {
+		e.preventDefault();
+		$(this).toggleClass('is-toggled');
+		$(this).parents('.product__description').find('.product__description--text span').stop().slideToggle(150);
+	});
+
 	// Sliders
 	var promoSlider = new Swiper('.js-promo-slider', {
 		speed: 600,
@@ -234,12 +241,98 @@ $(document).ready(function() {
 		},
 	});
 
+	var productsSlider = new Swiper('.js-products-slider', {
+		speed: 600,
+		loop: true,
+		slidesPerView: 3,
+		spaceBetween: 0,
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false
+		},
+		navigation: {
+			nextEl: '.js-products-slider-btn-next',
+			prevEl: '.js-products-slider-btn-prev',
+		}
+	});
+
 	// ========= Ajax form ===========
 	$('.js-input').on('focus',function() {
 		if($(this).hasClass('is-error')) {
 			$(this).removeClass('is-error');
 		}
 	});
+
+	// Parallax
+
+	function parallax(item){
+		var scrolled = $(window).scrollTop();
+		var speed = $(item).attr('data-parallax-speed');
+		var direction = $(item).attr('data-parallax-direction');
+
+
+
+		if(direction === 'horisontal-right') {
+			$(item).css({
+				'transform': 'translate3d(' + (scrolled*speed) + 'px' + ', 0, 0)',
+				'-webkit-transform': 'translate3d(' + (scrolled*speed) + 'px' + ', 0, 0)',
+				'-o-transform': 'translate3d(' + (scrolled*speed) + 'px' + ', 0, 0)',
+				'-moz-transform': 'translate3d(' + (scrolled*speed) + 'px' + ', 0, 0)'
+				
+			});
+		} else if(direction === 'horisontal-left') {
+			$(item).css({
+				'transform': 'translate3d(' + -(scrolled*speed) + 'px' + ', 0, 0)',
+				'-webkit-transform': 'translate3d(' + -(scrolled*speed) + 'px' + ', 0, 0)',
+				'-o-transform': 'translate3d(' + -(scrolled*speed) + 'px' + ', 0, 0)',
+				'-moz-transform': 'translate3d(' + -(scrolled*speed) + 'px' + ', 0, 0)'
+				
+			});
+		} else if(direction === 'vertical-top') {
+			$(item).css({
+				'transform': 'translate3d(0, ' + -(scrolled*speed)+'px' + ', 0)',
+				'-moz-transform': 'translate3d(0, ' + -(scrolled*speed)+'px' + ', 0)',
+				'-ms-transform': 'translate3d(0, ' + -(scrolled*speed)+'px' + ', 0)',
+				'-o-transform': 'translate3d(0, ' + -(scrolled*speed)+'px' + ', 0)',
+				'-webkit-transform': 'translate3d(0, ' + -(scrolled*speed)+'px' + ', 0)'
+			});
+		} else if(direction === 'vertical-bottom') {
+			$(item).css({
+				'transform': 'translate3d(0, ' + (scrolled*speed)+'px' + ', 0)',
+				'-moz-transform': 'translate3d(0, ' + (scrolled*speed)+'px' + ', 0)',
+				'-ms-transform': 'translate3d(0, ' + (scrolled*speed)+'px' + ', 0)',
+				'-o-transform': 'translate3d(0, ' + (scrolled*speed)+'px' + ', 0)',
+				'-webkit-transform': 'translate3d(0, ' + (scrolled*speed)+'px' + ', 0)'
+			});
+		}
+		
+
+	}
+
+	var offsets = [];
+
+	var windowHeight = $(window).height() - 200;
+
+	$('.js-item-parallax').each(function() {
+		var offset = $(this).offset().top - windowHeight;
+
+		offsets.push(offset);
+	});
+
+
+	if($('.js-item-parallax').length > 0) {
+
+		$(window).on('scroll', function(e) {
+			var scroll = $(this).scrollTop();
+
+			$('.js-item-parallax').each(function() {
+				
+				parallax($(this));
+				
+			});
+		});
+
+	}
 
 
 

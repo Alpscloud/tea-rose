@@ -17,8 +17,7 @@
 		padding-left 15px
 		padding-right 15px
 		
-	&-cart
-		font 14px $Med
+	
 	
 	&-with-ic
 		font-size 14px
@@ -29,6 +28,30 @@
 		background-position 17px 50% 
 		background-repeat no-repeat
 		background-size 20px 18px
+		
+		&__lg
+			padding-top 22px
+			padding-bottom 22px
+			height 60px
+			width 185px
+			font-size 16px
+			background-size 22px 22px
+			background-position 20px 50%
+		
+	&-cart
+		font 14px $Med
+		
+		&.is-empty
+			width 55px
+			height 55px
+			border-radius 50%
+			background-position 50% 50%
+			padding 0
+			// pointer-events none
+			
+			.btn-cart__count
+				display none
+			
 		
 	&-light
 		background-color $light-color
@@ -60,6 +83,23 @@
 		&:hover
 			background-color $accent-color
 			color $light-color
+			
+	&-secondary-color
+		background-color $secondary-color
+		color $light-color
+		
+		&:hover
+			background-color $accent-color
+			color $light-color
+	
+	&-grey
+		background-color #f7f5f5
+		color $secondary-color
+			
+	&-md
+		font-size 14px
+		padding-top 18px
+		padding-bottom 18px
 			
 			
 	&-equal
@@ -181,7 +221,7 @@
 		display inline-block
 		position relative
 		padding-right 30px
-		font 12px $Med
+		font 14px $Med
 		line-height 1
 		text-align left
 		&--ic
@@ -211,9 +251,22 @@
 		color $light-color
 		font-size 40px
 		font-family $Reg
+		position relative
+		svg
+			display block
+			fill $light-color
+			width 11px
+			height 11px
+			position absolute
+			position-center()
+			
+		
+				
 		&:hover
 			background-color $dark-accent-color
 			box-shadow none
+			
+
 			
 	&__delete
 		background-color $color-bg
@@ -224,4 +277,12 @@
 			background-color $dark-accent-color
 			svg
 				fill $light-color
-		
+	
+	&__toggle
+		position relative
+		display inline-block
+		&:before
+			content attr(data-default-text)
+		&.is-toggled
+			&:before
+				content attr(data-toggled-text)

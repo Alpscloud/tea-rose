@@ -344,7 +344,8 @@
 
 						<div class="header__icons-links">
 							<!-- Wishlist -->
-							<a href="page-wishlist.html" class="icon-link tooltip__wrapper">
+							<!-- Remove is-empty class -->
+							<a href="page-wishlist.html" class="icon-link tooltip__wrapper ">
 								<i class="icon-link__ic">
 									<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20.651 18.534" enable-background="new 0 0 20.651 18.534" xml:space="preserve">
 										<g>
@@ -373,6 +374,8 @@
 									</svg>
 
 								</i>
+
+								<span class="icon-link__counter">99</span>
 
 								<!-- Tooltip -->
 								<span class="tooltip">Избранное</span>
@@ -407,8 +410,16 @@
 							</a>
 							<!--// Cabinet -->
 						</div>
+						
+						<div class="header__cart text-right">
+							<a href="page-cart.html" class="btn btn-cart btn-with-ic is-empty tooltip__wrapper">
+								<span class="btn-cart__count">5415 грн</span>
 
-						<a href="page-cart.html" class="btn btn-cart btn-with-ic">0 грн</a>
+								<!-- Tooltip -->
+								<span class="tooltip">Перейти в корзину</span>
+								<!-- //Tooltip -->
+							</a>
+						</div>
 					</div>
 				</div>
 
@@ -583,7 +594,7 @@
 						<!-- Socials -->
 						<ul class="socials">
 							<li class="socials__item">
-	<a href="#" class="socials__link" target="_blank" rel="nofollow">
+	<a href="#" class="socials__link" target="_blank" rel="nofollow" title="Telegram">
 		<i class="socials__link--ic">
 
 			<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 19.23 16.2" enable-background="new 0 0 19.23 16.2" xml:space="preserve">
@@ -598,7 +609,7 @@
 	</a>
 </li>
 <li class="socials__item">
-	<a href="#" class="socials__link" target="_blank" rel="nofollow">
+	<a href="#" class="socials__link" target="_blank" rel="nofollow" title="Viber">
 		<i class="socials__link--ic">
 
 			<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20.35 21.034" enable-background="new 0 0 20.35 21.034" xml:space="preserve">
@@ -642,7 +653,7 @@
 	</a>
 </li>
 <li class="socials__item">
-	<a href="#" class="socials__link" target="_blank" rel="nofollow">
+	<a href="#" class="socials__link" target="_blank" rel="nofollow" title="WhatsApp">
 		<i class="socials__link--ic">
 
 			<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20.167 20.324" enable-background="new 0 0 20.167 20.324" xml:space="preserve">
@@ -701,7 +712,7 @@
 											<img src="img/promo/1.jpg" alt="">
 										</a>
 
-										<a href="#" class="btn btn-light">Открыть</a>
+										<a href="#" class="btn btn-grey btn-md">Открыть</a>
 									</div>
 								</div>
 								<!-- //Slide -->
@@ -713,7 +724,7 @@
 											<img src="img/promo/2.jpg" alt="">
 										</a>
 
-										<a href="#" class="btn btn-light">Открыть</a>
+										<a href="#" class="btn btn-grey btn-md">Открыть</a>
 									</div>
 								</div>
 								<!-- //Slide -->
@@ -807,7 +818,7 @@
 
 			<div class="card__tools">
 				<!-- Wishlist btn -->
-				<a href="#" class="link-wishlist tooltip__wrapper">
+				<a href="#" class="link-wishlist tooltip__wrapper is-active">
 					<i class="link-wishlist__ic">
 						<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20.651px" height="18.534px" viewBox="0 0 20.651 18.534" enable-background="new 0 0 20.651 18.534" xml:space="preserve">
 							<g>
@@ -1825,7 +1836,7 @@
 								<div class="blog-title__content">
 									<img src="img/decor/blog-title-decor.svg" class="decor-img" alt="Tea rose">
 									<h3 class="sect__title">Блог<br>Чайной<br>Розы</h3>
-									<a href="page-catalog.html" class="permalink">Открыть статьи</a>
+									<a href="page-blog.html" class="permalink">Открыть статьи</a>
 								</div>
 							</div>
 						</div>
@@ -1884,18 +1895,18 @@
 									<li><a href="page-technical.html">Доставка</a></li>
 									<li><a href="page-technical.html">Возврат</a></li>
 									<li><a href="page-technical.html">Оплата</a></li>
-									<li><a href="page-technical.html">Конфидициальность</a></li>
+									<li><a href="page-technical.html">Конфиденциальность</a></li>
 								</ul>
 							</nav>
 						</div>
 						<!-- //col -->
 
 						<div class="footer__col">
-							<h2 class="footer__col--title">Приезжайте к нам</h2>
+							<h2 class="footer__col--title">Приезжайте в Киеве</h2>
 
 							<div class="footer__contacts">
-								<p class="footer__contacts--link block-with-ic block-with-ic__address">Киев,<br>Бульвар Леси<br>Украинки 10</p>
-								<p class="footer__contacts--link block-with-ic block-with-ic__address">Киев,<br>Бульвар Леси<br>Украинки 10</p>
+								<p class="footer__contacts--link block-with-ic block-with-ic__address">Бульвар Леси<br>Украинки 10</p>
+								<p class="footer__contacts--link block-with-ic block-with-ic__address">Бульвар Леси<br>Украинки 15</p>
 							</div>
 						</div>
 						<!-- //col -->
@@ -1916,7 +1927,7 @@
 
 							<ul class="socials socials-accent">
 								<li class="socials__item">
-	<a href="#" class="socials__link" target="_blank" rel="nofollow">
+	<a href="#" class="socials__link" target="_blank" rel="nofollow" title="Telegram">
 		<i class="socials__link--ic">
 
 			<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"  viewBox="0 0 19.23 16.2" enable-background="new 0 0 19.23 16.2" xml:space="preserve">
@@ -1931,7 +1942,7 @@
 	</a>
 </li>
 <li class="socials__item">
-	<a href="#" class="socials__link" target="_blank" rel="nofollow">
+	<a href="#" class="socials__link" target="_blank" rel="nofollow" title="Viber">
 		<i class="socials__link--ic">
 
 			<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20.35 21.034" enable-background="new 0 0 20.35 21.034" xml:space="preserve">
@@ -1975,7 +1986,7 @@
 	</a>
 </li>
 <li class="socials__item">
-	<a href="#" class="socials__link" target="_blank" rel="nofollow">
+	<a href="#" class="socials__link" target="_blank" rel="nofollow" title="WhatsApp">
 		<i class="socials__link--ic">
 
 			<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20.167 20.324" enable-background="new 0 0 20.167 20.324" xml:space="preserve">
@@ -2000,6 +2011,13 @@
 		</i>
 	</a>
 </li>							</ul>
+
+							<div class="developed">
+								<p class="developed__text">Powered by:</p>
+								<a href="#" class="developed__link" target="_blank" title="Grytsay" rel="nofollow">
+									<img src="img/grytsay.svg" alt="Grytsay">
+								</a>
+							</div>
 						</div>
 						<!-- //col -->
 
@@ -2007,14 +2025,8 @@
 				</div>
 			</div>
 
-			<div class="copyright">
-				<div class="row align-vertical-center align-horisontal-between">
-					<p class="copyright__text">&copy; 2020 Все права защищены</p>
-
-					<a href="#" class="developed" target="_blank" title="Grytsay">
-						<img src="img/grytsay.svg" alt="Grytsay">
-					</a>
-				</div>
+			<div class="copyright text-center">
+				<p class="copyright__text">&copy; 2020 Все права защищены</p>
 			</div>
 		</div>
 		<!-- //container -->

@@ -35,7 +35,8 @@
 
 						<div class="header__icons-links">
 							<!-- Wishlist -->
-							<a href="page-wishlist.html" class="icon-link tooltip__wrapper">
+							<!-- Remove is-empty class -->
+							<a href="page-wishlist.html" class="icon-link tooltip__wrapper ">
 								<i class="icon-link__ic">
 									<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 20.651 18.534" enable-background="new 0 0 20.651 18.534" xml:space="preserve">
 										<g>
@@ -64,6 +65,8 @@
 									</svg>
 
 								</i>
+
+								<span class="icon-link__counter">99</span>
 
 								<!-- Tooltip -->
 								<span class="tooltip">Избранное</span>
@@ -98,8 +101,16 @@
 							</a>
 							<!--// Cabinet -->
 						</div>
+						
+						<div class="header__cart text-right">
+							<a href="page-cart.html" class="btn btn-cart btn-with-ic is-empty tooltip__wrapper">
+								<span class="btn-cart__count">5415 грн</span>
 
-						<a href="page-cart.html" class="btn btn-cart btn-with-ic">0 грн</a>
+								<!-- Tooltip -->
+								<span class="tooltip">Перейти в корзину</span>
+								<!-- //Tooltip -->
+							</a>
+						</div>
 					</div>
 				</div>
 
