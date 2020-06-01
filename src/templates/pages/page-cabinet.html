@@ -4,9 +4,9 @@
 	<!-- CONTENT WRAPPER -->
 	<div class="content__wrapper">
 
-		<!-- Popups -->
-		{% include '../parts/components/popups.html' %}
-		<!-- //Popups -->
+
+		{% include '../parts/components/popups/popup-edit-profile.html' %}
+		{% include '../parts/components/popups/popup-subscribe-thanks.html' %}
 
 		<!-- Header -->
 		{% include '../parts/sections/header.html' %}
@@ -31,10 +31,344 @@
 
 
 					<div class="cabinet">
-						
+						<!-- User -->
+						<div class="cabinet-user__wrapper gutter-bottom">
+							<h3 class="sect__title text-center">Ваш личный кабинет</h3>
+
+							<div class="cabinet-user">
+								<div class="row align-vertical-center align-horisontal-start cabinet-user__row">
+									<!-- Avatar -->
+
+									<div class="cabinet-user__avatar bg" style="background-image: url('https://i1.wp.com/itc.ua/wp-content/uploads/2016/11/Emilia-Clarke.jpg?fit=1000%2C710&quality=100&strip=all&ssl=1');"></div>
+
+									<!-- //Avatar -->
+									
+									<!-- Information -->
+									<div class="cabinet-user__information">
+										<div class="cabinet-user__information--header">
+											<div class="row align-vertical-center align-horisontal-start row-gutters row-nowrap">
+
+												<div class="cabinet-user__information--header_col">
+													<p>Информация</p>
+												</div>
+												<!-- //col -->
+
+												<div class="cabinet-user__information--header_col">
+													<p>Персональная скидка</p>
+												</div>
+												<!-- //col -->
+
+												<div class="cabinet-user__information--header_col">
+													<p><button class="js-open-edit-profile-form-btn">Редактировать</button></p>
+												</div>
+												<!-- //col -->
+
+												<div class="cabinet-user__information--header_col">
+													<p><a href="#">Выйти</a></p>
+												</div>
+												<!-- //col -->
+											</div>
+										</div>
+
+										<div class="cabinet-user__information--body">
+											<div class="row align-vertical-start align-horisontal-start row-gutters row-nowrap">
+												<div class="cabinet-user__information--body_col">
+													<ul class="information__list">
+														<li><span>Имя:</span> <b>Эмилия Кларк</b></li>
+														<li><span>Телефон:</span> <b>+38 066 724 19 39</b></li>
+														<li><span>Почта:</span> <b>emilie_clark@gmail.com</b></li>
+													</ul>
+												</div>
+												<!-- //col -->
+
+
+												<div class="cabinet-user__information--body_col">
+													<ul class="information__list">
+														<li><span>Размер:</span> <b>-10%</b></li>
+													</ul>
+												</div>
+												<!-- //col -->
+
+
+												<div class="cabinet-user__information--body_col">
+													<a href="tel:+3809999999999" class="btn btn-wide">Позвоните мне</a>
+												</div>
+												<!-- //col -->
+
+
+											</div>
+										</div>
+									</div>
+									<!-- //Information -->
+								</div>
+							</div>
+						</div>
+						<!--// User -->
+
+						<!-- Orders -->
+						<div class="cabinet-orders__wrapper">
+							<div class="cabinet-orders__header text-center">
+								<h3 class="sect__title">Вы покупали</h3>
+
+								<!-- Sorting -->
+								<div class="sorting">
+									<span class="sorting__label">Сортировать по:</span>
+									<div class="sorting__params">
+										<a href="#" class="link sorting__link is-active">Дате</a>
+										<a href="#" class="link sorting__link">Цене</a>
+									</div>
+								</div>
+								<!-- //Sorting -->
+							</div>
+
+							<div class="cabinet-orders">
+								<!-- Order item -->
+								<div class="cabinet-order">
+
+									<!-- Order number -->
+									<span class="cabinet-order__number">№ 4</span>
+									<!-- //Order number -->
+
+									<div class="cabinet-order__row row align-vertical-start align-horisontal-between row-gutters row-nowrap">
+										<div class="cabinet-order__col">
+
+											<div class="cabinet-order__products">
+												<div class="cabinet-order__product--wrapper">
+													<a href="page-product.html" class="cabinet-order__product card__thumbnail">
+														<img src="img/product-thumb.jpg" alt="Название продукта">
+													</a>
+												</div>
+
+												<div class="cabinet-order__product--wrapper">
+													<a href="page-product.html" class="cabinet-order__product card__thumbnail">
+														<img src="img/product-thumb.jpg" alt="Название продукта">
+													</a>
+												</div>
+
+												<div class="cabinet-order__product--wrapper">
+													<a href="page-product.html" class="cabinet-order__product card__thumbnail">
+														<img src="img/product-thumb.jpg" alt="Название продукта">
+													</a>
+												</div>
+
+												<div class="cabinet-order__product--wrapper">
+													<a href="page-product.html" class="cabinet-order__product card__thumbnail">
+														<img src="img/product-thumb.jpg" alt="Название продукта">
+													</a>
+												</div>
+
+											</div>
+
+										</div>
+										<!-- //col -->
+
+
+										<div class="cabinet-order__col">
+											<ul class="cabinet-order__list">
+												<li><span>Кол-во:</span> <b>1</b></li>
+												<li><span>Артикул:</span> <b>34475, 11224, 99134, 22210</b></li>
+												<li><span>Дата:</span> <b>13.08.2019</b></li>
+											</ul>
+										</div>
+										<!-- //col -->
+
+
+										<div class="cabinet-order__col">
+											<ul class="cabinet-order__list cabinet-order__list--price">
+												<li><span>Цена:</span><br><b>94123 грн</b></li>
+											</ul>
+										</div>
+										<!-- //col -->
+
+
+										<div class="cabinet-order__col">
+											<a href="#" class="btn btn-dark btn-wide">Заказать повторно</a>
+										</div>
+										<!-- //col -->
+
+
+									</div>
+								</div>
+								<!-- //Order item -->
+
+								<!-- Order item -->
+								<div class="cabinet-order">
+
+									<!-- Order number -->
+									<span class="cabinet-order__number">№ 3</span>
+									<!-- //Order number -->
+
+									<div class="cabinet-order__row row align-vertical-start align-horisontal-between row-gutters row-nowrap">
+										<div class="cabinet-order__col">
+
+											<div class="cabinet-order__products">
+												<div class="cabinet-order__product--wrapper">
+													<a href="page-product.html" class="cabinet-order__product card__thumbnail">
+														<img src="img/product-thumb.jpg" alt="Название продукта">
+													</a>
+												</div>
+
+											</div>
+
+										</div>
+										<!-- //col -->
+
+
+										<div class="cabinet-order__col">
+											<ul class="cabinet-order__list">
+												<li><span>Кол-во:</span> <b>1</b></li>
+												<li><span>Артикул:</span> <b>34475</b></li>
+												<li><span>Дата:</span> <b>13.08.2019</b></li>
+											</ul>
+										</div>
+										<!-- //col -->
+
+
+										<div class="cabinet-order__col">
+											<ul class="cabinet-order__list cabinet-order__list--price">
+												<li><span>Цена:</span><br><b>94123 грн</b></li>
+											</ul>
+										</div>
+										<!-- //col -->
+
+
+										<div class="cabinet-order__col">
+											<a href="#" class="btn btn-dark btn-wide">Заказать повторно</a>
+										</div>
+										<!-- //col -->
+
+
+									</div>
+								</div>
+								<!-- //Order item -->
+
+								<!-- Order item -->
+								<div class="cabinet-order">
+
+									<!-- Order number -->
+									<span class="cabinet-order__number">№ 2</span>
+									<!-- //Order number -->
+
+									<div class="cabinet-order__row row align-vertical-start align-horisontal-between row-gutters row-nowrap">
+										<div class="cabinet-order__col">
+
+											<div class="cabinet-order__products">
+												<div class="cabinet-order__product--wrapper">
+													<a href="page-product.html" class="cabinet-order__product card__thumbnail">
+														<img src="img/product-thumb.jpg" alt="Название продукта">
+													</a>
+												</div>
+
+												<div class="cabinet-order__product--wrapper">
+													<a href="page-product.html" class="cabinet-order__product card__thumbnail">
+														<img src="img/product-thumb.jpg" alt="Название продукта">
+													</a>
+												</div>
+
+
+											</div>
+
+										</div>
+										<!-- //col -->
+
+
+										<div class="cabinet-order__col">
+											<ul class="cabinet-order__list">
+												<li><span>Кол-во:</span> <b>1</b></li>
+												<li><span>Артикул:</span> <b>34475, 11224</b></li>
+												<li><span>Дата:</span> <b>13.08.2019</b></li>
+											</ul>
+										</div>
+										<!-- //col -->
+
+
+										<div class="cabinet-order__col">
+											<ul class="cabinet-order__list cabinet-order__list--price">
+												<li><span>Цена:</span><br><b>1000 грн</b></li>
+											</ul>
+										</div>
+										<!-- //col -->
+
+
+										<div class="cabinet-order__col">
+											<a href="#" class="btn btn-dark btn-wide">Заказать повторно</a>
+										</div>
+										<!-- //col -->
+
+
+									</div>
+								</div>
+								<!-- //Order item -->
+
+									<!-- Order item -->
+								<div class="cabinet-order">
+
+									<!-- Order number -->
+									<span class="cabinet-order__number">№ 1</span>
+									<!-- //Order number -->
+
+									<div class="cabinet-order__row row align-vertical-start align-horisontal-between row-gutters row-nowrap">
+										<div class="cabinet-order__col">
+
+											<div class="cabinet-order__products">
+												<div class="cabinet-order__product--wrapper">
+													<a href="page-product.html" class="cabinet-order__product card__thumbnail">
+														<img src="img/product-thumb.jpg" alt="Название продукта">
+													</a>
+												</div>
+
+												<div class="cabinet-order__product--wrapper">
+													<a href="page-product.html" class="cabinet-order__product card__thumbnail">
+														<img src="img/product-thumb.jpg" alt="Название продукта">
+													</a>
+												</div>
+
+												<div class="cabinet-order__product--wrapper">
+													<a href="page-product.html" class="cabinet-order__product card__thumbnail">
+														<img src="img/product-thumb.jpg" alt="Название продукта">
+													</a>
+												</div>
+
+
+											</div>
+
+										</div>
+										<!-- //col -->
+
+
+										<div class="cabinet-order__col">
+											<ul class="cabinet-order__list">
+												<li><span>Кол-во:</span> <b>1</b></li>
+												<li><span>Артикул:</span> <b>34475, 11224, 11224</b></li>
+												<li><span>Дата:</span> <b>13.08.2019</b></li>
+											</ul>
+										</div>
+										<!-- //col -->
+
+
+										<div class="cabinet-order__col">
+											<ul class="cabinet-order__list cabinet-order__list--price">
+												<li><span>Цена:</span><br><b>344 грн</b></li>
+											</ul>
+										</div>
+										<!-- //col -->
+
+
+										<div class="cabinet-order__col">
+											<a href="#" class="btn btn-dark btn-wide">Заказать повторно</a>
+										</div>
+										<!-- //col -->
+
+
+									</div>
+								</div>
+								<!-- //Order item -->
+							</div>
+						</div>
+						<!-- //Orders -->
 					</div>
 
-				
+
 
 
 				</div>

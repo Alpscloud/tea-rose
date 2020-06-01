@@ -1,0 +1,173 @@
+{% include '../parts/head.html' %}
+<body class="body-decor-bg">
+	
+	<!-- CONTENT WRAPPER -->
+	<div class="content__wrapper">
+
+		{% include '../parts/components/popups/popup-login.html' %}
+		{% include '../parts/components/popups/popup-add-to-cart.html' %}
+		{% include '../parts/components/popups/popup-subscribe-thanks.html' %}
+
+		<!-- Header -->
+		{% include '../parts/sections/header.html' %}
+		<!-- //Header -->
+
+		<!-- Main -->
+		<main class="main main-page">
+			
+			<section class="sect__article">
+				<h2 class="w3c">&nbsp;</h2>
+
+				<section class="sect__article--header">
+					<h2 class="w3c">&nbsp;</h2>
+
+					<div class="container">
+
+						<!-- Breadcrumbs -->
+						<div class="breadcrumbs">
+							<ul class="breadcrumbs__list">
+								<li class="breadcrumbs__item"><a href="index.html" class="breadcrumbs__link">Главная</a></li>
+								<li class="breadcrumbs__item"><a href="page-blog.html" class="breadcrumbs__link">Блог</a></li>
+								<li class="breadcrumbs__item"><span class="breadcrumbs__link is-active">Заголовок статьи</span></li>
+							</ul>
+						</div>
+						<!-- //Breadcrumbs -->
+
+						<h1 class="sect__title text-center article__title">Далеко-далеко за словесными горами в стране.</h1>
+					</div>
+					<!-- //container -->
+
+				</section>
+				
+
+				<!-- Article content -->
+				<article class="article">
+
+					<div class="article__block ">
+
+						<div class="container">
+
+							<div class="row align-horisontal-start article__row">
+
+								<div class="article__content--col">
+									<div class="content">
+										<h4>Заголовок</h4>
+										<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Подзаголовок по всей текстами буквоград это агенство путь, вопроса живет что большой буквенных. Маленький одна вскоре необходимыми назад однажды обеспечивает составитель.</p>
+									</div>
+
+									<div class="article__img bg" style="background-image: url('img/article-img.jpg');">
+										<img src="img/article-img.jpg" alt="Описание">
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //container -->
+
+					</div>
+
+					<div class="article__visual gutters">
+						<div class="container">
+							<div class="row align-horisontal-between align-vertical-center article__visual--row">
+								<div class="article__visual--col">
+									<img src="img/article-img-sm.jpg" alt="Альт">
+								</div>
+								<!-- //col -->
+
+								<div class="article__visual--col">
+									<span class="drop drop-single"></span>
+
+									<div class="content">
+										<h4>Заголовок</h4>
+										<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Подзаголовок по всей текстами буквоград это агенство путь, вопроса живет что большой буквенных. Маленький одна вскоре необходимыми назад однажды обеспечивает составитель.</p>
+									</div>
+								</div>
+								<!-- //col -->
+
+								<div class="article__visual--col">
+									<img src="img/article-img-sm.jpg" alt="Альт">
+								</div>
+								<!-- //col -->
+							</div>
+						</div>
+						<!-- //container -->
+					</div>
+
+					<div class="article__block">
+
+						<div class="container">
+
+							<div class="row align-horisontal-end article__row article__row--reverse">
+
+								<div class="article__content--col">
+									<div class="content">
+										<h4>Заголовок</h4>
+										<p>Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Подзаголовок по всей текстами буквоград это агенство путь, вопроса живет что большой буквенных. Маленький одна вскоре необходимыми назад однажды обеспечивает составитель.</p>
+									</div>
+
+									<div class="article__img bg" style="background-image: url('img/article-img.jpg');">
+										<img src="img/article-img.jpg" alt="Описание">
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- //container -->
+						
+					</div>
+
+
+
+
+				</article>
+				<!-- //Article content -->
+
+				<!-- Section blog -->
+				<section class="sect__blog gutter-top">
+					<h2 class="w3c">&nbsp;</h2>
+
+					<div class="container">
+						<div class="blog block-with-gutter-and-border">
+							<div class="row align-vertical-center blog__row">
+								<div class="blog__articles--col">
+									<div class="row align-horisontal-start">
+
+										{% include '../parts/components/article-card.html' %}
+										{% include '../parts/components/article-card.html' %}
+										{% include '../parts/components/article-card.html' %}
+									</div>
+								</div>
+
+								<div class="blog-title__content--col">
+									<div class="blog-title__content">
+										<span class="drop drop-double"></span>
+										<img src="img/decor/blog-title-decor.svg" class="decor-img" alt="Чайная роза">
+										<h3 class="sect__title">Читайте<br>так же</h3>
+										<a href="page-blog.html" class="permalink">Открыть статьи</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!-- //container -->
+				</section>
+				<!-- //Section blog -->
+
+
+
+				<div class="decor-figure js-item-parallax" data-parallax-speed="0.3" data-parallax-direction="vertical-top"></div>
+			</section>
+			
+		</main>
+		<!-- //Main -->
+
+		<!-- Footer -->
+		{% include '../parts/sections/footer.html' %}
+		<!-- //Footer -->
+
+	</div>
+	<!-- //CONTENT WRAPPER -->
+
+	{% include '../parts/scripts.html' %}
+
+</body>
+
+</html>

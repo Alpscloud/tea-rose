@@ -20,3 +20,73 @@
 			
 		.blog__articles--col
 			margin-top -35px
+			
+
+
+.article
+	&__title
+		font-size 56px
+		margin-bottom 95px
+		
+	&__block
+		min-height 660px
+		display flex
+		align-items center
+		position relative
+		
+	&__content
+		&--col
+			width 100%
+			max-width 450px
+			padding-right 75px
+			
+			.content
+				position relative
+				&:before
+					pseudo()
+					position absolute
+					left 0
+					bottom 100%
+					width 74px
+					height 115px
+					background url('../img/decor/gold-leafs.svg') 50% 50% no-repeat / contain
+					z-index -1
+					pointer-events none
+					
+			
+	&__img
+		height 100%
+		position absolute
+		vertical-center()
+		right 0
+		width 60%
+		max-width 1100px
+		img
+			@extends .visually-hidden
+			
+	&__row
+		&--reverse
+			
+			.article
+				&__content--col
+					padding-right 0
+					padding-left 75px
+					
+					.content
+						&:before
+							transform scaleX(-1)
+				&__img
+					left 0
+					right auto
+					
+	&__visual
+		&--col
+			width 33.33333%
+			padding 0 45px
+			position relative
+		&--row
+			margin-left -45px
+			margin-right -45px
+			img
+				display block
+				width 100%

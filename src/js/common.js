@@ -43,6 +43,13 @@ $(document).ready(function() {
 		$('html').addClass('is-fixed');
 	});
 
+	$('.js-open-edit-profile-form-btn').on('click',function(e) {
+		e.preventDefault();
+		$('.js-popup').fadeOut(300);
+		$('.js-popup-edit-profile-form').fadeIn(300);
+		$('html').addClass('is-fixed');
+	});
+
 	
 
 

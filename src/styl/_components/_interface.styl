@@ -99,8 +99,15 @@
 			width 27px
 			height 27px
 			
+	.tooltip
+		&:after
+			content attr(data-default-text)
+			
 	&.is-active
 		background-color $wishlist-active-color
+		.tooltip
+			&:after
+				content attr(data-active-text)
 		
 // Delivery
 .delivery
@@ -417,11 +424,87 @@
 			left 175px
 			top -30px
 			
+.blog-title__content--col
+	position relative
+	.drop-double
+		top -125px
+		right 0
+		transform scaleX(-1)
+		
+.sect__products
+	.drop
+		&-triple
+			top 5px
+		&-double
+			left auto
+			top 95px
+			right 15px
+			
+.sect__categories
+	.drop
+		&-single
+			right 230px
+			top 130px
+		&-double
+			top 210px
+			left 230px
+
+
+.about-us__content--block
+	&_text
+		position relative
+		.drop-double
+			right -22.5px
+			top -400px
+			z-index 2
+			
+	&_img
+		.drop-triple
+			left -21px
+			
+.article__visual--col
+	.drop
+		bottom 100%
+		margin-bottom 15px
+		left 115px
+			
+// ============
+
+.with-decor
+	span
+		position relative
+		&:before
+			pseudo()
+			position absolute
+			vertical-center()
+			background-position 50% 50%
+			background-repeat no-repeat
+			background-size contain
+			pointer-events none
+			z-index -1
+			
+	&-flower
+		span
+			&:before
+				left 100%
+				margin-left 10px
+				width 65.185px
+				height 101.225px
+				background-image url('../img/decor/gold-flower.svg')
+	&-butterfly
+		span
+			&:before
+				right 100%
+				margin-right 10px
+				width 66px
+				height 52px
+				background-image url('../img/decor/butterfly.svg')
+			
 // Decor figure
 .decor-figure
 	background-color #f7f5f5
 	position absolute
-	z-index -1
+	z-index -2
 	pointer-events none
 	
 .product-page
@@ -430,5 +513,20 @@
 		top 1200px
 		height 900px
 		width 50%
-			
+		
+.sect__choise-bouquet
+	.decor-figure
+		width 720px
+		height 800px
+		left 0
+		top -360px
+
+.sect__article
+	position relative
+	.decor-figure
+		left 0
+		top 1200px
+		height 900px
+		width 100%
+		
 

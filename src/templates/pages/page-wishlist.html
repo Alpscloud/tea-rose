@@ -1,0 +1,63 @@
+{% include '../parts/head.html' %}
+<body>
+	
+	<!-- CONTENT WRAPPER -->
+	<div class="content__wrapper">
+
+		{% include '../parts/components/popups/popup-login.html' %}
+		{% include '../parts/components/popups/popup-add-to-cart.html' %}
+		{% include '../parts/components/popups/popup-subscribe-thanks.html' %}
+
+		<!-- Header -->
+		{% include '../parts/sections/header.html' %}
+		<!-- //Header -->
+
+		<!-- Main -->
+		<main class="main main-page">
+			
+			<section class="sect__blog gutter-bottom">
+				<h2 class="w3c">&nbsp;</h2>
+
+				<div class="container">
+					<!-- Breadcrumbs -->
+					<div class="breadcrumbs">
+						<ul class="breadcrumbs__list">
+							<li class="breadcrumbs__item"><a href="index.html" class="breadcrumbs__link">Главная</a></li>
+							<li class="breadcrumbs__item"><span class="breadcrumbs__link is-active">Избранное</span></li>
+						</ul>
+					</div>
+					<!-- //Breadcrumbs -->
+
+					<div class="wishlist">
+
+						<h3 class="sect__title">Избранное</h3>
+
+						<div class="row wishlist__row align-horisontal-start">
+							{% include '../parts/components/card-active-wishlist.html' %}
+							{% include '../parts/components/card-active-wishlist.html' %}
+							{% include '../parts/components/card-active-wishlist.html' %}
+							{% include '../parts/components/card-active-wishlist.html' %}
+							{% include '../parts/components/card-active-wishlist.html' %}
+							{% include '../parts/components/card-active-wishlist.html' %}
+						</div>
+
+					</div>
+				</div>
+				<!-- //container -->
+			</section>
+			
+		</main>
+		<!-- //Main -->
+
+		<!-- Footer -->
+		{% include '../parts/sections/footer.html' %}
+		<!-- //Footer -->
+
+	</div>
+	<!-- //CONTENT WRAPPER -->
+
+	{% include '../parts/scripts.html' %}
+
+</body>
+
+</html>
