@@ -227,31 +227,45 @@ $(document).ready(function() {
 	// Sliders
 	var promoSlider = new Swiper('.js-promo-slider', {
 		speed: 600,
-		loop: true,
+		loop: false,
 		spaceBetween: 0,
-		autoplay: {
-			delay: 5000,
-			disableOnInteraction: false
-		},
+		slidesPerView: 'auto',
 		pagination: {
 			el: '.js-promo-slider-pagination',
 			clickable: true
-		},
-		navigation: {
-			nextEl: '.js-promo-slider-btn-next',
-			prevEl: '.js-promo-slider-btn-prev',
 		},
 		on: {
 			init: function() {
 				$('.js-promo-slider').parents('.promo-slider').find('.slider__loader').hide(200);
 			}
 		},
+
+		breakpoints: {
+			620: {
+				speed: 600,
+				slidesPerView: 1,
+				spaceBetween: 0,
+				loop: true,
+				autoplay: {
+					delay: 5000,
+					disableOnInteraction: false
+				},
+				pagination: {
+					el: '.js-promo-slider-pagination',
+					clickable: true
+				},
+				navigation: {
+					nextEl: '.js-promo-slider-btn-next',
+					prevEl: '.js-promo-slider-btn-prev',
+				},
+			}
+		}
 	});
 
 	var productsSlider = new Swiper('.js-products-slider', {
 		speed: 600,
 		loop: true,
-		slidesPerView: 3,
+		slidesPerView: 1,
 		spaceBetween: 0,
 		autoplay: {
 			delay: 5000,
@@ -260,6 +274,28 @@ $(document).ready(function() {
 		navigation: {
 			nextEl: '.js-products-slider-btn-next',
 			prevEl: '.js-products-slider-btn-prev',
+		},
+
+		breakpoints: {
+			700: {
+				slidesPerView: 3,
+				speed: 600,
+				spaceBetween: 0,
+				navigation: {
+					nextEl: '.js-products-slider-btn-next',
+					prevEl: '.js-products-slider-btn-prev',
+				},
+			},
+			500: {
+				slidesPerView: 2,
+				speed: 600,
+				spaceBetween: 0,
+				navigation: {
+					nextEl: '.js-products-slider-btn-next',
+					prevEl: '.js-products-slider-btn-prev',
+				},
+			}
+		
 		}
 	});
 
@@ -281,6 +317,7 @@ $(document).ready(function() {
 
 		if(direction === 'horisontal-right') {
 			$(item).css({
+				'will-change': 'transform',
 				'transform': 'translate3d(' + (scrolled*speed) + 'px' + ', 0, 0)',
 				'-webkit-transform': 'translate3d(' + (scrolled*speed) + 'px' + ', 0, 0)',
 				'-o-transform': 'translate3d(' + (scrolled*speed) + 'px' + ', 0, 0)',
@@ -289,6 +326,7 @@ $(document).ready(function() {
 			});
 		} else if(direction === 'horisontal-left') {
 			$(item).css({
+				'will-change': 'transform',
 				'transform': 'translate3d(' + -(scrolled*speed) + 'px' + ', 0, 0)',
 				'-webkit-transform': 'translate3d(' + -(scrolled*speed) + 'px' + ', 0, 0)',
 				'-o-transform': 'translate3d(' + -(scrolled*speed) + 'px' + ', 0, 0)',
@@ -297,6 +335,7 @@ $(document).ready(function() {
 			});
 		} else if(direction === 'vertical-top') {
 			$(item).css({
+				'will-change': 'transform',
 				'transform': 'translate3d(0, ' + -(scrolled*speed)+'px' + ', 0)',
 				'-moz-transform': 'translate3d(0, ' + -(scrolled*speed)+'px' + ', 0)',
 				'-ms-transform': 'translate3d(0, ' + -(scrolled*speed)+'px' + ', 0)',
@@ -305,6 +344,7 @@ $(document).ready(function() {
 			});
 		} else if(direction === 'vertical-bottom') {
 			$(item).css({
+				'will-change': 'transform',
 				'transform': 'translate3d(0, ' + (scrolled*speed)+'px' + ', 0)',
 				'-moz-transform': 'translate3d(0, ' + (scrolled*speed)+'px' + ', 0)',
 				'-ms-transform': 'translate3d(0, ' + (scrolled*speed)+'px' + ', 0)',

@@ -83,11 +83,15 @@
 				z-index 1
 			
 			&--information
-				display flex
-				align-items center
-				justify-content flex-start
+				&_content
+					display flex
+					align-items center
+					justify-content flex-start
 				
-		
+				&_label
+					font 14px $Med
+					margin-bottom 10px
+					display none
 					
 				.articul
 					font-size 14px
@@ -100,16 +104,25 @@
 		padding 0 15px
 		width 50%
 		&:first-child
-			padding-right 90px
+			padding-right 60px
 		&--subcol
-			width 50%
+			flex 1
 			padding 0 15px
+			&:first-child
+				width 220px
+				flex none
 			
 		&--label
 			font 22px $Med
 			
-	&-promocode
+	&-promocode,
+	&-footer
 		padding-top 55px
+		
+		.cart-row__col--subcol
+			width 50%
+			&:first-child
+				width 50%
 		
 	&-footer
 		padding-top 55px

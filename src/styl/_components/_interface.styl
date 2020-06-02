@@ -75,6 +75,7 @@
 	display inline-block
 	width 50px
 	height 50px
+	flex none
 	border-radius 50%
 	background-color $dark-accent-color
 	box-shadow 0px 3px 3px -1px rgba($dark-color,0.16)
@@ -470,6 +471,14 @@
 			
 // ============
 
+.gold-leaf
+	position absolute
+	top 0
+	right 0
+	width 74px
+	height 116px
+	background url('../img/decor/gold-leafs.svg') 50% 50% no-repeat / contain
+
 .with-decor
 	span
 		position relative
@@ -528,5 +537,30 @@
 		top 1200px
 		height 900px
 		width 100%
+		
+.sect__about-us--params
+	position relative
+	.about-us__content--block_img 
+		.drop-triple
+			right -21px
+			left auto
+	
+
+
+	.decor-figure
+		width 69%
+		height 600px
+		&-top
+			left 0
+			top -300px
+		&-bottom
+			right 0
+			bottom -300px
+// .sect__about-us
+// 	.decor-figure
+// 		width 1330px
+// 		height 700px
+// 		left 0
+// 		top 30%
 		
 
