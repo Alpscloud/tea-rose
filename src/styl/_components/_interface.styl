@@ -128,6 +128,36 @@
 			width 43px
 			height 43px
 			
+	&__mobile
+		display none
+		margin 0
+		.phone-link
+			display inline-block
+			color $light-color
+			font-size 18px
+			
+		.delivery
+			&__text
+				color rgba($light-color, .40)
+				font 11px $Med
+				padding-left 0
+				margin-bottom 7px
+				line-height 1
+				&:before
+					display none
+					
+			&__content
+				padding-left 55px
+				position relative
+				&:before
+					pseudo()
+					position absolute
+					left 0
+					vertical-center()
+					background url('../img/icons/svg/delivery-ic-light.svg') 50% 50% no-repeat / 43px 43px
+					width 43px
+					height 43px
+			
 
 
 			

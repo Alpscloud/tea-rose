@@ -179,7 +179,7 @@
 			width 100%
 			padding-right 0
 			text-align center
-			margin-bottom 50px
+			margin-bottom 15px
 		
 		&__actions
 			width 100%
@@ -246,12 +246,9 @@
 			transform none
 			left auto
 			top auto
-			padding-top 70%
-			height auto
-			iframe
-				position absolute
-				position-center()
-				object-fit cover
+			// padding-top 70%
+			// height auto
+			height 450px
 			&--wrapper
 				width 100%
 				
@@ -296,9 +293,242 @@
 		margin-left 75px
 					
 +max-screen(1000px)
+	.main
+		margin-top 0
+		padding-top 100px
 	// Header
-	.header
+
+	.nav
 		display none
+		&-catalog
+			&__col
+				width 100%
+				flex none
+				margin-right 0
+				order 2
+			&__list
+				display block	
+			&__item
+				display block
+				margin-right 0
+				width 100%
+				padding-left 20px
+				padding-right 20px
+				
+				
+				position relative
+				
+				&.has-sublist
+					> .nav-catalog__link
+				
+						&:after
+							display none
+							
+					&:hover
+						> .nav-catalog__link
+							color $light-color
+							
+				&--mobile
+					padding 10px 45px
+			
+					.nav-catalog__link
+						padding 0
+						border none
+			&__link
+				font 15px $Med
+				color $light-color
+				padding 20px
+				border-bottom 1px solid #2e2727
+				display block
+				&:after
+					display none
+					
+			&__sublist
+				&--wrapper
+					display none
+					margin-top 0
+					padding 30px 45px
+					margin 0 -25px
+					background-color #262222
+					border-bottom-left-radius 31px
+					border-bottom-right-radius 31px
+					position relative
+					top auto
+					left auto
+					width auto
+					opacity 1
+					visibility visible
+					pointer-events auto
+					transition none
+				
+					
+					.container
+						padding 0
+				&--content
+					max-height none
+					overflow hidden
+					padding 0
+					background-color transparent
+					ul
+						column-count 1
+						column-gap 0
+						
+					li
+						margin-bottom 25px
+						&:last-child
+							margin-bottom 0
+					
+					a
+						font 13px $Med
+				&--title
+					display none
+	
+	.btn__toggle-subnav
+		display inline-block
+		position absolute
+		right 40px
+		top 0
+		z-index 2
+		height 63px
+		
+
+	.delivery
+		&__desktop
+			display none
+		&__mobile
+			display block
+			
+			
+	.header
+		padding-top 0
+		position fixed
+		top 0
+		left 0
+		width 100%
+		z-index 20
+		&-top
+			background-color #f7f5f5
+			padding 5px 0
+			position relative
+			margin-bottom 0
+			z-index 2
+			.container
+				position relative
+				z-index 2
+			&:before,
+			&:after
+				pseudo()
+				position absolute
+				top 100%
+				width 35.833px
+				height 35.833px
+				background-position 50% 50%
+				background-repeat no-repeat
+				background-size contain
+				z-index 1
+				margin-top -1px
+				pointer-events none
+						
+			&:before
+				left 0
+				background-image url('../img/icons/svg/header-corners/up_left.svg')
+			&:after
+				right 0
+				background-image url('../img/icons/svg/header-corners/up_right.svg')
+		&-bottom
+			position fixed
+			background-color $secondary-color
+			top 0
+			left 0
+			width 100%
+			height 100vh
+			overflow-y auto
+			
+			will-change transform
+			transition transform .2s ease-in-out
+			
+			transform translateY(-120%)
+			
+			
+			padding 85px 0
+			
+			&.is-opened
+				transform translateY(0)
+			
+			.container
+				padding 0
+				
+		&__cart
+			width 45px
+			height 45px
+			
+		&__contacts
+			order 1
+			padding 0 20px
+			
+			width 100%
+			&--row
+				justify-content space-between
+				border-bottom 1px solid #2e2727
+				padding 13px 20px
+			
+		.logo
+			&-img
+				&__desktop
+					display none
+				&__mobile
+					display block
+			img
+				width 80px
+				
+	
+	.phone-link
+		display none
+
+	.languages__link
+		width 65px
+		border-radius 20px
+		background-color rgba($dark-color, .1)
+		text-align center
+		padding-top 10px
+		padding-bottom 10px
+		color $light-color
+		opacity 1
+		&.is-active
+			background-color $secondary-color
+			color $light-color
+			opacity 1
+		&:before
+			display none
+			
+	.icon-link__counter
+		background-color $secondary-color
+		
+	.btn-cart
+		width 45px
+		height 45px
+		padding 0
+		background-position 50% 50%
+		.icon-link__counter
+			display flex
+		&.is-empty
+			width 45px
+			height 45px
+			.icon-link__counter
+				display none
+				
+		.btn-cart__count
+			display none
+			
+		.icon-link__counter
+			bottom auto
+			left auto
+			right 0
+			top -4px
+			
+	.btn__hamburger
+		display inline-block
+	// =====
 		
 	.form
 		max-width 100%
@@ -401,11 +631,57 @@
 				padding-right 20px
 
 	// Catalog
+	.btn-toggle-filter
+		display inline-block
+		margin-bottom 30px
 	.aside
+		width 100%
+		max-width 75%
 		display none
+		padding-bottom 50px
+		&-form
+			&__filters
+				margin-top 0
+				margin-bottom 0
+				background-color #f5f5f5
+				border-top-left-radius 31px
+				border-top-right-radius 31px
+				overflow hidden
+				-webkit-mask-image -webkit-radial-gradient(white, black)
+				&--block
+					display none
+					background-color #e6e6e6
+					
+					&_wrapper
+						&.is-toggled
+							&:before
+								opacity 0
+							.aside-form__filters--block_btn
+								background-color #e6e6e6
+							
+			&__footer
+				display flex
+				flex-direction column
+				align-items center
+				background-color #f5f5f5
+				padding-top 25px
+				border-bottom-left-radius 31px
+				border-bottom-right-radius 31px
+			
+				
+				.btn
+					width 100%
+					background-color $accent-color
+			&__reset
+				display none
+				&--btn_mobile
+					display inline-block
 		
 	.catalog__products
 		padding-left 0
+		width 100%
+		flex none
+		
 		
 	// Cart
 	.cart
@@ -486,21 +762,44 @@
 			
 	// Footer
 	.footer
+		&__content
+			padding 15px 0
 		&__col
 			width 100%
-			margin-bottom 40px
-			text-align center
+			margin-bottom 30px
+			text-align left
+			&--title
+				margin-bottom 15px
 			&:last-child
 				margin-bottom 0
 				
+		&__logo
+			img
+				max-width 110px
+				
+		&__nav
+			ul
+				column-count 2
+				column-gap 10px
+				
 		&__contacts
 			display flex
-			align-items center
-			flex-direction column
+			justify-content flex-start
+			margin-left -7.5px
+			margin-right -7.5px
+			flex-wrap wrap
 			&--link
-				width 180px
-				text-align left
+				&_wrapper
+					padding 0 7.5px 
+					margin-bottom 0
+		&__logo
+			text-align left
 			
+	.developed
+		margin-top 30px
+		
+	.copyright
+		padding-top 15px
 	// Blog
 	.blog__category
 		margin-bottom 50px
@@ -687,7 +986,7 @@
 		
 		.card__wrapper
 			width 50%
-			margin-bottom 40px
+			margin-bottom 70px
 			
 	.form
 		&-block
@@ -773,6 +1072,81 @@
 				width 50%
 		
 +max-screen(620px)
+	.popup
+		&__body
+			padding 30px
+			
+			.btn__close
+				top 10px
+				right 20px
+				
+		&__title
+			font-size 20px
+			
+		&__text
+			font-size 12px
+			margin-top 20px
+			
+		&__form
+			.checkbox__label
+				margin-top 10px
+			
+	.btn__tab
+		font-size 12px
+
+	// Header
+	.header
+		&-top
+			.languages
+				display none
+			
+		&-bottom
+			.languages
+				display flex
+				align-items center
+				justify-content center
+				padding-left 40px
+				padding-right 40px
+				width 100%
+				margin-bottom 30px
+				margin-right 0
+				
+				&__link
+					font-size 14px
+					color rgba($light-color, .5)
+					&.is-active
+						background-color #f7f5f5
+						color $secondary-color
+						
+		&__contacts
+			&--row
+				padding 0
+				border none
+			.socials
+				order 2
+				margin-right 0
+				width 100%
+				display flex
+				justify-content space-evenly
+				padding 15px 0
+				border-bottom 1px solid #2e2727
+
+	.delivery__mobile
+		order 1
+		padding-bottom 30px
+		border-bottom 1px solid #2e2727
+		width 100%
+
+		text-align center
+		
+		.delivery__content
+			padding-left 75px
+			display inline-block
+			text-align left
+		
+	
+			
+
 	// Homepage
 	.sect__promo
 		.container
@@ -799,26 +1173,46 @@
 			width 215px
 			height 260px
 			border-radius 31px
+			-webkit-mask-image -webkit-radial-gradient(white, black)
 			box-shadow 0px 16px 32px -27px rgba(0,0,0,0.34)
 			.btn
 				display none
 				
 	.choise-results
+		&__wrapper
+			background-color $secondary-color
 		&__value
-			width 100%
+		
 			text-align center
-			font-size 32px
-			margin-bottom 20px
+			font-size 25px
+			padding-right 20px
+			position relative
+			
+			&:after
+				content 'Найдено товаров'
+				font 12px $SemiBold
+				color rgba($light-color, .3)
+				display block
+				margin-top 5px
 		&__text
-			width 100%
-			text-align center
-			font-size 12px
-			margin-bottom 5px
+			display none
+			
+		&__link
+			width 50px
+			height 50px
+			padding 0
+			margin-right 15px
+			span
+				display none
 			
 		&__tools
-			width 100%
-			.row
-				justify-content center
+			width 50%
+			
+			.round-ic
+				background-color $accent-color
+				svg
+					fill $light-color
+		
 				
 		&__link
 			font-size 14px
@@ -887,9 +1281,69 @@
 	.delivery-price
 		font-size 18px
 		
+	// Product
+	.product__video
+		height 300px
+		
+	// Catalog
+	.aside
+		max-width 100%
+	
+
+	// Footer
+		
+	.footer__contacts
+		&--link
+			&_wrapper
+				width 50%
+				margin-bottom 20px
+				&:last-child
+					margin-bottom 0
+					
+		&--phones
+			.footer__contacts--link_wrapper
+				width 100%
 +max-screen(475px)
 	// Homepage
-
+	
+	.sect__categories
+		padding-bottom 50px
+		.sect__title
+			text-align left
+	
+	.categories__row,
+	.blog__articles--col .row
+		display block
+		overflow-x auto
+		white-space nowrap
+		padding-bottom 30px
+		margin 0
+			
+	.category-card,
+	.article-card
+		width 215px
+		margin-right 20px
+		display inline-block
+		padding 0
+		vertical-align top
+		.card__title
+			font-size 20px
+		&:last-child
+			margin-right 0
+		
+		.card__thumbnail
+			height 260px
+			
+	.products__row
+		&:nth-child(even)
+			.sect__title--col
+				order 2
+				margin-bottom 0
+				margin-top 40px
+				
+			.products
+				order 1
+		
 	.card
 		&__wrapper
 			width 100% !important
@@ -899,9 +1353,31 @@
 		.price
 			font-size 26px		
 		.card__tools
-			margin-top 20px
+			margin-top 25px
 		&__thumbnail
-			margin-bottom 15px
+			margin-bottom 25px
+			border-radius 31px
+			-webkit-mask-image -webkit-radial-gradient(white, black)
+		
+		&__information
+			padding-right 0
+	
+		&__tools
+			justify-content center		
+			
+	.price__row
+		flex-wrap wrap
+		text-align center
+		
+		
+		.price
+			width 100%
+			margin-right 0
+			font-size 25px
+			
+		.articul
+			width 100%
+			font-size 10px
 			
 	.catalog__products
 		.card
@@ -919,6 +1395,16 @@
 				text-align center
 				padding 45px 15px 15px 15px
 				border-radius 10px
+				
+	.form-block
+		&__title
+			font-size 40px
+			margin-bottom 30px
+		&__notice
+			font-size 20px
+			margin-bottom 30px
+		&__text
+			margin-bottom 50px
 				
 	// Contacts
 	.contacts
@@ -988,8 +1474,100 @@
 		padding-left 60px
 		margin-top 10px
 		margin-left 0
+		
+	// Product
+	.product
+		.articul
+			font-size 10px
+			margin-bottom 5px
+		&__img
+			margin-bottom 25px
+			border-radius 31px
+			-webkit-mask-image -webkit-radial-gradient(white, black)
+			box-shadow 0 16px 32px -27px rgba(0,0,0,.34)
+			
+		&__information
+			text-align center
+			
+		&__description
+			text-align left
+			margin-bottom 25px
+			&--text
+				font-size 14px
+			&--title
+				text-align center
+				font-size 15px
+				margin-bottom 20px
+				
+		&__tools
+			&--wrapper
+				margin 0 auto
+				&:before
+					display none
+					
+			.card__tools
+				margin 20px 0
+					
+		&__price
+			margin-bottom 25px
+			.price
+				font-size 25px
+			&--label
+				display none
+				
+	.sect__viewed-products
+		.sect__title
+			text-align left
+			
 			
 +max-screen(400px)
+	.header
+		&-top
+			padding 10px 0
+			&__row
+				justify-content flex-end
+		&-bottom
+			.languages
+				justify-content space-between
+				
+		.logo__col
+			position absolute
+			position-center()
+			margin-right 0
+			
+		.logo
+			margin-right 0
+			
+		&__icons
+			&-links
+				margin-right 20px
+				.icon-link
+					margin 0
+				
+		.icon-link__login 
+			position absolute
+			vertical-center()
+			left 80px
+			
+	.icon-link
+		&__counter
+			bottom auto
+			top -11px
+			
+	.btn-cart
+		.icon-link__counter
+			top 1px
+			right -2px
+				
+	.btn__hamburger
+		position absolute
+		left 15px
+		vertical-center()
+		margin-left 0
+				
+	.delivery__mobile
+
+		text-align center
 	// Homepage
 	.form
 		&-block
@@ -1008,12 +1586,7 @@
 			padding-left 15px
 			padding-right 15px
 			
-	.card
-		.card__tools
-			.btn-with-ic
-				flex 1
-				text-align center
-				width auto
+	
 				
 	.sect__choise-bouquet
 		padding-bottom 80px
@@ -1076,3 +1649,17 @@
 			
 		.total-price__row
 			justify-content center
+			
+	// Catalog
+	.btn-toggle-filter
+		width 100%
+		margin-bottom 30px
+		
+	.aside-form__filters--block_btn
+		font-size 15px
+		
+	.checkbox-filter,
+	.radio-filter
+		font-size 13px
+		&:hover
+			color $text-color

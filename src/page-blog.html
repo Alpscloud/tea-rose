@@ -141,7 +141,7 @@
 			<!-- Popup content-->
 			<div class="popup__content">
 				<h3 class="popup__title">Восстановление пароля</h3>
-				<p class="popup__text">Мы вышлем Вам пароль на Ваш e-mail,<br>указанный при регистрации</p>
+				<p class="popup__text">Мы вышлем Вам пароль на Ваш e-mail, указанный при регистрации</p>
 				<form class="popup__form text-left">
 					<div class="input__wrapper">
 						<input type="email" class="input-round js-input is-error" name="email" placeholder="e-mail *">
@@ -197,7 +197,8 @@
 					<div class="row align-vertical-center align-horisontal-start">
 						<!-- Logo -->
 						<a href="index.html" class="logo" title="Чайная роза">
-							<img src="img/logo.svg" alt="Логотип Чайная роза">
+							<img src="img/logo.svg" alt="Логотип Чайная роза"  class="logo-img logo-img__desktop">
+							<img src="img/logo-mobile.svg" alt="Логотип Чайная роза" class="logo-img logo-img__mobile">
 						</a>
 						<!-- //Logo -->
 
@@ -215,7 +216,7 @@
 				</div>
 
 
-				<div class="delivery">
+				<div class="delivery delivery__desktop">
 					<p class="delivery__text">Доставка 24/7</p>
 				</div>
 
@@ -224,11 +225,10 @@
 					<div class="row align-vertical-center align-horisontal-end">
 
 						<ul class="languages">
-							<li class="languages__item"><a href="#" class="languages__link link">en</a></li>
-							<li class="languages__item"><a href="#" class="languages__link link">укр</a></li>
-							<li class="languages__item"><a href="#" class="languages__link link is-active">ру</a></li>
-						</ul>
-
+	<li class="languages__item"><a href="#" class="languages__link link">en</a></li>
+	<li class="languages__item"><a href="#" class="languages__link link">укр</a></li>
+	<li class="languages__item"><a href="#" class="languages__link link is-active">ру</a></li>
+</ul>
 						<div class="header__icons-links">
 							<!-- Wishlist -->
 							<!-- Remove/add is-empty class -->
@@ -271,7 +271,7 @@
 							<!--// Wishlist -->
 
 							<!-- Cabinet -->
-							<a href="page-wishlist.html" class="icon-link tooltip__wrapper js-login-btn">
+							<a href="page-wishlist.html" class="icon-link icon-link__login tooltip__wrapper js-login-btn">
 								<i class="icon-link__ic">
 
 									<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 19.68 19.149" enable-background="new 0 0 19.68 19.149" xml:space="preserve">
@@ -300,14 +300,18 @@
 						
 						<div class="header__cart text-right">
 							<!-- Remove/add is-empty class -->
-							<a href="page-cart.html" class="btn btn-cart btn-with-ic tooltip__wrapper">
+							<a href="page-cart.html" class="btn btn-cart is-empty btn-with-ic tooltip__wrapper">
 								<span class="btn-cart__count">5415 грн</span>
+
+								<span class="icon-link__counter">99</span>
 
 								<!-- Tooltip -->
 								<span class="tooltip">Перейти в корзину</span>
 								<!-- //Tooltip -->
 							</a>
 						</div>
+
+						<button class="btn__hamburger js-open-mobile-menu-btn" type="button"></button>
 					</div>
 				</div>
 
@@ -319,21 +323,26 @@
 		<!-- //container -->
 	</div>
 
-	<div class="header-bottom">
+	<div class="header-bottom js-mobile-menu">
 		<div class="container">
 			<div class="row align-vertical-center-align-horisontal-between header-bottom__row">
 
+				<ul class="languages">
+	<li class="languages__item"><a href="#" class="languages__link link">en</a></li>
+	<li class="languages__item"><a href="#" class="languages__link link">укр</a></li>
+	<li class="languages__item"><a href="#" class="languages__link link is-active">ру</a></li>
+</ul>
 				<div class="nav-catalog__col">
-					<!-- NAV -->
+					<!-- NAV catalog-->
 					<nav class="nav-catalog">
 	<ul class="nav-catalog__list">
 		<li class="nav-catalog__item has-sublist">
 			<a href="page-catalog.html" class="nav-catalog__link">Онлайн витрина</a>
 
-			<button class="btn__toggle-subnav" type="button"></button>
+			<button class="btn__toggle-subnav js-toggle-mobile-submenu-btn" type="button"></button>
 
 			<!-- Sublist -->
-			<div class="nav-catalog__sublist--wrapper">
+			<div class="nav-catalog__sublist--wrapper js-submenu">
 				<div class="nav-catalog__sublist--content">
 					<div class="container">
 						<h2 class="nav-catalog__sublist--title">Онлайн витрина</h2>
@@ -359,10 +368,10 @@
 		<li class="nav-catalog__item has-sublist">
 			<a href="page-catalog.html" class="nav-catalog__link">Цветы</a>
 
-			<button class="btn__toggle-subnav" type="button"></button>
+			<button class="btn__toggle-subnav js-toggle-mobile-submenu-btn" type="button"></button>
 
 			<!-- Sublist -->
-			<div class="nav-catalog__sublist--wrapper">
+			<div class="nav-catalog__sublist--wrapper js-submenu">
 				<div class="nav-catalog__sublist--content">
 					<div class="container">
 						<h2 class="nav-catalog__sublist--title">Цветы</h2>
@@ -385,10 +394,10 @@
 		<li class="nav-catalog__item has-sublist">
 			<a href="page-catalog.html" class="nav-catalog__link">Декор и подарки</a>
 
-			<button class="btn__toggle-subnav" type="button"></button>
+			<button class="btn__toggle-subnav js-toggle-mobile-submenu-btn" type="button"></button>
 
 			<!-- Sublist -->
-			<div class="nav-catalog__sublist--wrapper">
+			<div class="nav-catalog__sublist--wrapper js-submenu">
 				<div class="nav-catalog__sublist--content">
 					<div class="container">
 						<h2 class="nav-catalog__sublist--title">Декор и подарки</h2>
@@ -416,10 +425,10 @@
 		<li class="nav-catalog__item has-sublist">
 			<a href="page-catalog.html" class="nav-catalog__link">Всё для свадьбы</a>
 
-			<button class="btn__toggle-subnav" type="button"></button>
+			<button class="btn__toggle-subnav js-toggle-mobile-submenu-btn" type="button"></button>
 
 			<!-- Sublist -->
-			<div class="nav-catalog__sublist--wrapper">
+			<div class="nav-catalog__sublist--wrapper js-submenu">
 				<div class="nav-catalog__sublist--content">
 					<div class="container">
 						<h2 class="nav-catalog__sublist--title">Всё для свадьбы</h2>
@@ -446,10 +455,10 @@
 		<li class="nav-catalog__item has-sublist">
 			<a href="page-catalog.html" class="nav-catalog__link">Новости и акции</a>
 
-			<button class="btn__toggle-subnav" type="button"></button>
+			<button class="btn__toggle-subnav js-toggle-mobile-submenu-btn" type="button"></button>
 
 			<!-- Sublist -->
-			<div class="nav-catalog__sublist--wrapper">
+			<div class="nav-catalog__sublist--wrapper js-submenu">
 				<div class="nav-catalog__sublist--content">
 					<div class="container">
 						<h2 class="nav-catalog__sublist--title">Новости и акции</h2>
@@ -473,14 +482,19 @@
 
 			
 		</li>
+
+		<li class="nav-catalog__item nav-catalog__item--mobile"><a href="page-about.html" class="nav-catalog__link">О нас</a></li>
+		<li class="nav-catalog__item nav-catalog__item--mobile"><a href="page-blog.html" class="nav-catalog__link">Блог</a></li>
+		<li class="nav-catalog__item nav-catalog__item--mobile"><a href="page-contacts.html" class="nav-catalog__link">Контакты</a></li>
 		
 	</ul>
 </nav>
-					<!-- //NAV -->
+					<!-- //NAV catalog-->
+
 				</div>
 
 				<div class="header__contacts">
-					<div class="row align-vertical-center align-horisontal-end header__contacts__row">
+					<div class="row align-vertical-center align-horisontal-end header__contacts--row">
 						<!-- Socials -->
 						<ul class="socials">
 							<li class="socials__item">
@@ -570,7 +584,16 @@
 </li>						</ul>
 						<!-- //Socials -->
 
+
+
 						<a href="tel:+38044 543 12 34" class="phone-link">044 543 12 34</a>
+
+						<div class="delivery delivery__mobile">
+							<div class="delivery__content">
+								<p class="delivery__text">Доставка 24/7</p>
+								<a href="tel:+38044 543 12 34" class="phone-link">044 543 12 34</a>
+							</div>
+						</div>
 					</div>
 					<!-- //row -->
 				</div>
@@ -1060,10 +1083,11 @@
 									<li><a href="page-about.html">О нас</a></li>
 									<li><a href="page-blog.html">Блог</a></li>
 									<li><a href="page-contacts.html">Контакты</a></li>
+									<li><a href="page-technical.html">Конфиденциальность</a></li>
 									<li><a href="page-technical.html">Доставка</a></li>
 									<li><a href="page-technical.html">Возврат</a></li>
 									<li><a href="page-technical.html">Оплата</a></li>
-									<li><a href="page-technical.html">Конфиденциальность</a></li>
+									
 								</ul>
 							</nav>
 						</div>
@@ -1073,8 +1097,9 @@
 							<h2 class="footer__col--title">Приезжайте в Киеве</h2>
 
 							<div class="footer__contacts">
-								<p class="footer__contacts--link block-with-ic block-with-ic__address">Бульвар Леси<br>Украинки 10</p>
-								<p class="footer__contacts--link block-with-ic block-with-ic__address">Бульвар Леси<br>Украинки 15</p>
+								<div class="footer__contacts--link_wrapper"><p class="footer__contacts--link block-with-ic block-with-ic__address">Бульвар Леси<br>Украинки 10</p></div>
+								<div class="footer__contacts--link_wrapper"><p class="footer__contacts--link block-with-ic block-with-ic__address">Бульвар Леси<br>Украинки 15</p></div>
+								<div class="footer__contacts--link_wrapper"><p class="footer__contacts--link block-with-ic block-with-ic__address">Бульвар Леси<br>Украинки 15</p></div>
 							</div>
 						</div>
 						<!-- //col -->
@@ -1082,10 +1107,10 @@
 						<div class="footer__col">
 							<h2 class="footer__col--title">Свяжитесь</h2>
 
-							<div class="footer__contacts">
-								<p class="footer__contacts--link block-with-ic block-with-ic__phone"><a href="tel:+380449829898">+38 044 982 98 98</a></p>
-								<p class="footer__contacts--link block-with-ic block-with-ic__phone"><a href="tel:+380997232332">+38 099 723 23 32</a></p>
-								<p class="footer__contacts--link block-with-ic block-with-ic__email"><a href="mailto:admin@tea-rose.com.ua<">admin@tea-rose.ua</a></p>
+							<div class="footer__contacts footer__contacts--phones">
+								<div class="footer__contacts--link_wrapper"><p class="footer__contacts--link block-with-ic block-with-ic__phone"><a href="tel:+380449829898">+38 044 982 98 98</a></p></div>
+								<div class="footer__contacts--link_wrapper"><p class="footer__contacts--link block-with-ic block-with-ic__phone"><a href="tel:+380997232332">+38 099 723 23 32</a></p></div>
+								<div class="footer__contacts--link_wrapper"><p class="footer__contacts--link block-with-ic block-with-ic__email"><a href="mailto:admin@tea-rose.com.ua<">admin@tea-rose.ua</a></p></div>
 							</div>
 						</div>
 						<!-- //col -->

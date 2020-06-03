@@ -42,6 +42,9 @@
 	&-cart
 		font 14px $Med
 		
+		.icon-link__counter
+			display none
+		
 		&.is-empty
 			width 55px
 			height 55px
@@ -49,6 +52,9 @@
 			background-position 50% 50%
 			padding 0
 			// pointer-events none
+				
+			.icon-link__counter
+				display none
 			
 			.btn-cart__count
 				display none
@@ -123,9 +129,13 @@
 				
 	&__toggle-subnav
 		display none
-		width 12px
-		height 5px
-		background url('../img/icons/svg/arrow-sm.svg') 50% 50% no-repeat / 12px 5px
+		width 30px
+		height 100%
+		background url('../img/icons/svg/arrow-sm-light.svg') 50% 50% no-repeat / 12px 5px
+		will-change transform
+		transition transform .17s ease-in-out
+		&.is-active
+			transform rotate(-180deg)
 	
 		
 	&__arrow
@@ -158,65 +168,53 @@
 			background-color $alternate-color
 			color $light-color
 		
-	&__top
+	&-toggle-filter
+		position relative
 		display none
-		border-radius 50%
-		width 40px
-		height 40px
-		position fixed
-		right 30px
-		bottom 30px
-		background-color $accent-color
-		z-index 10
-		text-align center
-		transition all .17s ease-in-out
-		box-shadow 0px 0px 13px 0px rgba($dark-color, 0.21)
-		&:after
-			content ''
-			display inline-block
-			position absolute
-			top 15px
-			left 10px
-			width 20px
-			height 20px
-			transform rotate(-45deg)
-			border-top 1px solid $dark-color
-			border-right 1px solid $dark-color
-			transition all .23s ease-in-out
-		&:hover
-			background-color $dark-color
-			transform scale(1.1)
-			box-shadow 0px 0px 13px 0px rgba($accent-color, 0.21)
-			&:after
-				border-top 1px solid $accent-color
-				border-right 1px solid $accent-color
+		&:before
+			content attr(data-default-text)
+		&.is-active
+			&:before
+				content attr(data-toggled-text)
 		
 
 	&__hamburger
-		display inline-block
+		display none
 		flex none
-		width 50px
-		height 50px
+		width 45px
+		height 45px
 		border-radius 50%
 		background-color $accent-color
 		position relative
-		transition background-color .17s ease-in-out
-		margin-left 15px
-		&--line
-			width 27px
-			height 2px
-			background-color $dark-color
-			display block
-			margin 6px auto
-			transition all 0.3s ease-in-out	
+		transition all.17s ease-in-out
+		margin-left 25px
+		box-shadow 0px 14px 25px -11px rgba(224,83,83,0.45)
+		&:before,
+		&:after
+			pseudo()
+			position absolute
+			position-center()
+			transition opacity .17s ease-in-out
+			background-position 50% 50%
+			background-repeat no-repeat
+			background-size contain
+			
+		&:before
+			width 22.008px
+			height 7.623px
+			background-image url('../img/icons/svg/hamburger/menu.svg')
+			
+		&:after
+			width 16px
+			height 16px
+			background-image url('../img/icons/svg/hamburger/close.svg')
+			opacity 0
+		
 		&.is-active
-			.btn__hamburger--line
-				&:nth-child(1)
-					transform translateY(8px) rotate(45deg)
-				&:nth-child(2)
-					opacity 0	
-				&:nth-child(3)
-					transform translateY(-8px) rotate(-45deg)
+			&:before
+				opacity 0
+			&:after
+				opacity 1
 					
 	&__reset
 		display inline-block

@@ -72,6 +72,26 @@ $(document).ready(function() {
 	});
 	// ========= =========== =========== ===========
 
+	// Mobile menu
+	$('.js-toggle-mobile-submenu-btn').on('click', function(e) {
+		e.preventDefault();
+
+		$(this).toggleClass('is-active');
+
+		$(this).parents('.nav-catalog__item').find('.js-submenu').stop().slideToggle(150);
+	});
+
+	$('.js-open-mobile-menu-btn').on('click', function(e) {
+		e.preventDefault();
+
+		$(this).toggleClass('is-active');
+
+		$('html').toggleClass('is-fixed');
+		$('.js-mobile-menu').toggleClass('is-opened');
+	
+
+	});
+
 	// Tabs
 	$('.js-tab-content').not(":first").hide();
 	$('.js-tab-btn:first').addClass('is-active');
@@ -94,8 +114,17 @@ $(document).ready(function() {
 		e.preventDefault();
 
 		$(this).toggleClass('is-active');
+		$(this).parents('.aside-form__filters--block_wrapper').toggleClass('is-toggled');
 
 		$(this).next('.aside-form__filters--block').stop().slideToggle(150);
+	});
+
+	$('.js-toggle-mobile-filter-btn').on('click', function(e) {
+		e.preventDefault();
+
+		$(this).toggleClass('is-active');
+
+		$('.js-mobile-filter').stop().slideToggle(150);
 	});
 
 	// Toggle choise results

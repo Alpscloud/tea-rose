@@ -7,7 +7,8 @@
 					<div class="row align-vertical-center align-horisontal-start">
 						<!-- Logo -->
 						<a href="index.html" class="logo" title="Чайная роза">
-							<img src="img/logo.svg" alt="Логотип Чайная роза">
+							<img src="img/logo.svg" alt="Логотип Чайная роза"  class="logo-img logo-img__desktop">
+							<img src="img/logo-mobile.svg" alt="Логотип Чайная роза" class="logo-img logo-img__mobile">
 						</a>
 						<!-- //Logo -->
 
@@ -19,7 +20,7 @@
 				</div>
 
 
-				<div class="delivery">
+				<div class="delivery delivery__desktop">
 					<p class="delivery__text">Доставка 24/7</p>
 				</div>
 
@@ -27,11 +28,7 @@
 				<div class="header__tools">
 					<div class="row align-vertical-center align-horisontal-end">
 
-						<ul class="languages">
-							<li class="languages__item"><a href="#" class="languages__link link">en</a></li>
-							<li class="languages__item"><a href="#" class="languages__link link">укр</a></li>
-							<li class="languages__item"><a href="#" class="languages__link link is-active">ру</a></li>
-						</ul>
+						{% include '../components/languages.html' %}
 
 						<div class="header__icons-links">
 							<!-- Wishlist -->
@@ -75,7 +72,7 @@
 							<!--// Wishlist -->
 
 							<!-- Cabinet -->
-							<a href="page-wishlist.html" class="icon-link tooltip__wrapper js-login-btn">
+							<a href="page-wishlist.html" class="icon-link icon-link__login tooltip__wrapper js-login-btn">
 								<i class="icon-link__ic">
 
 									<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 19.68 19.149" enable-background="new 0 0 19.68 19.149" xml:space="preserve">
@@ -104,14 +101,18 @@
 						
 						<div class="header__cart text-right">
 							<!-- Remove/add is-empty class -->
-							<a href="page-cart.html" class="btn btn-cart btn-with-ic tooltip__wrapper">
+							<a href="page-cart.html" class="btn btn-cart is-empty btn-with-ic tooltip__wrapper">
 								<span class="btn-cart__count">5415 грн</span>
+
+								<span class="icon-link__counter">99</span>
 
 								<!-- Tooltip -->
 								<span class="tooltip">Перейти в корзину</span>
 								<!-- //Tooltip -->
 							</a>
 						</div>
+
+						<button class="btn__hamburger js-open-mobile-menu-btn" type="button"></button>
 					</div>
 				</div>
 
@@ -123,25 +124,37 @@
 		<!-- //container -->
 	</div>
 
-	<div class="header-bottom">
+	<div class="header-bottom js-mobile-menu">
 		<div class="container">
 			<div class="row align-vertical-center-align-horisontal-between header-bottom__row">
 
+				{% include '../components/languages.html' %}
+
 				<div class="nav-catalog__col">
-					<!-- NAV -->
+					<!-- NAV catalog-->
 					{% include '../components/nav-catalog.html' %}
-					<!-- //NAV -->
+					<!-- //NAV catalog-->
+
 				</div>
 
 				<div class="header__contacts">
-					<div class="row align-vertical-center align-horisontal-end header__contacts__row">
+					<div class="row align-vertical-center align-horisontal-end header__contacts--row">
 						<!-- Socials -->
 						<ul class="socials">
 							{% include '../components/socials.html' %}
 						</ul>
 						<!-- //Socials -->
 
+
+
 						<a href="tel:+38044 543 12 34" class="phone-link">044 543 12 34</a>
+
+						<div class="delivery delivery__mobile">
+							<div class="delivery__content">
+								<p class="delivery__text">Доставка 24/7</p>
+								<a href="tel:+38044 543 12 34" class="phone-link">044 543 12 34</a>
+							</div>
+						</div>
 					</div>
 					<!-- //row -->
 				</div>
