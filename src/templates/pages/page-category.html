@@ -31,17 +31,21 @@
 
 					<div class="catalog">
 
-						<button class="btn btn-toggle-filter js-toggle-mobile-filter-btn" type="button" data-default-text="Открыть фильтр" data-toggled-text="Скрыть фильтр"></button>
+						<h2 class="page-title page-title__mobile">Цветы:</h2>
+
+						
 
 						<div class="row align-vertical-start catalog__row">
 							{% include '../parts/sections/sidebar.html' %}
 							
 							<!-- Products -->
-							<div class="catalog__products">
+							<div class="catalog__products category__products">
+
+
 
 								<div class="catalog__products--header">
 									<div class="row align-vertical-center align-horisontal-between">
-										<h1 class="page-title">Букеты:</h1>
+										<h1 class="page-title page-title__desktop">Цветы:</h1>
 										
 										<!-- Sorting -->
 										<div class="sorting">
@@ -56,6 +60,41 @@
 									</div>
 								</div>
 								<!-- //header -->
+
+								<!-- Categories links -->
+
+								<div class="categories">
+									<div class="row align-horisontal-start categories-links__row">
+										<div class="category-link__wrapper">
+											<a href="#" class="category-link is-active">Название категории</a>
+										</div>
+
+										<div class="category-link__wrapper">
+											<a href="#" class="category-link">Длинное<br>Название<br>категории</a>
+										</div>
+
+										<div class="category-link__wrapper">
+											<a href="#" class="category-link">Категория</a>
+										</div>
+
+										<div class="category-link__wrapper">
+											<a href="#" class="category-link">Название категории</a>
+										</div>
+
+										<div class="category-link__wrapper">
+											<a href="#" class="category-link">Длинное Название категории</a>
+										</div>
+
+										<div class="category-link__wrapper">
+											<a href="#" class="category-link">Категория</a>
+										</div>
+									</div>
+								</div>
+								<!-- //Categories links -->
+								
+								<div class="toggle-aside-btn">
+									<button class="btn btn-toggle-filter js-toggle-mobile-filter-btn" type="button" data-default-text="Открыть фильтр" data-toggled-text="Скрыть фильтр"></button>
+								</div>
 
 
 								<div class="row catalog__products--row align-horisontal-start">

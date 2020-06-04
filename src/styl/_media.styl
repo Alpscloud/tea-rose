@@ -278,12 +278,13 @@
 					
 	// Cart
 	.cart-delivery__variants 
+		min-height auto
 		
 		.cart-row__col
 			width 100% !important
 			max-width 100% !important
 			flex none
-			margin-bottom 45px
+			margin-bottom 20px
 			padding 0 22.5px !important
 			&:last-child
 				margin-bottom 0
@@ -296,6 +297,10 @@
 	.main
 		margin-top 0
 		padding-top 100px
+		
+	.sect__technical
+		padding-top 200px
+		margin-top -100px
 	// Header
 
 	.nav
@@ -630,7 +635,7 @@
 				padding-left 20px
 				padding-right 20px
 
-	// Catalog
+	// Catalog / category
 	.btn-toggle-filter
 		display inline-block
 		margin-bottom 30px
@@ -682,6 +687,48 @@
 		width 100%
 		flex none
 		
+	.page-title
+		&__desktop
+			display none
+		&__mobile
+			display block
+			margin-bottom 20px
+			
+	.category__products
+		display flex
+		flex-direction column
+		
+		.categories
+			order 1
+			margin-top 0
+			margin-bottom 20px
+			
+		.toggle-aside-btn
+			order 2
+			
+		.btn-toggle-filter
+			margin-bottom 40px
+		
+		.catalog__products
+			&--row
+				order 4
+			&--header
+				order 3
+			
+		.pagination
+			order 5
+		
+	.toggle-aside-btn
+		display block
+		
+	.category-link
+		&__wrapper
+			padding-left 10px
+			padding-right 10px
+			
+	.categories-links__row
+		margin-left -10px
+		margin-right -10px
 		
 	// Cart
 	.cart
@@ -720,6 +767,9 @@
 		width 110px
 		height 110px
 		margin-right 20px
+		
+	// .main-page
+	// 	padding-top 54px
 		
 +max-screen(767px)
 	.gutters
@@ -760,8 +810,13 @@
 		&__text
 			width 100%
 			
+	.sect__categories 
+		.drop
+			display none
+			
 	// Footer
 	.footer
+		background-color #f2f2f2
 		&__content
 			padding 15px 0
 		&__col
@@ -875,10 +930,10 @@
 	// Technical
 	.technical__title
 		font-size 56px
+		margin-bottom 40px
 	.block-404__title
 		width 100%
 		text-align center
-		margin-bottom 40px
 		position relative
 		img
 			position absolute
@@ -896,10 +951,14 @@
 			width auto
 			padding-left 40px
 			padding-right 40px
+			
+	.block-404 
+		.technical__text
+			margin-bottom 40px
 		
 	.sect__technical
 		min-height auto
-		padding 100px 0
+		padding 170px 0 100px
 	
 	// Product	
 	.sect__another-products
@@ -978,7 +1037,12 @@
 	.shop-address
 		&__wrapper
 			padding-left 60px
+	
 
+	// Footer
+	.footer
+		.socials__item
+			margin-right 27px
 +max-screen(700px)
 	// Homepage
 	.products__row
@@ -1070,6 +1134,11 @@
 						margin-bottom 20px
 			.card__wrapper
 				width 50%
+				
+	.category-link
+		font-size 12px
+		&__wrapper
+			width 33.3333%
 		
 +max-screen(620px)
 	.popup
@@ -1303,7 +1372,67 @@
 		&--phones
 			.footer__contacts--link_wrapper
 				width 100%
+				
+
+	// Technical
+	.thanks 
+		img
+			bottom 100%
+			right 0
+				
 +max-screen(475px)
+	.header
+		&-top
+			padding 10px 0
+			&__row
+				justify-content flex-end
+		&-bottom
+			.languages
+				justify-content space-between
+				
+		.logo__col
+			position absolute
+			position-center()
+			margin-right 0
+			
+		.logo
+			margin-right 0
+			
+		&__icons
+			&-links
+				margin-right 20px
+				.icon-link
+					margin 0
+				
+		.icon-link__login 
+			position absolute
+			vertical-center()
+			left 80px
+			
+	.icon-link
+		&__counter
+			bottom auto
+			top -11px
+			
+	.btn-cart
+		.icon-link__counter
+			top 1px
+			right -2px
+				
+	.btn__hamburger
+		position absolute
+		left 15px
+		vertical-center()
+		margin-left 0
+				
+	.delivery__mobile
+
+		text-align center
+		
+
+	.btn-equal
+		max-width 100%
+		
 	// Homepage
 	
 	.sect__categories
@@ -1423,7 +1552,16 @@
 			width 100%
 			margin-right 0
 			margin-bottom 10px
-			font-size 12px
+			font-size 14px
+			
+	.category-link
+		height 60px
+		padding 5px
+		&__wrapper
+			width 50%
+			
+	.btn-toggle-filter
+		width 100%
 			
 	// Cart
 	.cart
@@ -1431,6 +1569,13 @@
 			&:after,
 			&:before
 				top 30px
+			&.is-current
+				&:after
+					width 25%
+					width calc((100% - 70px)/ 2)
+			&.is-active
+				&:after
+					width 100%
 			&--information
 				font-size 12px
 				&_ic
@@ -1440,6 +1585,8 @@
 					svg
 						width 35px
 						height 35px
+						
+	
 						
 		&-orders__product
 			.card__thumbnail
@@ -1469,10 +1616,10 @@
 					padding-right 5px
 
 	.delivery-price
-		font-size 16px
+		font-size 14px
 		width 100%
 		padding-left 60px
-		margin-top 10px
+		margin-top 5px
 		margin-left 0
 		
 	// Product
@@ -1521,53 +1668,7 @@
 			
 			
 +max-screen(400px)
-	.header
-		&-top
-			padding 10px 0
-			&__row
-				justify-content flex-end
-		&-bottom
-			.languages
-				justify-content space-between
-				
-		.logo__col
-			position absolute
-			position-center()
-			margin-right 0
-			
-		.logo
-			margin-right 0
-			
-		&__icons
-			&-links
-				margin-right 20px
-				.icon-link
-					margin 0
-				
-		.icon-link__login 
-			position absolute
-			vertical-center()
-			left 80px
-			
-	.icon-link
-		&__counter
-			bottom auto
-			top -11px
-			
-	.btn-cart
-		.icon-link__counter
-			top 1px
-			right -2px
-				
-	.btn__hamburger
-		position absolute
-		left 15px
-		vertical-center()
-		margin-left 0
-				
-	.delivery__mobile
 
-		text-align center
 	// Homepage
 	.form
 		&-block

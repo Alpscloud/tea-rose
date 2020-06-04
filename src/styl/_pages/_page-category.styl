@@ -1,0 +1,43 @@
+.categories
+	margin-bottom 30px
+	margin-top -10px
+	&-links
+		&__row
+			margin-left -12px
+			margin-right -12px
+	
+.category-link
+	border-radius 12px
+	background-color #f5f5f5
+	text-align center
+	flex-col-center()
+	font 14px $Med
+	color $secondary-color
+	box-shadow $round-input-shadow
+	height 70px
+	padding 10px
+	position relative
+	&:before
+		pseudo()
+		position absolute
+		top -2px
+		z-index 1
+		horisontal-center()
+		background-color $accent-color
+		height 4px
+		border-radius 30px
+		width 30px
+	&.is-active
+		background-color $accent-color
+		color $light-color
+		box-shadow 0px 14px 25px -11px rgba(224,83,83,0.45)
+		&:before
+			display none
+	&:hover
+		box-shadow none
+	&__wrapper
+		padding 10px 12px
+		width 25%
+		
+.toggle-aside-btn
+	display none

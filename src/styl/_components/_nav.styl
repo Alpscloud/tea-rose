@@ -63,6 +63,16 @@
 			&:hover
 				color $accent-color
 				
+			&--important
+				font-family $Med
+				color $light-color
+				background-color $secondary-color
+				border-radius 30px
+				padding 5px 20px
+				span
+					display inline-block
+					animation neon2 1.5s ease-in-out infinite alternate
+				
 		&__sublist
 			&--wrapper
 				position absolute
@@ -103,9 +113,27 @@
 				margin-bottom 35px
 				
 			
-				
+@keyframes neon2 
+	from 
+		text-shadow 0 0 10px #fff, 
+		0 0 20px #fff, 
+		0 0 30px #fff, 
+		0 0 40px #f9dfa5, 
+		0 0 70px #f9dfa5, 
+		0 0 80px #f9dfa5, 
+		0 0 100px #f9dfa5, 
+		0 0 150px #f9dfa5
+	to 
+		text-shadow 0 0 5px #fff, 
+		0 0 10px #fff, 
+		0 0 15px #fff, 
+		0 0 20px #f9dfa5, 
+		0 0 35px #f9dfa5, 
+		0 0 40px #f9dfa5, 
+		0 0 50px #f9dfa5, 
+		0 0 75px #f9dfa5
 
-				
+			
 
 .footer__nav
 	ul

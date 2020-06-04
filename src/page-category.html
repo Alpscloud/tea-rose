@@ -43,7 +43,6 @@
 	<!-- CONTENT WRAPPER -->
 	<div class="content__wrapper">
 
-
 		<!-- Popup login-->
 <div class="popup js-popup js-popup-login-form" >
 	<div class="popup__overflow">
@@ -161,6 +160,79 @@
 
 
 
+		<!-- Popup add to cart-->
+<div class="popup js-popup js-popup-added-to-cart">
+	<div class="popup__overflow">
+		<div class="popup__body text-center">
+			<!-- Close btn -->
+			<button class="btn__close js-close-popup-btn" type="button">
+				<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
+					<path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717
+					L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859
+					c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287
+					l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285
+					L284.286,256.002z"/>
+				</svg>
+			</button>
+			<!-- //Close btn -->
+
+			<!-- Popup content-->
+			<div class="popup__content">
+				<h3 class="popup__title">Товар добавлен в корзину</h3>
+
+				<div class="row popup__btns">
+					<a href="page-cart.html" class="btn btn-wide">Перейти в корзину</a>
+					<a href="#" class="btn btn-wide btn-light js-close-popup-btn">Вернуться на сайт</a>
+				</div>
+			</div>
+			<!-- //Popup content-->
+		</div>
+	</div>
+</div>
+<!-- //Popup add to cart-->
+		<!-- Popup quick order-->
+<div class="popup js-popup js-popup-form">
+	<div class="popup__overflow">
+		<div class="popup__body text-center">
+			<!-- Close btn -->
+			<button class="btn__close js-close-popup-btn" type="button">
+				<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
+					<path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717
+					L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859
+					c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287
+					l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285
+					L284.286,256.002z"/>
+				</svg>
+			</button>
+			<!-- //Close btn -->
+
+			<!-- Popup content-->
+			<div class="popup__content">
+				<h3 class="popup__title">Быстрый заказ</h3>
+				<p class="popup__text">Заполните всего два поля,<br>а все остальное мы сделаем за вас :)</p>
+				<form class="popup__form text-left">
+					<div class="input__wrapper">
+						<input type="text" class="input-round js-input is-error" name="name" placeholder="Ваше имя *">
+					</div>
+					<div class="input__wrapper">
+						<input type="tel" class="input-round js-input" name="phone" placeholder="Ваш телефон *">
+					</div>
+					<div class="input__wrapper">
+						<button class="btn btn-wide" type="button">Отправить</button>
+					</div>
+
+					<label class="checkbox__label">
+						<input name="privacyPolicy" type="checkbox" checked>
+						<span class="checkbox text-left">Даю разрешение на<br>обработку личных данных</span>
+					</label>
+				</form>
+			</div>
+			<!-- //Popup content-->
+		</div>
+	</div>
+</div>
+<!-- //Popup quick order-->
+
 		<!-- Popup thanks-->
 <div class="popup js-popup js-popup-thanks">
 	<div class="popup__overflow">
@@ -187,7 +259,6 @@
 	</div>
 </div>
 <!-- //Popup thanks-->
-		
 
 		<!-- Header -->
 		<header class="header">
@@ -587,29 +658,674 @@
 		<!-- Main -->
 		<main class="main main-page">
 			
-			<section class="sect__technical bg-with-overlay bg" style="background-image: url('img/backgrounds/decor-bg.jpg');">
+			<section class="sect__catalog gutter-bottom">
 				<h2 class="w3c">&nbsp;</h2>
 
 				<div class="container">
-					
-					<div class="block-404">
-						<div class="row align-vertical-start">
-							<div class="block-404__title text-right">
-								<h2 class="technical__title">404</h2>
-								<img src="img/decor/gold-leafs.svg" alt="Tea Rose">
-							</div>
+					<!-- Breadcrumbs -->
+					<div class="breadcrumbs">
+						<ul class="breadcrumbs__list">
+							<li class="breadcrumbs__item"><a href="index.html" class="breadcrumbs__link">Главная</a></li>
+							<li class="breadcrumbs__item"><span class="breadcrumbs__link is-active">Букеты</span></li>
+						</ul>
+					</div>
+					<!-- //Breadcrumbs -->
 
-							<div class="technical__text--col">
-								<div class="technical__text">
-									<p>Видимо что то пошло не так :(</p>
-									<p>Намите на кнопку ниже,<br>что бы вернуться на главную страницу сайта</p>
+					<div class="catalog">
+
+						<h2 class="page-title page-title__mobile">Цветы:</h2>
+
+						
+
+						<div class="row align-vertical-start catalog__row">
+							<!-- Sidebar -->
+<aside class="aside js-mobile-filter">
+	<form class="aside-form">
+		<!-- Reset -->
+		<div class="aside-form__reset">
+			<button class="btn__reset" type="reset">
+				<span>Отменить фильтры</span>
+				<i class="btn__reset--ic">
+					<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
+						<path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-20.475-7.811-28.285,0L256,227.717
+						L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859
+						c-7.811,7.811-7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-5.857L256,284.287
+						l221.857,221.857c3.905,3.905,9.024,5.857,14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285
+						L284.286,256.002z"/>
+					</svg>
+				</i>
+			</button>
+		</div>
+		<!-- //Reset -->
+
+		<div class="aside-form__filters">
+			<!-- Filter block -->
+			<div class="aside-form__filters--block_wrapper">
+				<button class="aside-form__filters--block_btn js-toggle-filter-block-btn">Цена</button>
+
+				<div class="aside-form__filters--block">
+					<div class="price-range__wrapper">
+						<input type="hidden" name="price" class="js-price-input" value="">
+
+						<div class="price-range__inputs">
+							<div class="row align-vertical-end align-horisontal-between">
+
+								<div class="price-range__input--block">
+									<label class="price-range__input--label" for="priceMin">От</label>
+									<input type="text" placeholder="0 грн" class="price-range__input" name="priceMin" id="priceMin" value="0 грн">
 								</div>
+								<span class="price-range__inputs--divider"></span>
 
-								<a href="index.html" class="btn btn-wide">На главную</a>
+								<div class="price-range__input--block">
+									<label class="price-range__input--label" for="priceMax">До</label>
+									<input type="text" placeholder="99 999 грн" class="price-range__input" name="priceMax" id="priceMax" value="99999 грн">
+								</div>
 							</div>
 						</div>
-					</div>
 
+						<div class="price-range">
+							<div id="price"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- //Filter block -->
+
+			<!-- Filter block -->
+			<div class="aside-form__filters--block_wrapper">
+				<button class="aside-form__filters--block_btn js-toggle-filter-block-btn">Цветы</button>
+
+				<div class="aside-form__filters--block">
+					<!-- Check -->
+					<label class="checkbox__label">
+						<input name="flowers-name" type="checkbox">
+						<span class="checkbox checkbox-filter text-left">Название цветка</span>
+					</label>
+					<!-- //Check -->
+					<!-- Check -->
+					<label class="checkbox__label">
+						<input name="flowers-name" type="checkbox">
+						<span class="checkbox checkbox-filter text-left">Название цветка</span>
+					</label>
+					<!-- //Check -->
+					<!-- Check -->
+					<label class="checkbox__label">
+						<input name="flowers-name" type="checkbox">
+						<span class="checkbox checkbox-filter text-left">Название цветка</span>
+					</label>
+					<!-- //Check -->
+					<!-- Check -->
+					<label class="checkbox__label">
+						<input name="flowers-name" type="checkbox">
+						<span class="checkbox checkbox-filter text-left">Название цветка</span>
+					</label>
+					<!-- //Check -->
+				</div>
+			</div>
+			<!-- //Filter block -->
+
+			<!-- Filter block -->
+			<div class="aside-form__filters--block_wrapper">
+				<button class="aside-form__filters--block_btn js-toggle-filter-block-btn">Упаковка</button>
+
+				<div class="aside-form__filters--block">
+					<!-- Check -->
+					<label class="checkbox__label">
+						<input name="packaging-paper" type="checkbox">
+						<span class="checkbox checkbox-filter text-left">Бумага</span>
+					</label>
+					<!-- //Check -->
+
+					<!-- Check -->
+					<label class="checkbox__label">
+						<input name="packaging-box" type="checkbox">
+						<span class="checkbox checkbox-filter text-left">Коробка</span>
+					</label>
+					<!-- //Check -->
+
+					<!-- Check -->
+					<label class="checkbox__label">
+						<input name="packaging-cellophane" type="checkbox">
+						<span class="checkbox checkbox-filter text-left">Целофан</span>
+					</label>
+					<!-- //Check -->
+					
+				</div>
+			</div>
+			<!-- //Filter block -->
+
+			<!-- Filter block -->
+			<div class="aside-form__filters--block_wrapper">
+				<button class="aside-form__filters--block_btn js-toggle-filter-block-btn">По цвету</button>
+
+				<div class="aside-form__filters--block">
+					<!-- Check -->
+					<label class="checkbox__label">
+						<input name="color-white" type="checkbox">
+						<span class="checkbox checkbox-filter text-left">Белый</span>
+					</label>
+					<!-- //Check -->
+
+					<!-- Check -->
+					<label class="checkbox__label">
+						<input name="color-red" type="checkbox">
+						<span class="checkbox checkbox-filter text-left">Красный</span>
+					</label>
+					<!-- //Check -->
+
+					<!-- Check -->
+					<label class="checkbox__label">
+						<input name="color-yellow" type="checkbox">
+						<span class="checkbox checkbox-filter text-left">Желтый</span>
+					</label>
+					<!-- //Check -->
+					
+				</div>
+			</div>
+			<!-- //Filter block -->
+
+			<!-- Filter block -->
+			<div class="aside-form__filters--block_wrapper">
+				<button class="aside-form__filters--block_btn js-toggle-filter-block-btn">Категория</button>
+
+				<div class="aside-form__filters--block">
+					<!-- Check -->
+					<label class="checkbox__label">
+						<input name="category-name" type="checkbox">
+						<span class="checkbox checkbox-filter text-left">Название категории</span>
+					</label>
+					<!-- //Check -->
+
+					<!-- Check -->
+					<label class="checkbox__label">
+						<input name="category-name" type="checkbox">
+						<span class="checkbox checkbox-filter text-left">Название категории</span>
+					</label>
+					<!-- //Check -->
+
+					<!-- Check -->
+					<label class="checkbox__label">
+						<input name="category-name" type="checkbox">
+						<span class="checkbox checkbox-filter text-left">Название категории</span>
+					</label>
+					<!-- //Check -->
+
+					<!-- Check -->
+					<label class="checkbox__label">
+						<input name="category-name" type="checkbox">
+						<span class="checkbox checkbox-filter text-left">Название категории</span>
+					</label>
+					<!-- //Check -->
+					
+				</div>
+			</div>
+			<!-- //Filter block -->
+		</div>
+		
+		<div class="aside-form__footer text-center">
+			<button type="reset" class="aside-form__reset--btn_mobile">Сбросить фильтры</button>
+			<button class="btn btn-secondary-color btn-md" type="submit">Применить</button>
+			
+		</div>
+		
+	</form>
+</aside>
+<!-- //Sidebar -->
+
+							
+							<!-- Products -->
+							<div class="catalog__products category__products">
+
+
+
+								<div class="catalog__products--header">
+									<div class="row align-vertical-center align-horisontal-between">
+										<h1 class="page-title page-title__desktop">Цветы:</h1>
+										
+										<!-- Sorting -->
+										<div class="sorting">
+											<span class="sorting__label">Сортировать по:</span>
+											<div class="sorting__params">
+												<a href="#" class="link sorting__link is-active">Популярности</a>
+												<a href="#" class="link sorting__link">Цене</a>
+												<a href="#" class="link sorting__link">Новизне</a>
+											</div>
+										</div>
+										<!-- //Sorting -->
+									</div>
+								</div>
+								<!-- //header -->
+
+								<!-- Categories links -->
+
+								<div class="categories">
+									<div class="row align-horisontal-start categories-links__row">
+										<div class="category-link__wrapper">
+											<a href="#" class="category-link is-active">Название категории</a>
+										</div>
+
+										<div class="category-link__wrapper">
+											<a href="#" class="category-link">Длинное<br>Название<br>категории</a>
+										</div>
+
+										<div class="category-link__wrapper">
+											<a href="#" class="category-link">Категория</a>
+										</div>
+
+										<div class="category-link__wrapper">
+											<a href="#" class="category-link">Название категории</a>
+										</div>
+
+										<div class="category-link__wrapper">
+											<a href="#" class="category-link">Длинное Название категории</a>
+										</div>
+
+										<div class="category-link__wrapper">
+											<a href="#" class="category-link">Категория</a>
+										</div>
+									</div>
+								</div>
+								<!-- //Categories links -->
+								
+								<div class="toggle-aside-btn">
+									<button class="btn btn-toggle-filter js-toggle-mobile-filter-btn" type="button" data-default-text="Открыть фильтр" data-toggled-text="Скрыть фильтр"></button>
+								</div>
+
+
+								<div class="row catalog__products--row align-horisontal-start">
+									<!-- Product card -->
+<article class="card__wrapper">
+	<div class="card">
+		<a href="page-product.html" class="card__thumbnail">
+			<span>Открыть</span>
+			<img src="img/product-thumb.jpg" alt="Product thumnail">
+		</a>
+		<div class="card__information">
+			<div class="row align-vertical-end align-horisontal-between price__row">
+				<p class="card__price price">1 450 Грн</p>
+
+				<p class="articul">арт: 34475</p>
+			</div>
+
+			<div class="card__tools">
+				<!-- Wishlist btn -->
+				<a href="#" class="link-wishlist tooltip__wrapper">
+					<i class="link-wishlist__ic">
+						<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20.651px" height="18.534px" viewBox="0 0 20.651 18.534" enable-background="new 0 0 20.651 18.534" xml:space="preserve">
+							<g>
+								<g>
+									<g>
+										<path d="M10.326,5.913c-0.276,0-0.5-0.224-0.5-0.5C9.826,2.979,7.847,1,5.413,1S1,2.979,1,5.413c0,0.276-0.224,0.5-0.5,0.5
+										S0,5.689,0,5.413C0,2.429,2.429,0,5.413,0s5.413,2.429,5.413,5.413C10.826,5.689,10.603,5.913,10.326,5.913z"/>
+									</g>
+									<g>
+										<path d="M20.151,5.913c-0.276,0-0.5-0.224-0.5-0.5C19.651,2.979,17.672,1,15.239,1c-2.434,0-4.413,1.979-4.413,4.413
+										c0,0.276-0.224,0.5-0.5,0.5s-0.5-0.224-0.5-0.5C9.826,2.429,12.255,0,15.239,0s5.412,2.429,5.412,5.413
+										C20.651,5.689,20.428,5.913,20.151,5.913z"/>
+									</g>
+									<g>
+										<path d="M10.326,18.534C9.108,18.534,0,11.182,0,5.413c0-0.276,0.224-0.5,0.5-0.5S1,5.137,1,5.413
+										c0,5.034,8.401,11.888,9.375,12.125c0.875-0.237,9.276-7.093,9.276-12.125c0-0.276,0.224-0.5,0.5-0.5s0.5,0.224,0.5,0.5
+										C20.651,11.182,11.544,18.534,10.326,18.534z"/>
+									</g>
+								</g>
+								<g>
+									<path d="M17.678,5.762c-0.276,0-0.5-0.224-0.5-0.5c0-1.069-0.869-1.938-1.938-1.938c-0.407,0-0.796,0.124-1.124,0.358
+									c-0.223,0.159-0.537,0.111-0.697-0.115c-0.161-0.225-0.109-0.537,0.115-0.697c0.499-0.357,1.089-0.546,1.706-0.546
+									c1.62,0,2.938,1.318,2.938,2.938C18.178,5.538,17.954,5.762,17.678,5.762z"/>
+								</g>
+							</g>
+						</svg>
+					</i>
+
+					<!-- Tooltip -->
+					<span class="tooltip tooltip-top">В избранное</span>
+					<!-- //Tooltip -->
+				</a>
+				<!-- //Wishlist btn -->
+
+				<a href="#" class="btn btn-with-ic js-add-to-cart-btn">В корзину</a>
+			</div>
+		</div>
+	</div>
+</article>
+<!-- // product card -->
+									<!-- Product card -->
+<article class="card__wrapper">
+	<div class="card">
+		<a href="page-product.html" class="card__thumbnail">
+			<span>Открыть</span>
+			<img src="img/product-thumb.jpg" alt="Product thumnail">
+		</a>
+		<div class="card__information">
+			<div class="row align-vertical-end align-horisontal-between price__row">
+				<p class="card__price price">1 450 Грн</p>
+
+				<p class="articul">арт: 34475</p>
+			</div>
+
+			<div class="card__tools">
+				<!-- Wishlist btn -->
+				<a href="#" class="link-wishlist tooltip__wrapper">
+					<i class="link-wishlist__ic">
+						<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20.651px" height="18.534px" viewBox="0 0 20.651 18.534" enable-background="new 0 0 20.651 18.534" xml:space="preserve">
+							<g>
+								<g>
+									<g>
+										<path d="M10.326,5.913c-0.276,0-0.5-0.224-0.5-0.5C9.826,2.979,7.847,1,5.413,1S1,2.979,1,5.413c0,0.276-0.224,0.5-0.5,0.5
+										S0,5.689,0,5.413C0,2.429,2.429,0,5.413,0s5.413,2.429,5.413,5.413C10.826,5.689,10.603,5.913,10.326,5.913z"/>
+									</g>
+									<g>
+										<path d="M20.151,5.913c-0.276,0-0.5-0.224-0.5-0.5C19.651,2.979,17.672,1,15.239,1c-2.434,0-4.413,1.979-4.413,4.413
+										c0,0.276-0.224,0.5-0.5,0.5s-0.5-0.224-0.5-0.5C9.826,2.429,12.255,0,15.239,0s5.412,2.429,5.412,5.413
+										C20.651,5.689,20.428,5.913,20.151,5.913z"/>
+									</g>
+									<g>
+										<path d="M10.326,18.534C9.108,18.534,0,11.182,0,5.413c0-0.276,0.224-0.5,0.5-0.5S1,5.137,1,5.413
+										c0,5.034,8.401,11.888,9.375,12.125c0.875-0.237,9.276-7.093,9.276-12.125c0-0.276,0.224-0.5,0.5-0.5s0.5,0.224,0.5,0.5
+										C20.651,11.182,11.544,18.534,10.326,18.534z"/>
+									</g>
+								</g>
+								<g>
+									<path d="M17.678,5.762c-0.276,0-0.5-0.224-0.5-0.5c0-1.069-0.869-1.938-1.938-1.938c-0.407,0-0.796,0.124-1.124,0.358
+									c-0.223,0.159-0.537,0.111-0.697-0.115c-0.161-0.225-0.109-0.537,0.115-0.697c0.499-0.357,1.089-0.546,1.706-0.546
+									c1.62,0,2.938,1.318,2.938,2.938C18.178,5.538,17.954,5.762,17.678,5.762z"/>
+								</g>
+							</g>
+						</svg>
+					</i>
+
+					<!-- Tooltip -->
+					<span class="tooltip tooltip-top">В избранное</span>
+					<!-- //Tooltip -->
+				</a>
+				<!-- //Wishlist btn -->
+
+				<a href="#" class="btn btn-with-ic js-add-to-cart-btn">В корзину</a>
+			</div>
+		</div>
+	</div>
+</article>
+<!-- // product card -->
+									<!-- Product card -->
+<article class="card__wrapper">
+	<div class="card">
+		<a href="page-product.html" class="card__thumbnail">
+			<span>Открыть</span>
+			<img src="img/product-thumb.jpg" alt="Product thumnail">
+		</a>
+		<div class="card__information">
+			<div class="row align-vertical-end align-horisontal-between price__row">
+				<p class="card__price price">1 450 Грн</p>
+
+				<p class="articul">арт: 34475</p>
+			</div>
+
+			<div class="card__tools">
+				<!-- Wishlist btn -->
+				<a href="#" class="link-wishlist tooltip__wrapper">
+					<i class="link-wishlist__ic">
+						<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20.651px" height="18.534px" viewBox="0 0 20.651 18.534" enable-background="new 0 0 20.651 18.534" xml:space="preserve">
+							<g>
+								<g>
+									<g>
+										<path d="M10.326,5.913c-0.276,0-0.5-0.224-0.5-0.5C9.826,2.979,7.847,1,5.413,1S1,2.979,1,5.413c0,0.276-0.224,0.5-0.5,0.5
+										S0,5.689,0,5.413C0,2.429,2.429,0,5.413,0s5.413,2.429,5.413,5.413C10.826,5.689,10.603,5.913,10.326,5.913z"/>
+									</g>
+									<g>
+										<path d="M20.151,5.913c-0.276,0-0.5-0.224-0.5-0.5C19.651,2.979,17.672,1,15.239,1c-2.434,0-4.413,1.979-4.413,4.413
+										c0,0.276-0.224,0.5-0.5,0.5s-0.5-0.224-0.5-0.5C9.826,2.429,12.255,0,15.239,0s5.412,2.429,5.412,5.413
+										C20.651,5.689,20.428,5.913,20.151,5.913z"/>
+									</g>
+									<g>
+										<path d="M10.326,18.534C9.108,18.534,0,11.182,0,5.413c0-0.276,0.224-0.5,0.5-0.5S1,5.137,1,5.413
+										c0,5.034,8.401,11.888,9.375,12.125c0.875-0.237,9.276-7.093,9.276-12.125c0-0.276,0.224-0.5,0.5-0.5s0.5,0.224,0.5,0.5
+										C20.651,11.182,11.544,18.534,10.326,18.534z"/>
+									</g>
+								</g>
+								<g>
+									<path d="M17.678,5.762c-0.276,0-0.5-0.224-0.5-0.5c0-1.069-0.869-1.938-1.938-1.938c-0.407,0-0.796,0.124-1.124,0.358
+									c-0.223,0.159-0.537,0.111-0.697-0.115c-0.161-0.225-0.109-0.537,0.115-0.697c0.499-0.357,1.089-0.546,1.706-0.546
+									c1.62,0,2.938,1.318,2.938,2.938C18.178,5.538,17.954,5.762,17.678,5.762z"/>
+								</g>
+							</g>
+						</svg>
+					</i>
+
+					<!-- Tooltip -->
+					<span class="tooltip tooltip-top">В избранное</span>
+					<!-- //Tooltip -->
+				</a>
+				<!-- //Wishlist btn -->
+
+				<a href="#" class="btn btn-with-ic js-add-to-cart-btn">В корзину</a>
+			</div>
+		</div>
+	</div>
+</article>
+<!-- // product card -->
+									<!-- Product card -->
+<article class="card__wrapper">
+	<div class="card">
+		<a href="page-product.html" class="card__thumbnail">
+			<span>Открыть</span>
+			<img src="img/product-thumb.jpg" alt="Product thumnail">
+		</a>
+		<div class="card__information">
+			<div class="row align-vertical-end align-horisontal-between price__row">
+				<p class="card__price price">1 450 Грн</p>
+
+				<p class="articul">арт: 34475</p>
+			</div>
+
+			<div class="card__tools">
+				<!-- Wishlist btn -->
+				<a href="#" class="link-wishlist tooltip__wrapper">
+					<i class="link-wishlist__ic">
+						<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20.651px" height="18.534px" viewBox="0 0 20.651 18.534" enable-background="new 0 0 20.651 18.534" xml:space="preserve">
+							<g>
+								<g>
+									<g>
+										<path d="M10.326,5.913c-0.276,0-0.5-0.224-0.5-0.5C9.826,2.979,7.847,1,5.413,1S1,2.979,1,5.413c0,0.276-0.224,0.5-0.5,0.5
+										S0,5.689,0,5.413C0,2.429,2.429,0,5.413,0s5.413,2.429,5.413,5.413C10.826,5.689,10.603,5.913,10.326,5.913z"/>
+									</g>
+									<g>
+										<path d="M20.151,5.913c-0.276,0-0.5-0.224-0.5-0.5C19.651,2.979,17.672,1,15.239,1c-2.434,0-4.413,1.979-4.413,4.413
+										c0,0.276-0.224,0.5-0.5,0.5s-0.5-0.224-0.5-0.5C9.826,2.429,12.255,0,15.239,0s5.412,2.429,5.412,5.413
+										C20.651,5.689,20.428,5.913,20.151,5.913z"/>
+									</g>
+									<g>
+										<path d="M10.326,18.534C9.108,18.534,0,11.182,0,5.413c0-0.276,0.224-0.5,0.5-0.5S1,5.137,1,5.413
+										c0,5.034,8.401,11.888,9.375,12.125c0.875-0.237,9.276-7.093,9.276-12.125c0-0.276,0.224-0.5,0.5-0.5s0.5,0.224,0.5,0.5
+										C20.651,11.182,11.544,18.534,10.326,18.534z"/>
+									</g>
+								</g>
+								<g>
+									<path d="M17.678,5.762c-0.276,0-0.5-0.224-0.5-0.5c0-1.069-0.869-1.938-1.938-1.938c-0.407,0-0.796,0.124-1.124,0.358
+									c-0.223,0.159-0.537,0.111-0.697-0.115c-0.161-0.225-0.109-0.537,0.115-0.697c0.499-0.357,1.089-0.546,1.706-0.546
+									c1.62,0,2.938,1.318,2.938,2.938C18.178,5.538,17.954,5.762,17.678,5.762z"/>
+								</g>
+							</g>
+						</svg>
+					</i>
+
+					<!-- Tooltip -->
+					<span class="tooltip tooltip-top">В избранное</span>
+					<!-- //Tooltip -->
+				</a>
+				<!-- //Wishlist btn -->
+
+				<a href="#" class="btn btn-with-ic js-add-to-cart-btn">В корзину</a>
+			</div>
+		</div>
+	</div>
+</article>
+<!-- // product card -->
+									<!-- Product card -->
+<article class="card__wrapper">
+	<div class="card">
+		<a href="page-product.html" class="card__thumbnail">
+			<span>Открыть</span>
+			<img src="img/product-thumb.jpg" alt="Product thumnail">
+		</a>
+		<div class="card__information">
+			<div class="row align-vertical-end align-horisontal-between price__row">
+				<p class="card__price price">1 450 Грн</p>
+
+				<p class="articul">арт: 34475</p>
+			</div>
+
+			<div class="card__tools">
+				<!-- Wishlist btn -->
+				<a href="#" class="link-wishlist tooltip__wrapper">
+					<i class="link-wishlist__ic">
+						<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20.651px" height="18.534px" viewBox="0 0 20.651 18.534" enable-background="new 0 0 20.651 18.534" xml:space="preserve">
+							<g>
+								<g>
+									<g>
+										<path d="M10.326,5.913c-0.276,0-0.5-0.224-0.5-0.5C9.826,2.979,7.847,1,5.413,1S1,2.979,1,5.413c0,0.276-0.224,0.5-0.5,0.5
+										S0,5.689,0,5.413C0,2.429,2.429,0,5.413,0s5.413,2.429,5.413,5.413C10.826,5.689,10.603,5.913,10.326,5.913z"/>
+									</g>
+									<g>
+										<path d="M20.151,5.913c-0.276,0-0.5-0.224-0.5-0.5C19.651,2.979,17.672,1,15.239,1c-2.434,0-4.413,1.979-4.413,4.413
+										c0,0.276-0.224,0.5-0.5,0.5s-0.5-0.224-0.5-0.5C9.826,2.429,12.255,0,15.239,0s5.412,2.429,5.412,5.413
+										C20.651,5.689,20.428,5.913,20.151,5.913z"/>
+									</g>
+									<g>
+										<path d="M10.326,18.534C9.108,18.534,0,11.182,0,5.413c0-0.276,0.224-0.5,0.5-0.5S1,5.137,1,5.413
+										c0,5.034,8.401,11.888,9.375,12.125c0.875-0.237,9.276-7.093,9.276-12.125c0-0.276,0.224-0.5,0.5-0.5s0.5,0.224,0.5,0.5
+										C20.651,11.182,11.544,18.534,10.326,18.534z"/>
+									</g>
+								</g>
+								<g>
+									<path d="M17.678,5.762c-0.276,0-0.5-0.224-0.5-0.5c0-1.069-0.869-1.938-1.938-1.938c-0.407,0-0.796,0.124-1.124,0.358
+									c-0.223,0.159-0.537,0.111-0.697-0.115c-0.161-0.225-0.109-0.537,0.115-0.697c0.499-0.357,1.089-0.546,1.706-0.546
+									c1.62,0,2.938,1.318,2.938,2.938C18.178,5.538,17.954,5.762,17.678,5.762z"/>
+								</g>
+							</g>
+						</svg>
+					</i>
+
+					<!-- Tooltip -->
+					<span class="tooltip tooltip-top">В избранное</span>
+					<!-- //Tooltip -->
+				</a>
+				<!-- //Wishlist btn -->
+
+				<a href="#" class="btn btn-with-ic js-add-to-cart-btn">В корзину</a>
+			</div>
+		</div>
+	</div>
+</article>
+<!-- // product card -->
+									<!-- Product card -->
+<article class="card__wrapper">
+	<div class="card">
+		<a href="page-product.html" class="card__thumbnail">
+			<span>Открыть</span>
+			<img src="img/product-thumb.jpg" alt="Product thumnail">
+		</a>
+		<div class="card__information">
+			<div class="row align-vertical-end align-horisontal-between price__row">
+				<p class="card__price price">1 450 Грн</p>
+
+				<p class="articul">арт: 34475</p>
+			</div>
+
+			<div class="card__tools">
+				<!-- Wishlist btn -->
+				<a href="#" class="link-wishlist tooltip__wrapper">
+					<i class="link-wishlist__ic">
+						<svg version="1.1" id="Слой_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="20.651px" height="18.534px" viewBox="0 0 20.651 18.534" enable-background="new 0 0 20.651 18.534" xml:space="preserve">
+							<g>
+								<g>
+									<g>
+										<path d="M10.326,5.913c-0.276,0-0.5-0.224-0.5-0.5C9.826,2.979,7.847,1,5.413,1S1,2.979,1,5.413c0,0.276-0.224,0.5-0.5,0.5
+										S0,5.689,0,5.413C0,2.429,2.429,0,5.413,0s5.413,2.429,5.413,5.413C10.826,5.689,10.603,5.913,10.326,5.913z"/>
+									</g>
+									<g>
+										<path d="M20.151,5.913c-0.276,0-0.5-0.224-0.5-0.5C19.651,2.979,17.672,1,15.239,1c-2.434,0-4.413,1.979-4.413,4.413
+										c0,0.276-0.224,0.5-0.5,0.5s-0.5-0.224-0.5-0.5C9.826,2.429,12.255,0,15.239,0s5.412,2.429,5.412,5.413
+										C20.651,5.689,20.428,5.913,20.151,5.913z"/>
+									</g>
+									<g>
+										<path d="M10.326,18.534C9.108,18.534,0,11.182,0,5.413c0-0.276,0.224-0.5,0.5-0.5S1,5.137,1,5.413
+										c0,5.034,8.401,11.888,9.375,12.125c0.875-0.237,9.276-7.093,9.276-12.125c0-0.276,0.224-0.5,0.5-0.5s0.5,0.224,0.5,0.5
+										C20.651,11.182,11.544,18.534,10.326,18.534z"/>
+									</g>
+								</g>
+								<g>
+									<path d="M17.678,5.762c-0.276,0-0.5-0.224-0.5-0.5c0-1.069-0.869-1.938-1.938-1.938c-0.407,0-0.796,0.124-1.124,0.358
+									c-0.223,0.159-0.537,0.111-0.697-0.115c-0.161-0.225-0.109-0.537,0.115-0.697c0.499-0.357,1.089-0.546,1.706-0.546
+									c1.62,0,2.938,1.318,2.938,2.938C18.178,5.538,17.954,5.762,17.678,5.762z"/>
+								</g>
+							</g>
+						</svg>
+					</i>
+
+					<!-- Tooltip -->
+					<span class="tooltip tooltip-top">В избранное</span>
+					<!-- //Tooltip -->
+				</a>
+				<!-- //Wishlist btn -->
+
+				<a href="#" class="btn btn-with-ic js-add-to-cart-btn">В корзину</a>
+			</div>
+		</div>
+	</div>
+</article>
+<!-- // product card -->
+								</div>
+
+								<!-- Pagination -->
+<div class="pagination">
+	<ul class="pagination__list">
+		<!-- Prev page link -->
+	<!-- 	<li class="pagination__item">
+			<a href="#" class="pagination__link pagination__link--arrow pagination__link--arrow_prev">
+				<i class="pagination__link--ic">
+					<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 5.997 12.034" enable-background="new 0 0 5.997 12.034" xml:space="preserve">
+						<path  d="M5.981,6.158C5.99,6.111,5.997,6.065,5.997,6.017c0-0.048-0.007-0.094-0.016-0.141
+						C5.972,5.829,5.961,5.785,5.943,5.74C5.924,5.693,5.898,5.652,5.87,5.609C5.853,5.583,5.846,5.554,5.826,5.53L1.32,0.263
+						C1.052-0.052,0.578-0.089,0.263,0.18C-0.052,0.449-0.089,0.923,0.18,1.238l4.089,4.779L0.18,10.796
+						c-0.27,0.315-0.232,0.789,0.083,1.058c0.141,0.121,0.314,0.18,0.487,0.18c0.212,0,0.422-0.089,0.57-0.263l4.506-5.267
+						C5.846,6.48,5.853,6.451,5.87,6.425c0.028-0.043,0.054-0.084,0.073-0.131C5.961,6.249,5.972,6.205,5.981,6.158z"/>
+					</svg>
+				</i>
+			</a>
+		</li> -->
+		<!-- //Prev page link -->
+
+		<li class="pagination__item"><a href="#" class="pagination__link is-active">1</a></li>
+		<li class="pagination__item"><a href="#" class="pagination__link">2</a></li>
+
+		<li class="pagination__item"><span class="pagination__link pagination__link--divider">...</span></li>
+
+		<li class="pagination__item"><a href="#" class="pagination__link">5</a></li>
+
+		<!-- Next page link -->
+		<li class="pagination__item">
+			<a href="#" class="pagination__link pagination__link--arrow pagination__link--arrow_next">
+				<i class="pagination__link--ic">
+					<svg version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 5.997 12.034" enable-background="new 0 0 5.997 12.034" xml:space="preserve">
+						<path  d="M5.981,6.158C5.99,6.111,5.997,6.065,5.997,6.017c0-0.048-0.007-0.094-0.016-0.141
+						C5.972,5.829,5.961,5.785,5.943,5.74C5.924,5.693,5.898,5.652,5.87,5.609C5.853,5.583,5.846,5.554,5.826,5.53L1.32,0.263
+						C1.052-0.052,0.578-0.089,0.263,0.18C-0.052,0.449-0.089,0.923,0.18,1.238l4.089,4.779L0.18,10.796
+						c-0.27,0.315-0.232,0.789,0.083,1.058c0.141,0.121,0.314,0.18,0.487,0.18c0.212,0,0.422-0.089,0.57-0.263l4.506-5.267
+						C5.846,6.48,5.853,6.451,5.87,6.425c0.028-0.043,0.054-0.084,0.073-0.131C5.961,6.249,5.972,6.205,5.981,6.158z"/>
+					</svg>
+				</i>
+			</a>
+		</li>
+		<!-- //Next page link -->
+
+	</ul>
+</div>
+<!-- //Pagination -->
+							</div>
+							<!-- //Products -->
+						</div>
+					</div>
 				</div>
 				<!-- //container -->
 			</section>
@@ -633,7 +1349,7 @@
 	<!-- //container -->
 </section>
 
-
+			
 		</main>
 		<!-- //Main -->
 
