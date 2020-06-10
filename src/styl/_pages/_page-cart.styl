@@ -10,6 +10,7 @@
 			justify-content flex-end
 			flex 1 0 auto
 			position relative
+			
 			&:before,
 			&:after
 				pseudo()
@@ -23,26 +24,49 @@
 				background-color $cart-progress-color
 				width 0
 				
+				
 			&:before
 				background-color #e8e8e8
 				
 			&.is-current
+				
 				&:after
-					width 50%
-					width calc((100% - 35px) / 2)
-				svg
-					fill $text-color
+					animation line-draw 1s linear 0ms forwards
+					animation-delay 1s
+				
 					
+				.cart-progress__step--information_ic
+					&-ic
+						fill $text-color
+						transition-delay 0.7s
+					&-circle
+						stroke $accent-color
+						stroke-dasharray 271 273
+						stroke-dashoffset 272
+						animation circle-draw 500ms linear 0ms forwards
+						animation-delay 1.6s
+						
+			&:last-child
+				&.is-current
+					&:after
+						animation-delay 2.2s
+						
 			&.is-active
 				&:after
 					width 100%
+					animation none
+				
 					
 				.cart-progress__step--information_ic
-					border-color $cart-progress-color
-				
-				svg
-					fill $text-color
+					&-ic
+						fill $text-color
+						transition-delay none
+					&-circle
+						stroke $accent-color
+						animation none
+						stroke-dasharray 0
 					
+
 				
 			&--information
 				width 85px
@@ -58,11 +82,22 @@
 					background-color $light-color
 					box-shadow $round-input-shadow
 					margin 0 auto 20px auto
-					border 1px solid #e8e8e8
-					svg
+					position relative
+					&-ic
 						width 48px
 						height 48px
 						fill #ccc
+						
+					&-circle
+						width 100%
+						height 100%
+						display block
+						position absolute
+						position-center()
+						fill-opacity 0
+						stroke #e8e8e8
+						stroke-width 1px
+						
 						
 			
 
@@ -88,6 +123,9 @@
 					display flex
 					align-items center
 					justify-content flex-start
+					
+					.card__thumbnail
+						border-radius 4px
 				
 				&_label
 					font 14px $Med

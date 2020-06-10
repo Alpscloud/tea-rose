@@ -23,7 +23,13 @@
 			&:last-child
 				margin-right 0
 				
+			&.is-important
+				position relative
+				z-index 11
+				
 			&.has-sublist
+		
+					
 				> .nav-catalog__link
 					padding-right 20px
 					&:after
@@ -45,7 +51,7 @@
 							transform translateY(-50%) rotate(-180deg)
 							
 					.nav-catalog__sublist--wrapper
-						margin-top 0
+						margin-top -8px
 						opacity 1
 						visibility visible
 						pointer-events auto
@@ -69,9 +75,14 @@
 				background-color $secondary-color
 				border-radius 30px
 				padding 5px 20px
+				position relative
+				z-index 10
 				span
 					display inline-block
-					animation neon2 1.5s ease-in-out infinite alternate
+					animation neon-desktop 1.5s ease-in-out infinite alternate
+					
+				&:hover
+					color $light-color
 				
 		&__sublist
 			&--wrapper
@@ -81,7 +92,7 @@
 				left 0
 				width 100%
 				background-color $light-color
-				padding-top 25px
+				padding-top 30px
 				margin-top 15px
 				transition all .17s ease-in-out
 				opacity 0
@@ -113,25 +124,45 @@
 				margin-bottom 35px
 				
 			
-@keyframes neon2 
+@keyframes neon-desktop
 	from 
-		text-shadow 0 0 10px #fff, 
-		0 0 20px #fff, 
-		0 0 30px #fff, 
-		0 0 40px #f9dfa5, 
-		0 0 70px #f9dfa5, 
-		0 0 80px #f9dfa5, 
-		0 0 100px #f9dfa5, 
-		0 0 150px #f9dfa5
+		text-shadow 0 0 10px rgba($light-color, .6), 
+		0 0 20px rgba($light-color, .6), 
+		0 0 30px rgba($light-color, .6), 
+		0 0 40px rgba($light-color, .6), 
+		0 0 70px rgba($light-color, .6), 
+		0 0 80px rgba($light-color, .6), 
+		0 0 100px rgba($light-color, .6), 
+		0 0 150px rgba($light-color, .6)
 	to 
-		text-shadow 0 0 5px #fff, 
-		0 0 10px #fff, 
-		0 0 15px #fff, 
-		0 0 20px #f9dfa5, 
-		0 0 35px #f9dfa5, 
-		0 0 40px #f9dfa5, 
-		0 0 50px #f9dfa5, 
-		0 0 75px #f9dfa5
+		text-shadow 0 0 5px rgba($light-color, .6), 
+		0 0 10px rgba($light-color, .6), 
+		0 0 15px rgba($light-color, .6), 
+		0 0 20px rgba($light-color, .6), 
+		0 0 35px rgba($light-color, .6), 
+		0 0 40px rgba($light-color, .6), 
+		0 0 50px rgba($light-color, .6), 
+		0 0 75px rgba($light-color, .6)
+		
+@keyframes neon-mobile
+	from 
+		text-shadow 0 0 2px rgba($light-color, .25), 
+		0 0 4px rgba($light-color, .25), 
+		0 0 6px rgba($light-color, .25), 
+		0 0 8px rgba($light-color, .25), 
+		0 0 10px rgba($light-color, .25), 
+		0 0 12px rgba($light-color, .25), 
+		0 0 14px rgba($light-color, .25), 
+		0 0 16px rgba($light-color, .25)
+	to 
+		text-shadow 0 0 4px rgba($light-color, .25), 
+		0 0 6px rgba($light-color, .25), 
+		0 0 8px rgba($light-color, .25), 
+		0 0 10px rgba($light-color, .25), 
+		0 0 12px rgba($light-color, .25), 
+		0 0 14px rgba($light-color, .25), 
+		0 0 16px rgba($light-color, .25), 
+		0 0 18px rgba($light-color, .25)
 
 			
 

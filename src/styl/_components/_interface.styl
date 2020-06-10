@@ -143,6 +143,7 @@
 				padding-left 0
 				margin-bottom 7px
 				line-height 1
+				opacity 1
 				&:before
 					display none
 					
@@ -592,5 +593,18 @@
 // 		height 700px
 // 		left 0
 // 		top 30%
+
+
+// Animation
+@keyframes circle-draw
+	100%
+		stroke-dashoffset 0
 		
+@keyframes line-draw
+	100%
+		width 100%
+
+@keyframes fill-ic
+	100%
+		fill $text-color
 

@@ -10,6 +10,20 @@
 			border 12px solid #f7f7f7
 			background-color $light-accent-color
 			
+		&__mobile
+			&--links
+				margin-bottom 45px
+				color rgba($dark-color, .4)
+				font 14px $Med
+				a, button
+					color inherit
+					font-size inherit
+					font-family inherit
+					display inline-block
+				button
+					margin-right 25px
+					
+			
 		&__information
 			flex 1
 			margin-left 50px
@@ -53,6 +67,12 @@
 					&:last-child
 						width 260px
 						flex none
+						
+					&-title
+						color #b3b0b0
+						margin-bottom 25px
+						font 18px $Med
+						display none
 						
 	&-orders
 		&__header
@@ -124,6 +144,7 @@
 				.card__thumbnail
 					margin-bottom 0
 					padding-top 100%
+					border-radius 4px
 						
 
 .information__list,
@@ -157,3 +178,8 @@
 			display inline-block
 			font 16px $Med
 			margin-top 13px
+			
+
+.cabinet-order__price
+	display block
+	width 100%
